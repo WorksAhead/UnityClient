@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mgp_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mgp_title_layout_height"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mgp_payment_way_card_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/mgp_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/mgp_gray" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE"
+        android:scrollbarThumbVertical="@color/mgp_sdkBackground"
+        android:scrollbarTrackVertical="@color/mgp_sdkBackground" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="@dimen/mgp_payment_way_card_padding" >
+
+                <TextView
+                    android:id="@+id/mgp_payment_way_card_select_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mgp_payment_way_card_select_TextView_height"
+                    android:background="@drawable/mgp_onlineserver_ll_fillet"
+                    android:drawableRight="@drawable/mgp_charge_center_select"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/mgp_payment_way_card_ImageView_paddingLeft"
+                    android:paddingRight="@dimen/mgp_payment_way_card_ImageView_paddingLeft"
+                    android:textColor="@color/mgp_black"
+                    android:textColorHint="@color/mgp_black"
+                    android:textSize="@dimen/mgp_text_mid" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mgp_payment_way_card_select_TextView_height"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/mgp_onlineserver_ll_fillet" >
+
+                    <ImageView
+                        android:layout_width="58dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:background="@color/mgp_white"
+                        android:paddingLeft="@dimen/mgp_payment_way_card_ImageView_paddingLeft"
+                        android:paddingRight="@dimen/mgp_payment_way_card_ImageView_paddingRight"
+                        android:src="@drawable/mgp_payment_way_card_number_img" />
+
+                    <EditText
+                        android:id="@+id/mgp_payment_way_card_number_EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:background="@color/mgp_white"
+                        android:ems="10"
+                        android:hint="@string/mgp_payment_way_card_number_hint"
+                        android:maxLength="24"
+                        android:singleLine="true"
+                        android:textColorHint="#b5b6b7"
+                        android:textSize="@dimen/mgp_text_mid" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mgp_payment_way_card_select_TextView_height"
+                    android:background="@drawable/mgp_onlineserver_ll_fillet" >
+
+                    <ImageView
+                        android:layout_width="58dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:background="@color/mgp_white"
+                        android:paddingLeft="@dimen/mgp_payment_way_card_ImageView_paddingLeft"
+                        android:paddingRight="@dimen/mgp_payment_way_card_ImageView_paddingRight"
+                        android:src="@drawable/mgp_payment_way_card_password_img" />
+
+                    <EditText
+                        android:id="@+id/mgp_payment_way_card_Password_EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0.5dp"
+                        android:background="@color/mgp_white"
+                        android:ems="10"
+                        android:hint="@string/mgp_payment_way_card_Password_hint"
+                        android:inputType="number"
+                        android:maxLength="26"
+                        android:singleLine="true"
+                        android:textColorHint="#b5b6b7"
+                        android:textSize="@dimen/mgp_text_mid" >
+                    </EditText>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/mgp_payment_way_card_pay_Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mgp_payment_way_card_pay_Button_height"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/mgp_quick_into_btn_xbg"
+                    android:text="@string/mgp_payment_way_card_pay_btn"
+                    android:textColor="@color/mgp_sdkBackground1"
+                    android:textSize="@dimen/mgp_text_mid" />
+
+                <LinearLayout
+                    android:id="@+id/mgp_payment_way_card_prompt_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mgp_payment_way_card_prompt1_tv"
+                        android:textColor="@color/mgp_black"
+                        android:textSize="@dimen/mgp_text_small_up" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+
+                    <TextView
+                        android:id="@+id/mgp_payment_way_card_prompt2_TextView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8c8989"
+                        android:textSize="@dimen/mgp_text_small" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

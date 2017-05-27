@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="150" height="150" tilewidth="32" tileheight="32">
+ <imagelayer name="Scene0" width="150" height="150">
+  <image source="Scene.jpg"/>
+ </imagelayer>
+ <objectgroup name="区域" width="150" height="150">
+  <object name="1" x="417" y="1315">
+   <polygon points="0,0 161,90 493,-463 323,-564 181,-320 232,-300 191,-219 131,-245 -7,-1"/>
+  </object>
+  <object name="2" x="724" y="681">
+   <polygon points="0,0 206,119 234,37 336,14 395,-26 534,-90 523,-248 496,-333 315,-299 262,-377 233,-357 201,-401 184,-394 160,-445 178,-490 262,-592 179,-654 -2,-568 -40,-611 -168,-488 -127,-439 -55,-381 -23,-363 53,-287 -19,-169 50,-73"/>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/cy_quick_reply_bg_top" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="快捷回复"
+            android:textColor="#c2c891"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/cy_img_quick_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:src="@drawable/cy_img_close_dialog" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cy_quick_reply_bg_bottom" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/cy_et_quick_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cy_holdspeak_click"
+                    android:cursorVisible="false"
+                    android:hint="点击设置快捷回复"
+                    android:textColor="#c2c891"
+                    android:textColorHint="#d5e8df" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/cy_btn_send_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cy_quick_reply_btn_bg"
+                    android:text="发送"
+                    android:textColor="#bedad8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/cy_et_quick_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cy_holdspeak_click"
+                    android:cursorVisible="false"
+                    android:hint="点击设置快捷回复"
+                    android:textColor="#c2c891"
+                    android:textColorHint="#d5e8df" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/cy_btn_send_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cy_quick_reply_btn_bg"
+                    android:text="发送"
+                    android:textColor="#bedad8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/cy_et_quick_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cy_holdspeak_click"
+                    android:cursorVisible="false"
+                    android:hint="点击设置快捷回复"
+                    android:textColor="#c2c891"
+                    android:textColorHint="#d5e8df" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/cy_btn_send_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cy_quick_reply_btn_bg"
+                    android:text="发送"
+                    android:textColor="#bedad8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/cy_et_quick_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cy_holdspeak_click"
+                    android:cursorVisible="false"
+                    android:hint="点击设置快捷回复"
+                    android:textColor="#c2c891"
+                    android:textColorHint="#d5e8df" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/cy_btn_send_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cy_quick_reply_btn_bg"
+                    android:text="发送"
+                    android:textColor="#bedad8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/cy_et_quick_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cy_holdspeak_click"
+                    android:cursorVisible="false"
+                    android:hint="点击设置快捷回复"
+                    android:textColor="#c2c891"
+                    android:textColorHint="#d5e8df" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/cy_btn_send_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/cy_quick_reply_btn_bg"
+                    android:text="发送"
+                    android:textColor="#bedad8" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

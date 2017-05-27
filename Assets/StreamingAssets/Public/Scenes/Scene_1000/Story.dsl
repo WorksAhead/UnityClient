@@ -1,0 +1,59 @@
+﻿story(1)
+{  
+	onmessage("start")
+	{
+	  sendgfxmessage("Main Camera","StopSound",1);
+	  wait(10);
+	  sendgfxmessage("Main Camera","PlaySound",0);
+	  wait(10);
+	  lockframe(1.0);
+	  wait(10);
+	  camerayaw(0,10);
+	  camerafollow();
+	  showwall("BtoC",false);
+	  showwall("AtoB",false);
+	  showwall("BDoor",true);
+	  wait(10);
+	  sendgfxmessage("UIPortal_Activity","PlayParticle");
+	  sendgfxmessage("UIPortal_PVE","PlayParticle");
+	  sendgfxmessage("UIPortal_PVP","PlayParticle");
+	  wait(10);
+	  loop(6)
+	  {
+	    createnpc(1001+$$);
+	  };
+	   wait(1000);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("cityusermove")
+	{
+	  log("cityusermove:{0} {1} {2}",$0,$1,$2);
+	  objmove($0,vector3($1,0,$2));
+	};
+	onmessage("objarrived")
+	{
+	  log("objarrived, adjust face {0}", $0);
+	  objface($0,-1);
+	};
+	onmessage("cityplayermove")
+	{
+	  if($0==0)
+	  {
+	    playerselfmove(vector3(50,0,80));
+	  };
+	  if($0==1)
+	  {
+	    playerselfmove(vector3(45,0,75));
+	  };
+	  if($0==2)
+	  {
+	    playerselfmove(vector3(45,0,65));
+	  };
+	};
+};
+story(2)
+{  
+};
+story(3)
+{  
+};

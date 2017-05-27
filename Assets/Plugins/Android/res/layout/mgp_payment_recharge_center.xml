@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mgp_white"
+    android:orientation="vertical" >
+    <!-- title bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mgp_title_layout_height"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mgp_payment_recharge_center_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/mgp_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/mgp_gray" />
+    </LinearLayout>
+    <ListView 
+        android:id="@+id/mgp_recharge_center_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/mgp_recharge_center_list_divider"
+        android:dividerHeight="2dip"
+        android:fadingEdge="none">
+        
+    </ListView>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/mgp_recharge_center_list_divider"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+     	android:layout_marginTop="40dip"
+     	android:layout_marginLeft="10dip"
+     	android:layout_marginRight="10dip"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mgp_payment_charge_center_type"
+        android:textSize="13sp"
+        android:text="@string/mgp_payment_charge_center_tips"/>
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_marginLeft="10dip"
+     	android:layout_marginRight="10dip"
+        android:layout_marginTop="3dip"
+        android:textSize="12sp"
+        android:textColor="@color/mgp_payment_charge_center_support"
+        android:text="@string/mgp_payment_charge_center_info1"/>
+    <TextView 
+        android:id="@+id/mgp_recharge_center_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_marginLeft="10dip"
+     	android:layout_marginRight="10dip"
+        android:layout_marginTop="3dip"
+        android:textSize="12sp"
+        android:textColor="@color/mgp_payment_charge_center_support"/>
+
+</LinearLayout>

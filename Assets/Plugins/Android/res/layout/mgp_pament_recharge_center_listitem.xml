@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10.67dip" 
+    android:background="@drawable/mgp_list_item_xbg">
+
+    <ImageView
+        android:id="@+id/mgp_charge_item_iv"
+        android:layout_width="53.33dip"
+        android:layout_height="53.33dip"
+        android:background="@drawable/mgp_payment_way_phone_card" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mgp_charge_item_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mgp_payment_charge_center_mobile"
+            android:textColor="@color/mgp_payment_charge_center_type"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/mgp_charge_item_type_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.5dip"
+            android:text="@string/mgp_payment_charge_center_mobile_info"
+            android:textColor="@color/mgp_payment_charge_center_support"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mgp_payment_way_charge_center_arrow" />
+
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mgp_sdk_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_login_ll_cyouLogo_layout_height" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                    android:layout_weight="188"
+                    android:paddingTop="@dimen/mgp_login_img_cyouLogo_paddingTop"
+                    android:src="@drawable/mgp_login_cyoulogo" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="230"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/login_close_ImageView"
+                        android:layout_width="38dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="44"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/mgp_login_img_close" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="79"
+                        android:gravity="bottom"
+                        android:paddingLeft="10dp"
+                        android:text="@string/mgp_login_tv_cyoulogo"
+                        android:textColor="#e0d0e5"
+                        android:textSize="@dimen/mgp_text_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/login_container_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_login_ll_account_layout_height"
+                android:layout_marginLeft="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                android:layout_marginRight="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                android:layout_marginTop="@dimen/mgp_login_ll_account_marginTop"
+                android:background="@drawable/mgp_login_ll_radius_fillet"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                android:paddingRight="@dimen/mgp_login_ll_root_paddingLeft_and_right" >
+
+                <com.changyou.mgp.sdk.mbi.account.widget.CustomEditText
+                    android:id="@+id/login_et_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mgp_login_et_layout_height"
+                    android:layout_marginTop="@dimen/mgp_login_et_marginTop"
+                    android:background="@drawable/mgp_login_et_account_fillet"
+                    android:drawableLeft="@drawable/mgp_login_land_account"
+                    android:drawableRight="@drawable/mgp_login_acc_show_his_arrow_down"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/mgp_login_et_account_hint"
+                    android:imeOptions="actionNext"
+                    android:maxLength="49"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/mgp_black"
+                    android:textColorHint="@color/mgp_sdk_hint_color"
+                    android:textSize="@dimen/mgp_text_small" />
+				<FrameLayout 
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content">
+	                <EditText
+	                    android:id="@+id/login_et_password"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="@dimen/mgp_login_et_layout_height"
+	                    android:background="@drawable/mgp_login_et_password_fillet"
+	                    android:drawableLeft="@drawable/mgp_login_land_password"
+	                    android:drawablePadding="10dp"
+	                    android:ems="10"
+	                    android:gravity="center_vertical"
+	                    android:hint="@string/mgp_login_et_password_hint"
+	                    android:imeOptions="actionGo"
+	                    android:inputType="textPassword"
+	                    android:longClickable="false"
+	                    android:maxLength="16"
+	                    android:paddingLeft="15dp"
+	                    android:singleLine="true"
+	                    android:textColor="@color/mgp_black"
+	                    android:textColorHint="@color/mgp_sdk_hint_color"
+	                    android:textSize="@dimen/mgp_text_small" />
+	                <TextView
+                    	android:id="@+id/login_tv_forgetPassword"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:layout_gravity="right|center_vertical"
+                    	android:layout_marginRight="10dp"
+                    	android:text="@string/mgp_login_tv_forgetPassword"
+                    	android:textColor="#828181"
+                    	android:textSize="@dimen/mgp_text_small" />
+				</FrameLayout>
+
+                <Button
+                    android:id="@+id/login_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginTop="12dip"
+                    android:background="@drawable/mgp_login_land_btn_onekey_xbg"
+                    android:gravity="center"
+                    android:text="@string/mgp_login_btn_login"
+                    android:textColor="@color/mgp_white"
+                    android:textSize="@dimen/mgp_text_max" />
+
+                <Button
+                    android:id="@+id/login_btn_oneKeyRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/mgp_onekey_regist_btn_xbg"
+                    android:gravity="center"
+                    android:text="@string/mgp_login_btn_oneKeyRegister"
+                    android:textColor="@drawable/mgp_login_onekey_btn_text_xbg"
+                    android:textSize="@dimen/mgp_text_max" />
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mgp_login_ll_qq_and_sina_LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="81dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                    android:text="@string/mgp_login_tv_other_mode"
+                    android:textColor="#e0d0e5"
+                    android:textSize="@dimen/mgp_text_small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mgp_login_ll_other_layout_height"
+                    android:layout_marginLeft="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                    android:layout_marginRight="@dimen/mgp_login_ll_root_paddingLeft_and_right"
+                    android:layout_marginTop="5dp"
+                    android:background="#9852AE" >
+
+                    <ImageView
+                        android:id="@+id/mgp_login_img_sina_ImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/mgp_login_ll_other_login_xbg"
+                        android:padding="@dimen/mgp_login_img_qq_and_sina_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mgp_login_sina" />
+
+                    <ImageView
+                        android:id="@+id/mgp_login_line"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/mgp_login_img_qq_and_sina_padding"
+                        android:layout_marginTop="@dimen/mgp_login_img_qq_and_sina_padding"
+                        android:background="#aa6dbc" />
+
+                    <ImageView
+                        android:id="@+id/mgp_login_img_qq_ImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/mgp_login_ll_other_login_xbg"
+                        android:padding="@dimen/mgp_login_img_qq_and_sina_padding"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/mgp_login_qq" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

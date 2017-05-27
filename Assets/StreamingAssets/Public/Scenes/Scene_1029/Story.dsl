@@ -1,0 +1,314 @@
+﻿story(1)
+{ 
+	local
+	{
+		@Stage(0);
+		@Tencount(0);
+    @Alive(0);
+	};
+	onmessage("start")
+	{
+	  wait(1900);
+	  showwall("BtoC",false);
+	  showwall("1029DoorA",true);
+	  showwall("1029DoorB",true);
+	  wait(10);
+	  publishlogicevent("ge_set_story_state","game",0);
+	  publishgfxevent("ge_set_indicator_invisible","indicator");
+	  wait(100);
+	  publishgfxevent("ge_pve_fightinfo","ui",1,1,1,4);
+	  wait(10);
+	  loop(5)
+	  {
+	  	createnpc(1001+$$);
+	  };
+	  wait(3000);
+	  loop(3)
+	  {
+	  	createnpc(1101+$$);
+	  };
+	  wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 7)
+		{
+		  loop(4)
+		  {
+		  	createnpc(1201+$$);
+		  };
+		  @Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+	};
+	onmessage("allnpckilled")
+	{
+		if(@Stage > 0)
+		{
+			wait(10);
+			@Stage = 0;
+			wait(10);
+			startstory(2);
+			terminate();
+		};
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(2)
+{
+  local
+  {
+    @Stage(0);
+    @Tencount(0);
+    @Alive(0);
+  };
+  onmessage("start")
+	{	
+		wait(3500);
+		publishgfxevent("ge_pve_fightinfo","ui",1,2,2,4);
+		wait(10);
+		loop(5)
+		{
+			createnpc(2001+$$);
+		};
+		wait(3000);
+		loop(3)
+		{
+		  createnpc(2101+$$);
+		};
+		wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 6)
+		{
+			loop(5)
+			{
+				createnpc(2201+$$);
+			};
+			@Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+	};
+	onmessage("allnpckilled")
+	{
+		if(@Stage > 0)
+		{
+			wait(10);
+			@Stage = 0;
+			wait(10);
+			startstory(3);
+			terminate();
+		};
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(3)
+{
+  local
+  {
+    @Stage(0);
+    @Tencount(0);
+    @Alive(0);
+  };
+  onmessage("start")
+	{	
+		wait(3500);
+		publishgfxevent("ge_pve_fightinfo","ui",1,3,3,4);
+		wait(10);
+		loop(4)
+		{
+		  createnpc(3001+$$);
+		};
+		wait(3000);
+		loop(5)
+		{
+			createnpc(3101+$$);
+		};
+		wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 7)
+		{
+			loop(4)
+		  {
+		  	createnpc(3201+$$);
+		  };
+			@Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+	};
+	onmessage("allnpckilled")
+	{
+		if(@Stage > 0)
+		{
+			wait(10);
+			@Stage = 0;
+			wait(10);
+			startstory(4);
+			terminate();
+		};
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(4)
+{
+  local
+  {
+    @Stage(0);
+    @Tencount(0);
+    @Alive(0);
+  };
+  onmessage("start")
+	{	
+		wait(3500);
+		publishgfxevent("ge_pve_fightinfo","ui",1,4,4,4);
+		wait(10);
+		loop(5)
+		{
+			createnpc(4001+$$);
+		};
+		wait(4000);
+		loop(5)
+		{
+			createnpc(4101+$$);
+		};
+		wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 7)
+		{
+			loop(4)
+		  {
+		  	createnpc(4201+$$);
+			};
+			@Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+	};
+	onmessage("allnpckilled")
+	{
+		if(@Stage > 0)
+		{
+			wait(10);
+			@Stage = 0;
+			wait(10);
+			startstory(5);
+			terminate();
+		};
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(5)
+{
+  local
+  {
+    @reconnectCount(0);
+  };
+	onmessage("start")
+	{
+    //camerayaw(-80,3100);
+    //wait(500);
+    //cameraheight(2.3,10);
+	  //cameradistance(7.6,10);
+	  lockframe(0.01);
+    wait(500);
+    lockframe(0.05);
+    wait(1800);
+    lockframe(0.08);
+    wait(300);
+    lockframe(0.2);
+    wait(500);
+    lockframe(1.0);
+		wait(300);
+		//camerayaw(0,100);
+	  //cameraheight(-1,100);
+	  //cameradistance(-1,100);
+	  wait(1000);
+	  publishlogicevent("ge_area_clear", "game",1);
+	  wait(2000);
+		loop(10) 
+		{ 
+		  //检测网络状态 
+		  while(!islobbyconnected() && @reconnectCount<10) 
+		  { 
+		    reconnectlobby();
+		    wait(3000);
+		    inc(@reconnectCount);
+		    loop(10)
+		    {
+		      if(islobbylogining())
+		      {
+		        wait(1000);
+		      };
+		    };
+		    if(islobbylogining())
+		    {
+		      disconnectlobby();
+		    };
+		  };
+		  if(islobbyconnected() && !islobbylogining()) 
+		  { 
+		    missioncompleted(0); 
+		    wait(21000);
+		    disconnectlobby(); 
+		  } else {
+		    wait(10000); 
+		    //terminate(); 
+		  };
+		}; 
+		changescene(0);
+		terminate(); 
+	};
+  onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null" >
+
+    <TextView
+        android:id="@+id/cy_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:maxLength="16"
+        android:maxWidth="150dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:textColor="#f4f1bb"
+        android:textSize="16sp" />
+    
+    <ImageView 
+        android:id="@+id/cy_redpoint_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cy_username_tv"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/cy_redpoint"/>
+    
+
+
+
+</RelativeLayout>

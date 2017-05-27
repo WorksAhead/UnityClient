@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mgp_sdkBackground1"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="10.0dip" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/mgp_quick_into_tv_prompt1"
+                android:textColor="@color/mgp_title_text_color"
+                android:textSize="@dimen/mgp_text_ultra_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="#d7d3d3"
+                android:orientation="vertical"
+                android:padding="1dp" 
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:layout_marginBottom="1dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="53dip"
+                        android:layout_height="fill_parent"
+                        android:background="#F4F4F4"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="21.33dip"
+                            android:layout_height="21.33dip"
+                            android:background="@drawable/mgp_onekey_register_acc_icon"
+                            android:padding="@dimen/mgp_quick_into_account_and_password_padding"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quick_into_account_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dip"
+                        android:background="@null"
+                        android:drawableRight="@drawable/mgp_onekey_register_edit_icon"
+                        android:hint="@string/mgp_regist_onekey_account"
+                        android:imeOptions="actionNext"
+                        android:maxEms="16"
+                        android:paddingLeft="15dip"
+                        android:singleLine="true"
+                        android:textColor="@color/mgp_sdk_color"
+                        android:textColorHint="@color/mgp_sdk_hint_color"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dip"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="53dip"
+                        android:layout_height="fill_parent"
+                        android:background="#F4F4F4"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:layout_width="21.33dip"
+                            android:layout_height="21.33dip"
+                            android:background="@drawable/mgp_onekey_register_passwd_icon"
+                            android:padding="@dimen/mgp_quick_into_account_and_password_padding"
+                            android:scaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/quick_into_password_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dip"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/mgp_regist_onekey_passwd"
+                        android:imeOptions="actionGo"
+                        android:maxEms="16"
+                        android:paddingLeft="15dip"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:textColor="@color/mgp_sdk_color"
+                        android:textColorHint="@color/mgp_sdk_hint_color"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/mgp_regist_for_tel_protocal_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15.0dip"
+                android:singleLine="true"
+                android:text="@string/mgp_regist_protocal"
+                android:textColor="#2c2c2c"
+                android:textSize="13.0sp" />
+
+            <Button
+                android:id="@+id/quick_into_btn_know"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/mgp_quick_into_btn_xbg"
+                android:gravity="center"
+                android:text="@string/mgp_quick_into_btn_know"
+                android:textColor="@color/mgp_sdkBackground1"
+                android:textSize="@dimen/mgp_text_mid" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

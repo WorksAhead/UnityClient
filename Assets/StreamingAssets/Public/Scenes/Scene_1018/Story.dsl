@@ -1,0 +1,355 @@
+﻿story(1)
+{
+	local
+  {
+    @trg(0);
+  };
+	onmessage("start")
+	{	
+		wait(1900);
+		showui(false);
+		publishlogicevent("ge_set_story_state","game",1);
+		sendgfxmessage("GfxGameRoot","EnableBloom");
+		wait(10);
+		sendgfxmessage("Main Camera","DimScreen",10);
+		wait(10);
+		cameraheight(11.5,10);
+		cameradistance(17,10);
+		publishgfxevent("ge_set_indicator_invisible","indicator");
+		wait(10);
+		sendgfxmessage("Main Camera","LightScreen",2000);
+		wait(300);
+	  publishlogicevent("ge_change_player_movemode","game",1);
+	  publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10001),1);
+	  wait(100);
+	  npcmovewithwaypoints(10001,vector2list("41.6441 22.82592 47.167 21.05215 50.8255 22.21408"));
+	  playerselfmovewithwaypoints(vector2list("43.30661 24.02605 48.82951 22.25227 49.6871 23.91948"));
+	  wait(100);
+	  showdlg(101801);
+	  wait(1000);
+	  //publishgfxevent("ge_show_skip","ui",1);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("dialogover",101801)
+	{
+		inc(@trg);
+		if(2==@trg)
+	  {
+	    localmessage("st2");
+	  };
+	};
+	onmessage("playerselfarrived")
+	{
+		playerselfface(0.5435975);
+	  inc(@trg);
+		if(2==@trg)
+	  {
+	    localmessage("st2");
+	  };
+	};
+	onmessage("npcarrived",10001)
+	{
+		npcface(10001,0.0886041);
+	};
+	onmessage("st2")
+	{
+	  publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10002),2);
+	  wait(10);
+	  npcmovewithwaypoints(10002,vector2list("53.59473 31.5577 51.3642 27.46405"));
+	  wait(10);
+	  startstory(2);
+		terminate();	
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(2)
+{ 
+	local
+  {
+    @MCount(0);
+  };
+  onmessage("npcarrived",10001)
+	{
+		npcface(10001,0.0886041);
+	};
+	onmessage("npcarrived",10002)
+	{
+		npcface(10002,3.566467);
+		wait(10);
+		inc(@MCount);
+	  if(1==@MCount)
+	  {
+	    showdlg(101802);
+	  }
+	  else
+	  {
+	  	destroynpc(10002);
+	  };
+	};
+	onmessage("dialogover",101802)
+	{
+		wait(10);
+		npcmovewithwaypoints(10002,vector2list("53.59473 31.5577 62.38514 27.29409"));
+		wait(10);
+		showdlg(101803);
+		wait(10);
+		restartareamonitor(1);
+	};
+	onmessage("dialogover",101803)
+	{
+		publishgfxevent("ge_show_skip","ui",0);
+		sendgfxmessage("Main Camera","DimScreen",300);
+		wait(300);
+	  publishlogicevent("ge_change_player_movemode","game",2);
+	  wait(10);
+	  publishgfxevent("ge_set_indicator_visible","indicator");
+	  sendgfxmessage("Main Camera","LightScreen",2500);
+	  wait(1500);
+	  showui(true);
+	  wait(10);
+	  publishgfxevent("ge_show_skip","ui",0);
+	};
+	onmessage("anyuserenterarea",1)
+	{
+		showui(false);
+		wait(10);
+		sendgfxmessage("Main Camera","DimScreen",10);
+		wait(10);
+		while(isplayerselfbusy()) 
+	  {
+	  	wait(500);
+	  };
+		sendgfxmessage("StoryObj","SetPlayerselfPosition",62.47073,178.9233,46.59911); 
+		publishgfxevent("ge_set_indicator_invisible","indicator");
+		wait(10);
+		publishlogicevent("ge_change_player_movemode","game",1);
+		showwall("BDoor",true);
+		camerafollowimmediately();
+		sendgfxmessage("Main Camera","LightScreen",1800);
+		wait(800);
+		playerselfmovewithwaypoints(vector2list("59.8275 48.22662"));
+		//playerselfmove(vector3(59.8275,178.9233,48.22662));		
+	};
+	onmessage("playerselfarrived")
+	{
+		wait(50);
+	  playerselfface(5.1841254);
+	  //publishgfxevent("ge_show_skip","ui",1);
+	  wait(10);
+	  showdlg(101804);
+	  publishlogicevent("ge_change_npc_movemode","game",unitid2objid(2001),1);
+	};
+	onmessage("dialogover",101804)
+	{
+		wait(10);
+		npcmove(2001,vector3(56.97326,178.9233,49.28206));
+	};
+	onmessage("npcarrived",2001)
+	{
+		showdlg(101805);
+		wait(10);
+		publishlogicevent("ge_change_npc_movemode","game",unitid2objid(2001),2);
+		wait(10);
+		publishlogicevent("ge_change_player_movemode","game",2);
+	};
+	onmessage("dialogover",101805)
+	{
+		publishgfxevent("ge_show_skip","ui",0);
+		sendgfxmessage("Main Camera","DimScreen",300);
+		wait(300);
+		cameraheight(-1,10);
+		cameradistance(-1,10);
+		publishgfxevent("ge_set_indicator_visible","indicator");
+		wait(10);
+		sendgfxmessage("Main Camera","LightScreen",2000);
+		wait(800);
+		publishgfxevent("pve_checkpoint_begin","ui_effect","席列的邀约",1,8);
+		npcaddimpact(2001,88898);
+		wait(1500);
+		setcamp(2001,2);
+		wait(10);
+		showui(true);
+		wait(10);
+		publishlogicevent("ge_set_story_state","game",0);
+		publishgfxevent("ge_show_skip","ui",0);
+		sendgfxmessage("GfxGameRoot","DisableBloom");
+		startstory(3);
+		terminate();	
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(3)
+{
+  local
+  {
+    @hp(0);
+    @maxhp(0);
+    @trg(0);
+  };
+	onmessage("start")
+	{	
+		sendgfxmessage("GfxGameRoot","EnableBloom");
+		@maxhp = getmaxhp(unitid2objid(2001));
+		while(@trg < 1) 
+    { 
+			@hp = gethp(unitid2objid(2001)); 
+      if(@hp < 0.1*@maxhp) 
+      { 
+      	enableai(2001,false);
+        localmessage("EndStory"); 
+        inc(@trg);
+        inc(@trg);
+      }; 
+      wait(1000);
+    }; 
+	};
+	onmessage("EndStory")
+	{
+    //camerayaw(-80,3100);
+    //wait(500);
+    //cameraheight(2.3,10);
+	  //cameradistance(7.6,10);
+	  showui(false);
+	  lockframe(0.01);
+    wait(500);
+    lockframe(0.05);
+    wait(1000);
+    showdlg(101806);
+    wait(800);
+    lockframe(0.08);
+    wait(300);
+    sendgfxmessage("Main Camera","DimScreen",1000);
+    lockframe(0.2);
+    wait(500);
+    lockframe(1.0);
+		wait(300);
+		//camerayaw(0,100);
+	  //cameraheight(-1,100);
+	  //cameradistance(-1,100);
+	  wait(200);
+	  publishgfxevent("ge_set_indicator_invisible","indicator");
+	  destroynpc(2001);
+		wait(800);
+		objstop(playerselfid());
+		publishlogicevent("ge_set_story_state","game",1);
+		wait(1000);
+		while(isplayerselfbusy()) 
+	  {
+	  	wait(1000);
+	  };
+		sendgfxmessage("StoryObj","SetPlayerselfPosition",61.1129,178.9233,48.83145);
+		createnpc(10003);
+		createnpc(10004);
+		wait(10);
+		enableai(10004,false);
+		cameraheight(11.5,10);
+		cameradistance(17,10);
+		wait(10);
+		playerselfface(-3.8199132);
+		objanimation(unitid2objid(10004),102,2010);
+		publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10003),2);
+		wait(10);
+		camerafollowimmediately();
+		npcmovewithwaypoints(10003,vector2list("65.55556 42.4216 61.13185 46.02593"));
+		sendgfxmessage("Main Camera","LightScreen",2000);
+		wait(2000);
+		objanimation(unitid2objid(10004),103,1167);
+	};
+	onmessage("npcarrived",10003)
+	{
+		npcface(10003,5.5233162);
+		showdlg(101807);
+		playerselfface(4.1709269);
+		npcface(10004,1.5891998);
+	};
+	onmessage("dialogover",101807)
+	{
+		showdlg(101808);
+		npcface(10003,-1.4023812);
+		publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10004),1);
+		enableai(10004,true);
+	};
+	onmessage("dialogover",101808)
+	{
+		npcmovewithwaypoints(10004,vector2list("59.04422 43.60259 66.10444 41.66757 73.47844 38.05901"));
+		wait(1500);
+		playerselfface(-3.92734);
+		wait(50);
+		npcface(10003,-4.0305588);
+		wait(1000);
+		showdlg(101809);
+	};
+	onmessage("dialogover",101809)
+	{
+		sendgfxmessage("Main Camera","DimScreen",2500);
+		wait(300);
+		showdlg(101810);
+	  wait(1800);
+	  publishlogicevent("ge_area_clear", "game",1);
+	  wait(10);
+	  startstory(4);
+		terminate();
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(4)
+{
+	local
+  {
+    @reconnectCount(0);
+  };
+	onmessage("start")
+	{	
+		//publishlogicevent("ge_set_story_state","game",0);
+		wait(2000);
+		loop(10) 
+		{ 
+		  //检测网络状态 
+		  while(!islobbyconnected() && @reconnectCount<10) 
+		  { 
+		    reconnectlobby();
+		    wait(3000);
+		    inc(@reconnectCount);
+		    loop(10)
+		    {
+		      if(islobbylogining())
+		      {
+		        wait(1000);
+		      };
+		    };
+		    if(islobbylogining())
+		    {
+		      disconnectlobby();
+		    };
+		  };
+		  if(islobbyconnected() && !islobbylogining()) 
+		  { 
+		    missioncompleted(0); 
+		    wait(21000);
+		    disconnectlobby(); 
+		  } else {
+		    wait(10000); 
+		    //terminate(); 
+		  };
+		}; 
+		changescene(0);
+		terminate(); 
+	};
+  onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};

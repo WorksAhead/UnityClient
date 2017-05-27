@@ -1,0 +1,2236 @@
+fileFormatVersion: 2
+guid: 963df244293f2164aa8a60a7d13f0545
+timeCreated: 1494490359
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Book-book_shadow_glow
+    21300002: Book-close_btn_hover
+    21300004: Book-close_btn_normal
+    21300006: Book-close_btn_pushed
+    21300008: Book-header_background
+    21300010: Container 1-papper
+    21300012: Container 2-border
+    21300014: Container 2-border_full
+    21300016: Container 2-papper
+    21300018: HUD Window-active_tab_background
+    21300020: HUD Window-close_btn_hover
+    21300022: HUD Window-close_btn_normal
+    21300024: HUD Window-icon_bg_decoration
+    21300026: HUD Window-icon_bronze_frame
+    21300028: HUD Window-icon_gold_frame
+    21300030: HUD Window-icon_green_frame
+    21300032: HUD Window-icon_overlay
+    21300034: HUD Window-icon_purple_frame
+    21300036: HUD Window-icon_silver_frame
+    21300038: HUD Window-pagination_background
+    21300040: HUD Window-row_background
+    21300042: HUD Window-tabs_background
+    21300044: HUD Window-window_background
+    21300046: HUD Window-window_frame
+    21300048: HUD-Action Bar-icon_bag_hover
+    21300050: HUD-Action Bar-icon_bag_normal
+    21300052: HUD-Action Bar-icon_bag_pushed
+    21300054: HUD-Action Bar-icon_settings_hover
+    21300056: HUD-Action Bar-icon_settings_normal
+    21300058: HUD-Action Bar-icon_settings_pushed
+    21300060: HUD-Action Bar-main_bar
+    21300062: HUD-Action Bar-main_bar_shadow_glow
+    21300064: HUD-Action Bar-spell_icon_background
+    21300066: HUD-Action Bar-spell_icon_frame
+    21300068: HUD-Action Bar-spell_icon_overlay-hover
+    21300070: HUD-Action Bar-spell_icon_overlay-pushed
+    21300072: HUD-Action Bar-spell_icon_overlay
+    21300074: HUD-Action Bar-sub_icon_empty_background
+    21300076: HUD-Action Bar-sub_icon_empty_shadow_glow
+    21300078: HUD-Cast - Loading Bar-fill_bar
+    21300080: HUD-Cast - Loading Bar-main_frame
+    21300082: HUD-Cast - Loading Bar-main_frame_shadow_glow
+    21300084: HUD-Charcater Frame 1-bronze_main_frame
+    21300086: HUD-Charcater Frame 1-bronze_main_shadow_glow
+    21300088: HUD-Charcater Frame 1-frame_overlay
+    21300090: HUD-Charcater Frame 1-gold_main_frame
+    21300092: HUD-Charcater Frame 1-gold_main_shadow_glow
+    21300094: HUD-Controller-handler
+    21300096: HUD-Controller-handler_shadow_glow
+    21300098: HUD-Controller-main_frame
+    21300100: HUD-Controller-main_frame_shadow_glow
+    21300102: HUD-Frame 2 - Potions-blue_frame
+    21300104: HUD-Frame 2 - Potions-blue_potion
+    21300106: HUD-Frame 2 - Potions-main_frame
+    21300108: HUD-Frame 2 - Potions-main_shadow_glow
+    21300110: HUD-Frame 2 - Potions-orange_frame
+    21300112: HUD-Frame 2 - Potions-orange_potion
+    21300114: HUD-Frame 2 - Potions-red_frame
+    21300116: HUD-Frame 2 - Potions-red_potion
+    21300118: HUD-Frame 2 - Potions-toxic_frame
+    21300120: HUD-Frame 2 - Potions-toxic_potion
+    21300122: HUD-Large Iconholder-hand_icon
+    21300124: HUD-Large Iconholder-icon_overlay_frame
+    21300126: HUD-Large Iconholder-main_frame
+    21300128: HUD-Large Iconholder-main_frame_shadow_glow
+    21300130: HUD-Large Iconholder-sword_icon
+    21300132: HUD-Message Container-message_container
+    21300134: HUD-Simple Unitframe-fill_blue
+    21300136: HUD-Simple Unitframe-fill_red
+    21300138: HUD-Simple Unitframe-main_frame
+    21300140: HUD-Spell Icon-frame_shadow_glow
+    21300142: HUD-Spell Icon-icon_overlay
+    21300144: HUD-Spell Icon-icon_overlay_frame
+    21300146: HUD-Spell Icon-main_frame
+    21300148: HUD-Unitframe-blue_fill_bar
+    21300150: HUD-Unitframe-character_avatar_overlay_frame
+    21300152: HUD-Unitframe-green_fill_xp_bar
+    21300154: HUD-Unitframe-main_frame
+    21300156: HUD-Unitframe-main_frame_shadow_glow
+    21300158: HUD-Unitframe-red_fill_bar
+    21300160: HUD-XP Bar-main_bar
+    21300162: HUD-XP Bar-main_bar_glow_shadow
+    21300164: HUD-XP Bar-xp_fill_bar
+    21300166: Icons-blue_potion
+    21300168: Icons-bubble
+    21300170: Icons-compass
+    21300172: Icons-error
+    21300174: Icons-flag
+    21300176: Icons-like
+    21300178: Icons-message
+    21300180: Icons-note
+    21300182: Icons-orange_potion
+    21300184: Icons-quest_1
+    21300186: Icons-quest_2
+    21300188: Icons-red_potion
+    21300190: Icons-star
+    21300192: Icons-toxic_potion
+    21300194: Icons-up
+    21300196: Loaing Bar-loading_bar
+    21300198: Loaing Bar-loading_bar_shadow_glow
+    21300200: Loaing Bar-loading_fill-orange
+    21300202: LOGIN Container-border
+    21300204: LOGIN Container-container_3
+    21300206: LOGIN Container-container_3_shadow_glow
+    21300208: UI-Checkbox-checkbox_checked
+    21300210: UI-Checkbox-checkbox_hover
+    21300212: UI-Checkbox-checkbox_normal
+    21300214: UI-Gold Button - Circle-goldb_hover
+    21300216: UI-Gold Button - Circle-goldb_normal
+    21300218: UI-Gold Button - Circle-goldb_pushed
+    21300220: UI-Gold Button - Circle-icon_circle_hover
+    21300222: UI-Gold Button - Circle-icon_circle_normal
+    21300224: UI-Gold Button - Circle-icon_circle_pushed
+    21300226: UI-Green Button - Large-lgb_hover
+    21300228: UI-Green Button - Large-lgb_normal
+    21300230: UI-Green Button - Large-lgb_pushed
+    21300232: UI-Green Button - Plus-gb_hover
+    21300234: UI-Green Button - Plus-gb_normal
+    21300236: UI-Green Button - Plus-gb_pushed
+    21300238: UI-Green Button - Plus-icon_plus_hover
+    21300240: UI-Green Button - Plus-icon_plus_normal
+    21300242: UI-Green Button - Plus-icon_plus_pushed
+    21300244: UI-Green, Red Button - Normal-ngb_hover
+    21300246: UI-Green, Red Button - Normal-ngb_normal
+    21300248: UI-Green, Red Button - Normal-ngb_pushed
+    21300250: UI-Green, Red Button - Normal-ngb_red_hover
+    21300252: UI-Green, Red Button - Normal-ngb_red_normal
+    21300254: UI-Green, Red Button - Normal-ngb_red_pushed
+    21300256: UI-Headline-headline_bg
+    21300258: UI-Leather Letter Inner Container-leather_letter_container_bg
+    21300260: UI-Scroll Bar-handler_hover
+    21300262: UI-Scroll Bar-handler_normal
+    21300264: UI-Scroll Bar-main_bar
+    21300266: UI-Seperators-seperator_1
+    21300268: UI-Seperators-seperator_2
+    21300270: UI-Seperators-table_seperator_dark
+    21300272: UI-Seperators-table_seperator_normal
+    21300274: UI-Slider-slider_hand_hover
+    21300276: UI-Slider-slider_hand_normal
+    21300278: UI-Slider-slider_hand_pushed
+    21300280: UI-Slider-slider_main
+    21300282: UI-Table Stars-empty_star
+    21300284: UI-Table Stars-gold_star
+    21300286: UI-Table Stars-white_star
+    21300288: UI-Tabs Menu-button_active_background
+    21300290: UI-Tabs Menu-button_hover_background
+    21300292: UI-Tabs Menu-item_seperator
+    21300294: UI-Tabs Menu-menu_background
+    21300296: UI-Text Background-background_1
+    21300298: UI-Text Background-pagination_background
+    21300300: UI-Text Input-input_focus
+    21300302: UI-Text Input-input_normal
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 1
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 2
+    aniso: 4
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Book-book_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 466
+        width: 594
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Book-close_btn_hover
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1945
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Book-close_btn_normal
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1922
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Book-close_btn_pushed
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1899
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Book-header_background
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 233
+        width: 471
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Container 1-papper
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 647
+        width: 597
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Container 2-border
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 963
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Container 2-border_full
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1441
+        width: 924
+        height: 606
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Container 2-papper
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1444
+        width: 921
+        height: 603
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-active_tab_background
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 1369
+        width: 87
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-close_btn_hover
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1178
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-close_btn_normal
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1029
+        width: 50
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_bg_decoration
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 889
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_bronze_frame
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1547
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_gold_frame
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 1140
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_green_frame
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 971
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_overlay
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 197
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_purple_frame
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 922
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-icon_silver_frame
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 873
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-pagination_background
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 461
+        width: 227
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-row_background
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 303
+        width: 308
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-tabs_background
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 417
+        width: 322
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-window_background
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 151
+        width: 328
+        height: 489
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD Window-window_frame
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 642
+        width: 338
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-icon_bag_hover
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1759
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-icon_bag_normal
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1729
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-icon_bag_pushed
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1699
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-icon_settings_hover
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1669
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-icon_settings_normal
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1639
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-icon_settings_pushed
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 1370
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-main_bar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1048
+        width: 854
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-main_bar_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1191
+        width: 894
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-spell_icon_background
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 372
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-spell_icon_frame
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 1090
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-spell_icon_overlay-hover
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 328
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-spell_icon_overlay-pushed
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 284
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-spell_icon_overlay
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 240
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-sub_icon_empty_background
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 1
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Action Bar-sub_icon_empty_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 547
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Cast - Loading Bar-fill_bar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 362
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Cast - Loading Bar-main_frame
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 8
+        width: 398
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Cast - Loading Bar-main_frame_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 374
+        width: 412
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Charcater Frame 1-bronze_main_frame
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 299
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Charcater Frame 1-bronze_main_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 1036
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Charcater Frame 1-frame_overlay
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 469
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Charcater Frame 1-gold_main_frame
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 194
+        width: 103
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Charcater Frame 1-gold_main_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 895
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Controller-handler
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 467
+        width: 93
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Controller-handler_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 38
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Controller-main_frame
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1662
+        width: 167
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Controller-main_frame_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 1161
+        width: 203
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-blue_frame
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 819
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-blue_potion
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1051
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-main_frame
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 43
+        width: 85
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-main_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 562
+        width: 129
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-orange_frame
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 749
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-orange_potion
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1426
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-red_frame
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 679
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-red_potion
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1487
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-toxic_frame
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 609
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Frame 2 - Potions-toxic_potion
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 1365
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Large Iconholder-hand_icon
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 404
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Large Iconholder-icon_overlay_frame
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 37
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Large Iconholder-main_frame
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 705
+        width: 129
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Large Iconholder-main_frame_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1835
+        width: 173
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Large Iconholder-sword_icon
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 37
+        width: 106
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Message Container-message_container
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1039
+        width: 660
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Simple Unitframe-fill_blue
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 1097
+        width: 123
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Simple Unitframe-fill_red
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1093
+        width: 123
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Simple Unitframe-main_frame
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1624
+        width: 161
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Spell Icon-frame_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1400
+        width: 143
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Spell Icon-icon_overlay
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 564
+        width: 81
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Spell Icon-icon_overlay_frame
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 11
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Spell Icon-main_frame
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 37
+        width: 101
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Unitframe-blue_fill_bar
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1588
+        width: 148
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Unitframe-character_avatar_overlay_frame
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 102
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Unitframe-green_fill_xp_bar
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 887
+        width: 133
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Unitframe-main_frame
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 11
+        width: 307
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Unitframe-main_frame_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 469
+        width: 344
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-Unitframe-red_fill_bar
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1606
+        width: 155
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-XP Bar-main_bar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1169
+        width: 894
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-XP Bar-main_bar_glow_shadow
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1403
+        width: 908
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: HUD-XP Bar-xp_fill_bar
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1189
+        width: 851
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-blue_potion
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 494
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-bubble
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 12
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-compass
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1020
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-error
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 11
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-flag
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 11
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-like
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 14
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-message
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 19
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-note
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 463
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-orange_potion
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 441
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-quest_1
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1271
+        width: 10
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-quest_2
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 1596
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-red_potion
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 594
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-star
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 13
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-toxic_potion
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 416
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Icons-up
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 437
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Loaing Bar-loading_bar
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1130
+        width: 872
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Loaing Bar-loading_bar_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1320
+        width: 906
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Loaing Bar-loading_fill-orange
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1177
+        width: 802
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: LOGIN Container-border
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 963
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: LOGIN Container-container_3
+      rect:
+        serializedVersion: 2
+        x: 1729
+        y: 767
+        width: 314
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: LOGIN Container-container_3_shadow_glow
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 39
+        width: 418
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Checkbox-checkbox_checked
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 12
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Checkbox-checkbox_hover
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 12
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Checkbox-checkbox_normal
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 12
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Gold Button - Circle-goldb_hover
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 15
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Gold Button - Circle-goldb_normal
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 64
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Gold Button - Circle-goldb_pushed
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 64
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Gold Button - Circle-icon_circle_hover
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 825
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Gold Button - Circle-icon_circle_normal
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 777
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Gold Button - Circle-icon_circle_pushed
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 729
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Large-lgb_hover
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 609
+        width: 253
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Large-lgb_normal
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 550
+        width: 253
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Large-lgb_pushed
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 491
+        width: 253
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Plus-gb_hover
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 64
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Plus-gb_normal
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 374
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Plus-gb_pushed
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 374
+        width: 85
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Plus-icon_plus_hover
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 683
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Plus-icon_plus_normal
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 637
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green Button - Plus-icon_plus_pushed
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 591
+        width: 45
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green, Red Button - Normal-ngb_hover
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1108
+        width: 257
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green, Red Button - Normal-ngb_normal
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 982
+        width: 257
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green, Red Button - Normal-ngb_pushed
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 929
+        width: 257
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green, Red Button - Normal-ngb_red_hover
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 876
+        width: 257
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green, Red Button - Normal-ngb_red_normal
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 823
+        width: 257
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Green, Red Button - Normal-ngb_red_pushed
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 770
+        width: 257
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Headline-headline_bg
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 309
+        width: 308
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Leather Letter Inner Container-leather_letter_container_bg
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 2
+        width: 341
+        height: 465
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Scroll Bar-handler_hover
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1844
+        width: 17
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Scroll Bar-handler_normal
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1789
+        width: 17
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Scroll Bar-main_bar
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 1098
+        width: 13
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Seperators-seperator_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1038
+        width: 278
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Seperators-seperator_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1035
+        width: 273
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Seperators-table_seperator_dark
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1316
+        width: 900
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Seperators-table_seperator_normal
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1312
+        width: 900
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Slider-slider_hand_hover
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 2022
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Slider-slider_hand_normal
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1995
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Slider-slider_hand_pushed
+      rect:
+        serializedVersion: 2
+        x: 2025
+        y: 1968
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Slider-slider_main
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 1162
+        width: 46
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Table Stars-empty_star
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 1371
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Table Stars-gold_star
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1140
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Table Stars-white_star
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1111
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Tabs Menu-button_active_background
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 563
+        width: 117
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Tabs Menu-button_hover_background
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 512
+        width: 111
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Tabs Menu-item_seperator
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1190
+        width: 8
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Tabs Menu-menu_background
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1200
+        width: 913
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Text Background-background_1
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 203
+        width: 123
+        height: 357
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Text Background-pagination_background
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 461
+        width: 227
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Text Input-input_focus
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 719
+        width: 255
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: UI-Text Input-input_normal
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 668
+        width: 255
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

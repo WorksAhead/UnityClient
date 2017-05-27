@@ -1,0 +1,306 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: Xhun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 34ee321ee09df9e4bb00b1deb27ac344, type: 2}
+  mSprites:
+  - name: background_Xhun
+    x: 1
+    y: 1
+    width: 202
+    height: 262
+    borderLeft: 12
+    borderRight: 12
+    borderTop: 14
+    borderBottom: 12
+    paddingLeft: 4
+    paddingRight: 4
+    paddingTop: 4
+    paddingBottom: 4
+  - name: cike1
+    x: 693
+    y: 1
+    width: 158
+    height: 218
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 55
+    paddingRight: 45
+    paddingTop: 18
+    paddingBottom: 22
+  - name: cike2
+    x: 383
+    y: 766
+    width: 158
+    height: 248
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 56
+    paddingRight: 44
+    paddingTop: 3
+    paddingBottom: 7
+  - name: cike3
+    x: 202
+    y: 778
+    width: 180
+    height: 240
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 44
+    paddingRight: 34
+    paddingTop: 7
+    paddingBottom: 11
+  - name: cike4
+    x: 852
+    y: 218
+    width: 166
+    height: 214
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 52
+    paddingRight: 40
+    paddingTop: 19
+    paddingBottom: 25
+  - name: cike5
+    x: 204
+    y: 1
+    width: 178
+    height: 236
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 45
+    paddingRight: 35
+    paddingTop: 8
+    paddingBottom: 14
+  - name: cike6
+    x: 152
+    y: 523
+    width: 204
+    height: 254
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 32
+    paddingRight: 22
+    paddingTop: 0
+    paddingBottom: 4
+  - name: cike7
+    x: 542
+    y: 766
+    width: 154
+    height: 240
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 58
+    paddingRight: 46
+    paddingTop: 7
+    paddingBottom: 11
+  - name: cike8
+    x: 357
+    y: 517
+    width: 202
+    height: 248
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 34
+    paddingRight: 22
+    paddingTop: 2
+    paddingBottom: 8
+  - name: cike9
+    x: 1
+    y: 264
+    width: 156
+    height: 258
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 57
+    paddingRight: 45
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jianshi1
+    x: 703
+    y: 220
+    width: 148
+    height: 216
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 57
+    paddingRight: 53
+    paddingTop: 21
+    paddingBottom: 21
+  - name: jianshi2
+    x: 550
+    y: 228
+    width: 152
+    height: 224
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 55
+    paddingRight: 51
+    paddingTop: 17
+    paddingBottom: 17
+  - name: jianshi3
+    x: 383
+    y: 1
+    width: 150
+    height: 230
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 56
+    paddingRight: 52
+    paddingTop: 14
+    paddingBottom: 14
+  - name: jianshi4
+    x: 852
+    y: 1
+    width: 168
+    height: 216
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 47
+    paddingRight: 43
+    paddingTop: 21
+    paddingBottom: 21
+  - name: jianshi5
+    x: 369
+    y: 238
+    width: 180
+    height: 232
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 41
+    paddingRight: 37
+    paddingTop: 13
+    paddingBottom: 13
+  - name: jianshi6
+    x: 534
+    y: 1
+    width: 158
+    height: 226
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 50
+    paddingRight: 50
+    paddingTop: 12
+    paddingBottom: 20
+  - name: jianshi7
+    x: 1
+    y: 782
+    width: 200
+    height: 240
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 31
+    paddingRight: 27
+    paddingTop: 9
+    paddingBottom: 9
+  - name: jianshi8
+    x: 1
+    y: 523
+    width: 150
+    height: 258
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 56
+    paddingRight: 52
+    paddingTop: 0
+    paddingBottom: 0
+  - name: jianshi9
+    x: 158
+    y: 264
+    width: 210
+    height: 252
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 26
+    paddingRight: 22
+    paddingTop: 3
+    paddingBottom: 3
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+  mCoordinates: 0
+  sprites: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1

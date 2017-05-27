@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mgp_onlineserver_custom_dialog_list_item_height"
+        android:background="@color/mgp_white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="384"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mgp_onlineserver_custom_dialog_list_item_img" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="32"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mgp_onlineserver_custom_dialog_list_item_date_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="263"
+                android:gravity="center"
+                android:textColor="#838383"
+                android:textSize="@dimen/mgp_text_ultra_small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="121"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/mgp_onlineserver_custom_dialog_list_item_amount_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/mgp_text_ultra_small" />
+
+                <TextView
+                    android:id="@+id/mgp_onlineserver_custom_dialog_list_item_state_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="#838383"
+                    android:textSize="@dimen/mgp_text_ultra_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

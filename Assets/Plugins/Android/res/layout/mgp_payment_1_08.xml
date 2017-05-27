@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99333333"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:id="@+id/cymg_payment_top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView 
+            android:id="@+id/cymg_payment_top_iv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"/>
+        <ImageButton 
+            android:id="@+id/cymg_payment_close_ibtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:background="@null"/>
+        <ImageButton 
+            android:id="@+id/cymg_payment_record_ibtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <!--  <ImageButton 
+        android:id="@+id/cymg_payment_adv_ibtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:adjustViewBounds="true"/>-->
+    <LinearLayout 
+        android:id="@+id/cymg_payment_content_ll_land"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        
+        <GridView 
+        android:id="@+id/cymg_payment_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingLeft="@dimen/mgp_payment_goods_item_margin"
+        android:paddingRight="@dimen/mgp_payment_goods_item_margin"
+        android:numColumns="3"></GridView>
+        
+   </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <ViewStub 
+	        android:id="@+id/cymg_payment_net_error_view"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout="@layout/mgp_payment_net_error"/>
+        
+    </LinearLayout>
+    
+    
+</LinearLayout>

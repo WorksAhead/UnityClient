@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: ren
+  m_EditorClassIdentifier: 
+  combinedMaterialInfo:
+  - atlases:
+    - {fileID: 0}
+    texPropertyNames:
+    - _MainTex
+  materials:
+  - {fileID: 2100000, guid: afb1706dc2b337a4ea7aafed0f1df608, type: 2}
+  - {fileID: 2100000, guid: 3168fb3af7da2a84494f71f1754d80ca, type: 2}
+  prefabUVRects:
+  - serializedVersion: 2
+    x: .00156250002
+    y: .001953125
+    width: .796875
+    height: .99609375
+  - serializedVersion: 2
+    x: .801562488
+    y: .001953125
+    width: .196875006
+    height: .24609375
+  resultMaterial: {fileID: 2100000, guid: 6a7b1103d9c237649a74cff036adc38e, type: 2}
+  resultMaterials: []
+  doMultiMaterial: 0
+  fixOutOfBoundsUVs: 0

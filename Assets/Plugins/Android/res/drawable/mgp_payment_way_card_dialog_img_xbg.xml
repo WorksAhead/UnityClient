@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/mgp_payment_way_card_dialog_btn_img_selected" android:state_checked="true" android:state_enabled="true"/>
+    <item android:drawable="@drawable/mgp_payment_way_card_dialog_btn_img_select" android:state_checked="false" android:state_enabled="true"/>
+
+</selector>

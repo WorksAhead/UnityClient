@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mgp_sdkBackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mgp_title_layout_height"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mgp_onlineserver_feedback_1_03_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/mgp_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/mgp_gray" />
+    </LinearLayout>
+
+    <com.changyou.mgp.sdk.mbi.ui.widget.NetErrorView
+        android:id="@+id/mgp_onlineserver_feedback_1_03_error_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </com.changyou.mgp.sdk.mbi.ui.widget.NetErrorView>
+
+    <ScrollView
+        android:id="@+id/mgp_onlineserver_feedback_1_03_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/mgp_onlineserver_feedback_1_03_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mgp_sdkBackground"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/mgp_onlineserver_feedback_1_03_padding_left_and_right"
+            android:paddingRight="@dimen/mgp_onlineserver_feedback_1_03_padding_left_and_right"
+            android:paddingTop="@dimen/mgp_onlineserver_feedback_1_03_padding_left_and_right"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_onlineserver_feedback_1_03_view1_layout_height"
+                android:layout_marginBottom="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom"
+                android:background="#d7d3d3"
+                android:padding="0.5dp" >
+
+                <TextView
+                    android:id="@+id/mgp_onlineserver_feedback_1_03_question_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/mgp_onlineserver_feedback_spinner_bg"
+                    android:gravity="center_vertical"
+                    android:hint="@string/mgp_onlineserver_feedback_question_tv"
+                    android:paddingLeft="@dimen/mgp_onlineserver_feedback_1_03_padding_left_and_right"
+                    android:longClickable="false"
+                    android:textColor="@color/mgp_black"
+                    android:textColorHint="@color/mgp_black"
+                    android:textSize="@dimen/mgp_text_mid" />
+            </LinearLayout>
+
+            <com.changyou.mgp.sdk.mbi.ui.widget.ScrollEditLayout
+                android:id="@+id/mgp_onlineserver_feedback_1_03_ScrollEditLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_onlineserver_feedback_1_03_view2_layout_height"
+                android:layout_marginBottom="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom"
+                android:layout_marginTop="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom" 
+                android:background="@drawable/mgp_onlineserver_ll_fillet">
+
+                <LinearLayout
+                    android:id="@+id/mgp_onlineserver_feedback_1_03_ScrollEditLayout_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                        <EditText
+                            android:id="@+id/mgp_onlineserver_feedback_1_03_content_EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/mgp_white"
+                            android:layout_margin="0.5dp"
+                            android:ems="10"
+                            android:gravity="top"
+                            android:hint="@string/mgp_onlineserver_feedback_describe_ed"
+                            android:imeOptions="flagNoExtractUi"
+                            android:maxLength="1500"
+                            android:padding="@dimen/mgp_onlineserver_feedback_1_03_padding_left_and_right"
+                            android:textColor="@color/mgp_black"
+                            android:textColorHint="#b5b6b7"
+                            android:textSize="15sp" >
+                        </EditText>
+                </LinearLayout>
+            </com.changyou.mgp.sdk.mbi.ui.widget.ScrollEditLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_onlineserver_feedback_1_03_view3_layout_height"
+                android:layout_marginBottom="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom"
+                android:layout_marginTop="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom"
+                android:background="@drawable/mgp_onlineserver_ll_fillet"
+                android:orientation="horizontal"
+                android:padding="1dp" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="60"
+                    android:background="@color/mgp_white"
+                    android:padding="@dimen/mgp_onlineserver_feedback_1_03_phone_padding"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mgp_mail_regist_tel_pic" />
+
+                <EditText
+                    android:id="@+id/mgp_onlineserver_feedback_1_03_phone_EditText"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="386"
+                    android:background="#FFFFFF"
+                    android:digits="1234567890"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="@string/mgp_onlineserver_feedback_phone_ed"
+                    android:maxLength="12"
+                    android:phoneNumber="true"
+                    android:singleLine="true"
+                    android:textColor="@color/mgp_black"
+                    android:textColorHint="#b5b6b7"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/mgp_onlineserver_feedback_1_03_feedback_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_onlineserver_feedback_1_03_view4_layout_height"
+                android:layout_marginBottom="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom"
+                android:layout_marginTop="@dimen/mgp_onlineserver_feedback_1_03_view_margin_top_and_bottom"
+                android:background="@drawable/mgp_onlineserver_feedback_btn_xbg"
+                android:text="@string/mgp_onlineserver_feedback_feedback_btn"
+                android:textColor="@drawable/mgp_onlineserver_feedback_btn_text_xbg"
+                android:textSize="@dimen/mgp_text_mid" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_onlineserver_feedback_1_03_view5_layout_height"
+                android:layout_marginBottom="@dimen/mgp_onlineserver_feedback_1_03_button_margin_top_and_bottom"
+                android:layout_marginTop="@dimen/mgp_onlineserver_feedback_1_03_button_margin_top_and_bottom"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/mgp_onlineserver_feedback_1_03_onlineIM_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/mgp_onlineserver_feedback_1_03_IM_margin_right"
+                    android:layout_weight="1"
+                    android:background="@drawable/mgp_onlineserver_fun_btn_xbg"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="11" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="34"
+                        android:scaleType="center"
+                        android:src="@drawable/mgp_onlineserver_im" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="38"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="3dp"
+                        android:text="@string/mgp_onlineserver_feedback_im_btn"
+                        android:textColor="@color/mgp_white"
+                        android:textSize="@dimen/mgp_text_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mgp_onlineserver_feedback_1_03_serverTEL_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mgp_onlineserver_feedback_1_03_servertel_margin_left_and_right"
+                    android:layout_marginRight="@dimen/mgp_onlineserver_feedback_1_03_servertel_margin_left_and_right"
+                    android:layout_weight="1"
+                    android:background="@drawable/mgp_onlineserver_fun_btn_xbg"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="11" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="34"
+                        android:scaleType="center"
+                        android:src="@drawable/mgp_onlineserver_servertel" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="38"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="3dp"
+                        android:text="@string/mgp_onlineserver_feedback_servertel_btn"
+                        android:textColor="@color/mgp_white"
+                        android:textSize="@dimen/mgp_text_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mgp_onlineserver_feedback_1_03_intoBBS_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/mgp_onlineserver_feedback_1_03_bbs_margin_left"
+                    android:layout_weight="1"
+                    android:background="@drawable/mgp_onlineserver_fun_btn_xbg"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="11" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="34"
+                        android:scaleType="center"
+                        android:src="@drawable/mgp_onlineserver_bbs" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="38"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="3dp"
+                        android:text="@string/mgp_onlineserver_feedback_bbs_btn"
+                        android:textColor="@color/mgp_white"
+                        android:textSize="@dimen/mgp_text_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mgp_onlineserver_feedback_1_03_view6_layout_height"
+                android:gravity="center"
+                android:text="@string/mgp_onlineserver_feedback_server_email_tv"
+                android:textColor="#7C7C7C"
+                android:textSize="@dimen/mgp_text_small" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

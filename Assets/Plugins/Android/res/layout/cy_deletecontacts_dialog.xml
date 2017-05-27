@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/cy_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+		android:gravity="center_vertical"
+		android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:background="#ebebeb"
+        android:textColor="#666666" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33b5e5" />
+
+    <Button
+        android:id="@+id/cy_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+		android:gravity="center_vertical"
+		android:paddingLeft="10dp"
+        android:text="删除私聊"
+        android:textSize="16sp"
+        android:background="@drawable/cy_delete_btn_selector"
+        android:textColor="#666666" />
+
+</LinearLayout>

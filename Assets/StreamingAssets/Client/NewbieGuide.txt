@@ -1,0 +1,32 @@
+﻿Id	TriggerLevelMini	TriggerLevelMax	TriggerSceneId	GroupId	TriggerUiId	ResetToGuideId	TargetChildPath	GuideUiPath	TargetChildIndex	NeedGuideDlg	AlwaysNeedGuideDlg	IsSpeakerAtLeft	Words	ScreenPosition	Rotate	Visible	Type	PreviousGuideId	LocalPosition	ChildNumber	ChildName	Scale
+#0	"00T_MainCity = 0(主城),T_MissionPanel =1（任务）,T_SceneSelect =2（副本选择）, T_SceneIntroduce =3（副本介绍）,T_Equiment=4（装备）,T_EquimentInfo =5（装备信息）,T_SkillPanel =6（技能）,T_PartnerPanel=7（伙伴界面）,T_PartnerStrenthen=8（伙伴强化界面）,T_PartnerLiftUp =9（伙伴技能进阶）,T_Activity=10（活动）"""										是否每次显示对话框											
+1	1	2	-1	1002	0	-1	MainCityUI(Clone)/UIPanel_1/UIAnchor-TopRight/Entrance-Mission			TRUE	FALSE	TRUE	跟随任务继续冒险吧	0.535|0.72	0|0|0	TRUE	1		15|-10|0			0.8|0.8|0.8
+2	1	2	-1	1002	1	1	Container/Scroll View/Grid/0			FALSE	FALSE	TRUE	点击任务会前往对应副本，现在尝试一下吧。	0.2|0.36	30|0|20	FALSE	4		100|-30|0	0		
+3	1	2	-1	1002	2	2	Scroll View/Grid/Chapter(Clone)/Scene1			FALSE	FALSE	TRUE	这里就是副本界面了...未来我们的冒险将由此展开，好激动的说。	0.3|0.44	30|0|20	FALSE	4		100|-30|0	0		
+4	1	2	-1	1002	3	3	Button/challenge			FALSE	FALSE	TRUE	勇者大人，让我们开始战斗吧，我已经迫不及待了。	0.1|0.32	30|0|20	FALSE	1		100|-30|0			
+5	2	3	-1	1003	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Bottom/Entrance-Bottom/Entrance-Equipment			TRUE	FALSE	TRUE	这里可以更换装备	0.469|0.305			2	101				
+6	2	3	-1	1003	4	5	PokeyContainer/EquipContainer/Left Scroll View/Grid		1	TRUE	FALSE	TRUE	点击更好的装备更换吧	0.523|0.456			100	101				
+7	2	3	-1	1003	5	6	SpriteInlay			FALSE	FALSE	TRUE	比身上的装备好很多啊，那么马上更换吧。	0.12|0.24			2	101				
+8	2	4	-1	1004	4		HeroEquip/Equipment		1	TRUE	FALSE	TRUE	即时更换装备，装备的等级依然会保留哦	0.254|0.128	0.1|0.2|0.3	FALSE	1		50|-40|0			
+9	2	4	-1	1004	5	8	SpriteUpdate			FALSE	FALSE	TRUE	装备升级后更换装备依然会继承等级，所以有时间一定要来升级哦！	0.42|0.24	0.1|0.2|0.3	FALSE	1		50|-40|0			
+10	3	5	-1	1005	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Bottom/Entrance-Bottom/Entrance-Skill			TRUE	FALSE	TRUE	好像领悟了新技能，现在去看一下吧	0.469|0.305			2	103				
+11	3	5	-1	1005	6	10	SkillStorage/ScrollView/Grid		3	FALSE	FALSE	TRUE	不同的技能有不同的作用，合理搭配才能更好的战胜敌人...当然这些勇者大人一定都知道的吧。	0.1|0.33	0|0|0	TRUE	1		15|-10|0			0.8|0.8|0.8
+12	3	5	-1	1005	6	11	SkillInfo/02LevelUpInfo/bt			TRUE	FALSE	TRUE	升级技能后，技能的伤害会得到大幅提升	0|0.3	0.1|0.2|0.3	FALSE	4		50|-40|0	0		
+13	7	15	1016	1007	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Bottom/Entrance-Bottom/Entrance-Partner			TRUE	FALSE	TRUE	有新同伴加入我们的队伍，快去看看吧	0.469|0.305	0.1|0.2|0.3	FALSE	1		50|-40|0			
+14	7	15	1016	1007	7	13	right/PartnerList/Scroll View/Grid		1	FALSE	FALSE	TRUE	点击对应的同伴就可以查看她的相关信息了，也没什么可看的嘛	0.32|0.46	0.1|0.2|0.3	FALSE	1		50|-40|0			
+15	7	15	1016	1007	7	14	left/Buttons/Container/04Played			TRUE	FALSE	TRUE	点击出战后，战斗中就可以召唤这位同伴了	0.245|0.681	0.1|0.2|0.3	FALSE	1		50|-40|0			
+16	7	15	1016	1007	7		left/Buttons/03Lift			TRUE	FALSE	TRUE	在这里可以训练同伴的技能	0.204|0.326			2	201				
+17	7	15	1016	1007	9	16	bt			FALSE	FALSE	TRUE	正好我们有足够的魔石，那么让我们开始训练吧	0.469|0.305			2	201				
+18	8	15	1017	1008	7		left/Buttons/02Strengthen			TRUE	FALSE	TRUE	通过属性强化，可以大幅度提升同伴战力	0.081|0.325			2	201				
+19	8	15	1017	1008	8	18	bt			FALSE	FALSE	TRUE	强化的等级越高，失败的概率就越高，现在就来试试运气吧	0.469|0.305	0|0|0	TRUE	1		15|-10|0			0.8|0.8|0.8
+20	9	15	1017	1009	2		Title/chapter_type/master_button			TRUE	FALSE	TRUE	精英关卡虽然难度较高，但收益也会更高哦	0.584|0.781	30|0|20	FALSE	4		100|-30|0	0		
+21	10	12	-1	1010	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Bottom/Entrance-Bottom/Entrance-XHun			TRUE	FALSE	TRUE	这里可以改变武器的外形	0.469|0.305	30|0|20	FALSE	4		100|-30|0	0		
+22	14	16	-1	1011	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Right/Entrance-Right/Entrance-Trial			TRUE	FALSE	TRUE	日常活动收益非常高，每天必做哦	0.469|0.305	30|0|20	FALSE	4		100|-30|0	1		
+23	15	17	-1	1011	10		Scroll View/Grid/1Unit-Gold			FALSE	FALSE	TRUE	刷金活动中能获得大量金币奖励，赶快试试吧	0.38|0.24	30|0|20	FALSE	1		100|-30|0			
+24	20	22	-1	1012	6		SkillStorage/ScrollView/Grid		5	TRUE	FALSE	TRUE	拖动更换装备的技能	0.385|0.553			2	301				
+25	12	14	-1	1013	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Right/Entrance-Right/Entrance-Match			TRUE	FALSE	TRUE	在这里和其他玩家战斗，不同的竞技场有不同的规则哦	0.469|0.305			2	303				
+26	19	20	-1	1014	10		Scroll View/Grid/2Unit-Treasure			FALSE	FALSE	TRUE	人鱼宝藏里有很多稀有的宝物，但是怪物非常凶险，勇者大人要小心哦	0|0.24			2	302				
+27	20	22	-1	1015	0		MainCityUI(Clone)/UIPanel_1/UIAnchor-BottomRight/Entrance-Bottom/Entrance-Bottom/Entrance-GodEquip			TRUE	FALSE	TRUE	传说中神器会提供很多强大的特殊属性	0.469|0.305	30|0|20	FALSE	4		100|-30|0	0		
+28	14	16	-1	1016	10		Scroll View/Grid/3Unit-Trial			FALSE	FALSE	TRUE	英雄试炼是和其他小伙伴一起战斗，快和土豪做朋友吧！	0.18|0.24			2	301				
+29	1	100	1014	1017	11		Ex			TRUE	FALSE	TRUE	Ex技能	0.18|0.24			2	301				
+30	1	100	-1	1018	12		SummonPartner			TRUE	TRUE	TRUE	点击召唤同伴	0|0.54			2	301				

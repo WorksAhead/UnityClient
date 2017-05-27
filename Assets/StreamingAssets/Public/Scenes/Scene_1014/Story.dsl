@@ -1,0 +1,394 @@
+﻿story(1)
+{ 
+	local
+  {
+    @Stage(0);
+    @Tencount(0);
+    @Alive(0);
+  };
+	onmessage("start")
+	{
+		wait(1900);
+		sendgfxmessage("GfxGameRoot","EnableBloom");
+		showui(false);
+		publishlogicevent("ge_set_story_state","game",1);
+		sendgfxmessage("Main Camera","DimScreen",10);
+		cameraheight(11.5,10);
+		cameradistance(17,10);
+		sendgfxmessage("StoryObj_1014","SetVisible",0);
+		wait(10);
+		sendgfxmessage("Main Camera","LightScreen",2000);
+		publishgfxevent("ge_set_indicator_invisible","indicator");
+		showdlg(101401);
+		setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("dialogover",101401)
+	{
+		wait(10);
+		publishlogicevent("ge_switch_combatstate","game",playerselfid(),1000);
+		wait(300);
+		showdlg(101402);
+	};
+	onmessage("dialogover",101402)
+	{
+	  wait(10);
+	  publishgfxevent("ge_show_skip","ui",0);
+	  sendgfxmessage("Main Camera","DimScreen",1000);
+		wait(900);
+		destroynpc(10001);
+		cameraheight(-1,10);
+		cameradistance(-1,10);
+		wait(100);
+		sendgfxmessage("Main Camera","LightScreen",2500);
+		wait(800);
+		publishgfxevent("pve_checkpoint_begin","ui_effect","暴力美学",1,4);
+		wait(1500);
+		showui(true);
+		wait(100);
+		publishlogicevent("ge_switch_combatstate","game",playerselfid(),1);
+		publishgfxevent("ge_show_skip","ui",0);
+		loop(7)
+	  {
+	    setcamp(1001+$$,2);
+	  };
+	  publishlogicevent("ge_set_story_state","game",0);
+	  publishgfxevent("ge_set_indicator_visible","indicator");
+	  wait(900);
+	  setrage(playerselfid(),300);
+	  wait(1000);
+	  sendgfxmessage("GfxGameRoot","DisableBloom");
+	  wait(5100);
+	  loop(4)
+	  {
+	    createnpc(1101+$$);
+	  };
+	  wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 5)
+		{
+			loop(3)
+			{
+				createnpc(1201+$$);
+			};
+			wait(500);
+			@Tencount = 2;
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+		if(@Tencount == 2 && @Alive < 6)
+		{
+			loop(5)
+			{
+				createnpc(1301+$$);
+			};
+			@Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+	};
+	onmessage("allnpckilled")
+	{
+		if(@Stage > 0)
+		{
+			wait(600);
+			publishlogicevent("ge_area_clear", "game",0);
+			wait(1500);
+			showwall("AtoB",false);
+			wait(100);
+			restartareamonitor(2);
+		};
+	};
+	onmessage("anyuserenterarea",2)
+	{
+		showwall("BDoor",true);
+		startstory(2);
+		terminate();	  
+	};
+  onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(2)
+{
+	local
+  {
+    @Stage(0);
+    @Tencount(0);
+    @Alive(0);
+  };
+	onmessage("start")
+	{
+		wait(10);
+	  loop(7)
+	  {
+	    createnpc(2001+$$);
+	  };
+	  wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 5)
+		{
+			loop(5)
+			{
+				createnpc(2101+$$);
+			};
+			wait(500);
+			@Tencount = 2;
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+		if(@Tencount == 2 && @Alive < 5)
+		{
+			loop(5)
+			{
+				createnpc(2201+$$);
+			};
+			@Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+	};
+	onmessage("allnpckilled")
+	{
+		if(@Stage > 0)
+		{
+			wait(600);
+			publishlogicevent("ge_area_clear", "game",0);
+			wait(1500);
+			showwall("BtoC",false);
+			wait(100);
+			restartareamonitor(3);
+		};
+	};
+	onmessage("anyuserenterarea",3)
+	{
+		showwall("CDoor",true);
+		startstory(3);
+		terminate();
+	};
+  onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(3)
+{
+  local
+  {
+    @Stage(0);
+    @Tencount(0);
+    @Alive(0);
+  };
+	onmessage("start")
+	{	
+		wait(10);
+	  loop(5)
+	  {
+  	  createnpc(3001+$$);
+  	};  
+  	wait(500);
+	  @Tencount = 1;
+	  wait(500);
+	  setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+	};
+	onmessage("objkilled")
+	{
+		@Alive = $1;
+		if(@Tencount == 1 && @Alive < 7)
+		{
+			loop(2)
+			{
+				createnpc(3101+$$);
+			};
+			wait(500);
+			@Tencount = 2;
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+		if(@Tencount == 2 && @Alive < 7)
+		{
+			loop(2)
+			{
+				createnpc(3201+$$);
+			};
+			wait(500);
+			@Tencount = 3;
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+		if(@Tencount == 3 && @Alive < 7)
+		{
+			loop(3)
+			{
+				createnpc(3301+$$);
+			};
+			@Tencount = 0;
+			wait(500);
+			inc(@Stage);
+			wait(500);
+			setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
+		};
+		//log("Stage:"+@Stage);
+	};
+	onmessage("allnpckilled")
+	{
+	  //log("allnpckilled:"+@Stage);
+		if(@Stage > 0)
+		{
+			@Stage = 0;
+    //camerayaw(-80,3100);
+    //wait(500);
+    //cameraheight(2.3,10);
+	  //cameradistance(7.6,10);
+	  lockframe(0.01);
+    wait(500);
+    lockframe(0.05);
+    wait(1800);
+    lockframe(0.08);
+    wait(300);
+    lockframe(0.2);
+    wait(500);
+    lockframe(1.0);
+		wait(300);
+		//camerayaw(0,100);
+	  //cameraheight(-1,100);
+	  //cameradistance(-1,100);
+	  wait(1000);
+	  while(isplayerselfbusy()) 
+	  {
+	  	wait(1000);
+	  };
+	  sendgfxmessage("GfxGameRoot","EnableBloom");
+	  localmessage("EndStory");
+		};
+	};
+	onmessage("EndStory")
+	{
+		wait(10);
+	  sendgfxmessage("Main Camera","DimScreen",1000);
+		wait(900);
+		showui(false);
+		publishlogicevent("ge_set_story_state","game",1);
+		wait(100);
+		sendgfxmessage("StoryObj_1014","SetPlayerselfPosition",77.94231,167.625,48.03176);
+		wait(100);
+		playerselfface(0.4207975);
+		createnpc(10002);
+		createnpc(10003);
+		camerafollowimmediately();
+		sendgfxmessage("StoryObj_1014","SetVisible",1);
+		cameraheight(13.5,10);
+		cameradistance(17,10);
+		wait(100);
+		sendgfxmessage("Main Camera","LightScreen",2000);
+		wait(800);
+		showdlg(101403);
+	};
+	onmessage("dialogover",101403)
+	{
+		publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10003),2);
+	  wait(10);
+	  npcmove(10003,vector3(74.76988,167.625,50.70258));
+	};
+	onmessage("npcarrived",10003)
+	{
+	  wait(10);
+	  npcface(10003,1.8102782);
+	  showdlg(101404);
+	  wait(500);
+	  npcface(10002,4.5320338);
+	  playerselfface(5.3742651);
+	};
+	onmessage("dialogover",101404)
+	{
+		wait(10);
+		publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10003),1);
+	  publishlogicevent("ge_change_npc_movemode","game",unitid2objid(10002),1);
+	  publishlogicevent("ge_change_player_movemode","game",1);
+	  wait(10);
+	  npcmove(10003,vector3(62.24829,167.625,54.85304));
+	  npcmove(10002,vector3(66.74474,167.625,54.94772));
+	  playerselfmove(vector3(64.85124,167.625,51.62471));
+	  wait(300);
+	  sendgfxmessage("Main Camera","DimScreen",2500);
+	  wait(10);
+	  cameradistance(23,2500);
+	  wait(2100);
+	  publishlogicevent("ge_area_clear", "game",1);
+	  wait(10);
+	  startstory(4);
+		terminate();
+	};
+	onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};
+story(4)
+{
+	local
+  {
+    @reconnectCount(0);
+  };
+	onmessage("start")
+	{
+		//publishlogicevent("ge_set_story_state","game",0);
+		wait(2000);
+		loop(10) 
+		{ 
+		  //检测网络状态 
+		  while(!islobbyconnected() && @reconnectCount<10) 
+		  { 
+		    reconnectlobby();
+		    wait(3000);
+		    inc(@reconnectCount);
+		    loop(10)
+		    {
+		      if(islobbylogining())
+		      {
+		        wait(1000);
+		      };
+		    };
+		    if(islobbylogining())
+		    {
+		      disconnectlobby();
+		    };
+		  };
+		  if(islobbyconnected() && !islobbylogining()) 
+		  { 
+		    missioncompleted(0); 
+		    wait(21000);
+		    disconnectlobby(); 
+		  } else {
+		    wait(10000); 
+		    //terminate(); 
+		  };
+		}; 
+		changescene(0);
+		terminate(); 
+	};
+  onmessage("missionfailed")
+  {
+    changescene(0);
+    terminate();
+  };
+};

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mgp_sdkBackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mgp_title_layout_height"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mgp_regist_container_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            layout="@layout/mgp_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/mgp_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+            
+	        <LinearLayout
+	            android:layout_width="match_parent"
+				android:layout_height="@dimen/mgp_register_tab_layout_height"
+	            android:gravity="center_vertical"
+	            android:orientation="horizontal"
+	            android:background="@drawable/mgp_register_tab_bg" >
+	
+	            <TextView
+	                android:id="@+id/mgp_register_onekey_tv"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:gravity="center"
+	                android:text="@string/mgp_register_tab_mail_text"
+	                android:textColor="#231815"
+	                android:textSize="16.0sp" />
+	
+	            <View
+	                android:layout_width="1dp"
+	                android:layout_height="20dp"
+	                android:background="@color/mgp_register_tab_gray" />
+	
+	            <TextView
+	                android:id="@+id/mgp_register_tel_tv"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:gravity="center"
+	                android:text="@string/mgp_register_tab_tel_text"
+	                android:textColor="#b5b6b7"
+	                android:textSize="16.0sp" />
+	        </LinearLayout>
+	        <ImageView
+	            android:id="@+id/mgp_register_moving_cursor"
+	            android:layout_width="match_parent"
+	            android:layout_height="4dp"
+	            android:scaleType="matrix"
+	            android:layout_gravity="bottom"
+	            android:src="@color/mgp_sdk_color" />
+        </FrameLayout>
+
+        <com.changyou.mgp.sdk.mbi.ui.widget.CustomViewPager
+            android:id="@+id/mgp_register_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:persistentDrawingCache="animation" >
+        </com.changyou.mgp.sdk.mbi.ui.widget.CustomViewPager>
+    </LinearLayout>
+
+    <com.changyou.mgp.sdk.mbi.ui.widget.NetErrorView
+        android:id="@+id/mgp_regist_for_tel_error_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+    </com.changyou.mgp.sdk.mbi.ui.widget.NetErrorView>
+
+</LinearLayout>

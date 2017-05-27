@@ -1,0 +1,25 @@
+======================
+Version 2.8.3
+
+Fixed bug where can only create one result material when creating multiple result materials
+
+Fixed bug when baking all bakers in scene if one has no objects
+
+Cleaned up error message when have not created texture bake results
+
+======================
+Version 2.8.2
+
+Added Mesh Baker texture packer
+
+Added button to auto generate source to combined material mappings from objects to combine
+
+Changed texture format messages from warnings to info messages
+
+Fixed null pointer exception when baking assets in place
+
+cleaned up code in TextureCombiner
+
+Added Show/Hide to the API which just updates triangles
+
+

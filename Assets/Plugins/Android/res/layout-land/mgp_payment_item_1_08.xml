@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cymg_payment_parent_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/mgp_payment_goods_item_margin"
+    android:layout_marginRight="@dimen/mgp_payment_goods_item_margin"
+    android:padding="@dimen/mgp_payment_goods_item_padding"
+    android:background="#00FFFFFF"
+    android:orientation="vertical">
+        
+        <ImageView
+	        android:id="@+id/cymg_payment_item_iv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:scaleType="fitXY"
+	        android:layout_gravity="center_horizontal"/>
+	    
+		<com.changyou.mgp.sdk.mbi.ui.widget.MarqueeTextView
+		    android:id="@+id/cymg_payment_item_name_tv"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:layout_gravity="center_horizontal"
+		    android:textSize="17.3sp"
+		    android:singleLine="true"
+		    android:ellipsize="marquee"
+            android:focusable="false"
+            android:background="@color/mgp_goods_item_bg"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+		    android:textColor="#dedcde"/>
+		
+		<TextView
+		    android:layout_width="match_parent"
+		    android:layout_height="2.0dip"
+		    android:background="@drawable/cymg_payment_item_dash"/>
+		
+		<com.changyou.mgp.sdk.mbi.ui.widget.MarqueeTextView
+		    android:id="@+id/cymg_payment_item_price_tv"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:textSize="16.7sp"
+		    android:gravity="center"
+		    android:layout_gravity="center_horizontal"
+		    android:singleLine="true"
+		    android:ellipsize="marquee"
+            android:focusable="false"
+            android:background="@color/mgp_goods_item_bg"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+		    android:textColor="#f9e045"/>
+        
+</LinearLayout>

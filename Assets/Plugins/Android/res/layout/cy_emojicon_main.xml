@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cy_rc_white" >
+
+        <View
+            android:id="@+id/cy_lines"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/cy_itemsplit" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/cy_viewPager"
+            android:layout_below="@id/cy_lines"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </android.support.v4.view.ViewPager>
+
+        <com.rockerhieu.emojicon.CirclePageIndicator
+            android:id="@+id/cy_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_below="@id/cy_viewPager"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="@drawable/mgp_payment_net_error_xbg"
+    android:gravity="center">
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.3dip"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/mgp_common_net_error_pic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/mgp_net_error_hint1"
+        android:textColor="#8b8a8a"
+        android:textSize="20.0sp"/>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/mgp_net_error_hint2"
+        android:textColor="#8b8a8a"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginLeft="33.0dip"
+        android:layout_marginRight="33.0dip"
+        android:textSize="15.0sp"/>
+    
+    <Button 
+        android:id="@+id/mgp_payment_net_error_refresh_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10.0dip"
+        android:layout_marginTop="15.3dip"
+        android:textColor="@color/mgp_white"
+        android:background="@drawable/mgp_payment_net_error_refresh_btn_xbg"
+        android:text="@string/mgp_refresh"
+        android:textSize="22.0sp"
+        android:gravity="center"/>
+</LinearLayout>

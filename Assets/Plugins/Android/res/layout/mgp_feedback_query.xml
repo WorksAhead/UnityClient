@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:list="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mgp_sdkBackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mgp_title_layout_height"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/mgp_onlineserver_feedback_query_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/mgp_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/mgp_gray" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/mgp_feedback_query_driver_tv"
+            android:layout_width="2px"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/mgp_list_line_margin_left"
+            android:background="#b2b2b2"
+            android:visibility="gone" />
+
+        <com.changyou.mgp.sdk.mbi.ui.widget.MGPDropDownListView
+            android:id="@+id/mgp_feedback_query_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ebebeb"
+            android:dividerHeight="1px"
+            android:fadingEdge="none"
+            list:isAutoLoadOnBottom="false"
+            list:isOpenDropDown="true"
+            list:isOpenLoadMore="true" 
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/mgp_feedback_query_empty_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/mgp_sdkBackground"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mgp_common_null_data" />
+
+            <TextView
+                android:id="@+id/mgp_feedback_query_empty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/mgp_no_feedback_text"
+                android:textColor="#b0b0b0"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <com.changyou.mgp.sdk.mbi.ui.widget.NetErrorView
+            android:id="@+id/mgp_feedback_query_error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+        </com.changyou.mgp.sdk.mbi.ui.widget.NetErrorView>
+    </FrameLayout>
+
+</RelativeLayout>

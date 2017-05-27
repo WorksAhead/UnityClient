@@ -1,0 +1,804 @@
+﻿Id	LogicDataFile	Description	TrueDescription	Icon	ActivateLevel	Passivity	RangeMin	RangeMax	SkillCoefficient	TargetType	TargetSelectType	CD	CastTime	MinusCD	CostHp	CostRage	CostEnergy	CostEnergyCore	CostItemId	BreakType	Category	LevelUpCostType	LevelUpVigorType	LiftSkillId	LiftCostItem	LiftCostItemNum	CanStartWhenStiffness	CanStartWhenHitFly	CanStartWhenKnockDown	NextSkillId	QSkillId	ESkillId	LockInputTime	NextInputTime	TargetChooseRange	ShowName	ShowDescription	ShowAtlasPath	ShowIconName	ShowCD	ShowHitNum	ShowScore	ShowSteps	ShowCostEnergy	ShowDamage	ShowDamagePerLevel	ShowSteps2Dec	ShowSteps3Dec	ShowSteps4Dec
+1		翻滚	翻滚		0	0			0	3	4	1			0		0	0	0	10	1									2			0	0.9															
+2		剑士裂地斩	裂地斩		1	0			0	2	2	2			0		0	0	0	10	1									3			0	0.6															
+3		枪手普攻1			1	0			0	2	2	1			0		0	0	0	10	1									4			0	0.6															
+4		剑士普攻1			1	0			0	2	2	1			0		0	0	0	10	1												0	2															
+5	test.dsl	枪手火球			1	0			0	2	2	1			0		0	0	0																														
+6	test.dsl	剑士普攻2			1	0			0	2	2	1			0		0	0	0																														
+7	test.dsl	剑士莲花斩			1	0			0	2	2	1			0		0	0	0																														
+8	test.dsl	枪手连发射击			1	0			0	2	2	1			0		0	0	0																														
+9	test.dsl	枪手浮空射击			1	0			0	2	2	1			0		0	0	0																														
+10	test.dsl	枪手终结射击			1	0			0	2	2	1			0		0	0	0																														
+11	test.dsl	剑士跳斩			1	0			0	2	2	1			0		0	0	0																														
+12	test.dsl	枪手召唤钢筋			1	0			0	2	2	1			0		0	0	0																														
+100	test.dsl	粘贴技能测试			1	0			0	2	2	1			0		0	0	0	30	2																												
+#剑士																																																	
+110001	jianshi/jianshi_pugong.dsl	剑士普攻1			1	0			0	2	2	1			0		0	0	0	10	1									110002			0	0.9															
+110002	jianshi/jianshi_pugong.dsl	剑士普攻2			1	0			0	2	2	1			0		0	0	0	10	1									110003			0	0.8															
+110003	jianshi/jianshi_pugong.dsl	剑士普攻3			1	0			0	2	2	1			0		0	0	0	10	1									110004			0	0.8															
+110004	jianshi/jianshi_pugong.dsl	剑士普攻4			1	0			0	2	2	1			0		0	0	0	10	1												0	2															
+110011	jianshi/jianshi_pugong.dsl	剑士普攻-接近			1	0			0	2	2	1			0		0	0	0	10	11																												
+110101	jianshi/jianshi_shanshen.dsl	剑士闪身			1	0			0	2	2	1			0		0	0	0	30	8																												
+110201	jianshi/jianshi_jianchong.dsl	剑士剑冲			1	0			0	2	2	2			0		0	0	0	30	3																												
+110301	jianshi/jianshi_tiaokong.dsl	剑士挑空			1	0			0	2	2	1			0		0	0	0	30	4									110302				2															
+110302	jianshi/jianshi_tiaokong.dsl	剑士空中连击			1	0			0	2	2	1			0		0	0	0	30	4																												
+110401	jianshi/jianshi_shenguizhan.dsl	剑士神鬼斩			1	0			0	2	2	1			0		0	0	0	30	5																												
+110501	jianshi/jianshi_xulizhongzhan.dsl	剑士蓄力重斩			1	0			0	2	2	1			0		0	0	0	30	2																												
+110601		剑士烈刃狂斩			1	0			0	2	2	1			0		0	0	0	30																													
+110701	jianshi/jianshi_huoyanbaopo.dsl	剑士火焰爆破			1	0			0	2	2	1			0		0	0	0	30	2																												
+110801		剑士火焰拖曳			1	0			0	2	2	1			0		0	0	0	30	3																												
+110901		剑士三连突			1	0			0	2	2	1			0		0	0	0	30																													
+#刺客																																																	
+#    刺客基础技能																																																	
+120000	Cike/Cike_Combat2Idle.dsl	从战斗状态切换为非战状态			1	0			0	2	2	1			0		0	0	0	0	12												0	1															
+120001	Cike/Cike_Hit_01.dsl	刺客普攻一段			1	0			0	2	2	0.1			0		0	0	0	100	1									120002			0.3	1				UI_AtlasDynamic\skill\skill	attack3										
+120002	Cike/Cike_Hit_02.dsl	刺客普攻二段			1	0			0	2	2	0.1			0		0	0	0	100	1									120003			0.3	1				UI_AtlasDynamic\skill\skill	attack3										
+120003	Cike/Cike_Hit_03.dsl	刺客普攻三段			1	0			0	2	2	0.1			0		0	0	0	100	1									120004			0.3	1				UI_AtlasDynamic\skill\skill	attack3										
+120004	Cike/Cike_Hit_04.dsl	刺客普攻四段			1	0			0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack3										
+120005	Cike/Cike_BeCool.dsl	刺客扮酷			1	0			0	2	2	1			0		0	0	0	0	13												0	1															
+125101	Cike/level04/Cike_Skill06_shadow01.dsl	影袭影子攻击一段			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125102	Cike/level04/Cike_Skill06_shadow02.dsl	影袭影子攻击二段			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125103	Cike/level04/Cike_Skill06_shadow03.dsl	影袭影子攻击三段			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125201	Cike/level04/Cike_Skill08_shadow01.dsl	影子模仿			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125202	Cike/level04/Cike_Skill08_shadow02.dsl	须佐影子攻击二段			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125203	Cike/level04/Cike_Skill08_shadow03.dsl	须佐影子攻击三段			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125301	Cike/level04/Cike_Skill04_shadow01.dsl	瞬身影子1			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125302	Cike/level04/Cike_Skill04_shadow02.dsl	瞬身影子2			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125303	Cike/level04/Cike_Skill04_shadow03.dsl	瞬身影子3			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125304	Cike/level04/Cike_Skill04_shadow04.dsl	瞬身影子4			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125305	Cike/level04/Cike_Skill04_shadow05.dsl	瞬身影子5			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125306	Cike/level04/Cike_Skill04_shadow06.dsl	瞬身影子5			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125401	Cike/level04/Cike_Skill07_shadow01.dsl	瞬狱影杀阵影子桩子			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125402	Cike/level04/Cike_Skill07_shadow02.dsl	瞬狱影杀阵影子1			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125403	Cike/level04/Cike_Skill07_shadow03.dsl	瞬狱影杀阵影子2			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125501	Cike/level04/Cike_Skill11_shadow01.dsl	暗器攻击1			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125502	Cike/level04/Cike_Skill11_shadow02.dsl	暗器攻击2			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125503	Cike/level04/Cike_Skill11_shadow03.dsl	暗器攻击3			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125504	Cike/level04/Cike_Skill11_shadow04.dsl	暗器攻击4			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125505	Cike/level04/Cike_Skill11_shadow05.dsl	暗器攻击5			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125506	Cike/level04/Cike_Skill11_shadow06.dsl	暗器落地攻击			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125511	Cike/level04/Cike_Skill11_shadow11.dsl	大风轮攻击			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+125512	Cike/level04/Cike_Skill11_shadow12.dsl	大风轮攻击2			1	0			0	2	2	1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack2										
+#    刺客特殊技能																																																	
+120141	Cike/level04/Cike_Skill01_41.dsl	刃旋			1	0			0	2	2	6			0		7	0	0	11	2									120142			0.6	1		刃旋	旋转切割，被波及到的目标会受到伤害	UI_AtlasDynamic/skill/skill	ck01	6	9		1	7	8	0.32	追加二段，可释放影刃	减少刃旋的CD时间	影刃会对命中的目标施加影伤效果
+120142	Cike/level04/Cike_Skill01_42.dsl	影刃			1	0			0	2	2	1			0		0	0	0	11	2												0.3	1.5		影刃		UI_AtlasDynamic/skill/skill	ck01	1			1	0					
+120143	Cike/level04/Cike_Skill01_42.dsl	影刃延迟伤害			1	0			0	2	2	1			0		0	0	0	11	2												0.3	1.5		影刃		UI_AtlasDynamic/skill/skill	ck01	1			1	0					
+120241	Cike/level04/Cike_Skill02_41.dsl	挑空			1	0			0	2	2	9			0		15	0	0	21	3									120242			0.5	1		挑空	挥刀上挑将身前目标击飞，并照成一定伤害，后续追加攻击，最后一击破霸体	UI_AtlasDynamic/skill/skill	ck02	9	6		1	15	11.2	0.448	上挑后可追加二段飞踢，将目标再次击飞，同时腾空	飞踢后可追加双切和流星	流星会对命中的目标施加影伤效果
+120242	Cike/level04/Cike_Skill02_42.dsl	飞踢			1	0			0	2	2	0			0		0	0	0	21	3												0.8	1.6		飞踢		UI_AtlasDynamic/skill/skill	ck02	0			1	0					
+120243	Cike/level04/Cike_Skill02_43.dsl	流星			1	0			0	2	2	5			0		0	0	0	21	3												0.6	1		流星		UI_AtlasDynamic/skill/skill	ck02	5			1	0					
+120341	Cike/level04/Cike_Skill03_41.dsl	回旋破			3	0			0	2	2	14			0		12	0	0	10	4									120342			0.5	1.5		回旋破	旋转身体垂直上踢，将周围目标击飞，并照成一定伤害	UI_AtlasDynamic/skill/skill	ck03	14	9		1	12	12	0.48	增加回旋破的范围	回旋破后可追加升龙刃，最目标照成对此打击	强化升龙刃，使升龙刃可以获得更多的打击次数
+120342	Cike/level04/Cike_Skill03_42.dsl	升龙刃			1	0			0	2	2	0			0		0	0	0	10	4												0.8	1.5		升龙刃		UI_AtlasDynamic/skill/skill	ck03	0			1	0					
+120441	Cike/level04/Cike_Skill04_41.dsl	瞬身一段			1	0			0	2	2	4			0		7	0	0	11	5						TRUE	TRUE	TRUE	120442			0.2	1.5		瞬身	向身前瞬身一段距离	UI_AtlasDynamic/skill/skill	ck04	6	4		1	7	1	0.04	减少瞬身术的CD时间	瞬身后可再次追加瞬身二段	进一步减少瞬身术的CD时间
+120442	Cike/level04/Cike_Skill04_42.dsl	瞬身二段			1	0			0	2	2	4			0		0	0	0	11	5						TRUE	TRUE	TRUE				0.2	1		瞬身二段		UI_AtlasDynamic/skill/skill	ck04	1			1	0					
+120541	Cike/level04/Cike_Skill05_41.dsl	瞬身前斩			20	0			0	2	2	17			0		30	0	0	11	0									120542			0	1		瞬身·斩	瞬身到目标身前进行一次斩击，对目标造成一定伤害和硬直，并破霸体	UI_AtlasDynamic/skill/skill	ck05	17	2		1	30	13	0.864	瞬身前斩后追加瞬身后斩	瞬身后斩可在受击状态下释放	瞬身后斩可破霸体
+120542	Cike/level04/Cike_Skill05_42.dsl	瞬身后斩			1	0			0	2	2	0			0		0	0	0	11	0												0	1		瞬身后斩		UI_AtlasDynamic/skill/skill	ck05	0			1	0					
+120641	Cike/level04/Cike_Skill06_41.dsl	影袭一段			10	0			0	2	2	7			0		8	0	0	10	0									120642			0	1		影袭	向身前打出一个影分身，影分身向前行进，遭遇目标或达到最大行进距离有进行一次斩击	UI_AtlasDynamic/skill/skill	ck07	7	4		1	8	7.8	0.312	追加二段，激活二段可再次最追加两次影分身攻击	减少影袭的CD时间	影分身攻击会对命中的目标施加影伤效果
+120642	Cike/level04/Cike_Skill06_42.dsl	影袭二段			1	0			0	2	2	0			0		0	0	0	10	0									120643			0	1		影袭二段		UI_AtlasDynamic/skill/skill	ck07	0			1	0					
+120643	Cike/level04/Cike_Skill06_43.dsl	影袭三段			1	0			0	2	2	0			0		0	0	0	10	0												0	1		影袭二段		UI_AtlasDynamic/skill/skill	ck07	0			1	0					
+120741	Cike/level04/Cike_Skill07_41.dsl	瞬狱影阵杀一段			1	0			0	2	2	30			0	300	0	0	0	10	10												0	1		瞬狱影阵	瞬狱影阵杀	UI_AtlasDynamic/skill/skill	ck01	30			1	0					
+120742	Cike/level04/Cike_Skill07_42.dsl	瞬狱影阵杀二段			1	0			0	2	2	1			0	300	0	0	0	10	10												0	1		瞬狱影阵杀二段		UI_AtlasDynamic/skill/skill	ck01	1			1	0					
+120841	Cike/level04/Cike_Skill08_41.dsl	影子模仿一段			30	0			0	2	2	28			0		40	0	0	10	0												0.21	5.1		影子模仿	向身前召唤一个影分身，影分身会持续一段时间，期间影分身会模仿刺客的一切动作	UI_AtlasDynamic/skill/skill	ck06	28			1	40	1	0.04	增长硬直持续时间	追加再次激活技能可与影子互换位置	进一步增强影子持续时间
+120842	Cike/level04/Cike_Skill08_42.dsl	影子模仿二段			1	0			0	2	2	0			0		0	0	0	11	0												0	1		影子模仿二段		UI_AtlasDynamic/skill/skill	ck06	0			1	0					
+120843	Cike/level04/Cike_Skill08_43.dsl	影子模仿三段			1	0			0	2	2	0			0		0	0	0	10	0												0	1		影子模仿三段		UI_AtlasDynamic/skill/skill	ck06	0			1	0					
+120941	Cike/level04/Cike_Skill09_41.dsl	九刃一段			1	0			0	2	2	1			0		0	0	0	10	0												0	1		九刃一段		UI_AtlasDynamic/skill/skill	ck10	1			1	0					
+120942	Cike/level04/Cike_Skill09_42.dsl	九刃二段			1	0			0	2	2	1			0		0	0	0	10	0												0	1		九刃二段		UI_AtlasDynamic/skill/skill	ck10	1			1	0					
+121041	Cike/level04/Cike_Skill10_41.dsl	风神落一段			35	0			0	2	2	23			0		40	0	0	10	0												0	1		风神落	将敌人挑向空中，自身也随之跃向高空，然后抱住敌人身体，急速旋转向地面撞去，第一击破霸体	UI_AtlasDynamic/skill/skill	ck09	23	7		1	40	24	0.84			
+121042	Cike/level04/Cike_Skill10_42.dsl	十刃二段			1	0			0	2	2	1			0		0	0	0	10	0												0	1		十刃二段		UI_AtlasDynamic/skill/skill	ck01	23	7		1	40	24	0.84			
+121141	Cike/level04/Cike_Skill11_41.dsl	大飞镖一段			1	0			0	2	2	1			0		0	0	0	11	0												0.4	1.5		大飞镖		UI_AtlasDynamic/skill/skill	ck08	1			1	0					
+121142	Cike/level04/Cike_Skill11_42.dsl	十一刃二段			1	0			0	2	2	1			0		0	0	0	11	0												0.3	1.5		刃旋OB		UI_AtlasDynamic/skill/skill	ck01	1			1	0					
+121241	Cike/level04/Cike_Skill12_41.dsl	十二刃一段			1	0			0	2	2	1			0		0	0	0	21	0									121242			0.4	1.5		挑空OB		UI_AtlasDynamic/skill/skill	ck01	1			1	0					
+121242	Cike/level04/Cike_Skill12_42.dsl	十二刃二段			1	0			0	2	2	1			0		0	0	0	21	0									121243			0.1	1		飞踢OB		UI_AtlasDynamic/skill/skill	ck01	1			1	0					
+121341	Cike/level04/Cike_Skill13_41.dsl	格挡			25	0			0	2	2	1			0		10	0	0	11	0								TRUE				0.4	1.5		格挡反击	释放后进入格挡状态，免疫伤害，即将受击的瞬间进行格挡可打出反击	UI_AtlasDynamic/skill/skill	js09	1			1	10	4	0.16			
+121342	Cike/level04/Cike_Skill13_42.dsl	反击			1	0			0	2	2	1			0		0	0	0	21	0								TRUE				0.1	1				UI_AtlasDynamic/skill/skill	js09	1			1	0					
+121441	Cike/level04/Cike_Skill14_41.dsl	EX爆气			1	0			0	2	2	1			0	300	0	0	0	11	14						TRUE	TRUE	TRUE				0.4	1.5		格挡反击	释放后进入格挡状态，免疫伤害，即将受击的瞬间进行格挡可打出反击	UI_AtlasDynamic/skill/skill	js09	1			1	10	4	0.16			
+#法师																																																	
+130000	fashi/fashi_combat2idle.dsl	法师从战斗状态切换为非战状态			1	0			0	2	2	1			0		0	0	0	0	12												0	1										0					
+130001	fashi/fashi_pugong.dsl	法师普攻1			1	0			0	2	2	0.1			0		0	0	0	10	1									130002			0.1	1.2				UI_AtlasDynamic/skill/skill	attack2					0					
+130002	fashi/fashi_pugong.dsl	法师普攻2			1	0			0	2	2	0.1			0		0	0	0	10	1									130003			0.1	1.2				UI_AtlasDynamic/skill/skill	attack2					0					
+130003	fashi/fashi_pugong.dsl	法师普攻3			1	0			0	2	2	0.1			0		0	0	0	10	1									130004			0.1	1.3				UI_AtlasDynamic/skill/skill	attack2					0					
+130004	fashi/fashi_pugong.dsl	法师普攻4			1	0			0	2	2	0.1			0		0	0	0	10	1												0.1	1				UI_AtlasDynamic/skill/skill	attack2					0					
+130005	fashi/fashi_shuashuai.dsl	法师扮酷			1	0			0	2	2	1			0		0	0	0	0	13												0	1										0					
+130011	fashi/fashi_pugong.dsl	普攻1召唤火爪			1	0			0	2	2	1	2.5		0		0	0	0	30		1								130102			0.6	4		空气炮	向前释放空气炮远程攻击敌人。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130012	fashi/fashi_pugong.dsl	普攻2召唤冰爪			1	0			0	2	2	1	2.5		0		0	0	0	30		1								130102			0.6	4		空气炮	向前释放空气炮远程攻击敌人。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130013	fashi/fashi_pugong.dsl	普攻3召唤火爪			1	0			0	2	2	1	2.5		0		0	0	0	30		1								130102			0.6	4		空气炮	向前释放空气炮远程攻击敌人。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130014	fashi/fashi_pugong.dsl	普攻4召唤冰爪			1	0			0	2	2	1	2.5		0		0	0	0	30		1								130102			0.6	4		空气炮	向前释放空气炮远程攻击敌人。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130101	fashi/fashi_kongqipao.dsl	空气炮1			1	0			0	2	2	1	2.5		0		0	0	0	30		1								130102			0.6	4		空气炮	向前释放空气炮远程攻击敌人。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130102	fashi/fashi_kongqipao.dsl	空气炮2			1	0			0	2	2	1			0		0	0	0	30		1											0.6	1		空气炮		UI_AtlasDynamic/skill/skill	js06	0			1	0	7.5	0.3			
+130111	fashi/fashi_kongqipao.dsl	空气炮：左1			1	0			0	2	2	0			0		0	0	0	10																													
+130112	fashi/fashi_kongqipao.dsl	空气炮：右1			1	0			0	2	2	0			0		0	0	0	10																													
+130113	fashi/fashi_kongqipao.dsl	空气炮：中型			1	0			0	2	2	0			0		0	0	0	10																													
+130121	fashi/fashi_kongqipao.dsl	空气炮:超大			1	0			0	2	2	0			0		0	0	0	10																													
+130201	fashi/fashi_shenglongquan.dsl	升龙拳1			1	0			0	2	2	1			0		0	0	0	30		2								130202			0.6	4		升龙拳	将敌人挑至空中。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+130202	fashi/fashi_shenglongquan.dsl	升龙拳2			1	0			0	2	2	1			0		0	0	0	30		2											0.6	1		升龙拳		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
+130301	fashi/fashi_xueqiushu.dsl	雪球术1			1	0			0	2	2	1			0		0	0	0	30		3								130302			0.6	6		雪球术	将敌人聚集并推开或牵引。	UI_AtlasDynamic/skill/skill	js03	7	8		1	7	7.5	0.3			
+130302	fashi/fashi_xueqiushu.dsl	雪球术2			1	0			0	2	2	1			0		0	0	0	30		3											0.6	1		雪球术		UI_AtlasDynamic/skill/skill	js03	0			1	0	7.5	0.3			
+130311	fashi/fashi_xueqiushu.dsl	雪漩涡			1	0			0	2	2	0			0		0	0	0	10																													
+130312	fashi/fashi_xueqiushu.dsl	雪球：近			1	0			0	2	2	0			0		0	0	0	10																													
+130313	fashi/fashi_xueqiushu.dsl	雪球：远			1	0			0	2	2	0			0		0	0	0	10																													
+130314	fashi/fashi_xueqiushu.dsl	雪球地面：近			1	0			0	2	2	0			0		0	0	0	10																													
+130315	fashi/fashi_xueqiushu.dsl	雪球地面：远			1	0			0	2	2	0			0		0	0	0	10																													
+130316	fashi/fashi_xueqiushu.dsl	雪球推动			1	0			0	2	2	0			0		0	0	0	11																													
+130317	fashi/fashi_xueqiushu.dsl	雪球地面推动			1	0			0	2	2	0			0		0	0	0	11																													
+130401	fashi/fashi_huoyanfenshen.dsl	火焰分身1			1	0			0	2	2	1			0		0	0	0	20		4								130402			0.6	4		火焰分身	闪现，在沿途制造分身自爆。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130402	fashi/fashi_huoyanfenshen.dsl	火焰分身2			1	0			0	2	2	1			0		0	0	0	20		4											0.6	4		火焰分身		UI_AtlasDynamic/skill/skill	js06	0			1	0	7.5	0.3			
+130411	fashi/fashi_huoyanfenshen.dsl	火焰分身召唤			1	0			0	2	2	0			0		0	0	0	11																													
+130412	fashi/fashi_huoyanfenshen.dsl	火焰分身1号			1	0			0	2	2	0			0		0	0	0	11																													
+130413	fashi/fashi_huoyanfenshen.dsl	火焰分身2号			1	0			0	2	2	0			0		0	0	0	11																													
+130414	fashi/fashi_huoyanfenshen.dsl	火焰分身3号			1	0			0	2	2	0			0		0	0	0	11																													
+130415	fashi/fashi_huoyanfenshen.dsl	火焰分身4号			1	0			0	2	2	0			0		0	0	0	11																													
+130501	fashi/fashi_bingqiang.dsl	冰枪1			1	0			0	2	2	1			0		0	0	0	30		5								130502			0.6	4		冰枪	召唤冰枪自动攻击敌人。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+130502	fashi/fashi_bingqiang.dsl	冰枪2			1	0			0	2	2	1			0		0	0	0	30		5											0.6	4		冰枪		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
+130601	fashi/fashi_huohuoshan.dsl	活火山1			1	0			0	2	2	1			0		0	0	0	20		6								130602			0.6	4		活火山	制造活火山造成大范围伤害。	UI_AtlasDynamic/skill/skill	js03	7	8		1	7	7.5	0.3			
+130602	fashi/fashi_huohuoshan.dsl	活火山2			1	0			0	2	2	1			0		0	0	0	20		6											0.6	4		活火山		UI_AtlasDynamic/skill/skill	js03	0			1	0	7.5	0.3			
+130701	fashi/fashi_bingfenghuang.dsl	冰凤凰1			1	0			0	2	2	1			0		0	0	0	30		7								130702			0.6	4		冰凤凰	召唤冰凤凰推送敌人。	UI_AtlasDynamic/skill/skill	js06	7	8		1	7	7.5	0.3			
+130702	fashi/fashi_bingfenghuang.dsl	冰凤凰2			1	0			0	2	2	1			0		0	0	0	30		7											0.6	4		冰凤凰		UI_AtlasDynamic/skill/skill	js06	0			1	0	7.5	0.3			
+130711	fashi/fashi_bingfenghuang.dsl	召唤物：冰凤凰			1	0			0	2	2	0			0		0	0	0	10																													
+130712	fashi/fashi_bingfenghuang.dsl	冰凤凰消失			1	0			0	2	2	0			0		0	0	0	11																													
+130713	fashi/fashi_bingfenghuang.dsl	冰凤凰break冲刺			1	0			0	2	2	0			0		0	0	0	10																													
+130714	fashi/fashi_bingfenghuang.dsl	召唤物：冰凤凰蛋			1	0			0	2	2	0			0		0	0	0	10																													
+130715	fashi/fashi_bingfenghuang.dsl	冰凤凰旋转			1	0			0	2	2	0			0		0	0	0	10																													
+130716	fashi/fashi_bingfenghuang.dsl	凤凰蛋破壳			1	0			0	2	2	0			0		0	0	0	11																													
+130801	fashi/fashi_binghuozoulang.dsl	冰火走廊1			1	0			0	2	2	1			0		0	0	0	30		8								130802			0.6	4		冰火走廊	制造一个冰火走廊将敌人困住。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+130802	fashi/fashi_binghuozoulang.dsl	冰火走廊2			1	0			0	2	2	1			0		0	0	0	30		8											0.6	4		冰火走廊		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
+130811	fashi/fashi_binghuozoulang.dsl	召唤物：寒冰走廊未形成			1	0			0	2	2	0			0		0	0	0	10																													
+130812	fashi/fashi_binghuozoulang.dsl	寒冰吸引1			1	0			0	2	2	0			0		0	0	0	10																													
+130813	fashi/fashi_binghuozoulang.dsl	寒冰吸引2			1	0			0	2	2	0			0		0	0	0	10																													
+130814	fashi/fashi_binghuozoulang.dsl	寒冰吸引3			1	0			0	2	2	0			0		0	0	0	10																													
+130815	fashi/fashi_binghuozoulang.dsl	召唤物：寒冰走廊			1	0			0	2	2	0			0		0	0	0	10																													
+130816	fashi/fashi_binghuozoulang.dsl	寒冰走廊之破碎			1	0			0	2	2	0			0		0	0	0	10																													
+130817	fashi/fashi_binghuozoulang.dsl	寒冰分身1			1	0			0	2	2	0			0		0	0	0	10																													
+130818	fashi/fashi_binghuozoulang.dsl	寒冰分身2			1	0			0	2	2	0			0		0	0	0	10																													
+130819	fashi/fashi_binghuozoulang.dsl	寒冰分身的陨落1			1	0			0	2	2	0			0		0	0	0	10																													
+130820	fashi/fashi_binghuozoulang.dsl	寒冰分身的陨落2			1	0			0	2	2	0			0		0	0	0	10																													
+130821	fashi/fashi_binghuozoulang.dsl	火焰分身			1	0			0	2	2	0			0		0	0	0	10																													
+130822	fashi/fashi_binghuozoulang.dsl	火焰分身前进			1	0			0	2	2	0			0		0	0	0	10																													
+130901	fashi/fashi_binghuolongjuanfeng.dsl	冰火龙卷风1			1	0			0	2	2	1			0		0	0	0	30		8								130902			0.6	4		冰火龙卷风	冰与火的风暴	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+130902	fashi/fashi_binghuolongjuanfeng.dsl	冰火龙卷风2			1	0			0	2	2	1			0		0	0	0	30		8											0.6	4		冰火龙卷风		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
+130911	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：寒冰龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+130912	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：赤炎龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+130913	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：寒冰龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+130914	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：赤炎龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+130915	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：寒冰龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+130916	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：赤炎龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+130917	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：巨大龙卷底座			1	0			0	2	2	0			0		0	0	0	10																													
+130918	fashi/fashi_binghuolongjuanfeng.dsl	召唤物：巨大龙卷风			1	0			0	2	2	0			0		0	0	0	10																													
+131001	fashi/fashi_yuansuxingtai.dsl	元素形态1			1	0			0	2	2	1			0		0	0	0	30		8								130802			0.6	4		冰火走廊	制造一个冰火走廊将敌人困住。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+131002	fashi/fashi_yuansuxingtai.dsl	元素形态2			1	0			0	2	2	1			0		0	0	0	30		8											0.6	4		冰火走廊		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
+131031	fashi/fashi_yuansuxingtai.dsl	召唤物：寒冰球			1	0			0	2	2	0			0		0	0	0	10																													
+131032	fashi/fashi_yuansuxingtai.dsl	召唤物：赤炎球			1	0			0	2	2	0			0		0	0	0	10																													
+131033	fashi/fashi_yuansuxingtai.dsl	寒冰球爆破			1	0			0	2	2	0			0		0	0	0	10																													
+131034	fashi/fashi_yuansuxingtai.dsl	赤炎球爆破			1	0			0	2	2	0			0		0	0	0	10																													
+131101	fashi/fashi_ex.dsl	ex技能			1	0			0	2	2	1			0		0	0	0	30		8								130802			0.6	4		冰火走廊	制造一个冰火走廊将敌人困住。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+131111	fashi/fashi_ex.dsl	召唤物：混沌魔人			1	0			0	2	2	0			0		0	0	0	10																													
+131112	fashi/fashi_ex.dsl	召唤物：冰球			1	0			0	2	2	0			0		0	0	0	10																													
+131113	fashi/fashi_ex.dsl	召唤物：火球			1	0			0	2	2	0			0		0	0	0	10																													
+131114	fashi/fashi_ex.dsl	混沌魔人冰球			1	0			0	2	2	0			0		0	0	0	10																													
+131115	fashi/fashi_ex.dsl	混沌魔人火球			1	0			0	2	2	0			0		0	0	0	10																													
+131116	fashi/fashi_ex.dsl	混沌魔人毁灭			1	0			0	2	2	0			0		0	0	0	10																													
+131117	fashi/fashi_ex.dsl	冰球爆炸			1	0			0	2	2	0			0		0	0	0	10																													
+131118	fashi/fashi_ex.dsl	火球爆炸			1	0			0	2	2	0			0		0	0	0	10																													
+131201	fashi/fashi_gedangfanji.dsl	格挡反击			1	0			0	2	2	1			0		0	0	0	30		8								130802			0.6	4		冰火走廊	制造一个冰火走廊将敌人困住。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+131301	fashi/fashi_baoqi.dsl	暴气			1	0			0	2	2	1			0	300	0	0	0	20	14						TRUE	TRUE	TRUE				0	2		暴气技	立即解除控制，将敌人震飞。	UI_AtlasDynamic/skill/skill	js05	0			1	0	50	2			
+#战士																																																	
+160000	zhankuang/zhankuang_combat2idle.dsl	战士从战斗状态切换为非战状态			1	0			0	2	2	1			0		0	0	0	0	12												0	1										0					
+160001	zhankuang/zhankuang_pugong.dsl	战士普攻1			1	0			0	2	2	0.1			0		0	0	0	10	1									160002			0.1	0.9				UI_AtlasDynamic/skill/skill	attack2					0					
+160002	zhankuang/zhankuang_pugong.dsl	战士普攻2			1	0			0	2	2	0.1			0		0	0	0	10	1									160003			0.1	1				UI_AtlasDynamic/skill/skill	attack2					0					
+160003	zhankuang/zhankuang_pugong.dsl	战士普攻3			1	0			0	2	2	0.1			0		0	0	0	10	1									160004			0.1	1				UI_AtlasDynamic/skill/skill	attack2					0					
+160004	zhankuang/zhankuang_pugong.dsl	战士普攻4			1	0			0	2	2	0.1			0		0	0	0	10	1												0.1	1				UI_AtlasDynamic/skill/skill	attack2					0					
+160005	zhankuang/zhankuang_shuashuai.dsl	战士扮酷			1	0			0	2	2	1			0		0	0	0	0	13												0	1										0					
+160101	zhankuang/zhankuang_xuanfengzhan.dsl	旋风斩1			30	0			0	2	2	6			0		12	0	0	30		6								160102			0.6	2		旋风斩	向前旋转造成多次打击。	UI_AtlasDynamic/skill/skill	js06	17	19		1	36	10	0.396			
+160102	zhankuang/zhankuang_xuanfengzhan.dsl	旋风斩2			0	0			0	2	2	11			0		24	0	0	30		6											0.6	2		旋风斩		UI_AtlasDynamic/skill/skill	js06	0			1	0	10	0.396			
+160201	zhankuang/zhankuang_fenglunzhan.dsl	风轮斩1			1	0			0	2	2	5			0		7	0	0	30	2	1								160202			0.6	2		风轮斩	向前挥砍两次将敌人击飞；再次点击触发二段风轮多段伤害。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+160202	zhankuang/zhankuang_fenglunzhan.dsl	风轮斩2			0	0			0	2	2	2			0		0	0	0	30		1											0.6	2		风轮斩		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
+160301	zhankuang/zhankuang_shanshen.dsl	闪身4-1			1	0			0	2	2	6			0		7	0	0	20		3								160302				2		闪身	快速移动一段距离，期间角色免疫控制。	UI_AtlasDynamic/skill/skill	js03	7			1	7	0	0			
+160302	zhankuang/zhankuang_shanshen.dsl	闪身4-2			0	0			0	2	2	1			0		0	0	0	20		3												2		闪身		UI_AtlasDynamic/skill/skill	js03	0			1	0	0	0			
+160401	zhankuang/zhankuang_julitiaokong.dsl	巨力挑空1			3	0			0	2	2	14			0		24	0	0	30		3								160402			0.3	2		巨力挑空	将敌人挑至空中，之后击远，可以破除霸体。	UI_AtlasDynamic/skill/skill	js03	14	2		1	24	15	0.6			
+160402	zhankuang/zhankuang_julitiaokong.dsl	巨力挑空2			0	0			0	2	2	0			0		0	0	0	30		3											0.3	2		巨力挑空		UI_AtlasDynamic/skill/skill	js03	0			1	0	15	0.6			
+160501	zhankuang/zhankuang_jujianchongji.dsl	巨剑冲击4-1			0	0			0	2	2	1			0		0	0	0	30		8												2		巨剑冲击	投掷手中的巨剑攻击敌人。	UI_AtlasDynamic/skill/skill	js05	1			1	0	12	1.2			
+160502	zhankuang/zhankuang_jujianchongji.dsl	巨剑冲击4-2			0	0			0	2	2	1			0		0	0	0	30		8												2		巨剑冲击		UI_AtlasDynamic/skill/skill	js05	1			1	0	12	1.2			
+160599	zhankuang/zhankuang_jujianchongji.dsl	巨剑冲击飞行物			0	0			0	0	0	0			0		0	0	0	30		8												2		巨剑冲击		UI_AtlasDynamic/skill/skill	js05	1			1	0	12	1.2			
+160601	zhankuang/zhankuang_jiantuoye.dsl	剑拖曳4-1			0	0			0	2	2	1			0		0	0	0	30		6												2		剑拖曳	向前奔跑拖动沿途的敌人。	UI_AtlasDynamic/skill/skill	js08	1			1	0	24	2.4			
+160701	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩1			35	0			0	2	2	25			0		40	0	0	20		7												2		疯狂连斩	开启疯狂模式，增强普攻。	UI_AtlasDynamic/skill/skill	js07	25	50		1	40	30	0.544			
+160702	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩2			0	0			0	2	2	0			0		0	0	0	10		7								160703			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+160703	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩3			0	0			0	2	2	0			0		0	0	0	10		7								1607051			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607021	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩2			0	0			0	2	2	0			0		0	0	0	10		7								1607031			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607031	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩3			0	0			0	2	2	0			0		0	0	0	10		7								1607052			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+160704	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩4			0	0			0	2	2	0			0		0	0	0	10		7								160705			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607041	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩4			0	0			0	2	2	0			0		0	0	0	10		7											0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+160705	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩5			0	0			0	2	2	0			0		0	0	0	10		7								160706			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+160706	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩6			0	0			0	2	2	0			0		0	0	0	10		7								1607021			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607051	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩5			0	0			0	2	2	0			0		0	0	0	10		7								1607061			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607061	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩6			0	0			0	2	2	0			0		0	0	0	10		7								160704			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607052	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩5			0	0			0	2	2	0			0		0	0	0	10		7								1607062			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+1607062	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩6			0	0			0	2	2	0			0		0	0	0	10		7								1607041			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+160707	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩7			0	0			0	2	2	0			0		0	0	0	10		7											0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
+160801	zhankuang/zhankuang_jianchong.dsl	绞杀1			1	0			0	2	2	8			0		9	0	0	30		2								160802				2		绞杀	发射三个冲击波将敌人击高，之后触发绞杀多次打击。	UI_AtlasDynamic/skill/skill	js02	8	15		1	9	8	0.32			
+160802	zhankuang/zhankuang_jianchong.dsl	绞杀2			0	0			0	2	2	0			0		0	0	0	30		2												2		绞杀		UI_AtlasDynamic/skill/skill	js02	0			1	0	8	0.32			
+160811	zhankuang/zhankuang_jianchong.dsl	绞杀地面1			1	0			0	2	2	0			0		0	0	0	10																													
+160812	zhankuang/zhankuang_jianchong.dsl	绞杀地面2			1	0			0	2	2	0			0		0	0	0	10																													
+160813	zhankuang/zhankuang_jianchong.dsl	绞杀地面3			1	0			0	2	2	0			0		0	0	0	10																													
+160901	zhankuang/zhankuang_tiaokongsha.dsl	挑空杀4-1			1	0			0	2	2	1			0		0	0	0	30		9								160902				2		挑杀	挑起前方的敌人。	UI_AtlasDynamic/skill/skill	js05	1			1	0	10	1			
+160902	zhankuang/zhankuang_tiaokongsha.dsl	挑空杀4-2			1	0			0	2	2	1			0		0	0	0	30		9												2		挑杀		UI_AtlasDynamic/skill/skill	js05	1			1	0	10	1			
+161001	zhankuang/zhankuang_tiaozhan.dsl	跳斩			10	0			0	2	2	18			0		28	0	0	30		4												2		跳斩	高高跃起，下落后造成多次打击。	UI_AtlasDynamic/skill/skill	js04	18	10		1	28	14	0.56			
+161101	zhankuang/zhankuang_dafengche.dsl	大风车4-1			1	0			0	2	2	1			0		0	0	0	30		9												2		大风车	在身边形成大风车，对周围造成伤害。	UI_AtlasDynamic/skill/skill	js05	1			1	0	10	1			
+161201	zhankuang/zhankuang_chongzhuang.dsl	冲撞4-1			1	0			0	2	2	7			0		7	0	0	20		9												2		冲撞	闪避类技能，可以打断施法。	UI_AtlasDynamic/skill/skill	js03	7			1	7	5.4	0.216			
+161202	zhankuang/zhankuang_chongzhuang.dsl	冲撞4-2			0	0			0	2	2	0			0		0	0	0	30		9												2		冲撞		UI_AtlasDynamic/skill/skill	js03	0			1	0	5.4	0.216			
+161301	zhankuang/zhankuang_wumangshazhen.dsl	五芒杀阵4-1			1	0			0	2	2	16			0		22	0	0	30		9												2		重锤	多次锤击地面，之后将敌人震开。	UI_AtlasDynamic/skill/skill	js05	16			1	22	10	1			
+161401	zhankuang/zhankuang_mieshichongji.dsl	灭世冲击4-1			1	0			0	2	2	14			0		14	0	0	30		9												2		灭世冲击	冲击敌人到空中后落地多段打击。	UI_AtlasDynamic/skill/skill	js10	14			1	14	10	1			
+161501	zhankuang/zhankuang_ex.dsl	ex技能			1	0			0	2	2	5			0	300	0	0	0	20	10						TRUE	TRUE	TRUE				0	2		ex技	手指疯狂滑动砍击敌人。	UI_AtlasDynamic/skill/skill	js05	0			1	0	50	2			
+161601	zhankuang/zhankuang_huoyantuoye.dsl	火焰拖曳1			20	0			0	2	2	12			0		19	0	0	20		5								161602				2		火焰拖曳	聚集前方敌人，再次点击抓取周围敌人拖动造成伤害。	UI_AtlasDynamic/skill/skill	js05	30	21		1	39	17.1	0.684			
+161602	zhankuang/zhankuang_huoyantuoye.dsl	火焰拖曳2			1	0			0	2	2	18			0		20	0	0	20		5												2		火焰拖曳		UI_AtlasDynamic/skill/skill	js05	30			1	39	17.1	0.684			
+161701	zhankuang/zhankuang_gedangfanji.dsl	格挡反击			25	0			0	2	2	1			0		10	0	0	20		9							TRUE					2		格挡反击	释放后进入格挡状态，若出入格挡状态下被击则执行格挡反击。	UI_AtlasDynamic/skill/skill	js09	5			1	1	4	0.16			
+161702	zhankuang/zhankuang_gedangfanji.dsl	格挡反击			0	0			0	0	0	0			0		10	0	0	20		9												2		格挡反击	释放后进入格挡状态，若出入格挡状态下被击则执行格挡反击。	UI_AtlasDynamic/skill/skill	js09	5			1	1	4	0.16			
+161801	zhankuang/zhankuang_baoqi.dsl	暴气			1	0			0	2	2	1			0	300	0	0	0	20	14						TRUE	TRUE	TRUE				0	2		暴气技	立即解除控制，将敌人震飞。	UI_AtlasDynamic/skill/skill	js05	0			1	0	50	2			
+#小怪																																																	
+300001	npc/Public.dsl	测试			0	0	0	30	0	2	2	15			0		0	0	0																														
+300100	npc/Bluelf.dsl	测试			0	0	0	2	0	2	2	1			0		0	0	0	10	5												0	0.5															
+300101	npc/Bluelf.dsl	哥布林精英旋风斩			0	0	0	8	0	2	2	10			0		0	0	0																														
+300102	npc/Bluelf.dsl	哥布林精英普攻			0	0	0	3.5	0	2	2	1			0		0	0	0																														
+300103	npc/Bluelf.dsl	哥布林小斧劈砍			0	0	0	3.5	0	2	2	1			0		0	0	0																														
+300104	npc/Bluelf.dsl	哥布林小斧跳砍			0	0	2.5	5.5	0	2	2	1			0		0	0	0																														
+300105	npc/Bluelf.dsl	哥布林长矛			0	0	0	30	0	2	2	1			0		0	0	0																														
+300106	npc/Bluelf.dsl	哥布林燃烧瓶			0	0	0	30	0	2	2	1			0		0	0	0																														
+300107	npc/Bluelf.dsl	哥布林燃烧瓶40			0	0	35	80	0	2	2	1			0		0	0	0																														
+300108	npc/Bluelf.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+300109	npc/Bluelf.dsl	哥布林燃烧瓶35			0	0	24	36	0	2	2	1			0		0	0	0																														
+300110	npc/Bluelf.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+300111	npc/Goblin.dsl	哥布林boss连击			0	0	0	4	0	2	2	5			0		0	0	0																														
+300112	npc/Goblin.dsl	哥布林boss普攻			0	0	0	4	0	2	2	5			0		0	0	0																														
+300113	npc/Goblin.dsl	哥布林boss震荡波			0	0	0	12	0	2	2	10			0		0	0	0																														
+300114	npc/Goblin.dsl	哥布林boss蓄力击			0	0	0	5	0	2	2	15			0		0	0	0																														
+300115	npc/Goblin.dsl	哥布林boss二连击			0	0	0	4	0	2	2	5			0		0	0	0																														
+300116	npc/Goblin.dsl	哥布林boss震荡波召唤物			0	0	0	5	0	2	2	1			0		0	0	0																														
+300117	npc/Bluelf.dsl	哥布林精英反击螺旋			0	0	0	30	0	2	2	0.1			0		0	0	0	100	1						TRUE	TRUE	TRUE																				
+300120	npc/Bluelf.dsl	哥布林燃烧瓶5			0	0	0	8	0	2	2	3			0		0	0	0																														
+300121	npc/Bluelf.dsl	哥布林燃烧瓶30			0	0	7	25	0	2	2	1			0		0	0	0																														
+300122	npc/Bluelf.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+300123	npc/Bluelf.dsl	哥布林燃烧自爆			0	0	-1	-1	0	2	2	3			0		0	0	0																														
+300124	npc/Bluelf.dsl	哥布林精英燃烧瓶			0	0	0	30	0	2	2	1			0		0	0	0																														
+300125	npc/Bluelf.dsl	哥布林长矛			0	0	0	30	0	2	2	1			0		0	0	0																														
+300126	npc/Bluelf.dsl	哥布林小斧劈砍			0	0	0	3.5	0	2	2	1			0		0	0	0																														
+300201	npc/Blof.dsl	狼人跳跃攻击			0	0	0	7	0	2	2	7			0		0	0	0																														
+300202	npc/Blof.dsl	狼人普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+300203	npc/Blof.dsl	骨锤狼人普攻			0	0	0	3.5	0	2	2	1			0		0	0	0																														
+300204	npc/Blof.dsl	骨锤狼人投掷			0	0	0	30	0	2	2	3			0		0	0	0																														
+300205	npc/Blof.dsl	骨锤狼人投掷			0	0	0	30	0	2	2	3			0		0	0	0																														
+300301	npc/KDArmy.dsl	来福枪兵喷射			0	0	0	3	0	2	2	1			0		0	0	0																														
+300302	npc/KDArmy.dsl	火枪兵射击			0	0	0	15	0	2	2	3			0		0	0	0																														
+300303	npc/KDArmy.dsl	火枪兵手雷			0	0	5	7	0	2	2	5			0		0	0	0																														
+300304	npc/KDArmy.dsl	来福枪兵连续喷射			0	0	0	3	0	2	2	8			0		0	0	0																														
+300305	npc/KDArmy.dsl	来福枪兵连续喷射三下			0	0	0	3	0	2	2	8			0		0	0	0																														
+300306	npc/KDArmy.dsl	长枪劈砍			0	0	0	3	0	2	2	1			0		0	0	0																														
+300307	npc/KDArmy.dsl	长枪抡击			0	0	0	3	0	2	2	1			0		0	0	0																														
+300308	npc/KDArmy.dsl	剑劈砍			0	0	0	3	0	2	2	1			0		0	0	0																														
+300309	npc/KDArmy.dsl	剑抡击			0	0	0	3	0	2	2	1			0		0	0	0																														
+300401	npc/SilverShield.dsl	镭射枪兵镭射			0	0	0	15	0	2	2	3			0		0	0	0																														
+300402	npc/SilverShield.dsl	镭射枪兵手雷			0	0	5	7	0	2	2	5			0		0	0	0																														
+300403	npc/SilverShield2.dsl	剑盾兵普攻			0	0	0	10	0	2	2	1			0		0	0	0																														
+300404	npc/SilverShield2.dsl	剑盾兵重击打			0	0	0	10	0	2	2	1			0		0	0	0																														
+300405	npc/SilverShield2.dsl	长枪兵普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+300406	npc/SilverShield2.dsl	长枪兵重击			0	0	0	10	0	2	2	1			0		0	0	0																														
+300407	npc/SilverShield2.dsl	长枪兵普攻无前摇			0	0	0	3	0	2	2	1			0		0	0	0																														
+300408	npc/SilverShield2.dsl	长枪兵重击无前摇			0	0	0	10	0	2	2	1			0		0	0	0																														
+300409	npc/SilverShield2.dsl	长枪兵普攻无后摇			0	0	0	3	0	2	2	1			0		0	0	0																														
+300410	npc/SilverShield2.dsl	长枪兵重击无后摇			0	0	0	10	0	2	2	1			0		0	0	0																														
+300411	npc/SilverShield2.dsl	长枪兵普攻无前后摇			0	0	0	3	0	2	2	1			0		0	0	0																														
+300412	npc/SilverShield2.dsl	长枪兵重击无前后摇			0	0	0	10	0	2	2	1			0		0	0	0																														
+300413	npc/SilverShield2.dsl	长枪兵上挑			0	0	0	10	0	2	2	1			0		0	0	0																														
+300501	npc/Mouse.dsl	钻地鼠人普攻			0	0	0	2	0	2	2	1			0		0	0	0																														
+300502	npc/Mouse.dsl	钻地鼠人翻滚			0	0	0	12	0	2	2	8			0		0	0	0																														
+300503	npc/Mouse.dsl	瘟疫鼠人放毒			0	0	0	2	0	2	2	5			0		0	0	0																														
+300504	npc/Mouse.dsl	小鼠人普攻			0	0	0	2	0	2	2	4			0		0	0	0																														
+300505	npc/Mouse.dsl	钻地鼠人荆棘			0	0	0	12	0	2	2	8			0		0	0	0																														
+300506	npc/Mouse.dsl	瘟疫鼠人死亡放毒			0	0	-1	-1	0	2	2	5			0		0	0	0																														
+300601	npc/BlackSmith.dsl	壮汉单发炮弹			0	0	0	15	0	2	2	3			0		0	0	0																														
+300602	npc/BlackSmith.dsl	单发炮弹			0	0	0	3	0	2	2	1			0		0	0	0																														
+300603	npc/BlackSmith.dsl	壮汉连发炮弹			0	0	0	15	0	2	2	8			0		0	0	0																														
+300604	npc/BlackSmith.dsl	连发炮弹			0	0	0	3	0	2	2	1			0		0	0	0																														
+300605	npc/BlackSmith.dsl	壮汉劈砍			0	0	0	3	0	2	2	5			0		0	0	0																														
+300606	npc/BlackSmith.dsl	壮汉横抡			0	0	0	3	0	2	2	3			0		0	0	0																														
+300701	npc/OEOrc.dsl	独眼巨人抡击			0	0	0	4	0	2	2	3			0		0	0	0																														
+300702	npc/OEOrc.dsl	独眼巨人抡砸			0	0	0	4	0	2	2	3			0		0	0	0																														
+300703	npc/OEOrc.dsl	独眼巨人跳砸			0	0	0	9	0	2	2	3			0		0	0	0																														
+300704	npc/OEOrc.dsl	独眼巨人投石			0	0	0	15	0	2	2	3			0		0	0	0																														
+300705	npc/OEOrc.dsl	石头飞行			0	0	0	3	0	2	2	3			0		0	0	0																														
+310101	npc/Zombie.dsl	僵尸赤普攻			0	0	0	2	0	2	2	3			0		0	0	0																														
+310102	npc/Zombie.dsl	僵尸赤爪击			0	0	0	2	0	2	2	3			0		0	0	0																														
+310103	npc/Zombie.dsl	僵尸青爪击			0	0	0	2	0	2	2	3			0		0	0	0																														
+310104	npc/Zombie.dsl	僵尸青连击			0	0	0	2	0	2	2	3			0		0	0	0																														
+310105	npc/Zombie.dsl	僵尸女啃咬			0	0	0	1	0	2	2	3			0		0	0	0																														
+310106	npc/Zombie.dsl	僵尸女爪击			0	0	0	1	0	2	2	3			0		0	0	0																														
+310201	npc/Skeleton.dsl	骷髅剑普攻			0	0	0	4	0	2	2	3			0		0	0	0																														
+310202	npc/Skeleton.dsl	骷髅剑普攻2			0	0	0	3	0	2	2	3			0		0	0	0																														
+310203	npc/Skeleton.dsl	骷髅骨普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+310204	npc/Skeleton.dsl	骷髅骨投掷			0	0	0	12	0	2	2	1			0		0	0	0																														
+310205	npc/Skeleton.dsl	骷髅斧普攻			0	0	0	3	0	2	2	3			0		0	0	0																														
+310206	npc/Skeleton.dsl	骷髅斧普攻2			0	0	0	3	0	2	2	3			0		0	0	0																														
+310301	npc/Miner.dsl	矿工投掷不稳定的水晶			0	0	5	7	0	2	2	3			0		0	0	0																														
+310302	npc/Miner.dsl	水晶飞行			0	0	0	3	0	2	2	1			0		0	0	0																														
+310303	npc/Miner.dsl	矿工劈砍			0	0	0	3	0	2	2	1			0		0	0	0																														
+310304	npc/Miner.dsl	矿工挥砍			0	0	0	3	0	2	2	1			0		0	0	0																														
+310305	npc/Miner.dsl	矿工自爆			0	0	0	3	0	2	2	1			0		0	0	0																														
+310306	npc/Miner.dsl	自爆水晶			0	0	0	2	0	2	2	1			0		0	0	0																														
+310307	npc/Miner.dsl	自爆水晶			0	0	0	2	0	2	2	1			0		0	0	0																														
+310308	npc/Miner.dsl	自爆水晶			0	0	0	2	0	2	2	1			0		0	0	0																														
+310309	npc/Miner.dsl	自爆水晶			0	0	0	2	0	2	2	1			0		0	0	0																														
+310401	npc/Necro.dsl	瘟疫弹			0	0	0	15	0	2	2	3			0		0	0	0																														
+310402	npc/Necro.dsl	瘟疫弹飞行			0	0	0	3	0	2	2	2			0		0	0	0																														
+310403	npc/Necro.dsl	毒性新星			0	0	0	15	0	2	2	8			0		0	0	0																														
+310404	npc/Necro.dsl	新型爆发			0	0	0	3	0	2	2	1			0		0	0	0																														
+310405	npc/Necro.dsl	瞬移			0	0	0	7	0	2	2	8			0		0	0	0																														
+310406	npc/Necro.dsl	召唤			0	0	0	15	0	2	2	8			0		0	0	0																														
+310407	npc/Necro.dsl	平移			0	0	0	8	0	2	2	8			0		0	0	0																														
+310408	npc/Necro.dsl	平移2			0	0	0	8	0	2	2	8			0		0	0	0																														
+310409	npc/Necro.dsl	骷髅出生			0	0	0	8	0	2	2	1000			0		0	0	0																														
+310410	npc/Necro.dsl	buff荆棘			0	0	0	25	0	2	2	15			0		0	0	0																														
+310411	npc/Necro.dsl	buff冰甲			0	0	0	25	0	2	2	15			0		0	0	0																														
+310412	npc/Necro.dsl	召唤E4-2			0	0	0	15	0	2	2	8			0		0	0	0																														
+310501	npc/Carrion.dsl	抡击			0	0	0	4	0	2	2	1			0		0	0	0																														
+310502	npc/Carrion.dsl	撞击			0	0	0	8	0	2	2	8			0		0	0	0																														
+310503	npc/Carrion.dsl	横抡			0	0	0	5	0	2	2	5			0		0	0	0																														
+320101	npc/TLPMArmy.dsl	剑盾兵劈砍			0	0	0	3	0	2	2	5			0		0	0	0																														
+320102	npc/TLPMArmy.dsl	剑盾兵格挡			0	0	0	15	0	2	2	5			0		0	0	0																														
+320103	npc/TLPMArmy.dsl	长矛兵横抡			0	0	0	3	0	2	2	5			0		0	0	0																														
+320104	npc/TLPMArmy.dsl	长矛兵前刺			0	0	0	4	0	2	2	5			0		0	0	0																														
+320105	npc/TLPMArmy.dsl	长矛兵连击			0	0	0	3	0	2	2	5			0		0	0	0																														
+320106	npc/TLPMArmy.dsl	弩箭横抡			0	0	0	3	0	2	2	5			0		0	0	0																														
+320107	npc/TLPMArmy.dsl	弩箭射箭			0	0	0	15	0	2	2	5			0		0	0	0																														
+320108	npc/TLPMArmy.dsl	飞箭			0	0	0	15	0	2	2	5			0		0	0	0																														
+320201	npc/SWJ.dsl	盾牌格挡			0	0	0	10	0	2	2	8			0		0	0	0																														
+320202	npc/SWJ.dsl	盾牌反击			0	0	-1	-1	0	2	2	3			0		0	0	0																														
+320203	npc/SWJ.dsl	剑盾劈砍			0	0	0	3	0	2	2	3			0		0	0	0																														
+320204	npc/SWJ.dsl	长矛横抡			0	0	0	4	0	2	2	3			0		0	0	0																														
+320205	npc/SWJ.dsl	长矛连击			0	0	0	4	0	2	2	6			0		0	0	0																														
+320206	npc/SWJ.dsl	飞轮横抡			0	0	0	4	0	2	2	3			0		0	0	0																														
+320207	npc/SWJ.dsl	飞轮投掷			0	0	0	12	0	2	2	5			0		0	0	0																														
+320208	npc/SWJ.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+320211	npc/SWJ2.dsl	长矛突进			0	0	0	9	0	2	2	6		0		0	0	0																															
+320212	npc/SWJ2.dsl	长矛破格当			0	0	0	3	0	2	2	6		0		0	0	0																															
+320213	npc/SWJ2.dsl	飞轮投掷			0	0	0	12	0	2	2	1		0		0	0	0																															
+320214	npc/SWJ2.dsl	飞轮飞行			0	0	0	15	0	2	2	1		0		0	0	0																															
+320215	npc/SWJ2.dsl	飞轮飞行			0	0	0	15	0	2	2	1		0		0	0	0																															
+320216	npc/SWJ2.dsl	飞轮飞行			0	0	0	15	0	2	2	1		0		0	0	0																															
+320217	npc/SWJ2.dsl	解控制			0	0	0	20	0	2	2	1		0		0	0	0																															
+320218	npc/SWJ2.dsl	飞轮飞行			0	0	0	15	0	2	2	1		0		0	0	0																															
+320301	npc/Assassin.dsl	双刀兵普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+320302	npc/Assassin.dsl	双刀兵闪身			0	0	0	10	0	2	2	1			0		0	0	0																														
+320303	npc/Assassin.dsl	双刀兵背刺			0	0	0	10	0	2	2	1			0		0	0	0																														
+320304	npc/Assassin.dsl	单刀兵普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+320305	npc/Assassin.dsl	单刀兵闪身			0	0	0	10	0	2	2	1			0		0	0	0																														
+320306	npc/Assassin.dsl	单刀兵飞镖			0	0	0	10	0	2	2	1			0		0	0	0																														
+320307	npc/Assassin.dsl	单刀兵飞镖技能			0	0	0	10	0	2	2	1			0		0	0	0																														
+320308	npc/Assassin.dsl	左徘徊			0	0	0	10	0	2	2	1			0		0	0	0																														
+320309	npc/Assassin.dsl	右徘徊			0	0	0	10	0	2	2	1			0		0	0	0																														
+320400	npc/Wizard.dsl	召唤特效			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204001	npc/Wizard3.dsl	召唤物出生			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204002	npc/Wizard3.dsl	目标身后瞬身			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204003	npc/Wizard3.dsl	自身身后瞬身			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204004	npc/Wizard3.dsl	瞬身			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204005	npc/Wizard3.dsl	平移1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204006	npc/Wizard3.dsl	平移2			0	0	0	10	0	2	2	1			0		0	0	0																														
+320401	npc/Wizard.dsl	寒冰箭			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204011	npc/Wizard.dsl	寒冰箭飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+320402	npc/Wizard.dsl	多重寒冰箭（精英）			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204021	npc/Wizard.dsl	多重寒冰箭飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204022	npc/Wizard.dsl	多重寒冰箭飞行2			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204023	npc/Wizard.dsl	多重寒冰箭飞行3			0	0	0	10	0	2	2	1			0		0	0	0																														
+320403	npc/Wizard.dsl	寒冰地爆			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204031	npc/Wizard.dsl	寒冰地爆飞行			0	0	0	10	0	2	2	1			0		0	0	0																														
+320404	npc/Wizard2.dsl	火焰箭			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204041	npc/Wizard2.dsl	火焰箭飞行			0	0	0	10	0	2	2	1			0		0	0	0																														
+320405	npc/Wizard2.dsl	火焰螺旋（精英）			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204050	npc/Wizard2.dsl	火焰螺旋飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204051	npc/Wizard2.dsl	火焰螺旋飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204052	npc/Wizard2.dsl	火焰螺旋飞行2			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204053	npc/Wizard2.dsl	火焰螺旋飞行3			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204054	npc/Wizard2.dsl	火焰螺旋飞行4			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204055	npc/Wizard2.dsl	火焰螺旋飞行5			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204056	npc/Wizard2.dsl	火焰螺旋飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204057	npc/Wizard2.dsl	火焰螺旋飞行2			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204058	npc/Wizard2.dsl	火焰螺旋飞行3			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204059	npc/Wizard2.dsl	火焰螺旋飞行4			0	0	0	10	0	2	2	1			0		0	0	0																														
+320406	npc/Wizard2.dsl	火焰地爆			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204061	npc/Wizard2.dsl	火焰地爆飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204062	npc/Wizard2.dsl	火焰地爆飞行2			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204063	npc/Wizard2.dsl	火焰地爆飞行3			0	0	0	10	0	2	2	1			0		0	0	0																														
+320407	npc/Wizard3.dsl	暗影箭			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204071	npc/Wizard3.dsl	暗影箭飞行			0	0	0	10	0	2	2	1			0		0	0	0																														
+320408	npc/Wizard3.dsl	召唤近战兵			0	0	0	10	0	2	2	1			0		0	0	0																														
+320409	npc/Wizard3.dsl	召唤远程兵			0	0	0	10	0	2	2	1			0		0	0	0																														
+320410	npc/Wizard3.dsl	召唤精英近战兵（精英）			0	0	0	10	0	2	2	1			0		0	0	0																														
+320411	npc/Wizard3.dsl	召唤精英远程兵（精英）			0	0	0	10	0	2	2	1			0		0	0	0																														
+320412	npc/Wizard3.dsl	召唤大壮（精英）			0	0	0	10	0	2	2	1			0		0	0	0																														
+320413	npc/Wizard4.dsl	剧毒箭			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204131	npc/Wizard4.dsl	剧毒箭飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+320414	npc/Wizard4.dsl	剧毒新星			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204140	npc/Wizard4.dsl	剧毒新星飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204141	npc/Wizard4.dsl	剧毒新星飞行2			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204142	npc/Wizard4.dsl	剧毒新星飞行3			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204143	npc/Wizard4.dsl	剧毒新星飞行4			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204144	npc/Wizard4.dsl	剧毒新星飞行5			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204145	npc/Wizard4.dsl	剧毒新星飞行6			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204146	npc/Wizard4.dsl	剧毒新星飞行7			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204147	npc/Wizard4.dsl	剧毒新星飞行8			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204148	npc/Wizard4.dsl	剧毒新星飞行9			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204149	npc/Wizard4.dsl	剧毒新星飞行10			0	0	0	10	0	2	2	1			0		0	0	0																														
+320415	npc/Wizard4.dsl	剧毒地爆（精英）			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204151	npc/Wizard4.dsl	剧毒地爆飞行1			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204152	npc/Wizard4.dsl	剧毒地爆飞行2			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204153	npc/Wizard4.dsl	剧毒地爆飞行3			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204154	npc/Wizard4.dsl	剧毒地爆飞行4			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204155	npc/Wizard4.dsl	剧毒地爆飞行5			0	0	0	10	0	2	2	1			0		0	0	0																														
+3204156	npc/Wizard4.dsl	剧毒地爆飞行6			0	0	0	10	0	2	2	1			0		0	0	0																														
+320501	npc/Stone.dsl	岩石怪打击			0	0	0	4	0	2	2	1			0		0	0	0																														
+320502	npc/Stone.dsl	岩石怪普攻			0	0	0	4	0	2	2	1			0		0	0	0																														
+320503	npc/Stone.dsl	岩石怪反伤			0	0	0	20	0	2	2	16			0		0	0	0																														
+320511	npc/SandWorm.dsl	沙虫钻出			0	0	0	20	0	2	2	8			0		0	0	0																														
+320512	npc/SandWorm.dsl	沙虫钻出			0	0	0	20	0	2	2	8			0		0	0	0																														
+320513	npc/SandWorm.dsl	喷吐			0	0	0	20	0	2	2	8			0		0	0	0																														
+320514	npc/SandWorm.dsl	追敌			0	0	0	20	0	2	2	3			0		0	0	0																														
+320515	npc/SandWorm.dsl	随机移动			0	0	0	20	0	2	2	3			0		0	0	0																														
+320601	npc/Rock.dsl	巨石怪普攻			0	0	0	5	0	2	2	1			0		0	0	0																														
+320602	npc/Rock.dsl	巨石怪普攻			0	0	0	5	0	2	2	1			0		0	0	0																														
+320603	npc/Rock.dsl	巨石怪践踏			0	0	0	15	0	2	2	5			0		0	0	0																														
+320604	npc/Rock.dsl	巨石怪砸地			0	0	0	15	0	2	2	5			0		0	0	0																														
+320605	npc/Rock.dsl	巨石怪普攻加快版			0	0	0	4	0	2	2	3			0		0	0	0																														
+320606	npc/Rock.dsl	巨石怪普攻2加速版			0	0	0	4	0	2	2	3			0		0	0	0																														
+320607	npc/Rock.dsl	巨石怪震荡			0	0	0	20	0	2	2	6			0		0	0	0																														
+320608	npc/Rock.dsl	震荡召唤物			0	0	0	20	0	2	2	1			0		0	0	0																														
+320609	npc/Rock.dsl	巨石怪投石			0	0	0	15	0	2	2	3			0		0	0	0																														
+320610	npc/Rock.dsl	石头飞行			0	0	0	1	0	2	2	3			0		0	0	0																														
+370101	npc/Elite/Bluelf.dsl	哥布林燃烧瓶			0	0	5	7	0	2	2	3			0		0	0	0																														
+370102	npc/Elite/Bluelf.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+370103	npc/Elite/Bluelf.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+370104	npc/Elite/Bluelf.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+370201	npc/Elite/TLPMArmy.dsl	弩箭速射			0	0	0	15	0	2	2	5			0		0	0	0																														
+370202	npc/Elite/TLPMArmy.dsl	弩箭连射			0	0	0	15	0	2	2	5			0		0	0	0																														
+370203	npc/Elite/TLPMArmy.dsl	飞箭			0	0	0	15	0	2	2	5			0		0	0	0																														
+370204	npc/Elite/TLPMArmy.dsl	飞轮投掷			0	0	0	12	0	2	2	1			0		0	0	0																														
+370205	npc/Elite/TLPMArmy.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+370301	npc/Elite/KDArmy.dsl	火枪兵射击			0	0	0	15	0	2	2	3			0		0	0	0																														
+370302	npc/Elite/KDArmy.dsl	来福枪兵喷射			0	0	0	3	0	2	2	1			0		0	0	0																														
+370303	npc/Elite/KDArmy.dsl	来福枪兵连射			0	0	0	3	0	2	2	8			0		0	0	0																														
+380101	npc/Berserker.dsl	普攻			0	0	0	3	0	2	2	3			0		0	0	0																														
+380102	npc/Berserker.dsl	砸地震荡			0	0	0	20	0	2	2	8			0		0	0	0																														
+380103	npc/Berserker.dsl	疯狂连砍			0	0	0	15	0	2	2	6			0		0	0	0																														
+380104	npc/Berserker.dsl	咆哮			0	0	0	20	0	2	2	12			0		0	0	0																														
+380105	npc/Berserker.dsl	位移打击			0	0	0	20	0	2	2	8			0		0	0	0																														
+380106	npc/Berserker.dsl	爆气			0	0	0	20	0	2	2	20			0		0	0	0																														
+380107	npc/Berserker.dsl	震荡召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380108	npc/Berserker.dsl	飞行召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380109	npc/Berserker.dsl	飞行召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380110	npc/Berserker.dsl	位移打召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380111	npc/Berserker.dsl	砸地震荡			0	0	0	20	0	2	2	8			0		0	0	0																														
+380112	npc/Berserker.dsl	震荡召唤物			0	0	0	20	0	2	2	1			0		0	0	0																														
+380201	npc/Xilie.dsl	浮空			0	0	0	3	0	2	2	8			0		0	0	0																														
+380202	npc/Xilie.dsl	爆气			0	0	0	20	0	2	2	20			0		0	0	0																														
+380203	npc/Xilie.dsl	开炮			0	0	0	20	0	2	2	3			0		0	0	0																														
+380204	npc/Xilie.dsl	单发炮弹			0	0	0	20	0	2	2	5			0		0	0	0																														
+380205	npc/Xilie.dsl	巨炮打击			0	0	0	20	0	2	2	8			0		0	0	0																														
+380206	npc/Xilie.dsl	巨炮落地			0	0	0	20	0	2	2	5			0		0	0	0																														
+380207	npc/Xilie.dsl	连发炮弹			0	0	0	20	0	2	2	3			0		0	0	0																														
+380208	npc/Xilie.dsl	炮弹轰击			0	0	0	20	0	2	2	5			0		0	0	0																														
+380209	npc/Xilie.dsl	冲击			0	0	0	20	0	2	2	10			0		0	0	0																														
+380210	npc/Xilie.dsl	连击			0	0	0	3	0	2	2	5			0		0	0	0																														
+380211	npc/Xilie.dsl	出场			0	0	-1	-1	0	2	2	1			0		0	0	0																														
+380212	npc/Xilie.dsl	表现技能			0	0	0	20	0	2	2	6			0		0	0	0																														
+380213	npc/Xilie.dsl	巨炮落地			0	0	0	20	0	2	2	1			0		0	0	0																														
+380301	npc/HuLun.dsl	普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380302	npc/HuLun.dsl	二连普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380303	npc/HuLun.dsl	三连普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380304	npc/HuLun.dsl	挣扎			0	0	0	20	0	2	2	1			0		0	0	0																														
+380305	npc/HuLun.dsl	怒吼			0	0	0	6	0	2	2	1			0		0	0	0																														
+380306	npc/HuLun.dsl	旋风			0	0	0	10	0	2	2	1			0		0	0	0																														
+380307	npc/HuLun.dsl	重劈			0	0	0	8	0	2	2	1			0		0	0	0																														
+380308	npc/HuLun.dsl	跳斩			0	0	0	8	0	2	2	1			0		0	0	0																														
+380311	npc/HuLun.dsl	普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380312	npc/HuLun.dsl	二连普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380313	npc/HuLun.dsl	三连普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380316	npc/HuLun.dsl	旋风			0	0	0	10	0	2	2	1			0		0	0	0																														
+380317	npc/HuLun.dsl	重劈			0	0	0	8	0	2	2	1			0		0	0	0																														
+380318	npc/HuLun.dsl	跳斩			0	0	0	8	0	2	2	1			0		0	0	0																														
+380321	npc/HuLun.dsl	出场			0	0	-1	-1	0	2	2	1			0		0	0	0																														
+380326	npc/HuLun.dsl	旋风加强			0	0	0	10	0	2	2	1			0		0	0	0																														
+380327	npc/HuLun.dsl	重劈加强			0	0	0	8	0	2	2	1			0		0	0	0																														
+380328	npc/HuLun.dsl	跳斩加强			0	0	0	8	0	2	2	1			0		0	0	0																														
+380392	npc/HuLun.dsl	剧情用二连普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+380401	npc/ZhuLuoFu.dsl	抡砸			0	0	0	3	0	2	2	1			0		0	0	0																														
+380402	npc/ZhuLuoFu.dsl	横抡			0	0	0	3	0	2	2	1			0		0	0	0																														
+380403	npc/ZhuLuoFu.dsl	跳砸			0	0	0	10	0	2	2	10			0		0	0	0																														
+380404	npc/ZhuLuoFu.dsl	旋风			0	0	0	10	0	2	2	10			0		0	0	0																														
+380405	npc/ZhuLuoFu.dsl	挑空			0	0	0	3	0	2	2	1			0		0	0	0																														
+380406	npc/ZhuLuoFu.dsl	连招			0	0	0	3	0	2	2	10			0		0	0	0																														
+380407	npc/ZhuLuoFu.dsl	连招2			0	0	0	3	0	2	2	10			0		0	0	0																														
+380408	npc/ZhuLuoFu.dsl	朱罗夫霸体			0	0	0	30	0	2	2	1			0		0	0	0																														
+#人鱼王子																																																	
+380601	npc/RenYuWangZi.dsl	普攻			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380602	npc/RenYuWangZi.dsl	闪身普攻			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380603	npc/RenYuWangZi.dsl	普攻连击			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380604	npc/RenYuWangZi.dsl	闪身1			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380605	npc/RenYuWangZi.dsl	闪身2			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380606	npc/RenYuWangZi.dsl	闪身3			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380607	npc/RenYuWangZi.dsl	闪身4			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380608	npc/RenYuWangZi.dsl	闪身5			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380609	npc/RenYuWangZi.dsl	快速冲锋			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380610	npc/RenYuWangZi.dsl	冲锋			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380611	npc/RenYuWangZi.dsl	大浪			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380612	npc/RenYuWangZi.dsl	召唤物大浪			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380613	npc/RenYuWangZi.dsl	普攻连击表演			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380614	npc/RenYuWangZi.dsl	闪身1			0	0	0	15	0	2	2	0.2			0		0	0	0																														
+#席列伙伴技能																																																	
+380501	npc/Partner/PXilie.dsl	爆气	受到硬直控制时，爆发巨大能量将周围敌人震飞。		0	0	0	20	0	2	2	30			0		0	0	0																														
+380502	npc/Partner/PXilie.dsl	炮击	对目标进行炮击。		0	0	0	20	0	2	2	1			0		0	0	0																														
+380503	npc/Partner/PXilie.dsl	单发炮弹			0	0	0	20	0	2	2	5			0		0	0	0																														
+380504	npc/Partner/PXilie.dsl	聚能炮击	通过短暂聚能，对目标位置进行一次猛烈炮击，对一定范围内的敌人造成巨大伤害和浮空。		0	0	0	20	0	2	2	8			0		0	0	0																														
+380505	npc/Partner/PXilie.dsl	巨炮落地			0	0	0	20	0	2	2	5			0		0	0	0																														
+380506	npc/Partner/PXilie.dsl	制导炮击	锁定目标，对目标进行连续制导炮击。		0	0	0	20	0	2	2	3			0		0	0	0																														
+380507	npc/Partner/PXilie.dsl	炮弹轰击			0	0	0	20	0	2	2	5			0		0	0	0																														
+380508	npc/Partner/PXilie.dsl	聚能炮击	通过短暂聚能，对目标位置进行一次猛烈炮击，对一定范围内的敌人造成巨大伤害和浮空。		0	0	0	20	0	2	2	8			0		0	0	0																														
+380509	npc/Partner/PXilie.dsl	巨炮落地			0	0	0	20	0	2	2	5			0		0	0	0																														
+380510	npc/Partner/PXilie.dsl	制导炮击	锁定目标，对目标进行连续制导炮击。		0	0	0	20	0	2	2	3			0		0	0	0																														
+380511	npc/Partner/PXilie.dsl	炮弹轰击			0	0	0	20	0	2	2	5			0		0	0	0																														
+380512	npc/Partner/PXilie.dsl	席列出场			0	0	0	20	0	2	2	0			0		0	0	0																														
+#萨菲勒																																																	
+380701	npc/SaFeiLe.dsl	普攻			0	0	0	3	0	2	2	3			0		0	0	0																														
+380702	npc/SaFeiLe.dsl	暗影裂隙			0	0	0	12	0	2	2	5			0		0	0	0																														
+380703	npc/SaFeiLe.dsl	召唤黑洞			0	0	0	18	0	2	2	3			0		0	0	0																														
+380704	npc/SaFeiLe.dsl	黑洞出生			0	0	0	3	0	2	2	3			0		0	0	0																														
+380705	npc/SaFeiLe.dsl	破军			0	0	0	8	0	2	2	8			0		0	0	0																														
+380706	npc/SaFeiLe.dsl	牵引			0	0	0	8	0	2	2	5			0		0	0	0																														
+380707	npc/SaFeiLe.dsl	召唤黑暗球			0	0	0	15	0	2	2	8			0		0	0	0																														
+380708	npc/SaFeiLe.dsl	黑洞脉冲			0	0	0	30	0	2	2	1			0		0	0	0																														
+380709	npc/SaFeiLe.dsl	黑球出生			0	0	0	3	0	2	2	3			0		0	0	0																														
+380710	npc/SaFeiLe.dsl	黑球移动			0	0	0	3	0	2	2	3			0		0	0	0																														
+380711	npc/SaFeiLe.dsl	黑球移动			0	0	0	3	0	2	2	3			0		0	0	0																														
+380712	npc/SaFeiLe.dsl	黑球移动			0	0	0	3	0	2	2	3			0		0	0	0																														
+#魔化狂战士小伙伴																																																	
+380801	npc/Partner/PBerserker.dsl	普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+380802	npc/Partner/PBerserker.dsl	砸地震荡			0	0	0	20	0	2	2	8			0		0	0	0																														
+380803	npc/Partner/PBerserker.dsl	疯狂连砍			0	0	0	15	0	2	2	8			0		0	0	0																														
+380804	npc/Partner/PBerserker.dsl	咆哮			0	0	0	20	0	2	2	10			0		0	0	0																														
+380805	npc/Partner/PBerserker.dsl	位移打击			0	0	0	20	0	2	2	10			0		0	0	0																														
+380806	npc/Partner/PBerserker.dsl	爆气			0	0	0	20	0	2	2	20			0		0	0	0																														
+380807	npc/Partner/PBerserker.dsl	震荡召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380808	npc/Partner/PBerserker.dsl	飞行召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380809	npc/Partner/PBerserker.dsl	飞行召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380810	npc/Partner/PBerserker.dsl	位移打召唤物			0	0	0	20	0	2	2	5			0		0	0	0																														
+380811	npc/Partner/PBerserker.dsl	出生咆哮			0	0	0	20	0	2	2	10			0		0	0	0																														
+#再造太阳神RA																																																	
+380901	npc/RA.dsl	普攻二连			0	0	0	4	0	2	2	0.2			0		0	0	0																														
+380902	npc/RA.dsl	变灯：红			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380903	npc/RA.dsl	变灯：绿			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380904	npc/RA.dsl	冲击波			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380905	npc/RA.dsl	波浪			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380906	npc/RA.dsl	召唤物大浪			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380907	npc/RA.dsl	火焰陨石			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380908	npc/RA.dsl	召唤物陨石			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380909	npc/RA.dsl	阳光普照			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380910	npc/RA.dsl	如沐甘霖			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380911	npc/RA.dsl	十字炼狱			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380912	npc/RA.dsl	召唤物炎棺			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380913	npc/RA.dsl	召唤物冰棺			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380914	npc/RA.dsl	召唤物冲击波1			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380915	npc/RA.dsl	召唤物冲击波2			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380916	npc/RA.dsl	召唤物冲击波3			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380917	npc/RA.dsl	召唤物冲击波4			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380918	npc/RA.dsl	召唤物阳光普照1			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380919	npc/RA.dsl	召唤物阳光普照2			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+380920	npc/RA.dsl	召唤物阳光普照3			0	0	0	30	0	2	2	0.2			0		0	0	0																														
+#炎兽技能																																																	
+381001	npc/YanShou.dsl	冲撞			0	0	0	20	0	2	2	5			0		0	0	0																														
+381002	npc/YanShou.dsl	喷火			0	0	0	20	0	2	2	5			0		0	0	0																														
+381003	npc/YanShou.dsl	践踏			0	0	0	15	0	2	2	10			0		0	0	0																														
+381004	npc/YanShou.dsl	火雨			0	0	0	25	0	2	2	5			0		0	0	0																														
+381005	npc/YanShou.dsl	火雨			0	0	0	3	0	2	2	1			0		0	0	0																														
+381006	npc/YanShou.dsl	点燃			0	0	0	25	0	2	2	5			0		0	0	0																														
+381007	npc/YanShou.dsl	点燃			0	0	0	3	0	2	2	1			0		0	0	0																														
+381008	npc/YanShou.dsl	蔓延			0	0	0	3	0	2	2	1			0		0	0	0																														
+381009	npc/YanShou.dsl	蔓延			0	0	0	3	0	2	2	1			0		0	0	0																														
+381010	npc/YanShou.dsl	蔓延			0	0	0	3	0	2	2	1			0		0	0	0																														
+381011	npc/YanShou.dsl	蔓延			0	0	0	3	0	2	2	1			0		0	0	0																														
+381012	npc/YanShou.dsl	蔓延			0	0	0	3	0	2	2	1			0		0	0	0																														
+#古斯兰玛技能																																																	
+381101	npc/GSLM.dsl	普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+381102	npc/GSLM.dsl	火焰刀			0	0	0	6	0	2	2	5			0		0	0	0																														
+381103	npc/GSLM.dsl	蔓延			0	0	0	3	0	2	2	5			0		0	0	0																														
+381104	npc/GSLM.dsl	火雨			0	0	0	25	0	2	2	1			0		0	0	0																														
+381105	npc/GSLM.dsl	火雨召唤物			0	0	0	3	0	2	2	1			0		0	0	0																														
+381106	npc/GSLM.dsl	连打			0	0	0	4	0	2	2	5			0		0	0	0																														
+381107	npc/GSLM.dsl	爆气			0	0	0	25	0	2	2	10			0		0	0	0																														
+381108	npc/GSLM.dsl	变身			0	0	0	25	0	2	2	10			0		0	0	0																														
+381109	npc/GSLM.dsl	出生			0	0	0	25	0	2	2	10			0		0	0	0																														
+#骷髅将军技能																																																	
+381201	npc/SNK.dsl	普攻			0	0	0	6	0	2	2	1			0		0	0	0																														
+381202	npc/SNK.dsl	普攻2			0	0	0	3	0	2	2	1			0		0	0	0																														
+381203	npc/SNK.dsl	天灾打击			0	0	0	11	0	2	2	1			0		0	0	0																														
+381204	npc/SNK.dsl	召唤骷髅			0	0	0	25	0	2	2	25			0		0	0	0																														
+381205	npc/SNK.dsl	召唤法阵			0	0	0	15	0	2	2	15			0		0	0	0																														
+381206	npc/SNK.dsl	法阵技能			0	0	0	100	0	2	2	1			0		0	0	0																														
+381207	npc/SNK.dsl	骷髅出生			0	0	0	3	0	2	2	1			0		0	0	0																														
+381208	npc/SNK.dsl	骷髅出生			0	0	0	3	0	2	2	1			0		0	0	0																														
+381209	npc/SNK.dsl	骷髅出生			0	0	0	3	0	2	2	1			0		0	0	0																														
+381210	npc/SNK.dsl	骷髅出生			0	0	0	3	0	2	2	1			0		0	0	0																														
+381211	npc/SNK.dsl	天灾打击			0	0	0	3	0	2	2	1			0		0	0	0																														
+#剑盾兵伙伴																																																	
+381301	npc/Partner/PSSLancer.dsl	普攻			0	0	0	8	0	2	2	1			0		0	0	0																														
+381302	npc/Partner/PSSLancer.dsl	重击			0	0	0	1	0	2	2	1			0		0	0	0																														
+381303	npc/Partner/PSSLancer.dsl	普攻			0	0	0	5	0	2	2	1			0		0	0	0																														
+381304	npc/Partner/PSSLancer.dsl	普攻			0	0	0	8	0	2	2	1			0		0	0	0																														
+381305	npc/Partner/PSSLancer.dsl	普攻			0	0	0	12	0	2	2	1			0		0	0	0																														
+381306	npc/Partner/PSSLancer.dsl	反击重击			0	0	0	1	0	2	2	1			0		0	0	0																														
+381307	npc/Partner/PSSLancer.dsl	出生			0	0	0	1	0	2	2	1			0		0	0	0																														
+#齿刃哥布林伙伴																																																	
+381401	npc/Partner/PBluelf.dsl	普攻			0	0	0	1	0	2	2	1			0		0	0	0																														
+381402	npc/Partner/PBluelf.dsl	普攻			0	0	0	8	0	2	2	1			0		0	0	0																														
+381403	npc/Partner/PBluelf.dsl	普攻			0	0	0	8	0	2	2	1			0		0	0	0																														
+381404	npc/Partner/PBluelf.dsl	普攻			0	0	0	1	0	2	2	1			0		0	0	0																														
+381405	npc/Partner/PBluelf.dsl	普攻			0	0	0	8	0	2	2	1			0		0	0	0																														
+381406	npc/Partner/PBluelf.dsl	跳劈			0	0	0	12	0	2	2	1			0		0	0	0																														
+381407	npc/Partner/PBluelf.dsl	出生			0	0	0	1	0	2	2	1			0		0	0	0																														
+#圣卫军飞轮小伙伴																																																	
+381501	npc/Partner/PSWJFW.dsl	普攻			0	0	0	4	0	2	2	3			0		0	0	0																														
+381502	npc/Partner/PSWJFW.dsl	飞轮			0	0	0	12	0	2	2	5			0		0	0	0																														
+381503	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381504	npc/Partner/PSWJFW.dsl	多重飞轮			0	0	0	12	0	2	2	5			0		0	0	0																														
+381505	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381506	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381507	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381508	npc/Partner/PSWJFW.dsl	反控制			0	0	0	12	0	2	2	5			0		0	0	0																														
+381509	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381510	npc/Partner/PSWJFW.dsl	飞轮			0	0	0	12	0	2	2	5			0		0	0	0																														
+381511	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381512	npc/Partner/PSWJFW.dsl	多重飞轮			0	0	0	12	0	2	2	5			0		0	0	0																														
+381513	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381514	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381515	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+381516	npc/Partner/PSWJFW.dsl	反控制			0	0	0	12	0	2	2	5			0		0	0	0																														
+381517	npc/Partner/PSWJFW.dsl	飞轮飞行			0	0	0	15	0	2	2	1			0		0	0	0																														
+#圣卫军长矛小伙伴																																																	
+381601	npc/Partner/PSWJSpeear.dsl	横抡			0	0	0	4	0	2	2	1			0		0	0	0																														
+381602	npc/Partner/PSWJSpeear.dsl	连击			0	0	0	4	0	2	2	5			0		0	0	0																														
+381603	npc/Partner/PSWJSpeear.dsl	突进			0	0	0	8	0	2	2	8			0		0	0	0																														
+381604	npc/Partner/PSWJSpeear.dsl	二连击			0	0	0	4	0	2	2	5			0		0	0	0																														
+381605	npc/Partner/PSWJSpeear.dsl	破格挡突进			0	0	0	8	0	2	2	8			0		0	0	0																														
+381606	npc/Partner/PSWJSpeear.dsl	破格挡二连击			0	0	0	4	0	2	2	5			0		0	0	0																														
+#召唤物技能					0	0	0	12	0	2	2	5			0		0	0	0																														
+390001	npc/Unit.dsl	飞锤			0	0	0	2	0	2	2	1			0		0	0	0																														
+390002	npc/Unit.dsl	飞矛			0	0	0	2	0	2	2	1			0		0	0	0																														
+390003	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390004	npc/Unit.dsl	火枪子弹			0	0	0	2	0	2	2	1			0		0	0	0																														
+390005	npc/Unit.dsl	火枪兵手雷			0	0	0	2	0	2	2	1			0		0	0	0																														
+390006	npc/Unit.dsl	镭射枪兵手雷			0	0	0	2	0	2	2	1			0		0	0	0																														
+390007	npc/Unit.dsl	骷髅掷骨			0	0	0	2	0	2	2	1			0		0	0	0																														
+390008	npc/Unit.dsl	自爆燃烧瓶1			0	0	0	2	0	2	2	1			0		0	0	0																														
+390009	npc/Unit.dsl	自爆燃烧瓶2			0	0	0	2	0	2	2	1			0		0	0	0																														
+390010	npc/Unit.dsl	自爆燃烧瓶3			0	0	0	2	0	2	2	1			0		0	0	0																														
+390011	npc/Unit.dsl	自爆燃烧瓶4			0	0	0	2	0	2	2	1			0		0	0	0																														
+390012	npc/Unit.dsl	飞锤弹幕1			0	0	0	2	0	2	2	1			0		0	0	0																														
+390013	npc/Unit.dsl	飞锤弹幕2			0	0	0	2	0	2	2	1			0		0	0	0																														
+390014	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390015	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390016	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390017	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390018	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390019	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390020	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+390021	npc/Unit.dsl	燃烧瓶			0	0	0	2	0	2	2	1			0		0	0	0																														
+##    伊娜																																																	
+400001	npc/YiNa/YiNa_Hit_01.dsl	伊娜普攻一段（无硬直）			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1									400002			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+400002	npc/YiNa/YiNa_Hit_02.dsl	伊娜普攻二段（无硬直）			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1									400003			0.3	1				UI_AtlasDynamic\skill\skill	ck02										
+400003	npc/YiNa/YiNa_Hit_03.dsl	伊娜普攻三段（无硬直）			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1									400004			0.3	1				UI_AtlasDynamic\skill\skill	ck03										
+400004	npc/YiNa/YiNa_Hit_04.dsl	伊娜普攻四段（无硬直）			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400005	npc/YiNa/YiNa_Hit_05.dsl	伊娜普攻四段无后摇（无硬直）			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400006	npc/YiNa/YiNa_Hit_06.dsl	伊娜普攻一段无距离限制（无硬直）			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1									400002			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+400011	npc/YiNa/YiNa_Hit_01.dsl	伊娜普攻一段			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1									400012			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+400012	npc/YiNa/YiNa_Hit_02.dsl	伊娜普攻二段			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1									400013			0.3	1				UI_AtlasDynamic\skill\skill	ck02										
+400013	npc/YiNa/YiNa_Hit_03.dsl	伊娜普攻三段			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1									400014			0.3	1				UI_AtlasDynamic\skill\skill	ck03										
+400014	npc/YiNa/YiNa_Hit_04.dsl	伊娜普攻四段			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400015	npc/YiNa/YiNa_Hit_05.dsl	伊娜普攻四段无后摇			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400016	npc/YiNa/YiNa_Hit_06.dsl	伊娜普攻一段无距离限制			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1									400012			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+400101	npc/YiNa/YiNa_Skill01_01.dsl	伊娜小突刺			1	0	0	5	0	2	2	0.1			0		0	0	0	100	1												0.3	1		小突刺		UI_AtlasDynamic\skill\skill	yn01										
+400201	npc/YiNa/YiNa_Skill02_01.dsl	伊娜大突刺			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		大突刺		UI_AtlasDynamic\skill\skill	yn01										
+400301	npc/YiNa/YiNa_Skill03_01.dsl	伊娜旋风			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		旋风		UI_AtlasDynamic\skill\skill	yn03										
+400401	npc/YiNa/YiNa_Skill04_01.dsl	伊娜前冲			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		前冲		UI_AtlasDynamic\skill\skill	ck01										
+400402	npc/YiNa/YiNa_Skill04_02.dsl	伊娜后冲			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		后冲		UI_AtlasDynamic\skill\skill	ck02										
+400403	npc/YiNa/YiNa_Skill04_03.dsl	伊娜右冲			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		右冲		UI_AtlasDynamic\skill\skill	ck03										
+400404	npc/YiNa/YiNa_Skill04_04.dsl	伊娜左冲			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		左冲		UI_AtlasDynamic\skill\skill	ck04										
+400501	npc/YiNa/YiNa_Skill05_01.dsl	伊娜飞镖1			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		飞镖		UI_AtlasDynamic\skill\skill	yn04										
+400502	npc/YiNa/YiNa_Skill05_02.dsl	伊娜飞镖2			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		飞镖		UI_AtlasDynamic\skill\skill	yn04										
+400503	npc/YiNa/YiNa_Skill05_03.dsl	伊娜飞镖3			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		飞镖		UI_AtlasDynamic\skill\skill	yn04										
+400511	npc/YiNa/YiNa_Skill05_Bullet01.dsl	飞镖1			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400512	npc/YiNa/YiNa_Skill05_Bullet02.dsl	飞镖2			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400513	npc/YiNa/YiNa_Skill05_Bullet03.dsl	飞镖3			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400514	npc/YiNa/YiNa_Skill05_Bullet04.dsl	飞镖4			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400515	npc/YiNa/YiNa_Skill05_Bullet05.dsl	飞镖5			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400516	npc/YiNa/YiNa_Skill05_Bullet06.dsl	飞镖6			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400517	npc/YiNa/YiNa_Skill05_Bullet07.dsl	飞镖7			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400518	npc/YiNa/YiNa_Skill05_Bullet08.dsl	飞镖8			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400519	npc/YiNa/YiNa_Skill05_Bullet09.dsl	飞镖9			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+400601	npc/YiNa/YiNa_Skill06_01.dsl	防御			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1						TRUE	TRUE	TRUE				0.3	1		防御		UI_AtlasDynamic\skill\skill	yn02										
+4006011	npc/YiNa/YiNa_Skill06_01.dsl	防御2秒反击			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1						TRUE	TRUE	TRUE				0.3	1		防御		UI_AtlasDynamic\skill\skill	yn02										
+4006012	npc/YiNa/YiNa_Skill06_01.dsl	防御秒反击（仅用于初见伊娜）			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1						TRUE	TRUE	TRUE				0.3	1		防御		UI_AtlasDynamic\skill\skill	yn02										
+4006013	npc/YiNa/YiNa_Skill06_01.dsl	防御1秒反击			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1						TRUE	TRUE	TRUE				0.3	1		防御		UI_AtlasDynamic\skill\skill	yn02										
+4006014	npc/YiNa/YiNa_Skill06_01.dsl	防御0.3秒反击			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1						TRUE	TRUE	TRUE				0.3	1		防御		UI_AtlasDynamic\skill\skill	yn02										
+##    茱儿																																																	
+410000	npc/ZhuEr/ZhuEr_Appear.dsl	出场			0	0	-1	-1	0	2	2	1			0		0	0	0																														
+410101	npc/ZhuEr/ZhuEr_Skill01_01.dsl	普攻			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101011	npc/ZhuEr/ZhuEr_Skill01_01.dsl	普攻飞行1			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101012	npc/ZhuEr/ZhuEr_Skill01_01.dsl	普攻飞行2			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101013	npc/ZhuEr/ZhuEr_Skill01_01.dsl	普攻飞行3			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101014	npc/ZhuEr/ZhuEr_Skill01_01.dsl	普攻飞行4			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410102	npc/ZhuEr/ZhuEr_Skill01_02.dsl	火焰箭普攻			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101021	npc/ZhuEr/ZhuEr_Skill01_02.dsl	火焰箭普攻飞行1			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101022	npc/ZhuEr/ZhuEr_Skill01_02.dsl	火焰箭普攻飞行2			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101023	npc/ZhuEr/ZhuEr_Skill01_02.dsl	火焰箭普攻飞行3			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101024	npc/ZhuEr/ZhuEr_Skill01_02.dsl	火焰箭普攻飞行4			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410103	npc/ZhuEr/ZhuEr_Skill01_03.dsl	寒冰箭普攻			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101031	npc/ZhuEr/ZhuEr_Skill01_03.dsl	寒冰箭普攻飞行1			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101032	npc/ZhuEr/ZhuEr_Skill01_03.dsl	寒冰箭普攻飞行2			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101033	npc/ZhuEr/ZhuEr_Skill01_03.dsl	寒冰箭普攻飞行3			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4101034	npc/ZhuEr/ZhuEr_Skill01_03.dsl	寒冰箭普攻飞行4			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410201	npc/ZhuEr/ZhuEr_Skill02_01.dsl	蓄力箭			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4102011	npc/ZhuEr/ZhuEr_Skill02_01.dsl	蓄力箭飞行			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410301	npc/ZhuEr/ZhuEr_Skill03_01.dsl	后跳蓄力箭			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4103011	npc/ZhuEr/ZhuEr_Skill03_01.dsl	后跳蓄力箭飞行			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410401	npc/ZhuEr/ZhuEr_Skill04_01.dsl	箭雨			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410402	npc/ZhuEr/ZhuEr_Skill04_02.dsl	火焰箭雨			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+410403	npc/ZhuEr/ZhuEr_Skill04_03.dsl	寒冰箭雨			1	0	0	15	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+##    达克尼斯																																																	
+420101	npc/DaKeNiSi/DaKeNiSi_Skill01.dsl	普攻二连			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420102	npc/DaKeNiSi/DaKeNiSi_Skill01.dsl	重击			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420103	npc/DaKeNiSi/DaKeNiSi_Skill01.dsl	刺击			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420104	npc/DaKeNiSi/DaKeNiSi_Skill01.dsl	追击			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420105	npc/DaKeNiSi/DaKeNiSi_Skill01.dsl	持续追击			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420201	npc/DaKeNiSi/DaKeNiSi_Skill02.dsl	绕背			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420202	npc/DaKeNiSi/DaKeNiSi_Skill02.dsl	后闪			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420203	npc/DaKeNiSi/DaKeNiSi_Skill02.dsl	前闪			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420204	npc/DaKeNiSi/DaKeNiSi_Skill02.dsl	随机闪			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420301	npc/DaKeNiSi/DaKeNiSi_Skill03.dsl	影袭			1	0	0	10	0	2	2	0.1			0		0	0	0	10	0												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4203011	npc/DaKeNiSi/DaKeNiSi_Skill03_shadow01.dsl	影袭影子攻击			1	0	0	10	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420401	npc/DaKeNiSi/DaKeNiSi_Skill04.dsl	分身			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4204011	npc/DaKeNiSi/DaKeNiSi_Skill04.dsl	分身出生1			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4204012	npc/DaKeNiSi/DaKeNiSi_Skill04.dsl	分身出生2			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+420501	npc/DaKeNiSi/DaKeNiSi_Skill05.dsl	达克尼斯飞镖			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1		飞镖		UI_AtlasDynamic\skill\skill	yn04										
+4205011	npc/DaKeNiSi/DaKeNiSi_Skill05_Bullet01.dsl	飞镖1			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4205012	npc/DaKeNiSi/DaKeNiSi_Skill05_Bullet01.dsl	飞镖2			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4205013	npc/DaKeNiSi/DaKeNiSi_Skill05_Bullet01.dsl	飞镖3			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4205014	npc/DaKeNiSi/DaKeNiSi_Skill05_Bullet01.dsl	飞镖4			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4205015	npc/DaKeNiSi/DaKeNiSi_Skill05_Bullet01.dsl	飞镖5			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+420601	npc/DaKeNiSi/DaKeNiSi_Skill06.dsl	死亡莲华			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+4206011	npc/DaKeNiSi/DaKeNiSi_Skill06_Bullet01.dsl	死亡莲华飞镖1			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4206012	npc/DaKeNiSi/DaKeNiSi_Skill06_Bullet01.dsl	死亡莲华飞镖2			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4206013	npc/DaKeNiSi/DaKeNiSi_Skill06_Bullet01.dsl	死亡莲华飞镖3			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4206014	npc/DaKeNiSi/DaKeNiSi_Skill06_Bullet01.dsl	死亡莲华飞镖4			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+4206015	npc/DaKeNiSi/DaKeNiSi_Skill06_Bullet01.dsl	死亡莲华飞镖5			1	0	0	30	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck04										
+##    紫衣刺客																																																	
+430000	npc/ZiYiCike/ZiYiCike_Appear.dsl	出场			0	0	-1	-1	0	2	2	1			0		0	0	0																														
+430001	npc/ZiYiCike/ZiYiCike_Hit_01.dsl	普攻一段			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1									430002			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+430002	npc/ZiYiCike/ZiYiCike_Hit_02.dsl	普攻二段			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1									430003			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+430003	npc/ZiYiCike/ZiYiCike_Hit_03.dsl	普攻三段			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1									430004			0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+430004	npc/ZiYiCike/ZiYiCike_Hit_04.dsl	普攻四段			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	ck01										
+430102	npc/ZiYiCike/ZiYiCike_Skill01_02.dsl	升龙刃			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	3		升龙刃二段		UI_AtlasDynamic\skill\skill	ck03										
+430201	npc/ZiYiCike/ZiYiCike_Skill02_01.dsl	刃旋			1	0	0	5	0	2	2	0.1			0		0	0	0	100	1												0.3	3		刃旋一段		UI_AtlasDynamic\skill\skill	ck01										
+430202	npc/ZiYiCike/ZiYiCike_Skill02_02.dsl	重击			1	0	0	10	0	2	2	0.1			0		0	0	0	100	1												0.3	3		刃旋二段		UI_AtlasDynamic\skill\skill	ck05										
+430301	npc/ZiYiCike/ZiYiCike_Skill03_01.dsl	护盾			1	0	0	10	0	2	2	20			0		0	0	0	100	1												0.3	3		刃旋二段		UI_AtlasDynamic\skill\skill	js09										
+##    蕾咪																																																	
+440000	npc/LeiMi/LeiMi_Appear.dsl	出场			0	0	-1	-1	0	2	2	1			0		0	0	0														0.3	1				UI_AtlasDynamic\skill\skill	lm01										
+440101	npc/LeiMi/LeiMi_Skill01.dsl	普攻一段			1	0	0	4	0	2	2	0.1			0		0	0	0	100	1									440102			0.3	1				UI_AtlasDynamic\skill\skill	lm01										
+440102	npc/LeiMi/LeiMi_Skill01.dsl	普攻二段			1	0	0	4	0	2	2	0.1			0		0	0	0	100	1									440103			0.3	3				UI_AtlasDynamic\skill\skill	lm01										
+440103	npc/LeiMi/LeiMi_Skill01.dsl	普攻三段			1	0	0	4	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	lm01										
+440201	npc/LeiMi/LeiMi_Skill02.dsl	小冲			1	0	0	4	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	lm01										
+4402011	npc/LeiMi/LeiMi_Skill02.dsl	小冲延迟伤害			1	0	0	4	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	lm01										
+440301	npc/LeiMi/LeiMi_Skill03.dsl	旋转			1	0	0	3	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	lm02										
+440401	npc/LeiMi/LeiMi_Skill04.dsl	连击			1	0	0	10	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	lm03										
+440501	npc/LeiMi/LeiMi_Skill05.dsl	挑空			1	0	0	2	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	lm04										
+##    狼人 莱卡翁 																																																	
+450000	npc/LaiKaWeng/LaiKaWeng_Appear.dsl	出场			0	0	-1	-1	0	2	2	1			0		0	0	0														0.3	1				UI_AtlasDynamic\skill\skill	lm01										
+450101	npc/LaiKaWeng/LaiKaWeng_Skill01.dsl	普攻			0	0	0	3	0	2	2	1			0		0	0	0																														
+450102	npc/LaiKaWeng/LaiKaWeng_Skill01.dsl	普攻强化			0	0	0	3	0	2	2	1			0		0	0	0																														
+450201	npc/LaiKaWeng/LaiKaWeng_Skill02.dsl	跳跃攻击			0	0	0	10	0	2	2	1			0		0	0	0																														
+450202	npc/LaiKaWeng/LaiKaWeng_Skill02.dsl	跳跃攻击强化			0	0	0	10	0	2	2	1			0		0	0	0																														
+450301	npc/LaiKaWeng/LaiKaWeng_Skill03.dsl	皮毛强化（黄盾）			0	0	0	30	0	2	2	1			0		0	0	0																														
+450401	npc/LaiKaWeng/LaiKaWeng_Skill03.dsl	利爪强化（吸血）			0	0	0	30	0	2	2	1			0		0	0	0																														
+##    平台墙																																																	
+460001	npc/PingTai/S01_JiTui_01.dsl	刺客普攻一段			1	0	0	50	0	2	2	0.1			0		0	0	0	100	1												0.3	1				UI_AtlasDynamic\skill\skill	attack3										

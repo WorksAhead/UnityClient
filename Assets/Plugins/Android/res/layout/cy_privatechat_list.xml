@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null" >
+
+    <com.changyou.utils.pulltorefresh.PullToRefreshListView
+        android:id="@+id/cy_contacts_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="1dp"
+        android:cacheColorHint="#3a4e47"
+        android:divider="#2b3a30"
+        android:dividerHeight="1dp"
+        android:listSelector="#00000000"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <com.changyou.utils.pulltorefresh.PullToRefreshScrollView
+        android:id="@+id/cy_scrollview_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/cy_no_chat_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingTop="120dp"
+            android:textColor="#ffffff" />
+    </com.changyou.utils.pulltorefresh.PullToRefreshScrollView>
+
+    <RelativeLayout
+        android:id="@+id/cy_rl_load_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/cy_pb_load_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>
