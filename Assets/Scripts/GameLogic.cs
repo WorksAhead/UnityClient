@@ -13,6 +13,9 @@ public class GameLogic : UnityEngine.MonoBehaviour
     {
         GlobalVariables.Instance.IsClient = true;
         DontDestroyOnLoad(this.gameObject);
+
+        // initialize lua environment
+        LuaManager.Instance.InitEnv();
     }
     // Use this for initialization
     internal void Start()
@@ -122,6 +125,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 }
                 
                 GameControler.TickGame();
+
+                LuaManager.Instance.Tick();
             }
 
             // Todo: try move to ui root
@@ -173,6 +178,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             GameControler.Release();
             AssetExManager.Instance.ClearAllAssetEx();
             UnityEngine.Resources.UnloadUnusedAssets();
+            LuaManager.Instance.DisposeEnv();
         }
         catch (System.Exception ex)
         {

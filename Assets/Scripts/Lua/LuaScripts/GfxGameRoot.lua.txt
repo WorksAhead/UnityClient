@@ -1,0 +1,17 @@
+LogToConsole = CS.UnityEngine.Debug.Log;
+
+function awake()
+	CS.UnityEngine.Object.DontDestroyOnLoad(self.gameObject);
+	LogToConsole('awake call from lua');
+end
+
+function start()
+	LogToConsole('start call from lua');
+end
+
+function update()
+end
+
+function ondestroy()
+	LogToConsole('destroy call from lua');
+end
