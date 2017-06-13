@@ -1,4 +1,8 @@
+-- short for unity functions
 LogToConsole = CS.UnityEngine.Debug.Log;
+
+-- lua debugger, disable in release build
+-- require('mobdebug').start("10.12.25.109")
 
 function awake()
 	CS.UnityEngine.Object.DontDestroyOnLoad(self.gameObject);

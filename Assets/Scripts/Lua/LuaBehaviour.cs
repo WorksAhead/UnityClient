@@ -95,6 +95,7 @@ public class LuaBehaviour : MonoBehaviour
 
     void ExecuteLua()
     {
-        LuaManager.Instance.Env.DoString(LuaScript.text, "Lua", ScriptEnv);
+        string luaExecutable = LuaManager.Instance.LoadLuaFromFile(System.IO.Path.GetFileNameWithoutExtension(LuaScript.name));
+        LuaManager.Instance.DoString(luaExecutable, ScriptEnv);
     }
 }

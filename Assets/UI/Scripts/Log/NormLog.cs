@@ -51,20 +51,10 @@ namespace ArkCrossEngine
         public void Record(GameEventCode code)
         {
             string action_sign = ((int)code).ToString();
-#if UNITY_ANDROID
-              JsonData device_info = new JsonData();
-              device_info["actionSign"] = action_sign;
-              CYMGConnector.doSdk("getDeviceInfo", device_info.ToJson());
-#endif
         }
         public void Print(int code)
         {
             string str = Build(code);
-#if UNITY_ANDROID
-          JsonData data = new JsonData();
-          data["event"] = str;
-          CYMGConnector.doSdk("mbiGameEvent", data.ToJson());
-#endif
             UnityEngine.Debug.Log("NormLog Print : " + str);
             LogSystem.Debug("NormLog Print : {0}", str);
         }
