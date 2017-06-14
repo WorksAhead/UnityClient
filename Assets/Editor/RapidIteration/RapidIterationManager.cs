@@ -39,7 +39,7 @@ namespace RapidIteration
 
         static void OnSceneOpenedCallback(UnityEngine.SceneManagement.Scene scene, UnityEditor.SceneManagement.OpenSceneMode mode)
         {
-            if (Application.isPlaying)
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
             {
                 return;
             }
