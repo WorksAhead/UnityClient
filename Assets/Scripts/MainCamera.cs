@@ -54,7 +54,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
 
     public void CameraFollow(int id)
     {
-        UnityEngine.GameObject obj = CrossObjectHelper.TryCastObject < UnityEngine.GameObject >(LogicSystem.GetGameObject(id));
+        UnityEngine.GameObject obj = LogicSystem.GetGameObject(id);
         if (null != obj)
         {
             m_CurTargetId = id;
@@ -129,11 +129,11 @@ public class MainCamera : UnityEngine.MonoBehaviour
     }
     public void CameraFollowImmediately(int id)
     {
-        ArkCrossEngine.GameObject obj = LogicSystem.GetGameObject(id);
+        UnityEngine.GameObject obj = LogicSystem.GetGameObject(id);
         if (null != obj)
         {
             m_CurTargetId = id;
-            m_Target = CrossObjectHelper.TryCastObject < UnityEngine.Transform > (obj.transform);
+            m_Target = obj.transform;
             UnityEngine.Collider collider = m_Target.GetComponent<UnityEngine.Collider>();
             if (null != collider)
             {
@@ -372,7 +372,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
             if (null != UnityEngine.Camera.main)
             {
-                int layer = ArkCrossEngine.LayerMask.NameToLayer("Detail");
+                int layer = LayerMask.NameToLayer("Detail");
                 int detailMask = (1 << layer);
                 if (GlobalVariables.Instance.IsHD)
                 {

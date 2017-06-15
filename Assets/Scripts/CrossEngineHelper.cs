@@ -7,24 +7,14 @@ namespace ArkCrossEngine
 {
     public class CrossObjectHelper
     {
-        public static T TryCastObject<T>(ArkCrossEngine.Object obj) where T : UnityEngine.Object
+        public static T TryCastObject<T>(UnityEngine.Object obj) where T : UnityEngine.Object
         {
-            if (obj == null)
-            {
-                return null;
-            }
-
-            return obj.GetImpl<T>();
+            return (T)obj;
         }
 
-        public static ArkCrossEngine.Object TryConstructCrossObject(UnityEngine.Object obj)
+        public static UnityEngine.Object TryConstructCrossObject(UnityEngine.Object obj)
         {
-            if (obj == null)
-            {
-                return null;
-            }
-
-            return ArkCrossEngine.ObjectFactory.Create<ArkCrossEngine.GameObject>(obj);
+            return obj;
         }
     }
 }

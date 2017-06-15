@@ -631,7 +631,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
             if (!hasAdded)
             {
                 string path = UIManager.Instance.GetPathByName("Pointing");
-                UnityEngine.GameObject go = ResourceSystem.GetSharedResource(path)._GetImpl() as UnityEngine.GameObject;
+                UnityEngine.GameObject go = ResourceSystem.GetSharedResource(path) as UnityEngine.GameObject;
                 if (null != go)
                 {
                     UnityEngine.GameObject goFather = GetBtnGameObject("Entrance-Skill");

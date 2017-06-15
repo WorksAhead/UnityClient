@@ -22,7 +22,7 @@ public class GlobalStoryObject : UnityEngine.MonoBehaviour
             float x = (float)args[0];
             float y = (float)args[1];
             float z = (float)args[2];
-            UnityEngine.GameObject playerself = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (LogicSystem.PlayerSelf);
+            UnityEngine.GameObject playerself = LogicSystem.PlayerSelf;
             if (null != playerself)
             {
                 playerself.transform.localScale = new UnityEngine.Vector3(x, y, z);
@@ -37,7 +37,7 @@ public class GlobalStoryObject : UnityEngine.MonoBehaviour
             float x = (float)args[0];
             float y = (float)args[1];
             float z = (float)args[2];
-            UnityEngine.GameObject playerself = LogicSystem.PlayerSelf._GetImpl() as UnityEngine.GameObject;
+            UnityEngine.GameObject playerself = LogicSystem.PlayerSelf as UnityEngine.GameObject;
             if (null != playerself)
             {
                 LogicSystem.NotifyGfxMoveControlStart(LogicSystem.PlayerSelf, 0, false);

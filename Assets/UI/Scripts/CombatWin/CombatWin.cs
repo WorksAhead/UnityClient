@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 public class CombatWin : UnityEngine.MonoBehaviour
 {
-    public ArkCrossEngine.GameObject goEffectTitle = null;
-    private ArkCrossEngine.GameObject runtimeEffect;
-    public ArkCrossEngine.GameObject goTitle = null;//特效goEffectTitle播在该UnityEngine.GameObject上
+    public UnityEngine.GameObject goEffectTitle = null;
+    private UnityEngine.GameObject runtimeEffect;
+    public UnityEngine.GameObject goTitle = null;//特效goEffectTitle播在该UnityEngine.GameObject上
     private List<object> eventlist = new List<object>();
-    public ArkCrossEngine.GameObject cardEffect = null; // 翻拍特效
-    public ArkCrossEngine.GameObject cloneEffect = null; // 特效副本
+    public UnityEngine.GameObject cardEffect = null; // 翻拍特效
+    public UnityEngine.GameObject cloneEffect = null; // 特效副本
     public float m_DelayTimeToMaincity = 2f;
     private bool effectPlay = true;
     public void UnSubscribe()
@@ -128,20 +128,20 @@ public class CombatWin : UnityEngine.MonoBehaviour
     //播放翻拍特效
     public void PlayEffect(UnityEngine.GameObject go)
     {
-        cloneEffect = ArkCrossEngine.ResourceSystem.NewObject(cardEffect) as ArkCrossEngine.GameObject;
+        cloneEffect = ArkCrossEngine.ResourceSystem.NewObject(cardEffect) as UnityEngine.GameObject;
         if (cloneEffect != null && go != null)
         {
             UnityEngine.Transform tf = go.transform.Find("Texture");
             if (tf != null)
             {
-                cloneEffect.transform.position = new ArkCrossEngine.Vector3(tf.position.x, tf.position.y, tf.position.z);
+                cloneEffect.transform.position = tf.position;
             }
         }
     }
     //标题特效
     public void TitleEffect()
     {
-        runtimeEffect = ArkCrossEngine.ResourceSystem.NewObject(goEffectTitle) as ArkCrossEngine.GameObject;
+        runtimeEffect = ArkCrossEngine.ResourceSystem.NewObject(goEffectTitle) as UnityEngine.GameObject;
         if (runtimeEffect != null && goTitle != null)
         {
             runtimeEffect.transform.position = goTitle.transform.position;
@@ -150,7 +150,7 @@ public class CombatWin : UnityEngine.MonoBehaviour
     //销毁特效
     void DestroyEffect()
     {
-        Destroy(cloneEffect._GetImpl());
+        Destroy(cloneEffect);
     }
     public void ButtonClick()
     {

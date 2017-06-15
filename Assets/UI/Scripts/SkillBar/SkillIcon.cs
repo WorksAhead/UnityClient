@@ -42,7 +42,7 @@ public class SkillIcon : UnityEngine.MonoBehaviour
         UnityEngine.GameObject go = this.gameObject;
         if (go != null)
         {
-            GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, m_SkillCat, ArkCrossEngine.Vector3.zero);
+            GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, m_SkillCat, UnityEngine.Vector3.zero);
             collisonTime = 0.3f;
             SetCountDown(collisonTime);
             AddTweenScale();

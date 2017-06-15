@@ -7,8 +7,8 @@ using ArkCrossEngine;
 public class UIJinBiVictoryPanel : UnityEngine.MonoBehaviour
 {
 
-    public ArkCrossEngine.GameObject goEffectInfo = null;
-    public ArkCrossEngine.GameObject goEffectTitle = null;
+    public UnityEngine.GameObject goEffectInfo = null;
+    public UnityEngine.GameObject goEffectTitle = null;
     private List<UnityEngine.GameObject> m_RunTimeEffectList = new List<UnityEngine.GameObject>();
     public UnityEngine.GameObject goTitle = null;//特效goEffectTitle播在该UnityEngine.GameObject上
     public UnityEngine.GameObject goItemLabel = null;//prefab

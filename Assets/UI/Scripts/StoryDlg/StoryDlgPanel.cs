@@ -16,7 +16,7 @@ public class StoryDlgPanel : UnityEngine.MonoBehaviour
     /* ScriptForStory 用于区分该脚本挂在StoryDlgBig上还是StoryDlgSmall，需要编辑器中修改*/
     public StoryDlgType ScriptForStory = StoryDlgType.Big;
     public float ShowWordDuration = 0.1f;
-    public ArkCrossEngine.GameObject EffectForSpeaker;
+    public UnityEngine.GameObject EffectForSpeaker;
     public UILabel lblName;
     public UILabel lblWords;
     public UILabel lblSpeakerNameLeft01;
@@ -176,12 +176,12 @@ public class StoryDlgPanel : UnityEngine.MonoBehaviour
             if (lblName != null) lblName.text = string.Format("[c9b2ae]{0}:[-]", item.SpeakerName);
             item.Words = item.Words.Replace("[\\n]", "\n");
             //if(lblWords!=null) lblWords.text = item.Words;
-            ArkCrossEngine.GameObject goAtlas = ArkCrossEngine.ResourceSystem.GetSharedResource(item.ImageLeftAtlas) as ArkCrossEngine.GameObject;
+            UnityEngine.GameObject goAtlas = ArkCrossEngine.ResourceSystem.GetSharedResource(item.ImageLeftAtlas) as UnityEngine.GameObject;
             bool isMonsterSpeaker = true;//判断是否为小怪
             if (goAtlas != null && spriteLeft != null)
             {
                 NGUITools.SetActive(spriteLeft.gameObject, true);
-                UIAtlas atlas = goAtlas.GetImpl<UnityEngine.GameObject>().GetComponent<UIAtlas>();
+                UIAtlas atlas = goAtlas.GetComponent<UIAtlas>();
                 if (atlas != null)
                 {
                     spriteLeft.atlas = atlas;
@@ -202,7 +202,7 @@ public class StoryDlgPanel : UnityEngine.MonoBehaviour
             }
             try
             {
-                goAtlas = ArkCrossEngine.ResourceSystem.GetSharedResource(item.ImageRightAtlas) as ArkCrossEngine.GameObject;
+                goAtlas = ArkCrossEngine.ResourceSystem.GetSharedResource(item.ImageRightAtlas) as UnityEngine.GameObject;
             }
             catch (System.Exception ex)
             {
@@ -212,7 +212,7 @@ public class StoryDlgPanel : UnityEngine.MonoBehaviour
             if (goAtlas != null && spriteRight != null)
             {
                 NGUITools.SetActive(spriteRight.gameObject, true);
-                UIAtlas atlas = goAtlas.GetImpl<UnityEngine.GameObject>().GetComponent<UIAtlas>();
+                UIAtlas atlas = goAtlas.GetComponent<UIAtlas>();
                 if (atlas != null)
                 {
                     spriteRight.atlas = atlas;
@@ -346,8 +346,8 @@ public class StoryDlgPanel : UnityEngine.MonoBehaviour
     private void PlayParticleByGameObject(UnityEngine.GameObject obj)
     {
         if (obj == null) return;
-        ArkCrossEngine.GameObject _gameobject = ArkCrossEngine.ObjectFactory.Create<ArkCrossEngine.GameObject>(gameObject);// new ArkCrossEngine.GameObject(obj);
-        ArkCrossEngine.Transform trans = GfxModule.Skill.Trigers.TriggerUtil.GetChildNodeByName(_gameobject, "ef_head");
+        UnityEngine.GameObject _gameobject = obj;
+        UnityEngine.Transform trans = GfxModule.Skill.Trigers.TriggerUtil.GetChildNodeByName(_gameobject, "ef_head");
         m_EfHeadTrans = CrossObjectHelper.TryCastObject<UnityEngine.Transform>(trans);
         if (trans != null && EffectForSpeaker != null)
         {
@@ -362,10 +362,10 @@ public class StoryDlgPanel : UnityEngine.MonoBehaviour
     }
     private void HandlerPlayParticle(int actorId)
     {
-        ArkCrossEngine.GameObject obj = LogicSystem.GetGameObject(actorId) as ArkCrossEngine.GameObject;
+        UnityEngine.GameObject obj = LogicSystem.GetGameObject(actorId) as UnityEngine.GameObject;
         if (null != obj)
         {
-            ArkCrossEngine.Transform trans = GfxModule.Skill.Trigers.TriggerUtil.GetChildNodeByName(obj, "ef_head");
+            UnityEngine.Transform trans = GfxModule.Skill.Trigers.TriggerUtil.GetChildNodeByName(obj, "ef_head");
             m_EfHeadTrans = CrossObjectHelper.TryCastObject<UnityEngine.Transform>(trans);
             if (trans != null && EffectForSpeaker != null)
             {

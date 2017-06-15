@@ -7,8 +7,8 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
 {
 
     // Use this for initialization
-    public ArkCrossEngine.Vector3 m_NpcPos;
-    public ArkCrossEngine.GameObject m_HintEffect;
+    public UnityEngine.Vector3 m_NpcPos;
+    public UnityEngine.GameObject m_HintEffect;
     public float m_DetectRange = 2.0f;
 
     public SkillCategory m_GuideCategory;
@@ -24,7 +24,7 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
     private bool m_HasSkillTeachStarted = false;
 
     private RoleInfo m_RoleInfo;
-    private ArkCrossEngine.GameObject m_RuntimeEffect;
+    private UnityEngine.GameObject m_RuntimeEffect;
     private bool m_IsDetect = false;
     private bool m_EnableGUI = false;
     //配置小手的位置
@@ -77,7 +77,7 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
         {
             if (m_IsDetect)
             {
-                UnityEngine.GameObject player = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (LogicSystem.PlayerSelf);
+                UnityEngine.GameObject player = LogicSystem.PlayerSelf;
                 if (null != player)
                 {
                     if (UnityEngine.Vector3.Distance(player.transform.position, new UnityEngine.Vector3( m_NpcPos.x, m_NpcPos.y, m_NpcPos.z)) < m_DetectRange)
@@ -145,7 +145,7 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
         {
             if (null != m_HintEffect)
             {
-                m_RuntimeEffect = ResourceSystem.NewObject(m_HintEffect) as ArkCrossEngine.GameObject;
+                m_RuntimeEffect = ResourceSystem.NewObject(m_HintEffect) as UnityEngine.GameObject;
                 if (null != m_RuntimeEffect)
                 {
                     m_RuntimeEffect.transform.position = m_NpcPos;
@@ -173,7 +173,7 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
                     VirtualScreen.SetGuiScaleMatrix();
                 }
                 GUI.depth = 0;
-                UnityEngine.Texture handTex = CrossObjectHelper.TryCastObject < UnityEngine.Texture > (ResourceSystem.GetSharedResource("UI/BeginnerGuide/shouzhi"));
+                UnityEngine.Texture handTex = ResourceSystem.GetSharedResource("UI/BeginnerGuide/shouzhi") as Texture;
                 if (handTex != null)
                 {
                     UnityEngine.Rect rect = VirtualScreen.GetRealRect(new UnityEngine.Rect(C_OffsetL + m_TransOffset, C_OffsetB, 100, 100));
@@ -247,7 +247,7 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
                     m_SkillStartTime = UnityEngine.Time.time;
                     EnableController(false);
                     LogicSystem.NotifyGfxForceStartSkill(LogicSystem.PlayerSelf, GetFirstSkill());
-                    LogicSystem.NotifyGfxStartSkill(LogicSystem.PlayerSelf, category, ArkCrossEngine.Vector3.zero);
+                    LogicSystem.NotifyGfxStartSkill(LogicSystem.PlayerSelf, category, UnityEngine.Vector3.zero);
                     OnSkillAAttack(2);
                 }
                 else
@@ -265,7 +265,7 @@ public class NewbieGuide : UnityEngine.MonoBehaviour
         }
         else
         {
-            LogicSystem.NotifyGfxStartSkill(LogicSystem.PlayerSelf, category, ArkCrossEngine.Vector3.zero);
+            LogicSystem.NotifyGfxStartSkill(LogicSystem.PlayerSelf, category, UnityEngine.Vector3.zero);
         }
     }
     private void EnableController(bool active)

@@ -9,7 +9,7 @@ public class Transparent : UnityEngine.MonoBehaviour
     {
         try
         {
-            m_LayerMask = (1 << ArkCrossEngine.LayerMask.NameToLayer("Default"));
+            m_LayerMask = (1 << LayerMask.NameToLayer("Default"));
             m_TransprentShader = UnityEngine.Shader.Find("Transparent/Diffuse");
         }
         catch (System.Exception ex)
@@ -23,7 +23,7 @@ public class Transparent : UnityEngine.MonoBehaviour
     {
         try
         {
-            UnityEngine.GameObject target = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(LogicSystem.PlayerSelf);
+            UnityEngine.GameObject target = LogicSystem.PlayerSelf;
             if (null == target || null == m_TransprentShader)
             {
                 return;

@@ -77,9 +77,9 @@ namespace ArkCrossEngine
         private bool IsFadeIn(UnityEngine.Vector3 pos)
         {
             bool result = false;
-            ArkCrossEngine.GameObject player = LogicSystem.PlayerSelf;
+            UnityEngine.GameObject player = LogicSystem.PlayerSelf;
             if (null != player)
-                if (ArkCrossEngine.Vector3.Distance(player.transform.position, new ArkCrossEngine.Vector3(pos.x, pos.y, pos.z)) < 3.0f)
+                if (UnityEngine.Vector3.Distance(player.transform.position, new UnityEngine.Vector3(pos.x, pos.y, pos.z)) < 3.0f)
                     result = true;
             return result;
         }

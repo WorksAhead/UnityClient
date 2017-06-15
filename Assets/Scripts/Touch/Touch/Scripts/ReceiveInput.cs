@@ -39,7 +39,7 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
             EasyJoystick.On_JoystickMoveStart += On_JoystickMoveStart;
             EasyJoystick.On_JoystickMove += On_JoystickMove;
             EasyJoystick.On_JoystickMoveEnd += On_JoystickMoveEnd;
-            m_SkillTipObj = ArkCrossEngine.ResourceSystem.NewObject(SkillTipPrefab) as ArkCrossEngine.GameObject;
+            m_SkillTipObj = ArkCrossEngine.ResourceSystem.NewObject(SkillTipPrefab) as UnityEngine.GameObject;
             if (m_SkillTipObj != null)
             {
                 m_SkillTipObj.SetActive(false);
@@ -203,8 +203,8 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
         UnityEngine.Vector3 dir = touchpos - new UnityEngine.Vector3(LogicSystem.PlayerSelf.transform.position.x, LogicSystem.PlayerSelf.transform.position.y, LogicSystem.PlayerSelf.transform.position.z);
         dir.y = 0;
         m_SkillTipObj.SetActive(true);
-        m_SkillTipObj.transform.position = new ArkCrossEngine.Vector3(touchpos.x, touchpos.y, touchpos.z);
-        m_SkillTipObj.transform.forward = new ArkCrossEngine.Vector3(dir.x, dir.y, dir.z);
+        m_SkillTipObj.transform.position = new UnityEngine.Vector3(touchpos.x, touchpos.y, touchpos.z);
+        m_SkillTipObj.transform.forward = new UnityEngine.Vector3(dir.x, dir.y, dir.z);
     }
 
     private void HideSkillTip()
@@ -254,7 +254,7 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
                         }
                         else
                         {
-                            GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, gesture.SkillTags, ArkCrossEngine.Vector3.zero);
+                            GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, gesture.SkillTags, UnityEngine.Vector3.zero);
                         }
                     }
                     else
@@ -291,10 +291,10 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
     {
         try
         {
-            UnityEngine.GameObject obj = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (ArkCrossEngine.LogicSystem.PlayerSelf);
+            UnityEngine.GameObject obj = ArkCrossEngine.LogicSystem.PlayerSelf;
             if (null != obj)
             {
-                GfxModule.Skill.GfxSkillSystem.Instance.StartAttack(ArkCrossEngine.LogicSystem.PlayerSelf, new ArkCrossEngine.Vector3(x, y, z));
+                GfxModule.Skill.GfxSkillSystem.Instance.StartAttack(ArkCrossEngine.LogicSystem.PlayerSelf, new UnityEngine.Vector3(x, y, z));
             }
         }
         catch (Exception ex)
@@ -318,7 +318,7 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
             waite_skill_buffer.Clear();
             for (int i = 0; i < push_skill_buffer.Count; i++)
             {
-                GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, push_skill_buffer[i].skillType, new ArkCrossEngine.Vector3(push_skill_buffer[i].targetPos.x, push_skill_buffer[i].targetPos.y, push_skill_buffer[i].targetPos.z));
+                GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, push_skill_buffer[i].skillType, new UnityEngine.Vector3(push_skill_buffer[i].targetPos.x, push_skill_buffer[i].targetPos.y, push_skill_buffer[i].targetPos.z));
             }
             /*
       foreach (CandidateSkillInfo node in push_skill_buffer) {
@@ -399,7 +399,7 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
             return;
         }
 
-        UnityEngine.GameObject playerSelf = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (LogicSystem.PlayerSelf);
+        UnityEngine.GameObject playerSelf = LogicSystem.PlayerSelf;
         if (playerSelf != null && move.joystickAxis != UnityEngine.Vector2.zero)
         {
             UnityEngine.Vector2 joyStickDir = move.joystickAxis * 10.0f;
@@ -452,9 +452,9 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
         }
     }
 
-    private void PlayEffect(ArkCrossEngine.GameObject effectPrefab, UnityEngine.Vector3 position, float playTime)
+    private void PlayEffect(UnityEngine.GameObject effectPrefab, UnityEngine.Vector3 position, float playTime)
     {
-        UnityEngine.GameObject obj = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (ArkCrossEngine.ResourceSystem.NewObject(effectPrefab, playTime));
+        UnityEngine.GameObject obj = ArkCrossEngine.ResourceSystem.NewObject(effectPrefab, playTime) as GameObject;
         if (obj != null)
         {
             obj.transform.position = position;
@@ -469,11 +469,11 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
     protected List<CandidateSkillInfo> waite_skill_buffer = new List<CandidateSkillInfo>();
     protected List<CandidateSkillInfo> push_skill_buffer = new List<CandidateSkillInfo>();
     protected ArkCrossEngine.SkillController skill_ctrl = null;
-    protected ArkCrossEngine.GameObject m_SkillTipObj = null;
-    public ArkCrossEngine.GameObject Go_Landmark = null;
+    protected UnityEngine.GameObject m_SkillTipObj = null;
+    public UnityEngine.GameObject Go_Landmark = null;
     public float Go_Landmark_Time = 0.2f;
-    public ArkCrossEngine.GameObject Go_Lock = null;
-    public ArkCrossEngine.GameObject SkillTipPrefab = null;
+    public UnityEngine.GameObject Go_Lock = null;
+    public UnityEngine.GameObject SkillTipPrefab = null;
     public float Go_Lock_Time = 0.2f;
     ///
     public delegate void EventHandler(float towards);

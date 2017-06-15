@@ -540,7 +540,7 @@ public class GamePokeyManager : UnityEngine.MonoBehaviour
 
     private void AddEquipGo(ItemConfig item_data, int itemcell, int p)
     {
-        UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GamePokey/ItemCell")._GetImpl() as UnityEngine.GameObject;
+        UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GamePokey/ItemCell") as UnityEngine.GameObject;
         go = NGUITools.AddChild(gridEquip.gameObject, go);
         if (go != null)
         {

@@ -357,7 +357,7 @@ public class UIBeginnerGuideManager
         m_LastGuideHand = m_CurrentGuideHand;//(m_LastGuideHand == m_CurrentGuideHand)?null:m_CurrentGuideHand;
         if (m_LastGuideHand != null) NGUITools.Destroy(m_LastGuideHand);
         string path = UIManager.Instance.GetPathByName("GuideHand");
-        UnityEngine.Object obj = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject(path));
+        UnityEngine.Object obj = ResourceSystem.NewObject(path);
         m_CurrentGuideHand = NGUITools.AddChild(trans.gameObject, obj);
         if (m_LastGuideHand == null)
         {

@@ -59,7 +59,7 @@ public class NewbieGuideManager : UnityEngine.MonoBehaviour
                             UnityEngine.Transform tf = uiRootTF.Find(ng.m_TargetChildPath);
                             if (tf != null)
                             {
-                                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource(ng.m_GuideUiPath));
+                                UnityEngine.GameObject go = ResourceSystem.GetSharedResource(ng.m_GuideUiPath) as UnityEngine.GameObject;
                                 if (null != go)
                                 {
                                     go = NGUITools.AddChild(tf.gameObject, go);
@@ -110,7 +110,7 @@ public class NewbieGuideManager : UnityEngine.MonoBehaviour
                                     tf = tf.GetChild(ng.m_ChildNumber);
                                     if (tf != null)
                                     {
-                                        UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource(ng.m_GuideUiPath));
+                                        UnityEngine.GameObject go = ResourceSystem.GetSharedResource(ng.m_GuideUiPath) as UnityEngine.GameObject;
                                         if (null != go)
                                         {
                                             go = NGUITools.AddChild(tf.gameObject, go);

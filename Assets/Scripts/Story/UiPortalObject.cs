@@ -64,7 +64,7 @@ public class UiPortalObject : UnityEngine.MonoBehaviour
                 UnityEngine.GameObject obj = collider.gameObject;
                 if (null != obj)
                 {
-                    if (obj == CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (LogicSystem.PlayerSelf))
+                    if (obj == LogicSystem.PlayerSelf)
                     {
                         UIManager.Instance.ShowWindowByName(WindowName);
                     }

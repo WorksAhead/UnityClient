@@ -15,8 +15,8 @@ public class TaskAward : UnityEngine.MonoBehaviour
     public UnityEngine.GameObject itemEffect = null;
     public UnityEngine.GameObject effectSprite = null;
 
-    private List<ArkCrossEngine.GameObject> effectList = new List<ArkCrossEngine.GameObject>();
-    private ArkCrossEngine.GameObject runtimeEffect;
+    private List<UnityEngine.GameObject> effectList = new List<UnityEngine.GameObject>();
+    private UnityEngine.GameObject runtimeEffect;
 
     // Use this for initialization
     void Start()
@@ -25,12 +25,10 @@ public class TaskAward : UnityEngine.MonoBehaviour
     //播放任务奖励标题特效
     void PlayEffectTitle()
     {
-        runtimeEffect = ArkCrossEngine.ResourceSystem.NewObject(
-            CrossObjectHelper.TryConstructCrossObject(goEffectTitle)) as ArkCrossEngine.GameObject;
+        runtimeEffect = ArkCrossEngine.ResourceSystem.NewObject(goEffectTitle) as UnityEngine.GameObject;
         if (runtimeEffect != null && goTitle != null)
         {
-            runtimeEffect.transform.position = 
-                new ArkCrossEngine.Vector3(goTitle.transform.position.x, goTitle.transform.position.y, goTitle.transform.position.z);
+            runtimeEffect.transform.position = goTitle.transform.position;
         }
     }
     // Update is called once per frame
@@ -108,12 +106,12 @@ public class TaskAward : UnityEngine.MonoBehaviour
     //销毁特效
     void DestroyEffect()
     {
-        Destroy(runtimeEffect._GetImpl());
+        Destroy(runtimeEffect);
         for (int i = 0; i < effectList.Count; i++)
         {
             if (effectList[i] != null)
             {
-                ArkCrossEngine.GameObject.Destroy(effectList[i]);
+                UnityEngine.GameObject.Destroy(effectList[i]);
             }
         }
         /*
@@ -180,7 +178,7 @@ public class TaskAward : UnityEngine.MonoBehaviour
         {
             if (money > 0)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem"));
+                UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(tfb.gameObject, go);
@@ -193,7 +191,7 @@ public class TaskAward : UnityEngine.MonoBehaviour
             }
             if (diamond > 0)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem"));
+                UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(tfb.gameObject, go);
@@ -206,7 +204,7 @@ public class TaskAward : UnityEngine.MonoBehaviour
             }
             if (exp > 0)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem"));
+                UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(tfb.gameObject, go);
@@ -220,7 +218,7 @@ public class TaskAward : UnityEngine.MonoBehaviour
             int count = itemlist.Count;
             for (int i = 0; i < count; ++i)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem"));
+                UnityEngine.GameObject go = ResourceSystem.GetSharedResource("UI/GameTask/AwardItem") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(tfb.gameObject, go);
@@ -342,7 +340,7 @@ public class TaskAward : UnityEngine.MonoBehaviour
         {
             if (money != null)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem"));
+                UnityEngine.GameObject go = ResourceSystem.GetSharedResource("UI/GameTask/AwardItem") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(tfb.gameObject, go);
@@ -372,7 +370,7 @@ public class TaskAward : UnityEngine.MonoBehaviour
             }
             if (diamond != null)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem"));
+                UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/GameTask/AwardItem") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(tfb.gameObject, go);
@@ -447,10 +445,10 @@ public class TaskAward : UnityEngine.MonoBehaviour
         {
             if (list[i] != null)
             {
-                ArkCrossEngine.GameObject newGo = ArkCrossEngine.ResourceSystem.NewObject(CrossObjectHelper.TryConstructCrossObject(itemEffect)) as ArkCrossEngine.GameObject;
+                UnityEngine.GameObject newGo = ArkCrossEngine.ResourceSystem.NewObject(itemEffect) as UnityEngine.GameObject;
                 if (newGo != null)
                 {
-                    newGo.transform.position = new ArkCrossEngine.Vector3(list[i].transform.position.x, list[i].transform.position.y, list[i].transform.position.z);
+                    newGo.transform.position = list[i].transform.position;
                 }
                 effectList.Add(newGo);
             }

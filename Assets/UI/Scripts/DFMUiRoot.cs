@@ -98,7 +98,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             if (PalmHitGo == null)
             {
                 string path = UIManager.Instance.GetPathByName("PalmHit");
-                PalmHitGo = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource(/*path*/"UI/PalmHit/PalmHit"));
+                PalmHitGo = ResourceSystem.GetSharedResource(/*path*/"UI/PalmHit/PalmHit") as GameObject;
                 if (PalmHitGo != null)
                 {
                     PalmHitGo = NGUITools.AddChild(gameObject, PalmHitGo);
@@ -265,7 +265,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
         UnityEngine.Transform tfPF = this.transform.Find("ScreenTipPanel/Wayfinding(Clone)");
         if (tfPF == null)
         {
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject("UI/Map/Wayfinding"));
+            UnityEngine.GameObject go = ResourceSystem.NewObject("UI/Map/Wayfinding") as GameObject;
             if (null != go)
             {
                 UnityEngine.Transform tf = go.transform;
@@ -297,7 +297,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
         try
         {
             string path = UIManager.Instance.GetPathByName("SellAward");
-            UnityEngine.Object obj = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.NewObject(path, timeRecycle));
+            UnityEngine.Object obj = ArkCrossEngine.ResourceSystem.NewObject(path, timeRecycle);
             UnityEngine.GameObject go = obj as UnityEngine.GameObject;
             if (null != go)
             {
@@ -442,7 +442,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
         try
         {
             string path = UIManager.Instance.GetPathByName("PVPTime");
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource(path));
+            UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource(path) as GameObject;
             if (go != null)
             {
                 UnityEngine.Transform tf = go.transform.Find("Label");
@@ -476,7 +476,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
         try
         {
             string path = UIManager.Instance.GetPathByName("PVPTime");
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource(path));
+            UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource(path) as GameObject;
             if (go != null)
             {
                 UnityEngine.Transform tf = go.transform.Find("Label");
@@ -923,7 +923,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             if (nn != null)
             {
                 nn.Reset();
-                ArkCrossEngine.GameObject _gameobject = ArkCrossEngine.ObjectFactory.Create<ArkCrossEngine.GameObject>(go);//new ArkCrossEngine.GameObject(go);
+                UnityEngine.GameObject _gameobject = go;//new UnityEngine.GameObject(go);
                 ArkCrossEngine.ResourceSystem.RecycleObject(_gameobject);
             }
             GfxUserInfo gui = GfxUserInfoListForUI.Find(g => g.m_ActorId == actorid);
@@ -1005,7 +1005,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             if (GfxUserInfoListForUI.Find(g => g.m_ActorId == gui.m_ActorId) == null)
             {
                 GfxUserInfoListForUI.Add(gui);
-                UnityEngine.GameObject pargo = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.LogicSystem.GetGameObject(gui.m_ActorId));
+                UnityEngine.GameObject pargo = ArkCrossEngine.LogicSystem.GetGameObject(gui.m_ActorId);
                 //         UnityEngine.Transform trans = GfxModule.Skill.Trigers.TriggerUtil.GetChildNodeByName(pargo, "ef_head");
                 //         if (trans != null && pargo != null) {
                 //           string path = UIManager.Instance.GetPathByName("NicknamePanel");
@@ -1016,7 +1016,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                 if (pargo != null && sgoi != null)
                 {
                     string path = UIManager.Instance.GetPathByName("NickName");
-                    UnityEngine.Object obj = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject(path));
+                    UnityEngine.Object obj = ResourceSystem.NewObject(path);
                     if (obj != null)
                     {
                         UnityEngine.GameObject go = obj as UnityEngine.GameObject;
@@ -1059,14 +1059,14 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             Data_NpcConfig dnc = NpcConfigProvider.Instance.GetNpcConfigById(gui.m_HeroId);
             if (dnc != null && dnc.m_ShowName)
             {
-                UnityEngine.GameObject pargo = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.LogicSystem.GetGameObject(gui.m_ActorId));
+                UnityEngine.GameObject pargo = ArkCrossEngine.LogicSystem.GetGameObject(gui.m_ActorId);
                 if (!NpcGameObjectS.ContainsKey(pargo))
                 {
                     SharedGameObjectInfo sgoi = ArkCrossEngine.LogicSystem.GetSharedGameObjectInfo(gui.m_ActorId);
                     if (pargo != null && sgoi != null)
                     {
                         string path = UIManager.Instance.GetPathByName("NickName");
-                        UnityEngine.Object obj = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject(path));
+                        UnityEngine.Object obj = ResourceSystem.NewObject(path);
                         if (obj != null)
                         {
                             UnityEngine.GameObject go = obj as UnityEngine.GameObject;
@@ -1196,7 +1196,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                 nguiPos = UICamera.mainCamera.ScreenToWorldPoint(pos);
             }
 
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/MonsterPrePower"));
+            UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/MonsterPrePower") as GameObject;
             UnityEngine.GameObject prePowerGo = NGUITools.AddChild(this.gameObject, go);
             if (prePowerGo == null)
                 return;
@@ -1475,7 +1475,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                 Destroy(existGo);
         }
 
-        UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/StageClear"));
+        UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/StageClear") as GameObject;
         if (null == go)
             return;
         go = NGUITools.AddChild(this.gameObject, go);
@@ -1522,7 +1522,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             if (loading != null) return;
 
             // show loading prefab, fill background picture and notice runtime
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.GetSharedResource("Loading/Loading2"));
+            UnityEngine.GameObject go = ResourceSystem.GetSharedResource("Loading/Loading2") as GameObject;
             if (go != null)
             {
                 // change loading tips
@@ -1560,7 +1560,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
     
     void SetBgTexture(string path, UnityEngine.GameObject go)
     {
-        UnityEngine.Texture tex = CrossObjectHelper.TryCastObject<UnityEngine.Texture>(ResourceSystem.GetSharedResource(path));
+        UnityEngine.Texture tex = ResourceSystem.GetSharedResource(path) as Texture;
         UnityEngine.Transform tf = go.transform.Find("DarkBack/Back");
         UITexture ut = tf.GetComponent<UITexture>();
         if (ut != null)
@@ -1703,7 +1703,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
         {
             if (message != null && dofunction != null)
             {
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("UI/ConfirmDlg/ConfirmDlg"));
+                UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/ConfirmDlg/ConfirmDlg") as GameObject;
                 if (go != null)
                 {
                     go = NGUITools.AddChild(gameObject, go);
@@ -1775,11 +1775,11 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
     {
         try
         {
-            UnityEngine.GameObject pargo = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.LogicSystem.GetGameObject(actorid));
+            UnityEngine.GameObject pargo = LogicSystem.GetGameObject(actorid);
             if (pargo != null)
             {
                 string path = UIManager.Instance.GetPathByName("Sheild");
-                UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource(path));
+                UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.GetSharedResource(path) as GameObject;
                 if (go != null && DynamicWidgetPanel != null)
                 {
                     go = NGUITools.AddChild(DynamicWidgetPanel, go);

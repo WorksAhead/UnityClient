@@ -79,7 +79,7 @@ public class UIActivitySignInSlot : UnityEngine.MonoBehaviour
     {
         ItemConfig itemCfg = ItemConfigProvider.Instance.GetDataById(itemId);
         if (itemCfg == null) return;
-        UnityEngine.Texture tex = CrossObjectHelper.TryCastObject<UnityEngine.Texture>(ResourceSystem.GetSharedResource(itemCfg.m_ItemTrueName));
+        UnityEngine.Texture tex = ResourceSystem.GetSharedResource(itemCfg.m_ItemTrueName) as UnityEngine.Texture;
         if (texItem != null)
         {
             if (tex != null)

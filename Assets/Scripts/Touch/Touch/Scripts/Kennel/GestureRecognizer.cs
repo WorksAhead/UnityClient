@@ -284,7 +284,7 @@ public abstract class Gesture
         if (UnityEngine.Physics.Raycast(ray, out hitInfo, 200f, layermask))
         {
             cur_touch_worldpos = hitInfo.point;
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (ArkCrossEngine.LogicSystem.PlayerSelf);
+            UnityEngine.GameObject go = ArkCrossEngine.LogicSystem.PlayerSelf;
             if (null != go)
             {
                 UnityEngine.Vector3 srcPos = go.transform.position;
@@ -353,7 +353,7 @@ public abstract class Gesture
         if (UnityEngine.Physics.Raycast(ray, out hitInfo, 200f, m_TerrainAndCharacterLayer))
         {
             start_touch_worldpos = hitInfo.point;
-            UnityEngine.GameObject go = CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (ArkCrossEngine.LogicSystem.PlayerSelf);
+            UnityEngine.GameObject go = ArkCrossEngine.LogicSystem.PlayerSelf;
             if (null != go)
             {
                 UnityEngine.Vector3 srcPos = go.transform.position;

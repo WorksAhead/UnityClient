@@ -9,8 +9,8 @@ public class XHunPanel : UnityEngine.MonoBehaviour
     private List<object> m_EventList = new List<object>();
     private List<UnityEngine.GameObject> m_ViewList = new List<UnityEngine.GameObject>();
 
-    public ArkCrossEngine.GameObject effectUpgrade = null;
-    public ArkCrossEngine.GameObject posUpgrade = null;
+    public UnityEngine.GameObject effectUpgrade = null;
+    public UnityEngine.GameObject posUpgrade = null;
     public XHunTitle title = null;
     public UnityEngine.GameObject viewItem = null;
     public BottomInfoContainer bottomInfoContainer = null;

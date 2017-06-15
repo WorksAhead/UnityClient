@@ -14,15 +14,15 @@ public class UIMarsLoading : UnityEngine.MonoBehaviour
 
     public float duration = 2f;
 
-    public ArkCrossEngine.GameObject effectBody = null;
-    public ArkCrossEngine.GameObject effectCount = null;
-    public ArkCrossEngine.GameObject effectFight = null;
-    public ArkCrossEngine.GameObject effectVS = null;
-    public ArkCrossEngine.GameObject posBodyL = null;
-    public ArkCrossEngine.GameObject posBodyR = null;
-    public ArkCrossEngine.GameObject posCount = null;
-    public ArkCrossEngine.GameObject posFight = null;
-    public ArkCrossEngine.GameObject posVS = null;
+    public UnityEngine.GameObject effectBody = null;
+    public UnityEngine.GameObject effectCount = null;
+    public UnityEngine.GameObject effectFight = null;
+    public UnityEngine.GameObject effectVS = null;
+    public UnityEngine.GameObject posBodyL = null;
+    public UnityEngine.GameObject posBodyR = null;
+    public UnityEngine.GameObject posCount = null;
+    public UnityEngine.GameObject posFight = null;
+    public UnityEngine.GameObject posVS = null;
 
     public UISprite spPlayerLeft;
     public UISprite spPlayerRight;

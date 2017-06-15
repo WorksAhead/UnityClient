@@ -64,7 +64,7 @@ public class UiDialogObject : UnityEngine.MonoBehaviour
                 UnityEngine.GameObject obj = collider.gameObject;
                 if (null != obj)
                 {
-                    if (obj == CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (LogicSystem.PlayerSelf))
+                    if (obj == LogicSystem.PlayerSelf)
                     {
                         LogicSystem.SendStoryMessage(MessageName, 1);
                     }
@@ -86,7 +86,7 @@ public class UiDialogObject : UnityEngine.MonoBehaviour
                 UnityEngine.GameObject obj = collider.gameObject;
                 if (null != obj)
                 {
-                    if (obj == CrossObjectHelper.TryCastObject < UnityEngine.GameObject > (LogicSystem.PlayerSelf))
+                    if (obj == LogicSystem.PlayerSelf)
                     {
                         LogicSystem.SendStoryMessage(MessageName, 0);
                     }

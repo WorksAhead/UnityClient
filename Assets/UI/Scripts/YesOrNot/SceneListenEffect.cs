@@ -5,9 +5,9 @@ public class SceneListenEffect : UnityEngine.MonoBehaviour
 {
 
     private List<object> m_EventList = new List<object>();
-    public ArkCrossEngine.GameObject goEffect;// boss出场和关卡开始特效
-    public ArkCrossEngine.GameObject defensEffect; // 防御关卡特效
-    public ArkCrossEngine.GameObject clearEffect; // 区域清楚特效
+    public UnityEngine.GameObject goEffect;// boss出场和关卡开始特效
+    public UnityEngine.GameObject defensEffect; // 防御关卡特效
+    public UnityEngine.GameObject clearEffect; // 区域清楚特效
     public void UnSubscribe()
     {
         try
@@ -37,7 +37,7 @@ public class SceneListenEffect : UnityEngine.MonoBehaviour
     {
         try
         {
-            goEffect = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/YesOrNot/Changjing") as ArkCrossEngine.GameObject;
+            goEffect = ArkCrossEngine.ResourceSystem.GetSharedResource("UI/YesOrNot/Changjing") as UnityEngine.GameObject;
             object obj = null;
             obj = LogicSystem.EventChannelForGfx.Subscribe<string>("pve_boss_enter", "ui_effect", OnBossEnter);
             if (obj != null) m_EventList.Add(obj);

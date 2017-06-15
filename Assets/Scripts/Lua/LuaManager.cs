@@ -62,8 +62,7 @@ public class LuaManager
     public byte[] CustomLoader(ref string filepath)
     {
         string fileName = filepath + ".lua";
-        ArkCrossEngine.Object obj = ResourceSystem.GetSharedResource(fileName);
-        TextAsset text = CrossObjectHelper.TryCastObject<UnityEngine.TextAsset>(obj);
+        TextAsset text = ResourceSystem.GetSharedResource(fileName) as TextAsset;
         if (text != null)
         {
             // for debugger
@@ -89,8 +88,7 @@ public class LuaManager
     public string LoadLuaFromFile(string name)
     {
         string fileName = name + ".lua";
-        ArkCrossEngine.Object obj = ResourceSystem.GetSharedResource(fileName);
-        TextAsset text = CrossObjectHelper.TryCastObject<UnityEngine.TextAsset>(obj);
+        TextAsset text = ResourceSystem.GetSharedResource(fileName) as TextAsset;
         if (text != null)
         {
             return text.text;

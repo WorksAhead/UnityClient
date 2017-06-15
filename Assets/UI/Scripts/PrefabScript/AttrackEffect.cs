@@ -53,7 +53,7 @@ public class AttrackEffect : UnityEngine.MonoBehaviour
             {
                 this.GetComponent<UILabel>().alpha = 1.0f;
                 this.GetComponent<UILabel>().transform.localScale = oldfontscale;
-                ArkCrossEngine.GameObject _gameobject = ArkCrossEngine.ObjectFactory.Create<ArkCrossEngine.GameObject>(gameObject);//new ArkCrossEngine.GameObject(gameObject);
+                UnityEngine.GameObject _gameobject = gameObject;
                 ArkCrossEngine.ResourceSystem.RecycleObject(_gameobject);
                 time = 0.0f;
                 signforinitpos = true;

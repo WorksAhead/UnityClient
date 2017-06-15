@@ -11,7 +11,7 @@ public enum SlotType
 public class UISkillSlot : UnityEngine.MonoBehaviour
 {
     public UnityEngine.GameObject canUpgradeTip = null;
-    public ArkCrossEngine.GameObject upgradeEffect = null;
+    public UnityEngine.GameObject upgradeEffect = null;
     public UnityEngine.GameObject upEffGO = null;
     public UILabel lblName = null;
     public UILabel lblSection = null;

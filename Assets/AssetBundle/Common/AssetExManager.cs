@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace ArkCrossEngine
 {
@@ -93,7 +94,7 @@ namespace ArkCrossEngine
             }
             return assetIdList;
         }
-        public ArkCrossEngine.Object GetAssetByNameWithoutExtention(string assetShortName)
+        public Object GetAssetByNameWithoutExtention(string assetShortName)
         {
             if (string.IsNullOrEmpty(assetShortName))
             {
@@ -109,11 +110,7 @@ namespace ArkCrossEngine
                 AssetEx asset = m_AssetExShortNameDict[assetShortName];
                 if (asset != null)
                 {
-                    ArkCrossEngine.Object assetRef = ArkCrossEngine.ObjectFactory.Create(asset.ExtractAsset(false, true));
-                    //ArkCrossEngine.Object assetRef = new ArkCrossEngine.Object(asset.ExtractAsset(false, true));
-                    //if (assetRef == null) {
-                    //  ResLoadHelper.Log("GetAssetByNameWithoutExtention failed:" + assetNameWithoutExtention);
-                    //}
+                    Object assetRef = asset.ExtractAsset(false, true);
                     return assetRef;
                 }
             }

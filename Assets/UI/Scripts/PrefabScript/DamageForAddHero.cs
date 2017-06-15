@@ -49,7 +49,7 @@ public class DamageForAddHero : UnityEngine.MonoBehaviour
             {
                 this.GetComponent<UILabel>().transform.localScale = oldfontscale;
                 this.GetComponent<UILabel>().alpha = 1.0f;
-                ArkCrossEngine.GameObject _gameobject = ArkCrossEngine.ObjectFactory.Create<ArkCrossEngine.GameObject>(gameObject);// new ArkCrossEngine.GameObject(gameObject);
+                UnityEngine.GameObject _gameobject = gameObject;
                 ArkCrossEngine.ResourceSystem.RecycleObject(_gameobject);
                 livetime = 0.0f;
                 signforinitpos = true;

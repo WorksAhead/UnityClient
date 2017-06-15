@@ -14,14 +14,14 @@ public class UIArtifactIntroduce : UnityEngine.MonoBehaviour
     public UILabel lblUnlockHint = null;
     public UISprite spImage = null;
     public UnityEngine.Color color = new UnityEngine.Color();
-    private ArkCrossEngine.GameObject effect = null;
+    private UnityEngine.GameObject effect = null;
     private float duration = 1.0f;
     // Use this for initialization
     void Start()
     {
         try
         {
-            effect = ArkCrossEngine.ResourceSystem.GetSharedResource("UI_Fx/7_FX_UI_ShengJi_01") as ArkCrossEngine.GameObject;
+            effect = ArkCrossEngine.ResourceSystem.GetSharedResource("UI_Fx/7_FX_UI_ShengJi_01") as UnityEngine.GameObject;
         }
         catch (System.Exception ex)
         {
@@ -124,7 +124,7 @@ public class UIArtifactIntroduce : UnityEngine.MonoBehaviour
     {
         if (effect != null)
         {
-            UnityEngine.GameObject ef = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject(effect));
+            UnityEngine.GameObject ef = ResourceSystem.NewObject(effect) as UnityEngine.GameObject;
             if (ef != null)
             {
                 nguiPos.Set(0.9f, nguiPos.y, nguiPos.z);

@@ -14,7 +14,7 @@ public class SkillBar : UnityEngine.MonoBehaviour
     public delegate void OnButtonClickDelegate(SkillCategory skillType);
     public static OnButtonClickDelegate OnButtonClickedHandler;//用于新手关的回调
     public static OnCommonButtonDelegate OnCommomButtonClickHandler;
-    public ArkCrossEngine.GameObject goEffect = null;
+    public UnityEngine.GameObject goEffect = null;
     private UnityEngine.GameObject m_RuntimeEffect = null;
     public UnityEngine.GameObject CommonSkillGo = null;
     public UISprite[] spBright = new UISprite[c_SkillNum];
@@ -168,7 +168,7 @@ public class SkillBar : UnityEngine.MonoBehaviour
             if (m_IsPressed)
             {
                 m_IsAttact = true;
-                GfxModule.Skill.GfxSkillSystem.Instance.StartAttack(ArkCrossEngine.LogicSystem.PlayerSelf, ArkCrossEngine.Vector3.zero);
+                GfxModule.Skill.GfxSkillSystem.Instance.StartAttack(ArkCrossEngine.LogicSystem.PlayerSelf, UnityEngine.Vector3.zero);
             }
             else
               if (m_IsAttact == true)
@@ -347,7 +347,7 @@ public class SkillBar : UnityEngine.MonoBehaviour
         }
         else
         {
-            GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, skillType, ArkCrossEngine.Vector3.zero);
+            GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, skillType, UnityEngine.Vector3.zero);
         }
     }
     private void IconFlashByIndex(int index)
@@ -612,7 +612,7 @@ public class SkillBar : UnityEngine.MonoBehaviour
                 skillcategory = SkillCategory.kExPvp;
             }
         }
-        GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, skillcategory, ArkCrossEngine.Vector3.zero);
+        GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, skillcategory, UnityEngine.Vector3.zero);
         if (m_IsInNewbieGuide && m_IsNeedLockGameFrame)
         {
             m_IsNeedLockGameFrame = false;

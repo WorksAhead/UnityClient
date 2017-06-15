@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 using ArkCrossEngine;
+using UnityEngine;
 
 public class CharacterUtil : UnityEngine.MonoBehaviour
 {
 
-    public ArkCrossEngine.GameObject m_MeetEnemyEffect;
+    public GameObject m_MeetEnemyEffect;
     public string m_MeetEnemyEffectBone;
-    public ArkCrossEngine.GameObject m_DeadEffect;
-    public ArkCrossEngine.GameObject m_DeadEffectAsPartner;
-    public ArkCrossEngine.GameObject m_OnHitGroundEffect;
+    public GameObject m_DeadEffect;
+    public GameObject m_DeadEffectAsPartner;
+    public GameObject m_OnHitGroundEffect;
 
     public void OnEnable()
     {
@@ -31,15 +32,15 @@ public class CharacterUtil : UnityEngine.MonoBehaviour
         {
             if (null != m_MeetEnemyEffect && !string.IsNullOrEmpty(m_MeetEnemyEffectBone))
             {
-                ArkCrossEngine.GameObject obj = ResourceSystem.NewObject(m_MeetEnemyEffect, 2.0f) as ArkCrossEngine.GameObject;
-                ArkCrossEngine.Transform parent = LogicSystem.FindChildRecursive(
-                    ArkCrossEngine.ObjectFactory.Create<ArkCrossEngine.Transform>(transform)/*new ArkCrossEngine.Transform(transform)*/,
+                GameObject obj = ResourceSystem.NewObject(m_MeetEnemyEffect, 2.0f) as GameObject;
+                Transform parent = LogicSystem.FindChildRecursive(
+                    transform,
                     m_MeetEnemyEffectBone);
                 if (null != parent)
                 {
                     obj.transform.parent = parent;
-                    obj.transform.localPosition = ArkCrossEngine.Vector3.zero;
-                    obj.transform.localRotation = ArkCrossEngine.Quaternion.identity;
+                    obj.transform.localPosition = UnityEngine.Vector3.zero;
+                    obj.transform.localRotation = UnityEngine.Quaternion.identity;
                 }
             }
         }
@@ -53,7 +54,7 @@ public class CharacterUtil : UnityEngine.MonoBehaviour
     {
         try
         {
-            ArkCrossEngine.GameObject deadEffect = m_DeadEffect;
+            GameObject deadEffect = m_DeadEffect;
             if (npcType == (int)NpcTypeEnum.Partner)
             {
                 if (null != m_DeadEffectAsPartner)
@@ -61,11 +62,11 @@ public class CharacterUtil : UnityEngine.MonoBehaviour
                     deadEffect = m_DeadEffectAsPartner;
                 }
             }
-            ArkCrossEngine.GameObject obj = ResourceSystem.NewObject(deadEffect, 2.0f) as ArkCrossEngine.GameObject;
+            GameObject obj = ResourceSystem.NewObject(deadEffect, 2.0f) as GameObject;
             if (null != obj)
             {
                 UnityEngine.Vector3 upos = this.transform.position + new UnityEngine.Vector3(0f, 0.5f, 0.0f);
-                obj.transform.position = new ArkCrossEngine.Vector3(upos.x, upos.y, upos.z);
+                obj.transform.position = new UnityEngine.Vector3(upos.x, upos.y, upos.z);
             }
         }
         catch (System.Exception ex)
@@ -94,10 +95,10 @@ public class CharacterUtil : UnityEngine.MonoBehaviour
         {
             if (null != m_OnHitGroundEffect)
             {
-                ArkCrossEngine.GameObject obj = ResourceSystem.NewObject(m_OnHitGroundEffect, 2.0f) as ArkCrossEngine.GameObject;
+                GameObject obj = ResourceSystem.NewObject(m_OnHitGroundEffect, 2.0f) as GameObject;
                 if (null != obj)
                 {
-                    obj.transform.position = new ArkCrossEngine.Vector3(transform.position.x, transform.position.y, transform.position.z);
+                    obj.transform.position = new UnityEngine.Vector3(transform.position.x, transform.position.y, transform.position.z);
                 }
             }
         }

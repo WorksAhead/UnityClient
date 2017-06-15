@@ -4,7 +4,7 @@ using System.Collections;
 public class SkillUnlockEffect : UnityEngine.MonoBehaviour
 {
 
-    public ArkCrossEngine.GameObject unlockEffect1;
+    public UnityEngine.GameObject unlockEffect1;
     public float time1;
     public float time2;
     public UISprite us;
@@ -29,8 +29,8 @@ public class SkillUnlockEffect : UnityEngine.MonoBehaviour
     //播放特效
     void PlayEffectStep1()
     {
-        ArkCrossEngine.GameObject go = ArkCrossEngine.ResourceSystem.NewObject(unlockEffect1) as ArkCrossEngine.GameObject;
-        go.transform.position = new ArkCrossEngine.Vector3(transform.position.x, transform.position.y, transform.position.z);
+        UnityEngine.GameObject go = ArkCrossEngine.ResourceSystem.NewObject(unlockEffect1) as UnityEngine.GameObject;
+        go.transform.position = new UnityEngine.Vector3(transform.position.x, transform.position.y, transform.position.z);
         us.spriteName = "wei-jie-suo-ji-neng1";
         Invoke("PlayEffectStep2", time1);
     }

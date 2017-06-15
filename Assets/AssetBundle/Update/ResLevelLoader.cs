@@ -53,7 +53,7 @@ namespace ArkCrossEngine
                         }
                         else
                         {
-                            UnityEngine.Object tmpAsset = CrossObjectHelper.TryCastObject<UnityEngine.Object>(ResourceSystem.GetSharedResource(assetEx.AssetShortName(), false));
+                            UnityEngine.Object tmpAsset = ResourceSystem.GetSharedResource(assetEx.AssetShortName(), false);
                             assetEx.SetAssetRef(tmpAsset);
                         }
                     }

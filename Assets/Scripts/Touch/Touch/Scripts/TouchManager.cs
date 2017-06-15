@@ -188,9 +188,8 @@ public class TouchManager : UnityEngine.MonoBehaviour
         {
             Destroy(inputProvider.gameObject);
         }
-
-        ArkCrossEngine.Object obj = ArkCrossEngine.ObjectFactory.Create(inputPrefab);//new ArkCrossEngine.Object(inputPrefab);
-        inputProvider = CrossObjectHelper.TryCastObject<InputProvider>(ResourceSystem.NewObject(obj));
+        
+        inputProvider = ResourceSystem.NewObject(inputPrefab) as InputProvider;
         inputProvider.name = inputPrefab.name;
         inputProvider.transform.parent = this.transform;
 
@@ -532,7 +531,7 @@ public class TouchManager : UnityEngine.MonoBehaviour
         e.gamePosZ = pos.z;
         e.name = args.Name;
 
-        UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.LogicSystem.PlayerSelf);
+        UnityEngine.GameObject go = LogicSystem.PlayerSelf;
         UnityEngine.Vector3 srcPos = pos;
         UnityEngine.Vector3 destPos = pos;
         if (null != go)
@@ -567,7 +566,7 @@ public class TouchManager : UnityEngine.MonoBehaviour
         e.gamePosZ = pos.z;
         e.name = args.Recognizer.EventMessageName;
 
-        UnityEngine.GameObject go = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.LogicSystem.PlayerSelf);
+        UnityEngine.GameObject go = ArkCrossEngine.LogicSystem.PlayerSelf;
         UnityEngine.Vector3 srcPos = args.GetStartTouchToWorldPoint();
         UnityEngine.Vector3 destPos = pos;
         if (null != go)

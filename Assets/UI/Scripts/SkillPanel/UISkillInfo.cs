@@ -90,7 +90,7 @@ public class UISkillInfo : UnityEngine.MonoBehaviour
     // Use this for initialization
     private SkillInfo m_SkillInfo = null;
 
-    private ArkCrossEngine.GameObject effect = null;
+    private UnityEngine.GameObject effect = null;
     private float duration = 1.0f;
     private int m_PlayerVigor = 0;
     private float m_PlayerVigorPlus = 0f;
@@ -100,7 +100,7 @@ public class UISkillInfo : UnityEngine.MonoBehaviour
     {
         try
         {
-            effect = ArkCrossEngine.ResourceSystem.GetSharedResource("UI_Fx/7_FX_UI_ShengJi_01") as ArkCrossEngine.GameObject;
+            effect = ArkCrossEngine.ResourceSystem.GetSharedResource("UI_Fx/7_FX_UI_ShengJi_01") as UnityEngine.GameObject;
         }
         catch (System.Exception ex)
         {

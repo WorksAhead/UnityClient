@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using ArkCrossEngine;
+using UnityEngine;
 
 public class Indicator : UnityEngine.MonoBehaviour
 {
 
     // Use this for initialization
     private float m_Dir;
-    private ArkCrossEngine.GameObject m_Owner;
+    private UnityEngine.GameObject m_Owner;
     private IndicatorType m_IndicatorTargetType = IndicatorType.NPC;
     private bool m_IndicatorTypeChanged = true;
     private string[] m_RoadSign = { "ADoor", "BDoor", "CDoor", "DDoor" };

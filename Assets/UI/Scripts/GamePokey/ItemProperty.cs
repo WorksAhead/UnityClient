@@ -4,9 +4,9 @@ using ArkCrossEngine;
 
 public class ItemProperty : UnityEngine.MonoBehaviour
 {
-    public ArkCrossEngine.GameObject upgradeEffect = null;
-    public ArkCrossEngine.GameObject upEffGO = null;
-    public ArkCrossEngine.GameObject effect = null;
+    public UnityEngine.GameObject upgradeEffect = null;
+    public UnityEngine.GameObject upEffGO = null;
+    public UnityEngine.GameObject effect = null;
     public UISprite spLevelUp = null;
     private float duration = 1.0f;
     // Use this for initialization
@@ -324,7 +324,7 @@ public class ItemProperty : UnityEngine.MonoBehaviour
     {
         if (effect != null)
         {
-            UnityEngine.GameObject ef = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject(effect));
+            UnityEngine.GameObject ef = ResourceSystem.NewObject(effect) as GameObject;
             if (ef != null)
             {
                 nguiPos.Set(-0.17f, nguiPos.y, nguiPos.z);
@@ -396,7 +396,7 @@ public class ItemProperty : UnityEngine.MonoBehaviour
                     //播放图标特效
                     if (upgradeEffect != null)
                     {
-                        UnityEngine.GameObject ef = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ResourceSystem.NewObject(upgradeEffect));
+                        UnityEngine.GameObject ef = ResourceSystem.NewObject(upgradeEffect) as GameObject;
                         if (ef != null && upEffGO != null)
                         {
                             ef.transform.position = new UnityEngine.Vector3(upEffGO.transform.position.x, upEffGO.transform.position.y, upEffGO.transform.position.z);

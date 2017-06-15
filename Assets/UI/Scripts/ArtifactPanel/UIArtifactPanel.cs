@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 public class UIArtifactPanel : UnityEngine.MonoBehaviour
 {
-    public ArkCrossEngine.GameObject upgradeEffect1 = null;
-    public ArkCrossEngine.GameObject upgradeEffect2 = null;
-    public ArkCrossEngine.GameObject upgradeEffect3 = null;
-    public ArkCrossEngine.GameObject upgradeEffect4 = null;
-    public ArkCrossEngine.GameObject upEffGO = null;
+    public UnityEngine.GameObject upgradeEffect1 = null;
+    public UnityEngine.GameObject upgradeEffect2 = null;
+    public UnityEngine.GameObject upgradeEffect3 = null;
+    public UnityEngine.GameObject upgradeEffect4 = null;
+    public UnityEngine.GameObject upEffGO = null;
     public UIArtifactIntroduce artifactIntroduce = null;
     public UIArtifactTitle artifactTitle = null;
     public ArtifactOperation artifactOperation = null;
@@ -203,26 +203,26 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
                 //播放特效
                 if (upgradeEffect1 != null && upgradeEffect2 != null && upgradeEffect3 != null && upgradeEffect4 != null)
                 {
-                    ArkCrossEngine.GameObject ef = null;// = ResourceSystem.NewObject(upgradeEffect) as UnityEngine.GameObject;
+                    UnityEngine.GameObject ef = null;// = ResourceSystem.NewObject(upgradeEffect) as UnityEngine.GameObject;
                     switch (index)
                     {
                         case 1:
-                            ef = ResourceSystem.NewObject(upgradeEffect1) as ArkCrossEngine.GameObject;
+                            ef = ResourceSystem.NewObject(upgradeEffect1) as UnityEngine.GameObject;
                             break;
                         case 2:
-                            ef = ResourceSystem.NewObject(upgradeEffect2) as ArkCrossEngine.GameObject;
+                            ef = ResourceSystem.NewObject(upgradeEffect2) as UnityEngine.GameObject;
                             break;
                         case 3:
-                            ef = ResourceSystem.NewObject(upgradeEffect3) as ArkCrossEngine.GameObject;
+                            ef = ResourceSystem.NewObject(upgradeEffect3) as UnityEngine.GameObject;
                             break;
                         case 4:
-                            ef = ResourceSystem.NewObject(upgradeEffect4) as ArkCrossEngine.GameObject;
+                            ef = ResourceSystem.NewObject(upgradeEffect4) as UnityEngine.GameObject;
                             break;
                     }
                     if (ef != null && upEffGO != null)
                     {
                         ef.transform.position = upEffGO.transform.position;
-                        Destroy(ef._GetImpl(), effectDuration);
+                        Destroy(ef, effectDuration);
                     }
                 }
             }

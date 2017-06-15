@@ -16,7 +16,7 @@ public class WipeoutAward : UnityEngine.MonoBehaviour
     public UnityEngine.AnimationCurve CurveForUp = null;// 移到上方轨迹
     public float DurationForUp = 1.2f;//移动上时间
 
-    public ArkCrossEngine.GameObject goEffectTitle = null;
+    public UnityEngine.GameObject goEffectTitle = null;
     private UnityEngine.GameObject runtimeEffect;
     public UnityEngine.GameObject goTitle = null;//特效goEffectTitle播在该UnityEngine.GameObject上
     public UIDragScrollView dragScrollview;

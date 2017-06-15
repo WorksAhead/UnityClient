@@ -7,8 +7,8 @@ using ArkCrossEngine;
 public class FightScoreChange : UnityEngine.MonoBehaviour
 {
 
-    public ArkCrossEngine.GameObject effectGo = null;
-    public ArkCrossEngine.GameObject effect = null;
+    public UnityEngine.GameObject effectGo = null;
+    public UnityEngine.GameObject effect = null;
 
     public UnityEngine.GameObject goZhan = null;
     //public UISprite spFight = null;
