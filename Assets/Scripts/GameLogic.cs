@@ -54,7 +54,14 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 /// Android: Normally it would point directly to the APK. The exception is if you are running a split binary build in which case it points to the the OBB instead.
                 string dataPath = UnityEngine.Application.dataPath;
                 /// Point to data path which have write permission
-                string persistentDataPath = UnityEngine.Application.persistentDataPath + "/DataFile";
+#if UNITY_IPHONE
+                string persistentDataPath = UnityEngine.Application.dataPath + "/Raw/";
+#elif UNITY_ANDROID
+                path = "jar:file://" + Application.dataPath + "!/assets/";
+                throw new Exception("Code Not Impled..");
+#else
+                string persistentDataPath = UnityEngine.Application.persistentDataPath + "/StreamingAssets/";
+#endif
                 /// Point to readonly data, note some platofrm like android points to compressed apk, witch cant be directory accesssed, use www. etc instead
                 string streamingAssetsPath = UnityEngine.Application.streamingAssetsPath;
                 /// Point to temp data path, may clean by system
@@ -107,6 +114,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
     {
         try
         {
+            //LogicSystem.BeginLoading();
+            
             // if we are fisrt time start game, extract and loading game first
             if (!m_IsDataFileExtracted && !m_IsDataFileExtractedPaused)
             {
@@ -278,18 +287,21 @@ public class GameLogic : UnityEngine.MonoBehaviour
     {
         // fire ge_loading_start event handled by ui module, display splash screen & change to loading state
         LogicSystem.BeginLoading();
+        yield return new WaitForSeconds(.1f);
 
         // if in shipping version, update resource from server
         if (GlobalVariables.Instance.IsPublish)
         {
             yield return StartCoroutine(HandleGameLoadingPublish());
-            
         }
+
         // if not play game in editor, extract config data to disk
-        else if (!UnityEngine.Application.isEditor)
+        //else if (!UnityEngine.Application.isEditor)
         {
-            yield return StartCoroutine(HandleGameLoadingNonEditor());
+            //yield return StartCoroutine(HandleGameLoadingNonEditor());
         }
+
+        LogicSystem.UpdateLoadingProgress(0.45f);
 
         // async load notice string from server
         ResAsyncInfo requestNoticeConfigInfo = NoticeConfigLoader.RequestNoticeConfig();

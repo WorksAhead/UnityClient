@@ -139,7 +139,7 @@ PlayerSettings:
     Android: com.cyou.mrd.df
     Standalone: unity.Cyou.Blade
     Tizen: com.cyou.mrd.df
-    iOS: m.cyou.cblade
+    iOS: m.cyou.cblade7
     tvOS: com.cyou.mrd.df
   buildNumber:
     iOS: 0
@@ -148,7 +148,7 @@ PlayerSettings:
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: nrgctx-trampolines=8096,nimt-trampolines=8096,ntrampolines=8096
-  stripEngineCode: 1
+  stripEngineCode: 0
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
@@ -277,6 +277,9 @@ PlayerSettings:
     m_Automatic: 0
   - m_BuildTarget: AndroidPlayer
     m_APIs: 08000000
+    m_Automatic: 0
+  - m_BuildTarget: iOSSupport
+    m_APIs: 100000000b00000008000000
     m_Automatic: 0
   m_BuildTargetVRSettings: []
   openGLRequireES31: 0
@@ -549,9 +552,9 @@ PlayerSettings:
   scriptingDefineSymbols:
     0: INVALID_UTF8_STRING
   platformArchitecture:
-    iOS: 0
+    iOS: 1
   scriptingBackend:
-    iOS: 0
+    iOS: 1
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
   apiCompatibilityLevelPerPlatform: {}
