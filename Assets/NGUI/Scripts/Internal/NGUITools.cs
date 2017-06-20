@@ -546,7 +546,29 @@ static public class NGUITools
 	/// </summary>
 
 	static public GameObject AddChild (this GameObject parent, GameObject prefab) { return parent.AddChild(prefab, -1); }
-    
+
+    /// <summary>
+    /// ArkCrossEngine.ResourceSystem.NewObject()生成的对象，用该方法添加到父节点上
+    /// </summary>
+    static public UnityEngine.GameObject AddChild(UnityEngine.GameObject parent, UnityEngine.Object prefab)
+    {
+        UnityEngine.GameObject go = prefab as UnityEngine.GameObject;
+#if UNITY_EDITOR
+        UnityEditor.Undo.RegisterCreatedObjectUndo(go, "Create Object");
+#endif
+
+        if (go != null && parent != null)
+        {
+            UnityEngine.Transform t = go.transform;
+            //t.parent = parent.transform;
+            t.localPosition = UnityEngine.Vector3.zero;
+            t.localRotation = UnityEngine.Quaternion.identity;
+            t.localScale = UnityEngine.Vector3.one;
+            go.layer = parent.layer;
+        }
+        return go;
+    }
+
     /// <summary>
     /// Instantiate an object and add it to the specified parent.
     /// </summary>
