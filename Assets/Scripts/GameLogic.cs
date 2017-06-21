@@ -60,7 +60,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 path = "jar:file://" + Application.dataPath + "!/assets/";
                 throw new Exception("Code Not Impled..");
 #else
-                string persistentDataPath = UnityEngine.Application.persistentDataPath + "/StreamingAssets/";
+                string persistentDataPath = UnityEngine.Application.dataPath + "/StreamingAssets/";
 #endif
                 /// Point to readonly data, note some platofrm like android points to compressed apk, witch cant be directory accesssed, use www. etc instead
                 string streamingAssetsPath = UnityEngine.Application.streamingAssetsPath;
