@@ -618,7 +618,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             UISprite us = tf.gameObject.GetComponent<UISprite>();
             if (us != null)
             {
-                us.spriteName = pi.HeroId == 1 ? "kuang-zhan-shi-tou-xiang2" : pi.HeroId == 2 ? "ci-ke-tou-xiang2" : "";
+                //us.spriteName = pi.HeroId == 1 ? "kuang-zhan-shi-tou-xiang2" : pi.HeroId == 2 ? "ci-ke-tou-xiang2" : "";
+                us.spriteName = "jue-se-xuan-zhong-kuang";
             }
         }
         tf = UIRootGO.transform.Find("SelectHeroPanel/SelectHero" + num + "/Sprite");
@@ -770,7 +771,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                     UISprite us = tf.gameObject.GetComponent<UISprite>();
                     if (us != null)
                     {
-                        us.spriteName = heroid == 1 ? "kuang-zhan-shi-tou-xiang2" : heroid == 2 ? "ci-ke-tou-xiang2" : "";
+                        // us.spriteName = heroid == 1 ? "kuang-zhan-shi-tou-xiang2" : heroid == 2 ? "ci-ke-tou-xiang2" : "";
+                        us.spriteName = "jue-se-xuan-zhong-kuang";
                     }
                 }
             }
@@ -794,6 +796,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
 
     private void ButtonCreateHeroColourScale(int newnum)
     {
+        /*
         if (UIRootGO != null)
         {
             UnityEngine.Transform tf = UIRootGO.transform.Find("ButtonCreateHero/" + 0 + "/Back");
@@ -812,6 +815,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 NGUITools.SetActive(tf.gameObject, true);
             }
         }
+        */
         SetHeroVisible(m_characterIndex, false);
         m_characterIndex = newnum;
         ChangeHeroIntroduce(m_characterIndex);
@@ -830,8 +834,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     }
     public void ButtonCreateHero2()
     {
-        ShowHeroAndDoAction((int)HeroIdEnum.MAGIC);
-        ButtonCreateHeroColourScale(3);
+        //ShowHeroAndDoAction((int)HeroIdEnum.MAGIC);
+        //ButtonCreateHeroColourScale(3);
     }
     public void ButtonCreateHero3()
     {
