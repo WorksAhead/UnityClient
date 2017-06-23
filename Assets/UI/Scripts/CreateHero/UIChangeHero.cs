@@ -83,8 +83,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     private enum HeroIdEnum
     {
         WARRIOR = 1,
-        ASSASSIN = 2,
-        MAGIC = 3,
+        MAGICA = 2,
     }
     internal enum RoleEnterResult
     {
@@ -148,6 +147,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             {
                 eventlist.Add(eo);
             }
+            
+            MoveCharacterFromPrefabToScene();
 
             // change hero introduce text on selection ui
             ChangeHeroIntroduce(0);
@@ -168,6 +169,35 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
     }
 
+    private void MoveCharacterFromPrefabToScene()
+    {
+        var holder = GameObject.Find("CharacterHolder");
+        if (holder != null)
+        {
+            if (m_HeroCike != null)
+            {
+                m_HeroCike.transform.SetParent(null);
+                m_HeroCike.transform.transform.position = holder.transform.position;
+                m_HeroCike.transform.transform.localPosition = holder.transform.localPosition;
+                m_HeroCike.transform.transform.rotation = holder.transform.rotation;
+                m_HeroCike.transform.transform.localRotation = holder.transform.localRotation;
+                m_HeroCike.transform.transform.localScale = holder.transform.localScale;
+                m_HeroCike.transform.SetLayer(0);
+            }
+            if (m_HeroJianshi != null)
+            {
+                m_HeroJianshi.transform.SetParent(null);
+                m_HeroJianshi.transform.transform.position = holder.transform.position;
+                m_HeroJianshi.transform.transform.localPosition = holder.transform.localPosition;
+                m_HeroJianshi.transform.transform.rotation = holder.transform.rotation;
+                m_HeroJianshi.transform.transform.localRotation = holder.transform.localRotation;
+                m_HeroJianshi.transform.transform.localScale = new UnityEngine.Vector3(2, 2, 2);
+                m_HeroJianshi.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
+                m_HeroJianshi.transform.SetLayer(0);
+            }
+        }
+    }
+
     private void OnFingerEvent(FingerEvent args)
     {
         FingerMotionEvent motionEventArgs = args as FingerMotionEvent;
@@ -180,14 +210,15 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 if (motionEventArgs.Phase == FingerMotionPhase.Updated)
                 {
                     // rotate left or right
-                    if (motionEventArgs.Position.x > m_LastFingerPos.x)
+                    if (motionEventArgs.Position.x - m_LastFingerPos.x > 0.5)
                     {
                         OnHeroRotate(m_CurHeroId, -1);
                     }
-                    else
+                    else if (motionEventArgs.Position.x - m_LastFingerPos.x < -0.5)
                     {
                         OnHeroRotate(m_CurHeroId, 1);
                     }
+                    else { }
                 }
                 m_LastFingerPos = motionEventArgs.Position;
             }
@@ -196,13 +227,14 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
 
     private void OnHeroRotate(int heroId, int clockwise)
     {
+        float angle = (float)(m_AngleVelocity / UnityEngine.Mathf.PI * 180.0f * UnityEngine.Time.deltaTime * clockwise);
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
-                m_HeroCike.transform.Rotate(UnityEngine.Vector3.up, (float)(m_AngleVelocity / UnityEngine.Mathf.PI * 180.0f * UnityEngine.Time.deltaTime * clockwise), Space.Self);
+            case (int)HeroIdEnum.MAGICA:
+                m_HeroCike.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
                 break;
             case (int)HeroIdEnum.WARRIOR:
-                m_HeroJianshi.transform.Rotate(UnityEngine.Vector3.up, (float)(m_AngleVelocity / UnityEngine.Mathf.PI * 180.0f * UnityEngine.Time.deltaTime * clockwise), Space.Self);
+                m_HeroJianshi.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
                 break;
         }
     }
@@ -223,6 +255,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     // FixMe: another way to get active hero game object
     void CameraLookAtHero(int heroId)
     {
+        return;
         string playerName = GetHeroNameByHeroId(heroId);
 
         // find all player in layers
@@ -264,7 +297,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         StopAllCoroutines();
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
                 // play queued animation
                 HeroPlayAnimation(m_HeroCike, GetAnimNameByHeroId(heroId));
                 HeroPlayAniationQueued(m_HeroCike, GetIdleAnimByHeroId(heroId));
@@ -289,7 +322,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     {
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
                 if (null != m_AudioSource && m_CikeSelectMusic.Count > 0)
                 {
                     m_AudioSource.clip = m_CikeSelectMusic[UnityEngine.Random.Range(0, m_CikeSelectMusic.Count)];
@@ -309,7 +342,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     {
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
                 if (null != m_WeaponAudioSource && m_CikeWeaponMusic.Count > 0)
                 {
                     m_WeaponAudioSource.clip = m_CikeWeaponMusic[UnityEngine.Random.Range(0, m_CikeWeaponMusic.Count)];
@@ -327,7 +360,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     }
     private void HeroPlayAnimation(UnityEngine.GameObject obj, string animName)
     {
-        if (null != obj && !String.IsNullOrEmpty(animName))
+        if (null != obj && !String.IsNullOrEmpty(animName) && obj.GetComponent<UnityEngine.Animation>() != null)
         {
             if (obj.GetComponent<UnityEngine.Animation>().IsPlaying(animName))
             {
@@ -338,7 +371,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     }
     private void HeroPlayAniationQueued(UnityEngine.GameObject obj, string animName)
     {
-        if (null != obj && !String.IsNullOrEmpty(animName))
+        if (null != obj && !String.IsNullOrEmpty(animName) && obj.GetComponent<UnityEngine.Animation>())
         {
             obj.GetComponent<UnityEngine.Animation>().PlayQueued(animName);
         }
@@ -367,7 +400,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             case (int)HeroIdEnum.WARRIOR:
                 m_HeroJianshi.SetActive(visible);
                 break;
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
                 m_HeroCike.SetActive(visible);
                 break;
         }
@@ -395,7 +428,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     {
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
+                if (m_CikeHandLeft == null || m_CikeHandRight == null) return;
                 m_WeaponCikeLeft.transform.parent = m_CikeHandLeft;
                 m_WeaponCikeLeft.transform.localPosition = UnityEngine.Vector3.zero;
                 m_WeaponCikeLeft.transform.localRotation = UnityEngine.Quaternion.identity;
@@ -415,7 +449,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         string result = "";
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
                 result = m_HeroCikeAnim;
                 break;
             case (int)HeroIdEnum.WARRIOR:
@@ -429,7 +463,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         string result = "";
         switch (heroId)
         {
-            case (int)HeroIdEnum.ASSASSIN:
+            case (int)HeroIdEnum.MAGICA:
                 result = m_HeroCikeIdleAnim;
                 break;
             case (int)HeroIdEnum.WARRIOR:
@@ -442,6 +476,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     // FixMe: another way to get active hero game object
     public void MoveCameraToHero(int heroId)
     {
+        return;
         string name = GetHeroNameByHeroId(heroId);
         UnityEngine.GameObject[] playersArr = UnityEngine.GameObject.FindGameObjectsWithTag("Player");
         for (int i = 0; i < playersArr.Length; ++i)
@@ -513,7 +548,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
 
         // reset camera to zero position
-        UnityEngine.Camera.main.transform.position = UnityEngine.Vector3.zero;
+        //UnityEngine.Camera.main.transform.position = UnityEngine.Vector3.zero;
         if (playlist != null && playlist.Count > 0)
         {
             int i = playlist.Count;
@@ -829,7 +864,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     }
     public void ButtonCreateHero1()
     {
-        ShowHeroAndDoAction((int)HeroIdEnum.ASSASSIN);
+        ShowHeroAndDoAction((int)HeroIdEnum.MAGICA);
         ButtonCreateHeroColourScale(2);
     }
     public void ButtonCreateHero2()

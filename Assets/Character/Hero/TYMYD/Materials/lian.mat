@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: lian
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _NORMALMAP _SPECGLOSSMAP
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 1929ec0bdb4385f4f91591e418e24d07, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: 856db9bab6b22f54498511f6fa55594c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupDirect:
+        m_Texture: {fileID: 2800000, guid: ee7a7f61be8cb4f41bd6c6888fd1719f, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupDirectSM2:
+        m_Texture: {fileID: 2800000, guid: c82ac15d8e3571f44b48e20691d6fbf2, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupSH:
+        m_Texture: {fileID: 2800000, guid: 64d7e30d253aba54794616efab10bb94, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LookupSpecAO:
+        m_Texture: {fileID: 2800000, guid: 0978e19c24154c048a16e819aa87d3f1, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ea4d67e812d5f1d49b8adcabd1d91534, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PSSProfile:
+        m_Texture: {fileID: 2800012, guid: 14c24d7ed8672a34dbb8f50b40c85003, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlosAOMap:
+        m_Texture: {fileID: 2800000, guid: 5b7256d11c37f6d4fa0726509b3f0e1d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 2800000, guid: bc79a8ff7cb01404bb440a9f4a57028f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _: 0
+    - _AmbientOcclusionLightSuppression: 0.161
+    - _AmbientOcclusionStrength: 0.08
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 0.886
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _PSSInternalExpanded: 0
+    - _Parallax: 0.02
+    - _ScatteringOffset: 0.06
+    - _ScatteringPower: 0.14
+    - _SmoothnessTextureChannel: 0
+    - _SpecBlur: 0.784
+    - _SpecEnvMapIntensity: 0.572
+    - _SpecGlossiness: 0.66
+    - _SpecIntensity: 1.11
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TranslucencyOffset: 0.307
+    - _TranslucencyPower: 0.74
+    - _TranslucencyRadius: 0.951
+    - _TranslucencyScale: 6.67
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _BlurRange: {r: 1.1484888, g: 1.6395166, b: 0, a: 0}
+    - _Color: {r: 0.5808823, g: 0.5595263, b: 0.5595263, a: 1}
+    - _EmissionColor: {r: 0.25735295, g: 0.22329153, b: 0.22329153, a: 1}
+    - _PSSProfileHigh_sqrtvar1234: {r: 0.24494897, g: 0.4358899, b: 1.1445522, a: 1.5394804}
+    - _PSSProfileHigh_transl123_sqrtvar5: {r: -24.044918, g: -7.593132, b: -1.1012939,
+        a: 0.9591663}
+    - _PSSProfileHigh_transl456_sqrtvar6: {r: -0.6087321, g: -1.5681467, b: -0.2279139,
+        a: 2.515949}
+    - _PSSProfileHigh_weighths1_var1: {r: 0.04781042, g: 0.12079207, b: 0.14078511,
+        a: 0.06}
+    - _PSSProfileHigh_weighths2_var2: {r: 0.03924223, g: 0.08088257, b: 0.09373263,
+        a: 0.19}
+    - _PSSProfileHigh_weighths3_var3: {r: 0.00056722073, g: 0.019676575, b: 0.0099479845,
+        a: 1.31}
+    - _PSSProfileHigh_weighths4_var4: {r: 0.13662241, g: 0.24660912, b: 0.2978499,
+        a: 2.37}
+    - _PSSProfileHigh_weighths5_var5: {r: 0.36285442, g: 0.29220563, b: 0.19288863,
+        a: 0.92}
+    - _PSSProfileHigh_weighths6_var6: {r: 0.41290328, g: 0.23983407, b: 0.2647958,
+        a: 6.33}
+    - _PSSProfileLow_sqrtvar12: {r: 0.44351488, g: 1.8061516, b: 0, a: 0}
+    - _PSSProfileLow_transl: {r: -0.4395289, g: -0.5961959, b: -0.55513734, a: 0}
+    - _PSSProfileLow_weighths1_var1: {r: 0.08761987, g: 0.22135122, b: 0.24446572,
+        a: 0.19670545}
+    - _PSSProfileLow_weighths2_var2: {r: 0.9123801, g: 0.77864885, b: 0.75553435,
+        a: 3.262184}
+    - _PSSProfileMedium_sqrtvar123: {r: 0.3362923, g: 1.5203214, b: 1.8948938, a: 0}
+    - _PSSProfileMedium_transl123: {r: -12.756769, g: -0.6241712, b: -0.40179527,
+        a: 0}
+    - _PSSProfileMedium_weighths1_var1: {r: 0.08705265, g: 0.20167464, b: 0.23451775,
+        a: 0.11309251}
+    - _PSSProfileMedium_weighths2_var2: {r: 0.13718964, g: 0.2662857, b: 0.30779788,
+        a: 2.311377}
+    - _PSSProfileMedium_weighths3_var3: {r: 0.7757577, g: 0.5320397, b: 0.45768446,
+        a: 3.5906222}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _TranslucencyColor: {r: 0.99188644, g: 1, b: 0.9632353, a: 1}
