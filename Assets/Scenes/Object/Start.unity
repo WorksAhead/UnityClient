@@ -246,6 +246,15 @@ MonoBehaviour:
   playTimeFight: 0
   playTimeVS: 0
   duration: 2
+  effectBody: {fileID: 0}
+  effectCount: {fileID: 0}
+  effectFight: {fileID: 0}
+  effectVS: {fileID: 0}
+  posBodyL: {fileID: 0}
+  posBodyR: {fileID: 0}
+  posCount: {fileID: 0}
+  posFight: {fileID: 0}
+  posVS: {fileID: 0}
   spPlayerLeft: {fileID: 0}
   spPlayerRight: {fileID: 0}
   lblPlayerLevelLeft: {fileID: 0}
@@ -995,7 +1004,7 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
-  mClipRange: {x: -250, y: -19, z: 701.1448, w: 38}
+  mClipRange: {x: -250, y: -18.381042, z: 842.8627, w: 38}
   mClipSoftness: {x: 1, y: 1}
   mDepth: 0
   mSortingOrder: 0
