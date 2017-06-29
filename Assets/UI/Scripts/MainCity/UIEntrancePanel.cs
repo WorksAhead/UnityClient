@@ -29,13 +29,14 @@ public enum SystemNewTipType : byte
     Task,
     Award,
     Activity,
-    pvp
+    pvp,
+    Settings
 }
 public class UIEntrancePanel : UnityEngine.MonoBehaviour
 {
     //
     public UISprite entrance = null;
-    private const int c_ButtonNumber = 12;
+    private const int c_ButtonNumber = 13;
     public UnityEngine.GameObject[] buttons = new UnityEngine.GameObject[c_ButtonNumber];
     public UnityEngine.GameObject RightBtn = null;
     public UnityEngine.GameObject BottomBtn = null;
@@ -182,7 +183,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
             ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
-    private bool isShowBtn = true;
+    private bool isShowBtn = false;
     public void OnEntranceBtnClick()
     {
         isShowBtn = !isShowBtn;
@@ -522,6 +523,8 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
                 break;
             case "Entrance-Award":
                 OpenAndCloseWindow("ActivityAward");
+                break;
+            case "Entrance-Settings":
                 break;
         }
     }
@@ -930,7 +933,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
     {
         for (int index = 0; index < buttons.Length; ++index)
         {
-            if (buttons[index] != null && buttons[index].name != "Entrance-Mission" && buttons[index].name != "Entrance-Shop" && buttons[index].name != "Entrance-Award")
+            if (buttons[index] != null && /*buttons[index].name != "Entrance-Mission" && buttons[index].name != "Entrance-Shop" && buttons[index].name != "Entrance-Award"*/buttons[index].name != "Entrance-Settings")
                 NGUITools.SetActive(buttons[index], false);
         }
     }
