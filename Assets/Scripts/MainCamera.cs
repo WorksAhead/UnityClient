@@ -677,7 +677,18 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private bool m_IsShaking = false;
     private bool m_NeedLookat = false;
 
-    private float m_FixedYaw = 0;
+    private float m_FixedYaw_ = 0;
+    private float m_FixedYaw
+    {
+        get { return m_FixedYaw_; }
+        set
+        {
+            m_FixedYaw_ = value; 
+            // notify player controller for camera yaw offset
+            PlayerControl.Instance.SetCameraYawOffset(m_FixedYaw / 180.0f * UnityEngine.Mathf.PI);
+        }
+    }
+
     private UnityEngine.Transform m_CameraTransform;
     private UnityEngine.Transform m_Target;
     private UnityEngine.Vector3 m_CurTargetPos;
