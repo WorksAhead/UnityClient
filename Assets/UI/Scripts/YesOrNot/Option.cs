@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ArkCrossEngine;
 
 public class Option : UnityEngine.MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class Option : UnityEngine.MonoBehaviour
     {
 
     }
+
     public void SwitchID()
     {
         ArkCrossEngine.NoticeConfigLoader.s_NoticeContent = "";
@@ -64,6 +66,22 @@ public class Option : UnityEngine.MonoBehaviour
         ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_dialog", "ui", ArkCrossEngine.StrDictionaryProvider.Instance.GetDictString(17), null,
         ArkCrossEngine.StrDictionaryProvider.Instance.GetDictString(140), ArkCrossEngine.StrDictionaryProvider.Instance.GetDictString(157), fun, false);
     }
+
+    public void DebugPVP()
+    {
+        PlayerControl.Instance.JoinTwoPlayerStage(0, (int)Keyboard.Event.Up);
+    }
+
+    public void DebugPVE()
+    {
+        PlayerControl.Instance.MatchMpve(0, (int)Keyboard.Event.Up);
+    }
+
+    public void DebugLevelup()
+    {
+        PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
+    }
+
     void SwitchIDButtonWhich(int which)
     {
         if (which == 1)

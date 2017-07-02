@@ -416,14 +416,14 @@ public abstract class Gesture
                             LogicSystem.EventChannelForGfx.Publish("ge_npc_click", "ui", signNpcTypeScript.GetNpcType());
                         }
                         /// 
-                        SharedGameObjectInfo assit_target = LogicSystem.GetSharedGameObjectInfo(hitGameObj.GetInstanceID());
+                        SharedGameObjectInfo assit_target = LogicSystem.GetSharedGameObjectInfo(hitGameObj);
                         if (null != assit_target)
                         {
                             ClickNpcManager.Instance.Execute(assit_target.m_ActorId);
                         }
                     }
                     SharedGameObjectInfo selfInfo = LogicSystem.PlayerSelfInfo;
-                    SharedGameObjectInfo targetInfo = LogicSystem.GetSharedGameObjectInfo(hitGameObj.GetInstanceID());
+                    SharedGameObjectInfo targetInfo = LogicSystem.GetSharedGameObjectInfo(hitGameObj);
                     if (null != targetInfo && null != selfInfo)
                     {
                         // camp

@@ -29,7 +29,7 @@ public class LoadingProgressBar : UnityEngine.MonoBehaviour
             }
 
             // loading end, begin destroy stage
-            if (sign3)
+            if (sign2)
             {
                 time += RealTime.deltaTime;
                 if (time >= 2.0f)
@@ -97,7 +97,7 @@ public class LoadingProgressBar : UnityEngine.MonoBehaviour
     // message send from gameLogic
     void EndLoading()
     {
-        sign2 = false;
+        sign2 = true;
         time = 0.0f;
     }
 
@@ -128,8 +128,7 @@ public class LoadingProgressBar : UnityEngine.MonoBehaviour
 
         // reset and destroy unused ui elements
         sign1 = true;
-        sign2 = true;
-        sign3 = true;
+        sign2 = false;
         time = 0f;
         NGUITools.DestroyImmediate(this.transform.parent.gameObject);
 
@@ -148,7 +147,6 @@ public class LoadingProgressBar : UnityEngine.MonoBehaviour
     }
 
     private bool sign1 = true;
-    private bool sign2 = true;
-    private bool sign3 = true;
+    private bool sign2 = false;
     private float time = 0f;
 }
