@@ -637,7 +637,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1837760142}
   - component: {fileID: 1837760141}
-  - component: {fileID: 1837760148}
   - component: {fileID: 1837760146}
   m_Layer: 0
   m_Name: Main Camera
@@ -712,31 +711,6 @@ MonoBehaviour:
   blurIterations: 2
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
---- !u!114 &1837760148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1837760137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e50e925fb93c78246bf995d9dc3a2330, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 4
-  adaptiveTextureSize: 256
-  remapCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  exposureAdjustment: 1.34
-  middleGrey: 0.4
-  white: 2
-  adaptionSpeed: 1.5
-  tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
-  validRenderTextureFormat: 0
 --- !u!1 &1877349015
 GameObject:
   m_ObjectHideFlags: 0

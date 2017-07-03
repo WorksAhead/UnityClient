@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using XLua;
 using System;
+
+#if ENABLE_LUA
+using XLua;
+#endif
 
 [Serializable]
 public class Injection
@@ -10,8 +13,9 @@ public class Injection
     public string Name;
     public object Object;
 }
-
+#if ENABLE_LUA
 [LuaCallCSharp]
+#endif
 public class LuaBehaviour : MonoBehaviour
 {
     public TextAsset LuaScript;
@@ -24,10 +28,13 @@ public class LuaBehaviour : MonoBehaviour
     private Action LuafDestroy;
 
     /// self table
+#if ENABLE_LUA
     private LuaTable ScriptEnv;
-
+#endif
+    
     void Awake()
     {
+#if ENABLE_LUA
         LuaEnv env = LuaManager.Instance.Env;
 
         // set index meta table
@@ -60,6 +67,7 @@ public class LuaBehaviour : MonoBehaviour
         {
             LuafAwake();
         }
+#endif
     }
 
     void Start ()
@@ -90,12 +98,16 @@ public class LuaBehaviour : MonoBehaviour
         LuafUpdate = null;
         LuafDestroy = null;
         Injections = null;
+#if ENABLE_LUA
         ScriptEnv.Dispose();
+#endif
     }
 
     void ExecuteLua()
     {
+#if ENABLE_LUA
         string luaExecutable = LuaManager.Instance.LoadLuaFromFile(System.IO.Path.GetFileNameWithoutExtension(LuaScript.name));
         LuaManager.Instance.DoString(luaExecutable, ScriptEnv);
+#endif
     }
 }

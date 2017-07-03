@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 886923350}
   - component: {fileID: 886923348}
   - component: {fileID: 886923349}
+  - component: {fileID: 886923352}
   m_Layer: 0
   m_Name: GfxGameRoot
   m_TagString: Untagged
@@ -434,6 +435,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &886923352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 886923347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ff4051e75dc9443879b116bd65c930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCounter:
+    enabled: 1
+    anchor: 1
+    color: {r: 0, g: 0.7372549, b: 0.11764706, a: 1}
+    warningLevelValue: 50
+    criticalLevelValue: 20
+    resetAverageOnNewScene: 0
+    resetMinMaxOnNewScene: 0
+    minMaxIntervalsToSkip: 3
+    updateInterval: 0.5
+    milliseconds: 1
+    average: 1
+    averageMilliseconds: 0
+    averageNewLine: 0
+    averageSamples: 50
+    minMax: 0
+    minMaxMilliseconds: 0
+    minMaxNewLine: 0
+    colorWarning: {r: 0, g: 0.7372549, b: 0.11764706, a: 1}
+    colorCritical: {r: 1, g: 1, b: 0.12068963, a: 1}
+  memoryCounter:
+    enabled: 1
+    anchor: 1
+    color: {r: 0, g: 0.7372549, b: 0.11764706, a: 1}
+    updateInterval: 1
+    precise: 1
+    total: 1
+    allocated: 1
+    monoUsage: 0
+  deviceInfoCounter:
+    enabled: 0
+    anchor: 2
+    color: {r: 0.6745098, g: 0.6745098, b: 0.6745098, a: 1}
+    platform: 1
+    cpuModel: 1
+    gpuModel: 1
+    gpuApi: 1
+    gpuSpec: 1
+    ramSize: 1
+    screenData: 1
+  hotKey: 96
+  hotKeyCtrl: 0
+  hotKeyShift: 0
+  hotKeyAlt: 0
+  keepAlive: 1
+  operationMode: 2
+  forceFrameRate: 0
+  forcedFrameRate: -1
+  shadow: 1
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+  shadowDistance: {x: 1, y: -1}
+  outline: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 0.5019608}
+  outlineDistance: {x: 1, y: -1}
+  scaleFactor: 1
+  labelsFont: {fileID: 0}
+  fontSize: 0
+  lineSpacing: 1
+  countersSpacing: 0
+  paddingOffset: {x: 5, y: 5}
+  sortingOrder: 10000
+  lookAndFeelFoldout: 0
+  advancedFoldout: 0
 --- !u!1 &929147035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1079,7 @@ MonoBehaviour:
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
-  mClipRange: {x: -250, y: -18.381042, z: 842.8627, w: 38}
+  mClipRange: {x: -250.3316, y: -18.381042, z: 794.5841, w: 38}
   mClipSoftness: {x: 1, y: 1}
   mDepth: 0
   mSortingOrder: 0
