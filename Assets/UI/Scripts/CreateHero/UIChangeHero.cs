@@ -191,8 +191,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroJianshi.transform.transform.localPosition = holder.transform.localPosition;
                 m_HeroJianshi.transform.transform.rotation = holder.transform.rotation;
                 m_HeroJianshi.transform.transform.localRotation = holder.transform.localRotation;
-                m_HeroJianshi.transform.transform.localScale = new UnityEngine.Vector3(2, 2, 2);
-                m_HeroJianshi.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
+                m_HeroJianshi.transform.transform.localScale = holder.transform.localScale;//new UnityEngine.Vector3(2, 2, 2);
+                //m_HeroJianshi.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
                 m_HeroJianshi.transform.SetLayer(0);
             }
         }

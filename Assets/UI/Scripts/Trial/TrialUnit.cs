@@ -119,7 +119,7 @@ public class TrialUnit : UnityEngine.MonoBehaviour
         }
     }
     //播完销毁，可点
-    private void UnLockFinish()
+    public void UnLockFinish()
     {
         if (unLockEffect != null)
         {

@@ -137,6 +137,6 @@ public class LevelUp : UnityEngine.MonoBehaviour
         UIManager.Instance.HideWindowByName("LevelUp");
         UIManager.Instance.HideWindowByName("FightScoreChange");
         ArkCrossEngine.RoleInfo role = ArkCrossEngine.LobbyClient.Instance.CurrentRole;
-        ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("after_levelup", "ui_effect", role.Level);
+        //ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("after_levelup", "ui_effect", role.Level);
     }
 }

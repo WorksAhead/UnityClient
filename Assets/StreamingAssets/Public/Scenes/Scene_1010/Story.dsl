@@ -45,50 +45,6 @@
 	//0——单人PVE，1——多人活动，2——PVP
 	onmessage("cityplayermove")
 	{
-		if($0==0)
-		{	
-			@targetPt = vector3(64.54072 172.08 39.34027);
-			@dist = vector3dist(getposition(playerselfid()),@targetPt);
-			if(@dist<=1)
-			{
-				sendgfxmessage("GfxGameRoot","ShowWindow","SceneSelect");
-			}
-			else
-			{
-				playerselfmove(@targetPt);
-			};
-		};
-		if($0==1)
-		{
-			@targetPt = vector3(71.92841 0.07996559 -6.046996);
-			@dist = vector3dist(getposition(playerselfid()),@targetPt);
-			if(@dist<=1)
-			{
-				sendgfxmessage("GfxGameRoot","ShowWindow","Trial");
-			}
-			else
-			{
-				playerselfmove(@targetPt);
-			};
-		};
-		if($0==2)
-		{
-			@targetPt = vector3(103.5865 0.07999742 -6.541862);
-			@dist = vector3dist(getposition(playerselfid()),@targetPt);
-			if(@dist<=1)
-			{
-			  	sendgfxmessage("GfxGameRoot","ShowWindow","PvPEntrance");
-			}
-			else
-			{
-				playerselfmove(@targetPt);
-			};
-		};
-		
-		message("playermovetopos")
-		playerselfmove(vector3($0,$1,$2));
-		
-		message("aimovestopped")
 		
 	};
 };

@@ -476,7 +476,7 @@ public class UISceneSelect : UnityEngine.MonoBehaviour
         if (!hasCommonChapter && m_SubSceneType == SubSceneType.Master)
         {
             LogicSystem.EventChannelForGfx.Publish("ge_screen_tip", "ui",
-              "该章节未开放，请耐心等待", UIScreenTipPosEnum.AlignTop, UnityEngine.Vector3.zero);
+              "该章节尚未开放", UIScreenTipPosEnum.AlignTop, UnityEngine.Vector3.zero);
             return;
         }
         if (IsChapterMoving()) return;

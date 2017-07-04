@@ -233,7 +233,8 @@ public class UIPvPEntrance : UnityEngine.MonoBehaviour
         {
             if (unit.HasOpen)
             {//播放第一个为开放的（等级从大到小排的序）
-                unit.PlayUnLock();
+                //unit.PlayUnLock();
+                unit.UnLockFinish();
             }
         }
     }

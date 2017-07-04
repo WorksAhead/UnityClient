@@ -5,12 +5,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400004}
-  - 114: {fileID: 11400002}
-  - 114: {fileID: 11400012}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400004}
+  - component: {fileID: 11400002}
+  - component: {fileID: 11400012}
   m_Layer: 9
   m_Name: sp_hand
   m_TagString: Untagged
@@ -23,12 +23,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400002}
-  - 114: {fileID: 11400000}
-  - 54: {fileID: 5400002}
-  - 114: {fileID: 11400014}
+  - component: {fileID: 400002}
+  - component: {fileID: 11400000}
+  - component: {fileID: 5400002}
+  - component: {fileID: 11400014}
   m_Layer: 9
   m_Name: GuideHand
   m_TagString: Untagged
@@ -41,10 +41,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400004}
-  - 114: {fileID: 11400028}
+  - component: {fileID: 400004}
+  - component: {fileID: 11400028}
   m_Layer: 9
   m_Name: all_circle
   m_TagString: Untagged
@@ -57,10 +57,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400006}
-  - 54: {fileID: 5400000}
+  - component: {fileID: 400006}
+  - component: {fileID: 5400000}
   m_Layer: 9
   m_Name: glowCircle
   m_TagString: Untagged
@@ -73,12 +73,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400008}
-  - 114: {fileID: 11400030}
-  - 114: {fileID: 11400022}
-  - 114: {fileID: 11400008}
+  - component: {fileID: 400008}
+  - component: {fileID: 11400030}
+  - component: {fileID: 11400022}
+  - component: {fileID: 11400008}
   m_Layer: 9
   m_Name: sp_circle04
   m_TagString: Untagged
@@ -91,10 +91,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400010}
-  - 114: {fileID: 11400032}
+  - component: {fileID: 400010}
+  - component: {fileID: 11400032}
   m_Layer: 9
   m_Name: icon
   m_TagString: Untagged
@@ -107,12 +107,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400016}
-  - 114: {fileID: 11400038}
-  - 114: {fileID: 11400020}
-  - 114: {fileID: 11400010}
+  - component: {fileID: 400016}
+  - component: {fileID: 11400038}
+  - component: {fileID: 11400020}
+  - component: {fileID: 11400010}
   m_Layer: 9
   m_Name: sp_circle05
   m_TagString: Untagged
@@ -125,12 +125,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400018}
-  - 114: {fileID: 11400040}
-  - 114: {fileID: 11400024}
-  - 114: {fileID: 11400016}
+  - component: {fileID: 400018}
+  - component: {fileID: 11400040}
+  - component: {fileID: 11400024}
+  - component: {fileID: 11400016}
   m_Layer: 9
   m_Name: sp_circle03
   m_TagString: Untagged
@@ -143,12 +143,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400020}
-  - 114: {fileID: 11400042}
-  - 114: {fileID: 11400026}
-  - 114: {fileID: 11400018}
+  - component: {fileID: 400020}
+  - component: {fileID: 11400042}
+  - component: {fileID: 11400026}
+  - component: {fileID: 11400018}
   m_Layer: 9
   m_Name: sp_circle02
   m_TagString: Untagged
@@ -161,11 +161,11 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400022}
-  - 114: {fileID: 11400044}
-  - 114: {fileID: 11400006}
+  - component: {fileID: 400022}
+  - component: {fileID: 11400044}
+  - component: {fileID: 11400006}
   m_Layer: 9
   m_Name: sp_circle01
   m_TagString: Untagged
@@ -184,6 +184,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400006}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -197,6 +199,8 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400010}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -213,6 +217,8 @@ Transform:
   - {fileID: 400008}
   - {fileID: 400016}
   m_Father: {fileID: 400006}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -226,6 +232,8 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400000}
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -237,6 +245,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -248,6 +258,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
@@ -259,6 +271,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
@@ -270,6 +284,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -281,6 +297,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400022
 Transform:
   m_ObjectHideFlags: 1
@@ -292,6 +310,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -301,7 +321,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -316,7 +336,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -328,7 +348,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
   m_Name: 
@@ -349,20 +369,28 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   showInPanelTool: 1
   generateNormals: 0
+  generateUV2: 0
+  shadowMode: 0
   widgetsAreStatic: 0
   cullWhileDragging: 0
   alwaysOnScreen: 0
   anchorOffset: 0
+  softBorderPadding: 1
   renderQueue: 0
   startingRenderQueue: 3000
+  mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 161
+  mSortingOrder: 0
+  mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
+  useSortingOrder: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -379,38 +407,44 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: .0800418481
-      outSlope: .0800418481
+      inSlope: 0.08004185
+      outSlope: 0.08004185
       tangentMode: 0
-    - time: .25
+    - serializedVersion: 2
+      time: 0.25
       value: 1
-      inSlope: 6.65066767
+      inSlope: 6.6506677
       outSlope: -0
-      tangentMode: 17
-    - time: .5
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.5
       value: 1
       inSlope: 0
       outSlope: -2
-      tangentMode: 21
-    - time: 1
+      tangentMode: 69
+    - serializedVersion: 2
+      time: 1
       value: 0
       inSlope: -2
-      outSlope: -.207048908
+      outSlope: -0.20704891
       tangentMode: 5
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .25
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: 1, y: 1, z: 1}
-  to: {x: .800000012, y: .800000012, z: .800000012}
+  to: {x: 0.8, y: 0.8, z: 0.8}
   updateTable: 0
 --- !u!114 &11400004
 MonoBehaviour:
@@ -439,28 +473,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 0
   mWidth: 92
   mHeight: 90
   mDepth: 161
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.02222228
-  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
-  mSpriteName: shouzhi
+  aspectRatio: 1.0222223
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
+  mSpriteName: shouzhi
+  mFillCenter: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,28 +516,33 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: .00165015459
+    - serializedVersion: 2
+      time: 0
+      value: 0.0016501546
       inSlope: 0
-      outSlope: 4.64348793
-      tangentMode: 17
-    - time: .214999989
+      outSlope: 4.643488
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.21499999
       value: 1
-      inSlope: 4.64348793
-      outSlope: -1.27388537
-      tangentMode: 21
-    - time: 1
+      inSlope: 4.643488
+      outSlope: -1.2738854
+      tangentMode: 69
+    - serializedVersion: 2
+      time: 1
       value: 0
-      inSlope: -1.06270814
-      outSlope: -1.06270814
+      inSlope: -1.0627081
+      outSlope: -1.0627081
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .0299999993
-  duration: .200000003
+  delay: 0.03
+  duration: 0.2
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -520,33 +564,39 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: .099999994
+    - serializedVersion: 2
+      time: 0.099999994
       value: 1
-      inSlope: 11.9484463
+      inSlope: 11.948446
       outSlope: -0
-      tangentMode: 17
-    - time: .594999969
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.59499997
       value: 1
       inSlope: 0
-      outSlope: -2.46913552
-      tangentMode: 21
-    - time: 1
+      outSlope: -2.4691355
+      tangentMode: 69
+    - serializedVersion: 2
+      time: 1
       value: 0
-      inSlope: -2.46913552
-      outSlope: -.795583546
+      inSlope: -2.4691355
+      outSlope: -0.79558355
       tangentMode: 5
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .5
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -568,36 +618,43 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 1.57920814
-      outSlope: 1.57920814
+      inSlope: 1.5792081
+      outSlope: 1.5792081
       tangentMode: 0
-    - time: .275000006
+    - serializedVersion: 2
+      time: 0.275
       value: 1
-      inSlope: 7.73467875
+      inSlope: 7.7346787
       outSlope: -0
-      tangentMode: 17
-    - time: .409999996
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.41
       value: 1
       inSlope: 0
-      outSlope: -4.08163309
-      tangentMode: 21
-    - time: .654999971
+      outSlope: -4.081633
+      tangentMode: 69
+    - serializedVersion: 2
+      time: 0.655
       value: 0
-      inSlope: -4.08163309
-      outSlope: -1.90803373
+      inSlope: -4.081633
+      outSlope: -1.9080337
       tangentMode: 5
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .949999988
+  duration: 0.95
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished:
   - mTarget: {fileID: 11400014}
     mMethodName: OnTweenHandFinished
+    mParameters: []
     oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -619,33 +676,39 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: .25
+    - serializedVersion: 2
+      time: 0.25
       value: 1
-      inSlope: 9.93400669
+      inSlope: 9.934007
       outSlope: -0
-      tangentMode: 17
-    - time: .5
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.5
       value: 1
       inSlope: 0
       outSlope: -2
-      tangentMode: 21
-    - time: 1
+      tangentMode: 69
+    - serializedVersion: 2
+      time: 1
       value: 0
       inSlope: -2
       outSlope: 0
       tangentMode: 5
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .25
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -680,33 +743,39 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: .099999994
+    - serializedVersion: 2
+      time: 0.099999994
       value: 1
-      inSlope: 11.9484463
+      inSlope: 11.948446
       outSlope: -0
-      tangentMode: 17
-    - time: .435000002
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.435
       value: 1
       inSlope: 0
-      outSlope: -1.76991153
-      tangentMode: 21
-    - time: 1
+      outSlope: -1.7699115
+      tangentMode: 69
+    - serializedVersion: 2
+      time: 1
       value: 0
-      inSlope: -1.76991153
-      outSlope: -1.90803373
+      inSlope: -1.7699115
+      outSlope: -1.9080337
       tangentMode: 5
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .0700000003
-  duration: .400000006
+  delay: 0.07
+  duration: 0.4
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -728,33 +797,39 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: .099999994
+    - serializedVersion: 2
+      time: 0.099999994
       value: 1
-      inSlope: 11.9484463
+      inSlope: 11.948446
       outSlope: -0
-      tangentMode: 17
-    - time: .699999988
+      tangentMode: 65
+    - serializedVersion: 2
+      time: 0.7
       value: 1
       inSlope: 0
-      outSlope: -5.92738819
+      outSlope: -5.927388
       tangentMode: 5
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 0
-      inSlope: -1.90803373
-      outSlope: -1.90803373
+      inSlope: -1.9080337
+      outSlope: -1.9080337
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .0500000007
-  duration: .300000012
+  delay: 0.05
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -776,28 +851,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 3.36419177
-      outSlope: 3.36419177
+      inSlope: 3.3641918
+      outSlope: 3.3641918
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: .0713147745
-      outSlope: .0713147745
+      inSlope: 0.071314774
+      outSlope: 0.071314774
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .800000012
+  duration: 0.8
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: .300000012, y: .300000012, z: .300000012}
-  to: {x: 1.39999998, y: 1.39999998, z: 1.39999998}
+  from: {x: 0.3, y: 0.3, z: 0.3}
+  to: {x: 1.4, y: 1.4, z: 1.4}
   updateTable: 0
 --- !u!114 &11400022
 MonoBehaviour:
@@ -815,33 +894,38 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 3.36419177
-      outSlope: 3.36419177
+      inSlope: 3.3641918
+      outSlope: 3.3641918
       tangentMode: 0
-    - time: .366650879
-      value: .910754383
-      inSlope: .431119263
-      outSlope: .431119263
+    - serializedVersion: 2
+      time: 0.36665088
+      value: 0.9107544
+      inSlope: 0.43111926
+      outSlope: 0.43111926
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: .0713147745
-      outSlope: .0713147745
+      inSlope: 0.071314774
+      outSlope: 0.071314774
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .0599999987
-  duration: .75
+  delay: 0.06
+  duration: 0.75
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: .300000012, y: .300000012, z: .300000012}
-  to: {x: .899999976, y: .899999976, z: .899999976}
+  from: {x: 0.3, y: 0.3, z: 0.3}
+  to: {x: 0.9, y: 0.9, z: 0.9}
   updateTable: 0
 --- !u!114 &11400024
 MonoBehaviour:
@@ -859,28 +943,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 3.36419177
-      outSlope: 3.36419177
+      inSlope: 3.3641918
+      outSlope: 3.3641918
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: .0713147745
-      outSlope: .0713147745
+      inSlope: 0.071314774
+      outSlope: 0.071314774
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .0700000003
-  duration: .400000006
+  delay: 0.07
+  duration: 0.4
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: .400000006, y: .400000006, z: .400000006}
-  to: {x: .699999988, y: .699999988, z: .699999988}
+  from: {x: 0.4, y: 0.4, z: 0.4}
+  to: {x: 0.7, y: 0.7, z: 0.7}
   updateTable: 0
 --- !u!114 &11400026
 MonoBehaviour:
@@ -898,28 +986,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 3.36419177
-      outSlope: 3.36419177
+      inSlope: 3.3641918
+      outSlope: 3.3641918
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: .0713147745
-      outSlope: .0713147745
+      inSlope: 0.071314774
+      outSlope: 0.071314774
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .0500000007
-  duration: .300000012
+  delay: 0.05
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: .200000003, y: .200000003, z: .200000003}
-  to: {x: .699999988, y: .699999988, z: .699999988}
+  from: {x: 0.2, y: 0.2, z: 0.2}
+  to: {x: 0.7, y: 0.7, z: 0.7}
   updateTable: 0
 --- !u!114 &11400028
 MonoBehaviour:
@@ -948,11 +1040,13 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 100
   mHeight: 100
   mDepth: 0
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -984,28 +1078,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 130
   mHeight: 130
   mDepth: 13
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
-  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
-  mSpriteName: light3
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
+  mSpriteName: light3
+  mFillCenter: 1
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1033,28 +1132,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 80
   mHeight: 80
   mDepth: 100
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
-  mAtlas: {fileID: 0}
-  mSpriteName: attack2
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 0}
+  mSpriteName: attack2
+  mFillCenter: 1
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1082,28 +1186,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 130
   mHeight: 130
   mDepth: 14
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
-  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
-  mSpriteName: light4
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
+  mSpriteName: light4
+  mFillCenter: 1
 --- !u!114 &11400040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1131,28 +1240,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 100
   mHeight: 100
   mDepth: 12
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
-  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
-  mSpriteName: light2
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
+  mSpriteName: light2
+  mFillCenter: 1
 --- !u!114 &11400042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1180,28 +1294,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 100
   mHeight: 100
   mDepth: 11
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
-  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
-  mSpriteName: light1
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
+  mSpriteName: light1
+  mFillCenter: 1
 --- !u!114 &11400044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1229,28 +1348,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 60
   mHeight: 60
   mDepth: 20
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
-  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
-  mSpriteName: ball
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 1b39f861edb38304a997ee84766f1df1, type: 2}
+  mSpriteName: ball
+  mFillCenter: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -1262,4 +1386,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
