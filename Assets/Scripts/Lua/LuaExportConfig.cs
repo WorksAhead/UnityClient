@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System;
 using UnityEngine;
+
+#if ENABLE_LUA
 using XLua;
 
 public static class LuaExportConfig
@@ -70,3 +72,4 @@ public static class LuaExportConfig
         new List<string>(){"UnityEngine.MonoBehaviour", "runInEditMode"},
     };
 }
+#endif

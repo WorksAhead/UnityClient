@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using XLua;
+
 using ArkCrossEngine;
+
+#if ENABLE_LUA
+using XLua;
+#endif
 
 public class LuaManager
 {
@@ -19,33 +23,42 @@ public class LuaManager
     internal float LastGCTime = 0;
     internal const float GCInterval = 1;
 
+#if ENABLE_LUA
     private LuaEnv luaEnv;
     public LuaEnv Env
     {
         get { return luaEnv; }
         set { luaEnv = value; }
     }
+#endif
 
     public void InitEnv()
     {
+#if ENABLE_LUA
         luaEnv = new LuaEnv();
         luaEnv.AddLoader(CustomLoader);
+#endif
     }
 
     public void Tick()
     {
+#if ENABLE_LUA
         if (UnityEngine.Time.time - LastGCTime > GCInterval)
         {
             luaEnv.Tick();
             LastGCTime = UnityEngine.Time.time;
         }
+#endif 
     }
 
     public void DisposeEnv()
     {
+#if ENABLE_LUA
         luaEnv.Dispose();
+#endif  
     }
 
+#if ENABLE_LUA
     /// note: debugger can`t capture dostring calls
     public void DoString(string luaText, LuaTable table = null )
     {
@@ -56,6 +69,7 @@ public class LuaManager
     {
         Env.DoString("require " + "\"" + path + "\"", "Lua");
     }
+#endif
 
     // input:  argument of lua require call, require full path if a remote debugger attached
     // output: null if no file found or UTF-8 string
