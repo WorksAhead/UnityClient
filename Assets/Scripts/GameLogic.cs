@@ -49,19 +49,15 @@ public class GameLogic : UnityEngine.MonoBehaviour
                     ResUpdateControler.InitContext();
                 }
 
+                // register file read handler
+                FileReaderProxy.RegisterReadFileHandler(EngineReadFileProxy, EngineFileExistsProxy);
+
                 /// Unity Editor: <path_to_project_folder>/Assets
                 /// iOS player: <path_to_player_app_bundle>/<AppName.app>/Data (this folder is read only, use Application.persistentDataPath to save data).
                 /// Android: Normally it would point directly to the APK. The exception is if you are running a split binary build in which case it points to the the OBB instead.
                 string dataPath = UnityEngine.Application.dataPath;
                 /// Point to data path which have write permission
-#if UNITY_IPHONE
-                string persistentDataPath = UnityEngine.Application.dataPath + "/Raw/";
-#elif UNITY_ANDROID
-                path = "jar:file://" + Application.dataPath + "!/assets/";
-                throw new Exception("Code Not Impled..");
-#else
-                string persistentDataPath = UnityEngine.Application.dataPath + "/StreamingAssets/";
-#endif
+                string persistentDataPath = Application.persistentDataPath;
                 /// Point to readonly data, note some platofrm like android points to compressed apk, witch cant be directory accesssed, use www. etc instead
                 string streamingAssetsPath = UnityEngine.Application.streamingAssetsPath;
                 /// Point to temp data path, may clean by system
@@ -70,17 +66,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 Debug.Log(string.Format("dataPath:{0} persistentDataPath:{1} streamingAssetsPath:{2} tempPath:{3}", dataPath, persistentDataPath, streamingAssetsPath, tempPath));
 
                 // store log in tempPath, others to persistentDataPath
-#if (UNITY_ANDROID || UNITY_IPHONE) && !UNITY_EDITOR
-	            GameControler.Init(tempPath, persistentDataPath);
+#if (UNITY_ANDROID || UNITY_IPHONE || UNITY_WEBGL) && !UNITY_EDITOR
                 GlobalVariables.Instance.IsDevice = true;
 #else
                 // if in editor, use streamingAssetsPath instead
                 GlobalVariables.Instance.IsDevice = false;
-                if (UnityEngine.Application.isEditor && !GlobalVariables.Instance.IsPublish)
-                    GameControler.Init(tempPath, streamingAssetsPath);
-                else
-                    GameControler.Init(dataPath, persistentDataPath);
 #endif
+                GameControler.Init(tempPath, streamingAssetsPath);
 
                 // override log output
                 LogSystem.OnOutput2 = (Log_Type type, string msg) =>
@@ -595,6 +587,28 @@ public class GameLogic : UnityEngine.MonoBehaviour
     public void StartCountDown(int countDownTime)
     {
         ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_pvp_counttime", "ui", countDownTime);
+    }
+
+    private byte[] EngineReadFileProxy(string filePath)
+    {
+        byte[] buffer = null;
+        try
+        {
+            // Todo: load from bundle
+            buffer = File.ReadAllBytes(filePath);
+        }
+        catch (Exception e)
+        {
+            GfxSystem.GfxLog("Exception:{0}\n{1}", e.Message, e.StackTrace);
+            return null;
+        }
+        return buffer;
+    }
+
+    private bool EngineFileExistsProxy(string filePath)
+    {
+        // TODO: handle bundle
+        return File.Exists(filePath);
     }
 
     private bool m_IsDataFileExtracted = false;

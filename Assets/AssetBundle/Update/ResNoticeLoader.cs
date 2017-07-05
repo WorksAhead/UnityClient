@@ -10,7 +10,7 @@ namespace ArkCrossEngine
     class NoticeConfigLoader
     {
         // FixMe: replace this url to config file
-        public static string s_NoticeConfigUrl = "http://10.1.9.84:8080/ArkCross/Notice.txt";
+        public static string s_NoticeConfigUrl = "https://engine.cyou-inc.com/11/Notice.txt";
         public static string s_NoticeContent = string.Empty;
 
         public static ResAsyncInfo RequestNoticeConfig()

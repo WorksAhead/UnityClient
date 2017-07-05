@@ -615,24 +615,24 @@ public class ResCacheGenerator
   {
     HomePath.CurHomePath = UnityEngine.Application.streamingAssetsPath;
     GlobalVariables.Instance.IsDebug = false;
-    FileReaderProxy.RegisterReadFileHandler((string filePath) => {
-      byte[] buffer = null;
-      try {
-        buffer = File.ReadAllBytes(filePath);
-        if (ResBuildConfig.BuildOptionEncode) {
-          string key = "防君子不防小人";
-          byte[] xor = Encoding.UTF8.GetBytes(key);
-          // Note: 排除ab分包版本资源和服务器列表（从服务器下载）
-          if (filePath.EndsWith(".txt") && !filePath.EndsWith("_ab.txt") && !filePath.EndsWith("ServerConfig.txt")) {
-            CrossEngineHelper.Xor(buffer, xor);
-          }
-        }
-      } catch (Exception e) {
-        ResBuildLog.Warn(string.Format("Exception:{0}\n{1}", e.Message, e.StackTrace));
-        return null;
-      }
-      return buffer;
-    });
+//     FileReaderProxy.RegisterReadFileHandler((string filePath) => {
+//       byte[] buffer = null;
+//       try {
+//         buffer = File.ReadAllBytes(filePath);
+//         if (ResBuildConfig.BuildOptionEncode) {
+//           string key = "防君子不防小人";
+//           byte[] xor = Encoding.UTF8.GetBytes(key);
+//           // Note: 排除ab分包版本资源和服务器列表（从服务器下载）
+//           if (filePath.EndsWith(".txt") && !filePath.EndsWith("_ab.txt") && !filePath.EndsWith("ServerConfig.txt")) {
+//             CrossEngineHelper.Xor(buffer, xor);
+//           }
+//         }
+//       } catch (Exception e) {
+//         ResBuildLog.Warn(string.Format("Exception:{0}\n{1}", e.Message, e.StackTrace));
+//         return null;
+//       }
+//       return buffer;
+//     });
     UnloadResCacheConfig();
 
     SceneConfigProvider.Instance.Load(FilePathDefine_Client.C_SceneConfig, "ScenesConfigs");
