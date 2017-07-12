@@ -1,6 +1,7 @@
 ﻿// Author: Xin Zhang <cowcoa@gmail.com>
 
 using UnityEngine;
+using System.IO;
 
 namespace Cow
 {
@@ -181,6 +182,62 @@ namespace Cow
         Int3 GraphPointToWorld(int x, int z, float height)
         {
             return (Int3)m_Matrix.MultiplyPoint3x4(new Vector3(x + 0.5f, height, z + 0.5f));
+        }
+
+        void GetGridIndex(Vector3 position, out int xIndex, out int zIndex)
+        {
+            Vector3 gridPos = m_InverseMatrix.MultiplyPoint3x4(position);
+
+            xIndex = Mathf.FloorToInt(gridPos.x);
+            zIndex = Mathf.FloorToInt(gridPos.z);
+        }
+
+        public void ExportBin(string fileName)
+        {
+            using (BinaryWriter writer = new BinaryWriter(File.Open(fileName, FileMode.Create)))
+            {
+                // m_UnclampedGridSize
+                writer.Write(m_UnclampedGridSize.x);
+                writer.Write(m_UnclampedGridSize.y);
+                // m_GridCoordinateCenter
+                writer.Write(m_GridCoordinateCenter.x);
+                writer.Write(m_GridCoordinateCenter.y);
+                writer.Write(m_GridCoordinateCenter.z);
+                // m_NodeSize
+                writer.Write(m_NodeSize);
+                // m_MaxNodeNumInWidth & m_MaxNodeNumInDepth
+                writer.Write(m_MaxNodeNumInWidth);
+                writer.Write(m_MaxNodeNumInDepth);
+                // m_NodeSizeSelfAdaption
+                writer.Write(m_NodeSizeSelfAdaption);
+
+                // Grid data
+                for (int z = 0; z < m_NodeNumInDepth; z++)
+                {
+                    for (int x = 0; x < m_NodeNumInWidth; x++)
+                    {
+                        GridNode node = m_Nodes[z * m_NodeNumInWidth + x];
+
+                        const byte NOT_BLOCK = (byte)'\x00';
+                        const byte STATIC_BLOCK = (byte)'\x01';
+
+                        byte walkableData = STATIC_BLOCK;
+                        if (node.walkable)
+                        {
+                            walkableData = NOT_BLOCK;
+                        }
+
+                        writer.Write(walkableData);
+                    }
+                }
+
+                writer.Close();
+            }
+        }
+
+        void ExportXml(string fileName)
+        {
+
         }
     }
 }

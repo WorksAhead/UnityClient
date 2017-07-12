@@ -1,6 +1,8 @@
 ﻿// Author: Xin Zhang <cowcoa@gmail.com>
 
+using UnityEngine;
 using UnityEditor;
+using System.IO;
 
 namespace Cow
 {
@@ -68,5 +70,55 @@ namespace Cow
                 m_GridGenerator.EnableDebugMesh();
             }
         }
+
+        [MenuItem("GridGenerator/Export")]
+        static void ExportGrid()
+        {
+            string scenePath = Path.GetDirectoryName(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path) + "/";
+            string exportFolder = new DirectoryInfo(scenePath).Name;
+            string exportPath = "Assets/StreamingAssets/Public/Scenes/" + exportFolder + "/";
+            string sceneName = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
+            string fileName = sceneName + "_cow_walkable";
+            string fileSubfix = ".map";
+            string exportFileName = exportPath + fileName + fileSubfix;
+
+            m_GridGenerator.ExportBin(exportFileName);
+
+            UnityEngine.Debug.Log("Export walkable data to " + exportFileName);
+        }
+
+        [MenuItem("GridGenerator/Export", true)]
+        static bool CheckExport()
+        {
+            if (m_GridGenerator != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        // -----------------------------------------------
+        [MenuItem("GridGenerator/Import")]
+        static void ImportGrid()
+        {
+            string importPath = Path.GetDirectoryName(UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().path) + "/";
+            string sceneName = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
+            string fileName = sceneName + "_cow_walkable";
+            string fileSubfix = ".map";
+            string importFileName = importPath + fileName + fileSubfix;
+
+            using (BinaryReader reader = new BinaryReader(File.Open(importFileName, FileMode.Open)))
+            {
+                Vector2 unclampedGridSize;
+                unclampedGridSize.x = reader.ReadSingle();
+                unclampedGridSize.y = reader.ReadSingle();
+
+                Debug.Log("unclampedGridSize : " + unclampedGridSize);
+            }
+        }
+
     }
 }
