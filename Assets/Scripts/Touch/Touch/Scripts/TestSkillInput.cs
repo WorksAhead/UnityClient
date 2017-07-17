@@ -14,6 +14,7 @@ public class TestSkillInput : UnityEngine.MonoBehaviour
     public KeyCode m_SkillEKey = KeyCode.E;
     public KeyCode m_SkillEX = KeyCode.Y;
     public KeyCode m_ChangeInput = KeyCode.F8;
+    public KeyCode m_CameraOrbit = KeyCode.F12;
 
     // Use this for initialization
     void Awake()
@@ -137,6 +138,27 @@ public class TestSkillInput : UnityEngine.MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.R))
             {
+            }
+            if (Input.GetKeyUp(KeyCode.F12))
+            {
+                UnityEngine.GameObject go = UnityEngine.GameObject.Find(ArkCrossEngine.GlobalVariables.cGameRootName);
+                if (go != null)
+                {
+                    MainCamera cameraScript = go.GetComponent<MainCamera>();
+                    if (cameraScript != null)
+                    {
+                        if (cameraScript.cameraType == MainCamera.CameraType.Default)
+                        {
+                            PlayerPrefs.SetString(MainCamera.CAMERA_MODE, MainCamera.CAMERA_MODE_ORBIT);
+                            cameraScript.cameraType = MainCamera.CameraType.Orbit;
+                        }
+                        else
+                        {
+                            PlayerPrefs.SetString(MainCamera.CAMERA_MODE, MainCamera.CAMERA_MODE_DEFAULT);
+                            cameraScript.cameraType = MainCamera.CameraType.Default;
+                        }
+                    }
+                }
             }
         }
         catch (System.Exception ex)

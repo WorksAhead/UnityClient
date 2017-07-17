@@ -6,6 +6,72 @@ using UnityEngine.SceneManagement;
 
 public class MainCamera : UnityEngine.MonoBehaviour
 {
+    public static string CAMERA_MODE = "CAMERA_MODE";
+    public static string CAMERA_MODE_DEFAULT = "CAMERA_MODE_DEFAULT";
+    public static string CAMERA_MODE_ORBIT = "CAMERA_MODE_ORBIT";
+
+    public enum CameraType
+    {
+        Default = 0,
+        Orbit = 1
+    }
+    CameraType m_CameraType;
+
+    public CameraType cameraType
+    {
+        get
+        {
+            return m_CameraType;
+        }
+        set
+        {
+            if (m_CameraType == value)
+            {
+                return;
+            }
+
+            if (value == CameraType.Orbit)
+            {
+                orbitController.targetTransform = m_Target;
+                orbitController.cameraTransform = m_CameraTransform;
+                if (orbitController.Init())
+                {
+                    orbitController.enabled = true;
+                }
+                else
+                {
+                    orbitController.enabled = false;
+                    return;
+                }
+            }
+            else
+            {
+                orbitController.enabled = false;
+            }
+
+            m_CameraType = value;
+        }
+    }
+
+    private void InitCameraMode()
+    {
+        if (PlayerPrefs.HasKey(CAMERA_MODE))
+        {
+            if (PlayerPrefs.GetString(CAMERA_MODE).Equals(CAMERA_MODE_DEFAULT))
+            {
+                cameraType = CameraType.Default;
+            }
+            else
+            {
+                cameraType = CameraType.Orbit;
+            }
+        }
+        else
+        {
+            cameraType = CameraType.Default;
+        }
+    }
+
     public void SetFollowEnable(bool value)
     {
         m_IsFollowEnable = value;
@@ -72,6 +138,8 @@ public class MainCamera : UnityEngine.MonoBehaviour
             {
                 m_IsFollow = false;
             }
+
+            InitCameraMode();
         }
     }
     //角色创建场景、移动摄像机
@@ -318,6 +386,9 @@ public class MainCamera : UnityEngine.MonoBehaviour
             m_OrigHeight = m_Height;
             m_OrigDistance = m_Distance;
             m_CurDistance = m_Distance;
+
+            orbitController = gameObject.AddComponent<CameraOrbitController>();
+            orbitController.enabled = false;
         }
         catch (System.Exception ex)
         {
@@ -336,7 +407,14 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
             if (!m_IsShaking && ArkCrossEngine.LobbyClient.Instance.CurrentRole != null)
             {
-                Apply();
+                if (cameraType == CameraType.Default)
+                {
+                    Apply();
+                }
+                else
+                {
+                    orbitController.DoUpdate();
+                }
             }
         }
         catch (System.Exception ex)
@@ -721,4 +799,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private bool m_Snap = false;
     private float m_TargetHeight = 100000.0f;
     private int m_CurTargetId;
+
+    // Cow's camera orbiter.
+    public CameraOrbitController orbitController = null;
 }
