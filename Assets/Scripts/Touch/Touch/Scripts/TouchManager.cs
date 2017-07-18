@@ -30,6 +30,8 @@ public class TouchManager : UnityEngine.MonoBehaviour
     public delegate void EventHandler();
     public static EventHandler OnInputProviderChanged;
 
+    // For camera orbit.
+    bool m_JoystickOperation = false;
     float m_FingerDistance = 0.0f;
     MainCamera m_CameraScript = null;
 
@@ -141,6 +143,9 @@ public class TouchManager : UnityEngine.MonoBehaviour
         {
             m_CameraScript = go.GetComponent<MainCamera>();
         }
+
+        EasyJoystick.On_JoystickMoveStart += On_JoystickMoveStart;
+        EasyJoystick.On_JoystickMoveEnd += On_JoystickMoveEnd;
     }
 
     /// 输入
@@ -639,6 +644,8 @@ public class TouchManager : UnityEngine.MonoBehaviour
     }
     void OnDestroy()
     {
+        EasyJoystick.On_JoystickMoveStart -= On_JoystickMoveStart;
+        EasyJoystick.On_JoystickMoveEnd -= On_JoystickMoveEnd;
         instance = null;
     }
 
@@ -729,6 +736,11 @@ public class TouchManager : UnityEngine.MonoBehaviour
             {
                 touches.Add(finger);
             }
+        }
+
+        if (m_JoystickOperation)
+        {
+            return;
         }
 
         if (touches.Count == 1)
@@ -1180,6 +1192,15 @@ public class TouchManager : UnityEngine.MonoBehaviour
     {
         return new UnityEngine.Vector2(Convert(v.x, fromUnit, toUnit),
                             Convert(v.y, fromUnit, toUnit));
+    }
+
+    void On_JoystickMoveStart(MovingJoystick move)
+    {
+        m_JoystickOperation = true;
+    }
+    void On_JoystickMoveEnd(MovingJoystick move)
+    {
+        m_JoystickOperation = false;
     }
 }
 
