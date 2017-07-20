@@ -30,11 +30,6 @@ public class TouchManager : UnityEngine.MonoBehaviour
     public delegate void EventHandler();
     public static EventHandler OnInputProviderChanged;
 
-    // For camera orbit.
-    bool m_JoystickOperation = false;
-    float m_FingerDistance = 0.0f;
-    MainCamera m_CameraScript = null;
-
     public static void FireHintEvent(Gesture gesture)
     {
         if (!TouchEnable) return;
@@ -138,14 +133,6 @@ public class TouchManager : UnityEngine.MonoBehaviour
     void Init()
     {
         InitInputProvider();
-        UnityEngine.GameObject go = UnityEngine.GameObject.Find(ArkCrossEngine.GlobalVariables.cGameRootName);
-        if (go != null)
-        {
-            m_CameraScript = go.GetComponent<MainCamera>();
-        }
-
-        EasyJoystick.On_JoystickMoveStart += On_JoystickMoveStart;
-        EasyJoystick.On_JoystickMoveEnd += On_JoystickMoveEnd;
     }
 
     /// 输入
@@ -644,8 +631,6 @@ public class TouchManager : UnityEngine.MonoBehaviour
     }
     void OnDestroy()
     {
-        EasyJoystick.On_JoystickMoveStart -= On_JoystickMoveStart;
-        EasyJoystick.On_JoystickMoveEnd -= On_JoystickMoveEnd;
         instance = null;
     }
 
@@ -735,104 +720,6 @@ public class TouchManager : UnityEngine.MonoBehaviour
             if (finger.IsDown)
             {
                 touches.Add(finger);
-            }
-        }
-
-        if (m_JoystickOperation)
-        {
-            return;
-        }
-
-        if (touches.Count == 1)
-        {
-            Finger finger = touches[0];
-            if (finger.IsMoving)
-            {
-                if (m_CameraScript != null && m_CameraScript.cameraType == MainCamera.CameraType.Orbit)
-                {
-                    if (finger.DeltaPosition.x > 0)
-                    {
-                        m_CameraScript.orbitController.rotateRight = false;
-                        m_CameraScript.orbitController.rotateLeft = true;
-                    }
-                    else if (finger.DeltaPosition.x < 0)
-                    {
-                        m_CameraScript.orbitController.rotateRight = true;
-                        m_CameraScript.orbitController.rotateLeft = false;
-                    }
-                    else
-                    {
-                        m_CameraScript.orbitController.rotateRight = false;
-                        m_CameraScript.orbitController.rotateLeft = false;
-                    }
-
-                    if (finger.DeltaPosition.y > 0)
-                    {
-                        m_CameraScript.orbitController.rotateUp = false;
-                        m_CameraScript.orbitController.rotateDown = true;
-                    }
-                    else if (finger.DeltaPosition.y < 0)
-                    {
-                        m_CameraScript.orbitController.rotateUp = true;
-                        m_CameraScript.orbitController.rotateDown = false;
-                    }
-                    else
-                    {
-                        m_CameraScript.orbitController.rotateUp = false;
-                        m_CameraScript.orbitController.rotateDown = false;
-                    }
-                }
-            }
-            else
-            {
-                if (m_CameraScript != null && m_CameraScript.cameraType == MainCamera.CameraType.Orbit)
-                {
-                    m_CameraScript.orbitController.rotateRight = false;
-                    m_CameraScript.orbitController.rotateLeft = false;
-                    m_CameraScript.orbitController.rotateUp = false;
-                    m_CameraScript.orbitController.rotateDown = false;
-                }
-            }
-        }
-        else if (touches.Count == 2)
-        {
-            Finger finger1 = touches[0];
-            Finger finger2 = touches[1];
-
-            if ((finger1.IsDown && !finger1.WasDown) || (finger2.IsDown && !finger2.WasDown))
-            {
-                m_FingerDistance = UnityEngine.Vector2.Distance(finger1.StartPosition, finger2.StartPosition);
-            }
-
-            if (finger1.IsMoving || finger2.IsMoving)
-            {
-                float currentDistance = UnityEngine.Vector2.Distance(finger1.Position, finger2.Position);
-                if (currentDistance > m_FingerDistance)
-                {
-                    m_CameraScript.orbitController.zoomIn = true;
-                }
-                else if (currentDistance < m_FingerDistance)
-                {
-                    m_CameraScript.orbitController.zoomOut = true;
-                }
-                m_FingerDistance = currentDistance;
-            }
-            else
-            {
-                m_CameraScript.orbitController.zoomIn = false;
-                m_CameraScript.orbitController.zoomOut = false;
-            }
-        }
-        else
-        {
-            if (m_CameraScript != null && m_CameraScript.cameraType == MainCamera.CameraType.Orbit)
-            {
-                m_CameraScript.orbitController.rotateRight = false;
-                m_CameraScript.orbitController.rotateLeft = false;
-                m_CameraScript.orbitController.rotateUp = false;
-                m_CameraScript.orbitController.rotateDown = false;
-                m_CameraScript.orbitController.zoomIn = false;
-                m_CameraScript.orbitController.zoomOut = false;
             }
         }
     }
@@ -1192,15 +1079,6 @@ public class TouchManager : UnityEngine.MonoBehaviour
     {
         return new UnityEngine.Vector2(Convert(v.x, fromUnit, toUnit),
                             Convert(v.y, fromUnit, toUnit));
-    }
-
-    void On_JoystickMoveStart(MovingJoystick move)
-    {
-        m_JoystickOperation = true;
-    }
-    void On_JoystickMoveEnd(MovingJoystick move)
-    {
-        m_JoystickOperation = false;
     }
 }
 

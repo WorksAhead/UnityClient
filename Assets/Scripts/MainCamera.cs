@@ -6,72 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MainCamera : UnityEngine.MonoBehaviour
 {
-    public static string CAMERA_MODE = "CAMERA_MODE";
-    public static string CAMERA_MODE_DEFAULT = "CAMERA_MODE_DEFAULT";
-    public static string CAMERA_MODE_ORBIT = "CAMERA_MODE_ORBIT";
-
-    public enum CameraType
-    {
-        Default = 0,
-        Orbit = 1
-    }
-    CameraType m_CameraType;
-
-    public CameraType cameraType
-    {
-        get
-        {
-            return m_CameraType;
-        }
-        set
-        {
-            if (m_CameraType == value)
-            {
-                return;
-            }
-
-            if (value == CameraType.Orbit)
-            {
-                orbitController.targetTransform = m_Target;
-                orbitController.cameraTransform = m_CameraTransform;
-                if (orbitController.Init())
-                {
-                    orbitController.enabled = true;
-                }
-                else
-                {
-                    orbitController.enabled = false;
-                    return;
-                }
-            }
-            else
-            {
-                orbitController.enabled = false;
-            }
-
-            m_CameraType = value;
-        }
-    }
-
-    private void InitCameraMode()
-    {
-        if (PlayerPrefs.HasKey(CAMERA_MODE))
-        {
-            if (PlayerPrefs.GetString(CAMERA_MODE).Equals(CAMERA_MODE_DEFAULT))
-            {
-                cameraType = CameraType.Default;
-            }
-            else
-            {
-                cameraType = CameraType.Orbit;
-            }
-        }
-        else
-        {
-            cameraType = CameraType.Default;
-        }
-    }
-
     public void SetFollowEnable(bool value)
     {
         m_IsFollowEnable = value;
@@ -138,8 +72,6 @@ public class MainCamera : UnityEngine.MonoBehaviour
             {
                 m_IsFollow = false;
             }
-
-            InitCameraMode();
         }
     }
     //角色创建场景、移动摄像机
@@ -387,13 +319,19 @@ public class MainCamera : UnityEngine.MonoBehaviour
             m_OrigDistance = m_Distance;
             m_CurDistance = m_Distance;
 
-            orbitController = gameObject.AddComponent<CameraOrbitController>();
-            orbitController.enabled = false;
+            EasyJoystick.On_JoystickMoveStart += On_JoystickMoveStart;
+            EasyJoystick.On_JoystickMoveEnd += On_JoystickMoveEnd;
         }
         catch (System.Exception ex)
         {
             ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
+    }
+
+    void OnDestroy()
+    {
+        EasyJoystick.On_JoystickMoveStart -= On_JoystickMoveStart;
+        EasyJoystick.On_JoystickMoveEnd -= On_JoystickMoveEnd;
     }
 
     internal void LateUpdate()
@@ -407,14 +345,8 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
             if (!m_IsShaking && ArkCrossEngine.LobbyClient.Instance.CurrentRole != null)
             {
-                if (cameraType == CameraType.Default)
-                {
-                    Apply();
-                }
-                else
-                {
-                    orbitController.DoUpdate();
-                }
+                TraceFingers();
+                Apply();
             }
         }
         catch (System.Exception ex)
@@ -544,6 +476,19 @@ public class MainCamera : UnityEngine.MonoBehaviour
         // Adjust real target angle when camera is locked
         float targetAngle = originalTargetAngle;
 
+        // Setup camera roll.
+        if (m_FixedRoll > m_MaxCameraAngle)
+        {
+            m_FixedRoll = m_MaxCameraAngle;
+        }
+        else if (m_FixedRoll < m_MinCameraAngle)
+        {
+            m_FixedRoll = m_MinCameraAngle;
+        }
+        float originalTargetRollAngle = m_FixedRoll;
+        float currentRollAngle = m_CameraTransform.eulerAngles.x;
+        float targetRollAngle = originalTargetRollAngle;
+
         // When pressing Fire2 (alt) the camera will snap to the target direction real quick.
         // It will stop snapping when it reaches the target
         //m_Snap = true;
@@ -555,11 +500,13 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 m_Snap = false;
 
             currentAngle = UnityEngine.Mathf.SmoothDampAngle(currentAngle, targetAngle, ref m_AngleVelocity, m_SnapSmoothLag, m_SnapMaxSpeed);
+            currentRollAngle = UnityEngine.Mathf.SmoothDampAngle(currentRollAngle, targetRollAngle, ref m_AngleVelocity, m_SnapSmoothLag, m_SnapMaxSpeed);
         }
         // Normal camera motion
         else
         {
             currentAngle = UnityEngine.Mathf.SmoothDampAngle(currentAngle, targetAngle, ref m_AngleVelocity, m_AngularSmoothLag, m_AngularMaxSpeed);
+            currentRollAngle = UnityEngine.Mathf.SmoothDampAngle(currentRollAngle, targetRollAngle, ref m_AngleVelocity, m_AngularSmoothLag, m_AngularMaxSpeed);
         }
 
         /*
@@ -583,7 +530,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         m_CurDistance = UnityEngine.Mathf.SmoothDamp(m_CurDistance, m_Distance, ref m_DistanceVelocity, m_DistanceSmoothLag);
 
         // Convert the angle into a rotation, by which we then reposition the camera
-        UnityEngine.Quaternion currentRotation = UnityEngine.Quaternion.Euler(0, currentAngle, 0);
+        UnityEngine.Quaternion currentRotation = UnityEngine.Quaternion.Euler(targetRollAngle, currentAngle, 0);
 
         // Set the position of the camera on the x-z plane to:
         // distance meters behind the target
@@ -591,7 +538,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         pos += currentRotation * UnityEngine.Vector3.back * m_CurDistance;
 
         // Set the height of the camera
-        pos.y = currentHeight;
+        // pos.y = currentHeight;
 
         m_CameraTransform.position = pos;
     }
@@ -672,10 +619,21 @@ public class MainCamera : UnityEngine.MonoBehaviour
             UnityEngine.Vector3 cameraPos = m_CameraTransform.position;
             UnityEngine.Vector3 offsetToCenter = centerPos - cameraPos;
 
+            UnityEngine.Vector3 targetCameraPos = centerPos;
+            targetCameraPos.y = cameraPos.y;
+
+            float dist = UnityEngine.Vector3.Distance(cameraPos, targetCameraPos);
+
+            UnityEngine.Vector3 cameraGroundPos = cameraPos;
+            cameraGroundPos.y = centerPos.y;
+
+            float height = UnityEngine.Vector3.Distance(cameraPos, cameraGroundPos);
+
+
             // Generate base rotation only around y-axis
             UnityEngine.Quaternion yRotation = UnityEngine.Quaternion.LookRotation(new UnityEngine.Vector3(offsetToCenter.x, 0, offsetToCenter.z));
 
-            UnityEngine.Vector3 relativeOffset = UnityEngine.Vector3.forward * m_CurDistance + UnityEngine.Vector3.down * m_Height;
+            UnityEngine.Vector3 relativeOffset = UnityEngine.Vector3.forward * dist + UnityEngine.Vector3.down * height;
             m_CameraTransform.rotation = yRotation * UnityEngine.Quaternion.LookRotation(relativeOffset);
 
             // Calculate the projected center position and top position in world space
@@ -738,6 +696,98 @@ public class MainCamera : UnityEngine.MonoBehaviour
         m_FactorB = m_MinSpeed - m_FactorA * UnityEngine.Mathf.Pow(m_MinSpeedDistance, m_Power);
     }
 
+    void On_JoystickMoveStart(MovingJoystick move)
+    {
+        m_JoystickOperation = true;
+    }
+    void On_JoystickMoveEnd(MovingJoystick move)
+    {
+        m_JoystickOperation = false;
+    }
+
+    void TraceFingers()
+    {
+        if (m_JoystickOperation)
+        {
+            return;
+        }
+
+        TouchManager.FingerList touches = (TouchManager.FingerList)TouchManager.Touches;
+
+        if (touches.Count == 1)
+        {
+            TouchManager.Finger finger = touches[0];
+            if (finger.IsMoving)
+            {
+                if (finger.DeltaPosition.x > 0)
+                {
+                    // Rotate Left
+                    m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * Time.deltaTime;
+                }
+                else if (finger.DeltaPosition.x < 0)
+                {
+                    // Rotate Right
+                    m_FixedYaw = m_CameraTransform.eulerAngles.y - m_AngularMaxSpeed * Time.deltaTime;
+                }
+
+                if (finger.DeltaPosition.y > 0)
+                {
+                    // Rotate Down
+                    float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * Time.deltaTime;
+                    if (camXAngle < m_MinCameraAngle)
+                    {
+                        camXAngle = m_MinCameraAngle;
+                    }
+                    m_FixedRoll = camXAngle;
+                }
+                else if (finger.DeltaPosition.y < 0)
+                {
+                    // Rotate Up
+                    float camXAngle = m_CameraTransform.eulerAngles.x + m_AngularMaxSpeed * Time.deltaTime;
+                    if (camXAngle > m_MaxCameraAngle)
+                    {
+                        camXAngle = m_MaxCameraAngle;
+                    }
+                    m_FixedRoll = camXAngle;
+                }
+            }
+        }
+        else if (touches.Count == 2)
+        {
+            TouchManager.Finger finger1 = touches[0];
+            TouchManager.Finger finger2 = touches[1];
+
+            if ((finger1.IsDown && !finger1.WasDown) || (finger2.IsDown && !finger2.WasDown))
+            {
+                m_FingerDistance = UnityEngine.Vector2.Distance(finger1.StartPosition, finger2.StartPosition);
+            }
+
+            if (finger1.IsMoving || finger2.IsMoving)
+            {
+                float currentDistance = UnityEngine.Vector2.Distance(finger1.Position, finger2.Position);
+                if (currentDistance > m_FingerDistance)
+                {
+                    // Zoom In
+                    m_CurDistance -= 20 * Time.deltaTime;
+                    if (m_CurDistance < m_MinDistance)
+                    {
+                        m_CurDistance = m_MinDistance;
+                    }
+                }
+                else if (currentDistance < m_FingerDistance)
+                {
+                    // Zoom Out
+                    m_CurDistance += 20 * Time.deltaTime;
+                    if (m_CurDistance > m_MaxDistance)
+                    {
+                        m_CurDistance = m_MaxDistance;
+                    }
+                }
+                m_FingerDistance = currentDistance;
+            }
+        }
+    }
+
     // The distance in the x-z plane to the target
     public float m_Distance = 7.0f;
     // the height we want the camera to be above the target
@@ -767,6 +817,13 @@ public class MainCamera : UnityEngine.MonoBehaviour
         }
     }
 
+    private float m_FixedRoll_ = 0;
+    private float m_FixedRoll
+    {
+        get { return m_FixedRoll_; }
+        set { m_FixedRoll_ = value; }
+    }
+
     private UnityEngine.Transform m_CameraTransform;
     private UnityEngine.Transform m_Target;
     private UnityEngine.Vector3 m_CurTargetPos;
@@ -787,7 +844,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_HeightSmoothLag = 0.3f;
     private float m_DistanceSmoothLag = 3.0f;
     private float m_AngularSmoothLag = 0.3f;
-    private float m_AngularMaxSpeed = 15.0f;
+    private float m_AngularMaxSpeed = 150.0f;
     private float m_SnapSmoothLag = 0.2f;
     private float m_SnapMaxSpeed = 720.0f;
     private float m_ClampHeadPositionScreenSpace = 0.75f;
@@ -800,6 +857,10 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_TargetHeight = 100000.0f;
     private int m_CurTargetId;
 
-    // Cow's camera orbiter.
-    public CameraOrbitController orbitController = null;
+    private bool m_JoystickOperation = false;
+    private float m_FingerDistance = 0.0f;
+    private float m_MinCameraAngle = 10.0f;
+    private float m_MaxCameraAngle = 80.0f;
+    private float m_MaxDistance = 20f;
+    private float m_MinDistance = 3f;
 }
