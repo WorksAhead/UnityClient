@@ -69,12 +69,12 @@ public class Option : UnityEngine.MonoBehaviour
 
     public void DebugPVP()
     {
-        PlayerControl.Instance.MatchMpve(0, (int)Keyboard.Event.Up);
+        PlayerControl.Instance.JoinPlatformDefense(0, (int)Keyboard.Event.Up);
     }
 
     public void DebugPVE()
     {
-        PlayerControl.Instance.JoinTwoPlayerStage(0, (int)Keyboard.Event.Up);
+        PlayerControl.Instance.MatchMpve(0, (int)Keyboard.Event.Up);
     }
 
     public void DebugLevelup()

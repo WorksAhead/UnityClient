@@ -8,7 +8,7 @@
 		addbreaksection(20, 0, 2100);
 		addbreaksection(30, 1100, 2100);
 		movecontrol(true);
-		animation("zhankuang_fenglunzhan_01");
+		animation("hero_skill02");
 		movechild(0, "1_JianShi_w_01", "ef_rightweapon01");
 		
 		//帧6

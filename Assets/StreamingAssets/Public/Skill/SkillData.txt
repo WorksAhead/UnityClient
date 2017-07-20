@@ -188,11 +188,11 @@
 160005	zhankuang/zhankuang_shuashuai.dsl	战士扮酷			1	0			0	2	2	1			0		0	0	0	0	13												0	1										0					
 160101	zhankuang/zhankuang_xuanfengzhan.dsl	旋风斩1			30	0			0	2	2	6			0		12	0	0	30		6								160102			0.6	2		旋风斩	向前旋转造成多次打击。	UI_AtlasDynamic/skill/skill	js06	17	19		1	36	10	0.396			
 160102	zhankuang/zhankuang_xuanfengzhan.dsl	旋风斩2			0	0			0	2	2	11			0		24	0	0	30		6											0.6	2		旋风斩		UI_AtlasDynamic/skill/skill	js06	0			1	0	10	0.396			
-160201	zhankuang/zhankuang_fenglunzhan.dsl	风轮斩1			1	0			0	2	2	5			0		7	0	0	30	2	1								160202			0.6	2		风轮斩	向前挥砍两次将敌人击飞；再次点击触发二段风轮多段伤害。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
+160201	zhankuang/zhankuang_fenglunzhan.dsl	风轮斩1			1	0			0	2	2	5			0		7	0	0	30	2	1											0.6	2		风轮斩	向前挥砍两次将敌人击飞；再次点击触发二段风轮多段伤害。	UI_AtlasDynamic/skill/skill	js01	7	8		1	7	7.5	0.3			
 160202	zhankuang/zhankuang_fenglunzhan.dsl	风轮斩2			0	0			0	2	2	2			0		0	0	0	30		1											0.6	2		风轮斩		UI_AtlasDynamic/skill/skill	js01	0			1	0	7.5	0.3			
 160301	zhankuang/zhankuang_shanshen.dsl	闪身4-1			1	0			0	2	2	6			0		7	0	0	20		3								160302				2		闪身	快速移动一段距离，期间角色免疫控制。	UI_AtlasDynamic/skill/skill	js03	7			1	7	0	0			
 160302	zhankuang/zhankuang_shanshen.dsl	闪身4-2			0	0			0	2	2	1			0		0	0	0	20		3												2		闪身		UI_AtlasDynamic/skill/skill	js03	0			1	0	0	0			
-160401	zhankuang/zhankuang_julitiaokong.dsl	巨力挑空1			3	0			0	2	2	14			0		24	0	0	30		3								160402			0.3	2		巨力挑空	将敌人挑至空中，之后击远，可以破除霸体。	UI_AtlasDynamic/skill/skill	js03	14	2		1	24	15	0.6			
+160401	zhankuang/zhankuang_julitiaokong.dsl	巨力挑空1			1	0			0	2	2	14			0		24	0	0	30		3								160402			0.3	2		巨力挑空	将敌人挑至空中，之后击远，可以破除霸体。	UI_AtlasDynamic/skill/skill	js03	14	2		1	24	15	0.6			
 160402	zhankuang/zhankuang_julitiaokong.dsl	巨力挑空2			0	0			0	2	2	0			0		0	0	0	30		3											0.3	2		巨力挑空		UI_AtlasDynamic/skill/skill	js03	0			1	0	15	0.6			
 160501	zhankuang/zhankuang_jujianchongji.dsl	巨剑冲击4-1			0	0			0	2	2	1			0		0	0	0	30		8												2		巨剑冲击	投掷手中的巨剑攻击敌人。	UI_AtlasDynamic/skill/skill	js05	1			1	0	12	1.2			
 160502	zhankuang/zhankuang_jujianchongji.dsl	巨剑冲击4-2			0	0			0	2	2	1			0		0	0	0	30		8												2		巨剑冲击		UI_AtlasDynamic/skill/skill	js05	1			1	0	12	1.2			
@@ -212,7 +212,7 @@
 1607052	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩5			0	0			0	2	2	0			0		0	0	0	10		7								1607062			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
 1607062	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩6			0	0			0	2	2	0			0		0	0	0	10		7								1607041			0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
 160707	zhankuang/zhankuang_fengkuanglianzhan.dsl	疯狂连斩7			0	0			0	2	2	0			0		0	0	0	10		7											0.1	2		疯狂连斩		UI_AtlasDynamic/skill/skill	js07	0			1	0	30	0.544			
-160801	zhankuang/zhankuang_jianchong.dsl	绞杀1			1	0			0	2	2	8			0		9	0	0	30		2								160802				2		绞杀	发射三个冲击波将敌人击高，之后触发绞杀多次打击。	UI_AtlasDynamic/skill/skill	js02	8	15		1	9	8	0.32			
+160801	zhankuang/zhankuang_jianchong.dsl	绞杀1			1	0			0	2	2	8			0		9	0	0	30		2												2		绞杀	发射三个冲击波将敌人击高，之后触发绞杀多次打击。	UI_AtlasDynamic/skill/skill	js02	8	15		1	9	8	0.32			
 160802	zhankuang/zhankuang_jianchong.dsl	绞杀2			0	0			0	2	2	0			0		0	0	0	30		2												2		绞杀		UI_AtlasDynamic/skill/skill	js02	0			1	0	8	0.32			
 160811	zhankuang/zhankuang_jianchong.dsl	绞杀地面1			1	0			0	2	2	0			0		0	0	0	10																													
 160812	zhankuang/zhankuang_jianchong.dsl	绞杀地面2			1	0			0	2	2	0			0		0	0	0	10																													

@@ -16,8 +16,8 @@
 		lockframe(1.0);
 		wait(10);
 		camerayaw(3.14159,10);
-		cameraheight(11.5,10);
-		cameradistance(12,10);
+		cameraheight(6.5,10);
+		cameradistance(6,10);
 		camerafollow();
 		wait(10);
 
