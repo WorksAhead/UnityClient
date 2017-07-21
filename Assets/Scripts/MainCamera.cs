@@ -59,6 +59,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         {
             m_CurTargetId = id;
             m_Target = obj.transform;
+            m_FixedRoll = 45;
             UnityEngine.Collider collider = m_Target.GetComponent<UnityEngine.Collider>();
             if (null != collider)
             {
@@ -499,14 +500,14 @@ public class MainCamera : UnityEngine.MonoBehaviour
             if (AngleDistance(currentAngle, originalTargetAngle) < 3.0)
                 m_Snap = false;
 
-            currentAngle = UnityEngine.Mathf.SmoothDampAngle(currentAngle, targetAngle, ref m_AngleVelocity, m_SnapSmoothLag, m_SnapMaxSpeed);
-            currentRollAngle = UnityEngine.Mathf.SmoothDampAngle(currentRollAngle, targetRollAngle, ref m_AngleVelocity, m_SnapSmoothLag, m_SnapMaxSpeed);
+            currentAngle = targetAngle;// UnityEngine.Mathf.SmoothDampAngle(currentAngle, targetAngle, ref m_AngleVelocity, m_SnapSmoothLag, m_SnapMaxSpeed);
+            currentRollAngle = targetRollAngle;// UnityEngine.Mathf.SmoothDampAngle(currentRollAngle, targetRollAngle, ref m_AngleVelocity, m_SnapSmoothLag, m_SnapMaxSpeed);
         }
         // Normal camera motion
         else
         {
-            currentAngle = UnityEngine.Mathf.SmoothDampAngle(currentAngle, targetAngle, ref m_AngleVelocity, m_AngularSmoothLag, m_AngularMaxSpeed);
-            currentRollAngle = UnityEngine.Mathf.SmoothDampAngle(currentRollAngle, targetRollAngle, ref m_AngleVelocity, m_AngularSmoothLag, m_AngularMaxSpeed);
+            currentAngle = targetAngle;// UnityEngine.Mathf.SmoothDampAngle(currentAngle, targetAngle, ref m_AngleVelocity, m_AngularSmoothLag, m_AngularMaxSpeed);
+            currentRollAngle = targetRollAngle;// UnityEngine.Mathf.SmoothDampAngle(currentRollAngle, targetRollAngle, ref m_AngleVelocity, m_AngularSmoothLag, m_AngularMaxSpeed);
         }
 
         /*
@@ -719,21 +720,26 @@ public class MainCamera : UnityEngine.MonoBehaviour
             TouchManager.Finger finger = touches[0];
             if (finger.IsMoving)
             {
+                float xScaleFactor = UnityEngine.Mathf.Abs(finger.DeltaPosition.x) / UnityEngine.Mathf.Abs(finger.DeltaPosition.y);
+                xScaleFactor = xScaleFactor > 1.0f ? 1.0f : xScaleFactor;
+                float yScaleFactor = UnityEngine.Mathf.Abs(finger.DeltaPosition.y) / UnityEngine.Mathf.Abs(finger.DeltaPosition.x);
+                yScaleFactor = yScaleFactor > 1.0f ? 1.0f : yScaleFactor;
+
                 if (finger.DeltaPosition.x > 0)
                 {
                     // Rotate Left
-                    m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * Time.deltaTime;
+                    m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * Time.deltaTime * xScaleFactor;
                 }
                 else if (finger.DeltaPosition.x < 0)
                 {
                     // Rotate Right
-                    m_FixedYaw = m_CameraTransform.eulerAngles.y - m_AngularMaxSpeed * Time.deltaTime;
+                    m_FixedYaw = m_CameraTransform.eulerAngles.y - m_AngularMaxSpeed * Time.deltaTime * xScaleFactor;
                 }
 
                 if (finger.DeltaPosition.y > 0)
                 {
                     // Rotate Down
-                    float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * Time.deltaTime;
+                    float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * Time.deltaTime * yScaleFactor;
                     if (camXAngle < m_MinCameraAngle)
                     {
                         camXAngle = m_MinCameraAngle;
@@ -743,7 +749,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 else if (finger.DeltaPosition.y < 0)
                 {
                     // Rotate Up
-                    float camXAngle = m_CameraTransform.eulerAngles.x + m_AngularMaxSpeed * Time.deltaTime;
+                    float camXAngle = m_CameraTransform.eulerAngles.x + m_AngularMaxSpeed * Time.deltaTime * yScaleFactor;
                     if (camXAngle > m_MaxCameraAngle)
                     {
                         camXAngle = m_MaxCameraAngle;
