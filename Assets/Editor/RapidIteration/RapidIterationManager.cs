@@ -44,6 +44,9 @@ namespace RapidIteration
                 return;
             }
 
+            // return until hot reload is enabled
+            return;
+
             // Update scene name.
             sSceneName = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
             sIsSceneDirty = false;
