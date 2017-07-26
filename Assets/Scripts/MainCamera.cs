@@ -526,9 +526,9 @@ public class MainCamera : UnityEngine.MonoBehaviour
         }
 
         // Damp the height
-        float currentHeight = m_CameraTransform.position.y;
-        currentHeight = UnityEngine.Mathf.SmoothDamp(currentHeight, m_TargetHeight, ref m_HeightVelocity, m_HeightSmoothLag);
-        m_CurDistance = UnityEngine.Mathf.SmoothDamp(m_CurDistance, m_Distance, ref m_DistanceVelocity, m_DistanceSmoothLag);
+        //float currentHeight = m_CameraTransform.position.y;
+        //currentHeight = UnityEngine.Mathf.SmoothDamp(currentHeight, m_TargetHeight, ref m_HeightVelocity, m_HeightSmoothLag);
+        //m_CurDistance = UnityEngine.Mathf.SmoothDamp(m_CurDistance, m_Distance, ref m_DistanceVelocity, m_DistanceSmoothLag);
 
         // Convert the angle into a rotation, by which we then reposition the camera
         UnityEngine.Quaternion currentRotation = UnityEngine.Quaternion.Euler(targetRollAngle, currentAngle, 0);
@@ -713,6 +713,27 @@ public class MainCamera : UnityEngine.MonoBehaviour
             return;
         }
 
+#if UNITY_EDITOR
+        // Zoom Camera and keep the distance between [minDistance, maxDistance].
+        float mw = Input.GetAxis("Mouse ScrollWheel");
+        if (mw > 0)
+        {
+            m_CurDistance -= Time.deltaTime * m_ZoomSpeed;
+            if (m_CurDistance < m_MinDistance)
+            {
+                m_CurDistance = m_MinDistance;
+            }
+        }
+        else if (mw < 0)
+        {
+            m_CurDistance += Time.deltaTime * m_ZoomSpeed;
+            if (m_CurDistance > m_MaxDistance)
+            {
+                m_CurDistance = m_MaxDistance;
+            }
+        }
+#endif
+
         TouchManager.FingerList touches = (TouchManager.FingerList)TouchManager.Touches;
 
         if (touches.Count == 1)
@@ -774,7 +795,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 if (currentDistance > m_FingerDistance)
                 {
                     // Zoom In
-                    m_CurDistance -= 20 * Time.deltaTime;
+                    m_CurDistance -= Time.deltaTime * m_ZoomSpeed;
                     if (m_CurDistance < m_MinDistance)
                     {
                         m_CurDistance = m_MinDistance;
@@ -783,7 +804,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 else if (currentDistance < m_FingerDistance)
                 {
                     // Zoom Out
-                    m_CurDistance += 20 * Time.deltaTime;
+                    m_CurDistance += Time.deltaTime * m_ZoomSpeed;
                     if (m_CurDistance > m_MaxDistance)
                     {
                         m_CurDistance = m_MaxDistance;
@@ -867,6 +888,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_FingerDistance = 0.0f;
     private float m_MinCameraAngle = 10.0f;
     private float m_MaxCameraAngle = 80.0f;
-    private float m_MaxDistance = 20f;
-    private float m_MinDistance = 3f;
+    private float m_MaxDistance = 30.0f;
+    private float m_MinDistance = 5.0f;
+    private float m_ZoomSpeed = 50.0f;
 }
