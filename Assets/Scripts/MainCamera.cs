@@ -233,6 +233,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         {
             m_Distance = m_OrigDistance;
         }
+        m_MaxDistance = m_Distance;
         m_DistanceSmoothLag = lag;
         //m_NeedLookat = true;
     }
@@ -346,7 +347,191 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
             if (!m_IsShaking && ArkCrossEngine.LobbyClient.Instance.CurrentRole != null)
             {
-                TraceFingers();
+                if (!m_CameraSlipping)
+                {
+                    TraceFingers();
+                }
+                // Auto rotation
+
+                // In free camera mode, check if camera need to slip in or out.
+                if (!m_CameraSlipping)
+                {
+                    // Begin slip camera in.
+                    if (m_CurDistance < m_SlipInDistance && !m_InWatchMode)
+                    {
+                        // Init slipping in.
+                        m_CameraSlipping = true;
+                        m_CameraSlippingIn = true;
+
+                        UnityEngine.Vector3 playerBackDir = -m_Target.forward;
+                        UnityEngine.Quaternion destRotation = UnityEngine.Quaternion.LookRotation(playerBackDir);
+
+                        m_SlipDestYawAngle = destRotation.eulerAngles.y;
+                        float slipDeltaYawAngle = 0.0f;
+                        if (m_SlipDestYawAngle > m_CameraTransform.eulerAngles.y)
+                        {
+                            if (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y < 180.0f)
+                            {
+                                slipDeltaYawAngle = m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y;
+                            }
+                            else
+                            {
+                                slipDeltaYawAngle = 360.0f - (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y);
+                            }
+                        }
+                        else
+                        {
+                            if (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle < 180.0f)
+                            {
+                                slipDeltaYawAngle = m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle;
+                            }
+                            else
+                            {
+                                slipDeltaYawAngle = 360.0f - (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle);
+                            }
+                        }
+                        m_SlipYawSpeed = slipDeltaYawAngle / m_SlipTime;
+                        //
+                        m_SlipDestRollAngle = destRotation.eulerAngles.x < m_MinCameraAngle ? m_MinCameraAngle : destRotation.eulerAngles.x;
+                        float slipDeltaRollAngle = UnityEngine.Mathf.Abs(m_SlipDestRollAngle - m_CameraTransform.eulerAngles.x);
+                        m_SlipRollSpeed = slipDeltaRollAngle / m_SlipTime;
+                        //
+                        m_SlipDestDistance = m_MinDistance;
+                        float slipDeltaDistance = m_CurDistance - m_SlipDestDistance;
+                        m_SlipZoomSpeed = slipDeltaDistance / m_SlipTime;
+
+                        //
+                        m_SlipOriginalYaw = m_CameraTransform.eulerAngles.y;
+                        m_SlipOriginalRoll = m_CameraTransform.eulerAngles.x;
+                        m_SlipOriginalDistance = m_SlipInDistance + 0.5f;
+                    }
+                    else if (m_CurDistance >= m_SlipOutDistance && m_InWatchMode)
+                    {
+                        // Init slipping out.
+                        m_CameraSlipping = true;
+
+                        m_SlipDestYawAngle = m_SlipOriginalYaw;
+                        float slipDeltaYawAngle = 0.0f;
+                        if (m_SlipDestYawAngle > m_CameraTransform.eulerAngles.y)
+                        {
+                            if (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y < 180.0f)
+                            {
+                                slipDeltaYawAngle = m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y;
+                            }
+                            else
+                            {
+                                slipDeltaYawAngle = 360.0f - (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y);
+                            }
+                        }
+                        else
+                        {
+                            if (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle < 180.0f)
+                            {
+                                slipDeltaYawAngle = m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle;
+                            }
+                            else
+                            {
+                                slipDeltaYawAngle = 360.0f - (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle);
+                            }
+                        }
+                        m_SlipYawSpeed = slipDeltaYawAngle / m_SlipTime;
+
+                        m_SlipDestRollAngle = m_SlipOriginalRoll;
+                        float slipDeltaRollAngle = UnityEngine.Mathf.Abs(m_SlipDestRollAngle - m_CameraTransform.eulerAngles.x);
+                        m_SlipRollSpeed = slipDeltaRollAngle / m_SlipTime;
+
+                        m_SlipDestDistance = m_SlipOriginalDistance;
+                        float slipDeltaDistance = m_SlipDestDistance - m_CurDistance;
+                        m_SlipZoomSpeed = slipDeltaDistance / m_SlipTime;
+                    }
+                }
+
+                if (m_CameraSlipping)
+                {
+                    TouchManager.Instance.joystickEnable = false;
+
+                    bool yawFinished = false;
+                    if (UnityEngine.Mathf.Abs(m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y) > 1.0f)
+                    {
+                        if (m_SlipDestYawAngle > m_CameraTransform.eulerAngles.y)
+                        {
+                            if (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y < 180.0f)
+                            {
+                                m_FixedYaw = m_CameraTransform.eulerAngles.y + m_SlipYawSpeed * Time.deltaTime;
+                            }
+                            else
+                            {
+                                m_FixedYaw = m_CameraTransform.eulerAngles.y - m_SlipYawSpeed * Time.deltaTime;
+                            }
+                        }
+                        else
+                        {
+                            if (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle < 180.0f)
+                            {
+                                m_FixedYaw = m_CameraTransform.eulerAngles.y - m_SlipYawSpeed * Time.deltaTime;
+                            }
+                            else
+                            {
+                                m_FixedYaw = m_CameraTransform.eulerAngles.y + m_SlipYawSpeed * Time.deltaTime;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        yawFinished = true;
+                    }
+
+                    bool rollFinished = false;
+                    if (UnityEngine.Mathf.Abs(m_SlipDestRollAngle - m_CameraTransform.eulerAngles.x) > 1.0f)
+                    {
+                        if (m_SlipDestRollAngle > m_CameraTransform.eulerAngles.x)
+                        {
+                            m_FixedRoll = m_CameraTransform.eulerAngles.x + m_SlipRollSpeed * Time.deltaTime;
+                        }
+                        else
+                        {
+                            m_FixedRoll = m_CameraTransform.eulerAngles.x - m_SlipRollSpeed * Time.deltaTime;
+                        }
+                    }
+                    else
+                    {
+                        rollFinished = true;
+                    }
+
+                    bool zoomFinished = false;
+                    if (UnityEngine.Mathf.Abs(m_SlipDestDistance - m_CurDistance) > 0.1f)
+                    {
+                        if (m_CameraSlippingIn)
+                        {
+                            m_CurDistance -= m_SlipZoomSpeed * Time.deltaTime;
+                        }
+                        else
+                        {
+                            m_CurDistance += m_SlipZoomSpeed * Time.deltaTime;
+                        }
+                    }
+                    else
+                    {
+                        zoomFinished = true;
+                    }
+
+                    if (yawFinished && rollFinished && zoomFinished)
+                    {
+                        m_CameraSlipping = false;
+                        if (m_CameraSlippingIn)
+                        {
+                            m_CameraSlippingIn = false;
+                            m_InWatchMode = true;
+                        }
+                        else
+                        {
+                            m_InWatchMode = false;
+                            TouchManager.Instance.joystickEnable = true;
+                        }
+                    }
+                }
+
+                // End Auto rotation
                 Apply();
             }
         }
@@ -531,7 +716,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         //m_CurDistance = UnityEngine.Mathf.SmoothDamp(m_CurDistance, m_Distance, ref m_DistanceVelocity, m_DistanceSmoothLag);
 
         // Convert the angle into a rotation, by which we then reposition the camera
-        UnityEngine.Quaternion currentRotation = UnityEngine.Quaternion.Euler(targetRollAngle, currentAngle, 0);
+        UnityEngine.Quaternion currentRotation = UnityEngine.Quaternion.Euler(currentRollAngle, currentAngle, 0);
 
         // Set the position of the camera on the x-z plane to:
         // distance meters behind the target
@@ -736,7 +921,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
 
         TouchManager.FingerList touches = (TouchManager.FingerList)TouchManager.Touches;
 
-        if (touches.Count == 1)
+        if (touches.Count == 1 && !m_InWatchMode)
         {
             TouchManager.Finger finger = touches[0];
             if (finger.IsMoving)
@@ -891,4 +1076,29 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_MaxDistance = 30.0f;
     private float m_MinDistance = 5.0f;
     private float m_ZoomSpeed = 50.0f;
+
+    // Is camera slipping or not.
+    private bool m_CameraSlipping = false;
+    // Is camera slipping in?
+    private bool m_CameraSlippingIn = false;
+    // If camera stop after slipping in, the camera is in WATCH MODE.
+    private bool m_InWatchMode = false;
+    // Once camera distance lower than this value, auto slip the camera close and face to character. 
+    private float m_SlipInDistance = 10.0f;
+    // Once camera distance great than this value, auto slip the camera far away from character and back to the original angle.
+    private float m_SlipOutDistance = 7.0f;
+    // Original yaw and roll angle as slip-in occured.
+    private float m_SlipOriginalYaw = 0.0f;
+    private float m_SlipOriginalRoll = 0.0f;
+    private float m_SlipOriginalDistance = 0.0f;
+    // Destination angle of slip in / out.
+    private float m_SlipDestYawAngle = 0.0f;
+    private float m_SlipDestRollAngle = 0.0f;
+    private float m_SlipDestDistance = 5.5f;
+    //
+    private float m_SlipYawSpeed = 0.0f;
+    private float m_SlipRollSpeed = 0.0f;
+    private float m_SlipZoomSpeed = 0.0f;
+    // Camera slipping must be finished in the slip time.
+    private float m_SlipTime = 1.0f;
 }

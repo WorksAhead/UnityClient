@@ -377,7 +377,7 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
     }
     void On_JoystickMove(MovingJoystick move)
     {
-        if (TouchManager.Touches.Count > 0)
+        if (TouchManager.Touches.Count > 0 && TouchManager.Instance.joystickEnable)
         {
             TriggerMove(move, false);
         }

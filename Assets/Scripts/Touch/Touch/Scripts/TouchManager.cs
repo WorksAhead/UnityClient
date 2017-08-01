@@ -99,6 +99,8 @@ public class TouchManager : UnityEngine.MonoBehaviour
         }
     }
 
+    // 是否允许摇杆操作.
+    public bool joystickEnable = true;
     // 是否跨场景
     public bool aross = false;
     // 是否允许远程
