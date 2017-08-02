@@ -391,6 +391,10 @@ public class MainCamera : UnityEngine.MonoBehaviour
                             }
                         }
                         m_SlipYawSpeed = slipDeltaYawAngle / m_SlipTime;
+                        if (m_SlipYawSpeed < 1.0f)
+                        {
+                            m_SlipYawSpeed = 1.0f;
+                        }
                         //
                         m_SlipDestRollAngle = destRotation.eulerAngles.x < m_MinCameraAngle ? m_MinCameraAngle : destRotation.eulerAngles.x;
                         float slipDeltaRollAngle = UnityEngine.Mathf.Abs(m_SlipDestRollAngle - m_CameraTransform.eulerAngles.x);
@@ -435,6 +439,10 @@ public class MainCamera : UnityEngine.MonoBehaviour
                             }
                         }
                         m_SlipYawSpeed = slipDeltaYawAngle / m_SlipTime;
+                        if (m_SlipYawSpeed < 1.0f)
+                        {
+                            m_SlipYawSpeed = 1.0f;
+                        }
 
                         m_SlipDestRollAngle = m_SlipOriginalRoll;
                         float slipDeltaRollAngle = UnityEngine.Mathf.Abs(m_SlipDestRollAngle - m_CameraTransform.eulerAngles.x);
@@ -451,35 +459,49 @@ public class MainCamera : UnityEngine.MonoBehaviour
                     TouchManager.Instance.joystickEnable = false;
 
                     bool yawFinished = false;
-                    if (UnityEngine.Mathf.Abs(m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y) > 1.0f)
+                    if (m_SlipDestYawAngle > m_CameraTransform.eulerAngles.y)
                     {
-                        if (m_SlipDestYawAngle > m_CameraTransform.eulerAngles.y)
+                        if (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y < 180.0f)
                         {
-                            if (m_SlipDestYawAngle - m_CameraTransform.eulerAngles.y < 180.0f)
+                            m_FixedYaw = m_CameraTransform.eulerAngles.y + m_SlipYawSpeed * Time.deltaTime;
+                            if (m_FixedYaw > m_SlipDestYawAngle)
                             {
-                                m_FixedYaw = m_CameraTransform.eulerAngles.y + m_SlipYawSpeed * Time.deltaTime;
-                            }
-                            else
-                            {
-                                m_FixedYaw = m_CameraTransform.eulerAngles.y - m_SlipYawSpeed * Time.deltaTime;
+                                m_FixedYaw = m_SlipDestYawAngle;
+                                yawFinished = true;
                             }
                         }
                         else
                         {
-                            if (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle < 180.0f)
+                            m_FixedYaw = m_CameraTransform.eulerAngles.y - m_SlipYawSpeed * Time.deltaTime;
+                            if (m_FixedYaw + 360.0f < m_SlipDestYawAngle)
                             {
-                                m_FixedYaw = m_CameraTransform.eulerAngles.y - m_SlipYawSpeed * Time.deltaTime;
-                            }
-                            else
-                            {
-                                m_FixedYaw = m_CameraTransform.eulerAngles.y + m_SlipYawSpeed * Time.deltaTime;
+                                m_FixedYaw = m_SlipDestYawAngle - 360.0f;
+                                yawFinished = true;
                             }
                         }
                     }
                     else
                     {
-                        yawFinished = true;
+                        if (m_CameraTransform.eulerAngles.y - m_SlipDestYawAngle < 180.0f)
+                        {
+                            m_FixedYaw = m_CameraTransform.eulerAngles.y - m_SlipYawSpeed * Time.deltaTime;
+                            if (m_FixedYaw < m_SlipDestYawAngle)
+                            {
+                                m_FixedYaw = m_SlipDestYawAngle;
+                                yawFinished = true;
+                            }
+                        }
+                        else
+                        {
+                            m_FixedYaw = m_CameraTransform.eulerAngles.y + m_SlipYawSpeed * Time.deltaTime;
+                            if (m_FixedYaw > 360.0f + m_SlipDestYawAngle)
+                            {
+                                m_FixedYaw = 360.0f + m_SlipDestYawAngle;
+                                yawFinished = true;
+                            }
+                        }
                     }
+
 
                     bool rollFinished = false;
                     if (UnityEngine.Mathf.Abs(m_SlipDestRollAngle - m_CameraTransform.eulerAngles.x) > 1.0f)
