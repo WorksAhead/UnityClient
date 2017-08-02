@@ -39,6 +39,7 @@ namespace ArkCrossEngine
             string requestNoticeConfigUrl = s_NoticeConfigUrl;
             requestNoticeConfigUrl = ResLoadHelper.GetDynamicUrl(requestNoticeConfigUrl);
             ResLoadHelper.Log("RequestNoticeConfig URL;" + requestNoticeConfigUrl);
+            /*
             using (WWW tWWW = new WWW(requestNoticeConfigUrl))
             {
                 yield return tWWW;
@@ -66,6 +67,7 @@ namespace ArkCrossEngine
                     tWWW.Dispose();
                 }
             }
+            */
 
             // finished
             ResUpdateCallback.OnEndRequestNoticeConfig();

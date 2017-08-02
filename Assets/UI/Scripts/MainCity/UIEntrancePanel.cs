@@ -929,6 +929,28 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
         }
         return num;
     }
+
+    public void OnSystemSettingClicked()
+    {
+        GfxSystem.SetEquipmentColor(LobbyClient.Instance.CurrentRole.HeroId, EquipmentType.E_Clothes, 
+            new UnityEngine.Color(UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), 1.0f));
+    }
+
+    public void OnNewBieRewardClicked()
+    {
+        PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
+    }
+
+    public void OnNetworkSpeedupClicked()
+    {
+        UIManager.Instance.ShowWindowByName("Trial");
+    }
+
+    public void OnPVPClicked()
+    {
+        UIManager.Instance.ShowWindowByName("PvPEntrance");
+    }
+
     void SetAllButttonUnactive()
     {
         for (int index = 0; index < buttons.Length; ++index)

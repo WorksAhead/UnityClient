@@ -10,7 +10,7 @@ public class BossHealthBar : UnityEngine.MonoBehaviour
         try
         {
             positionVec3 = this.transform.localPosition;
-            goHealthBar = this.transform.FindChild("HealthBar").gameObject;
+            goHealthBar = this.transform.Find("HealthBar").gameObject;
             if (null == goHealthBar)
             {
                 Debug.LogError("Can Not Find HealthBar");

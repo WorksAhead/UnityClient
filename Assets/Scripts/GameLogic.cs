@@ -72,6 +72,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 // if in editor, use streamingAssetsPath instead
                 GlobalVariables.Instance.IsDevice = false;
 #endif
+
+#if UNITY_ANDROID
+                if (!UnityEngine.Application.isEditor)
+                {
+                    streamingAssetsPath = persistentDataPath + "/Tables";
+                }
+#endif
                 GameControler.Init(tempPath, streamingAssetsPath);
 
                 // override log output
@@ -287,11 +294,15 @@ public class GameLogic : UnityEngine.MonoBehaviour
             yield return StartCoroutine(HandleGameLoadingPublish());
         }
 
+#if UNITY_ANDROID
         // if not play game in editor, extract config data to disk
-        //else if (!UnityEngine.Application.isEditor)
+        else if (!UnityEngine.Application.isEditor)
         {
-            //yield return StartCoroutine(HandleGameLoadingNonEditor());
+            string destPath = UnityEngine.Application.persistentDataPath + "/Tables";
+            if (!Directory.Exists(destPath))
+                yield return StartCoroutine(HandleGameLoadingNonEditor());
         }
+#endif
 
         LogicSystem.UpdateLoadingProgress(0.45f);
 
@@ -368,7 +379,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
     {
         LogicSystem.UpdateLoadingTip("加载配置数据");
         string srcPath = UnityEngine.Application.streamingAssetsPath;
-        string destPath = UnityEngine.Application.persistentDataPath + "/DataFile";
+        string destPath = UnityEngine.Application.persistentDataPath + "/Tables";
         Debug.Log(srcPath);
         Debug.Log(destPath);
 
@@ -596,13 +607,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
         {
             // Todo: load from bundle
             buffer = File.ReadAllBytes(filePath);
+            return buffer;
         }
         catch (Exception e)
         {
             GfxSystem.GfxLog("Exception:{0}\n{1}", e.Message, e.StackTrace);
             return null;
         }
-        return buffer;
     }
 
     private bool EngineFileExistsProxy(string filePath)

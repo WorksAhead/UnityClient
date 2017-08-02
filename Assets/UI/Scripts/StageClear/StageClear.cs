@@ -10,7 +10,7 @@ public class StageClear : UnityEngine.MonoBehaviour
         {
             m_Particle = CrossObjectHelper.TryCastObject<UnityEngine.GameObject>(ArkCrossEngine.ResourceSystem.GetSharedResource("Hero_FX/1_Swordman/ui_FX_01"));
 
-            UnityEngine.Transform trans = this.transform.FindChild("stage");
+            UnityEngine.Transform trans = this.transform.Find("stage");
             if (trans == null)
                 return;
             UnityEngine.GameObject go = trans.gameObject;
@@ -21,7 +21,7 @@ public class StageClear : UnityEngine.MonoBehaviour
                 pos = go.transform.position * 1.3f;
                 PlayParticle("stage", pos);
             }
-            trans = this.transform.FindChild("clear");
+            trans = this.transform.Find("clear");
             if (trans == null)
                 return;
             go = trans.gameObject;
@@ -65,7 +65,7 @@ public class StageClear : UnityEngine.MonoBehaviour
 
     private void StartTween()
     {
-        UnityEngine.Transform trans = this.transform.FindChild("stage");
+        UnityEngine.Transform trans = this.transform.Find("stage");
         if (trans == null)
             return;
         UnityEngine.GameObject go = trans.gameObject;
@@ -74,7 +74,7 @@ public class StageClear : UnityEngine.MonoBehaviour
         StartTweenPos(go);
         TweenAlpha.Begin(go, 0.2f, 0f);
 
-        trans = this.transform.FindChild("clear");
+        trans = this.transform.Find("clear");
         if (null == trans)
             return;
         go = trans.gameObject;
@@ -97,7 +97,7 @@ public class StageClear : UnityEngine.MonoBehaviour
     }
     public void OnStageAnimFinished()
     {
-        UnityEngine.Transform trans = this.transform.FindChild("stage");
+        UnityEngine.Transform trans = this.transform.Find("stage");
         if (trans == null)
             return;
         UnityEngine.GameObject go = trans.gameObject;
@@ -113,7 +113,7 @@ public class StageClear : UnityEngine.MonoBehaviour
     }
     public void OnClearAnimFinished()
     {
-        UnityEngine.Transform trans = this.transform.FindChild("clear");
+        UnityEngine.Transform trans = this.transform.Find("clear");
         if (null == trans)
             return;
         UnityEngine.GameObject go = trans.gameObject;
@@ -129,7 +129,7 @@ public class StageClear : UnityEngine.MonoBehaviour
     }
     private void PlayParticle(string father, UnityEngine.Vector3 nguiPos)
     {
-        UnityEngine.Transform trans = this.transform.FindChild(father);
+        UnityEngine.Transform trans = this.transform.Find(father);
         if (null == trans)
             return;
         UnityEngine.GameObject fatherGo = trans.gameObject;

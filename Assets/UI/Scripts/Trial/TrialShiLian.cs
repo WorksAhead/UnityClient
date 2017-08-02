@@ -31,7 +31,7 @@ public class TrialShiLian : UnityEngine.MonoBehaviour
     [HideInInspector]
     public bool isMatching = false;
 
-    private int sceneId = 4011;
+    private int sceneId = 4031;
     private string startTime = "";
     public UnityEngine.GameObject matchTimeUI = null;//匹配时间ui
     public UILabel matchTime = null;
