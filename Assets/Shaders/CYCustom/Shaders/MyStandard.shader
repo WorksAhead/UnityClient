@@ -81,6 +81,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
 			#pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
 			#pragma shader_feature _PARALLAXMAP
+			#define CY_DOUBLE_FACE_SHADER
 
 			#pragma multi_compile_fwdbase
 			#pragma multi_compile_fog
