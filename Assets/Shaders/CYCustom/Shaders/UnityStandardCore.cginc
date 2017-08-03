@@ -381,6 +381,12 @@ VertexOutputForwardBase vertForwardBase (VertexInput v)
     o.tex = TexCoords(v);
     o.eyeVec = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
     float3 normalWorld = UnityObjectToWorldNormal(v.normal);
+
+	// 让双面材质的光照正确
+#ifdef CY_DOUBLE_FACE_SHADER
+	normalWorld *= -sign(dot(normalWorld, o.eyeVec));
+#endif
+
     #ifdef _TANGENT_TO_WORLD
         float4 tangentWorld = float4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
 

@@ -117,6 +117,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature _PARALLAXMAP
+			#define CY_DOUBLE_FACE_SHADER
 
 			#pragma multi_compile_fwdadd_fullshadows
 			#pragma multi_compile_fog
@@ -146,6 +147,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _PARALLAXMAP
 			#pragma multi_compile_shadowcaster
 			#pragma multi_compile_instancing
+			#define CY_DOUBLE_FACE_SHADER
 
 			#pragma vertex vertShadowCaster
 			#pragma fragment fragShadowCaster
@@ -176,6 +178,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature _PARALLAXMAP
+			#define CY_DOUBLE_FACE_SHADER
 
 			#pragma multi_compile_prepassfinal
 			#pragma multi_compile_instancing
@@ -207,6 +210,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature EDITOR_VISUALIZATION
+			#define CY_DOUBLE_FACE_SHADER
 
 			#include "UnityStandardMeta.cginc"
 			ENDCG
@@ -241,6 +245,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
 			// SM2.0: NOT SUPPORTED shader_feature ___ _DETAIL_MULX2
 			// SM2.0: NOT SUPPORTED shader_feature _PARALLAXMAP
+			#define CY_DOUBLE_FACE_SHADER
 
 			#pragma skip_variants SHADOWS_SOFT DIRLIGHTMAP_COMBINED
 
@@ -275,6 +280,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature ___ _DETAIL_MULX2
 			// SM2.0: NOT SUPPORTED shader_feature _PARALLAXMAP
 			#pragma skip_variants SHADOWS_SOFT
+			#define CY_DOUBLE_FACE_SHADER
 			
 			#pragma multi_compile_fwdadd_fullshadows
 			#pragma multi_compile_fog
@@ -300,6 +306,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _METALLICGLOSSMAP
 			#pragma skip_variants SHADOWS_SOFT
 			#pragma multi_compile_shadowcaster
+			#define CY_DOUBLE_FACE_SHADER
 
 			#pragma vertex vertShadowCaster
 			#pragma fragment fragShadowCaster
@@ -328,6 +335,7 @@ Shader "CY/MyStandard"
 			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature EDITOR_VISUALIZATION
+			#define CY_DOUBLE_FACE_SHADER
 
 			#include "UnityStandardMeta.cginc"
 			ENDCG
