@@ -182,6 +182,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroCike.transform.transform.rotation = holder.transform.rotation;
                 m_HeroCike.transform.transform.localRotation = holder.transform.localRotation;
                 m_HeroCike.transform.transform.localScale = holder.transform.localScale;
+                m_HeroCike.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
                 m_HeroCike.transform.SetLayer(0);
             }
             if (m_HeroJianshi != null)
@@ -191,7 +192,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroJianshi.transform.transform.localPosition = holder.transform.localPosition;
                 m_HeroJianshi.transform.transform.rotation = holder.transform.rotation;
                 m_HeroJianshi.transform.transform.localRotation = holder.transform.localRotation;
-                m_HeroJianshi.transform.transform.localScale = new UnityEngine.Vector3(3f, 3f, 3f);
+                m_HeroJianshi.transform.transform.localScale = new UnityEngine.Vector3(0.9f, 0.9f, 0.9f); //holder.transform.localScale;
                 m_HeroJianshi.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
                 m_HeroJianshi.transform.SetLayer(0);
             }

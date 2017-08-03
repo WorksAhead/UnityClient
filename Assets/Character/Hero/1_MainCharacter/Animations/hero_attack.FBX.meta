@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: 20ee72f22dcafbe43806634c5ec06288
-timeCreated: 1499335925
+timeCreated: 1500950968
 licenseType: Pro
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: Bip001
     100002: Bip001 Head
@@ -133,8 +133,9 @@ ModelImporter:
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: hero_attack
@@ -297,7 +298,7 @@ ModelImporter:
       name: hero_attack_0
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 12
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -453,8 +454,8 @@ ModelImporter:
     - serializedVersion: 16
       name: hero_attack_1
       takeName: Take 001
-      firstFrame: 12
-      lastFrame: 32
+      firstFrame: 15
+      lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -610,7 +611,7 @@ ModelImporter:
     - serializedVersion: 16
       name: hero_attack_2
       takeName: Take 001
-      firstFrame: 32
+      firstFrame: 34
       lastFrame: 73
       wrapMode: 0
       orientationOffsetY: 0
@@ -770,7 +771,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -786,6 +790,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
