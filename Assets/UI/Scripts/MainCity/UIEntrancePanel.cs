@@ -426,7 +426,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
             //  OpenAndCloseWindow("Partner");
             //  break;
             case "Entrance-Trial":
-                LogicSystem.SendStoryMessage("cityplayermove", 1);
+                //LogicSystem.SendStoryMessage("cityplayermove", 1);
                 break;
             //case "Entrance-Shop":
             //  OpenAndCloseWindow("Store");
@@ -503,7 +503,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
                 }
                 break;
             case "Entrance-Mail":
-                OpenAndCloseWindow("Mail");
+                //OpenAndCloseWindow("Mail");
                 break;
             case "Entrance-Friend":
                 LogicSystem.PublishLogicEvent("ge_request_friends", "lobby");
