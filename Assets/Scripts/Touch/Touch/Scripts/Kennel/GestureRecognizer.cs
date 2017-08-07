@@ -535,10 +535,12 @@ public abstract class GestureRecognizerBase<T> : GestureRecognizer where T : Ges
         {
             return false;
         }
+        /*
         if (UICamera.lastHit.collider != null)
         {
             return false;
         }
+        */
         return true;
     }
 

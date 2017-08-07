@@ -12,13 +12,13 @@
 		movechild(0, "1_JianShi_w_01", "ef_backweapon01");
 
 		//帧1
-		setanimspeed(33, "zhankuang_jiaosha_01", 0.5);
+		setanimspeed(33, "hero_skill01", 0.5);
 		
 		//帧4
-		setanimspeed(233, "zhankuang_jiaosha_01", 3);
+		setanimspeed(233, "hero_skill01", 3);
 		
 		//帧13
-		setanimspeed(333, "zhankuang_jiaosha_01", 1);
+		setanimspeed(333, "hero_skill01", 1);
 		//帧49
 		
 		findmovetarget(0, vector3(0, 0, 0), 2, 180, 0.8, 0.2, 0, 0, false);
@@ -117,7 +117,7 @@ skill(160811)
 			stateimpact("kDefault", 16120201);
 		};        
         sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_02_03",1000,vector3(0,0,0),33);
-        playsound(0, "skill08011", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_jiaosha_01", false);
+        playsound(0, "skill08011", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/hero_skill01", false);
 		destroyself(1000);
     };
 	oninterrupt()

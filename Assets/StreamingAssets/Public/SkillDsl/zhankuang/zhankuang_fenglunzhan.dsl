@@ -12,34 +12,34 @@
 		movechild(0, "1_JianShi_w_01", "ef_rightweapon01");
 		
 		//帧6
-		setanimspeed(200, "zhankuang_fenglunzhan_01", 3);
+		setanimspeed(200, "hero_skill02", 3);
 		
 		//帧15
-		setanimspeed(300, "zhankuang_fenglunzhan_01", 1);
+		setanimspeed(300, "hero_skill02", 1);
 		
 		//帧17
-		//setanimspeed(433, "zhankuang_fenglunzhan_01", 1);
+		//setanimspeed(433, "hero_skill02", 1);
 		
 		//帧23
-		setanimspeed(566, "zhankuang_fenglunzhan_01", 0.5);
+		setanimspeed(566, "hero_skill02", 0.5);
 
 		//帧25
-		setanimspeed(700, "zhankuang_fenglunzhan_01", 3);
+		setanimspeed(700, "hero_skill02", 3);
 
 		//帧34
-		setanimspeed(800, "zhankuang_fenglunzhan_01", 1);
+		setanimspeed(800, "hero_skill02", 1);
 		//帧77
 			
-		playsound(250, "skill0201", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_01", false);
+		playsound(250, "skill0201", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/hero_skill02", false);
 
 		playsound(800, "skill0202", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_02", false);
 		playsound(750, "skill0203", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_01", false);
 
 		startcurvemove(200, true, 0.1, 0, 0, 5, 0, 0, 100, 0.03, 0, 0, 6, 0, 0, -80, 0.3, 0, 3, 0, 0, 30, 50, 0.1, 0, 3, 15, 0, -60, -120, 0.2, 0, -3, 10, 0, -300, -40);
 
-		//sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_01",1000,vector3(0,0,0.5),233,eular(0,0,0),vector3(1,1,1),true);
+		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02",1000,vector3(0,0,0.5),233,eular(0,0,0),vector3(1,1,1),true);
 	
-		charactereffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_01_01",1000,"Bone_Root",200);
+		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_01",1000,"Bone_Root",200);
 
 		areadamage(300, 0, 1, 1, 3, true) 
 		{
@@ -48,7 +48,7 @@
 			stateimpact("kDefault", 16020101);
 		};
 	
-		charactereffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_01_03",1000,"Bone_Root",766);
+		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_03",1000,"Bone_Root",766);
 
 		areadamage(833, 0, 1, 1.5, 3, true) 
 		{
@@ -66,8 +66,8 @@
 			audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
 		};
 		//shakecamera2(833, 200, false, true, vector3(0.3, 0.4, 0), vector3(40, 40, 0), vector3(12, 14, 0), vector3(80, 60, 0));
-		//sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_01",1000,vector3(0,0,0),866,eular(0,0,0),vector3(1.3,1.3,1.3),true);
-		sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_01_04",1000,vector3(0,0,2.3),866);
+		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02",1000,vector3(0,0,0),866,eular(0,0,0),vector3(1.3,1.3,1.3),true);
+		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_04",1000,vector3(0,0,2.3),866);
 	};
 	
 	oninterrupt()
