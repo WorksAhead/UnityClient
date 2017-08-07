@@ -347,7 +347,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
             if (!m_IsShaking && ArkCrossEngine.LobbyClient.Instance.CurrentRole != null)
             {
-                if (!m_CameraSlipping && !UICamera.mouse0.isOverUI)
+                if (!m_CameraSlipping && !UICamera.isOverUI)
                 {
                     TraceFingers();
                 }
