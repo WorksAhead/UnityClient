@@ -347,7 +347,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
             if (!m_IsShaking && ArkCrossEngine.LobbyClient.Instance.CurrentRole != null)
             {
-                if (!m_CameraSlipping)
+                if (!m_CameraSlipping && !UICamera.mouse0.isOverUI)
                 {
                     TraceFingers();
                 }
@@ -521,20 +521,23 @@ public class MainCamera : UnityEngine.MonoBehaviour
                     }
 
                     bool zoomFinished = false;
-                    if (UnityEngine.Mathf.Abs(m_SlipDestDistance - m_CurDistance) > 0.1f)
+                    if (m_CameraSlippingIn)
                     {
-                        if (m_CameraSlippingIn)
+                        m_CurDistance -= m_SlipZoomSpeed * Time.deltaTime;
+                        if (m_CurDistance <= m_SlipDestDistance)
                         {
-                            m_CurDistance -= m_SlipZoomSpeed * Time.deltaTime;
-                        }
-                        else
-                        {
-                            m_CurDistance += m_SlipZoomSpeed * Time.deltaTime;
+                            m_CurDistance = m_SlipDestDistance;
+                            zoomFinished = true;
                         }
                     }
                     else
                     {
-                        zoomFinished = true;
+                        m_CurDistance += m_SlipZoomSpeed * Time.deltaTime;
+                        if (m_CurDistance >= m_SlipDestDistance)
+                        {
+                            m_CurDistance = m_SlipDestDistance;
+                            zoomFinished = true;
+                        }
                     }
 
                     if (yawFinished && rollFinished && zoomFinished)
