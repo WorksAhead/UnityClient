@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: charactorUI
   m_TagString: Untagged
@@ -27,6 +27,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,8 +43,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 72900468cb22c72428fd51846d8d2d19, type: 2}
   mSprites:
   - name: chuang-jian-jue-se
-    x: 314
-    y: 116
+    x: 795
+    y: 798
     width: 152
     height: 42
     borderLeft: 0
@@ -54,8 +56,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: chuang-jian-jue-se-an-niu
-    x: 2
-    y: 2
+    x: 366
+    y: 462
     width: 507
     height: 112
     borderLeft: 0
@@ -67,8 +69,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ci-ke
-    x: 161
-    y: 603
+    x: 524
+    y: 639
     width: 151
     height: 385
     borderLeft: 0
@@ -80,8 +82,8 @@ MonoBehaviour:
     paddingTop: 46
     paddingBottom: 24
   - name: ci-ke-tou-xiang2
-    x: 878
-    y: 139
+    x: 676
+    y: 750
     width: 118
     height: 90
     borderLeft: 0
@@ -93,21 +95,21 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ci-ke-tou-xiang3
-    x: 878
-    y: 510
+    x: 147
+    y: 53
     width: 117
-    height: 91
+    height: 93
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 1
-    paddingRight: 1
-    paddingTop: 1
-    paddingBottom: 1
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: fa_shi_tou_xiang3
-    x: 878
-    y: 417
+    x: 794
+    y: 933
     width: 117
     height: 91
     borderLeft: 0
@@ -119,8 +121,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: fa-shi
-    x: 511
-    y: 91
+    x: 0
+    y: 569
     width: 365
     height: 455
     borderLeft: 0
@@ -131,9 +133,22 @@ MonoBehaviour:
     paddingRight: 12
     paddingTop: 0
     paddingBottom: 0
+  - name: fa-shi-tou-xiang
+    x: 676
+    y: 933
+    width: 117
+    height: 91
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: huo-te-xiao
-    x: 511
-    y: 2
+    x: 366
+    y: 374
     width: 408
     height: 87
     borderLeft: 0
@@ -145,8 +160,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jt
-    x: 2
-    y: 999
+    x: 274
+    y: 549
     width: 81
     height: 19
     borderLeft: 0
@@ -158,8 +173,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jue-se-xuan-zhong-kuang
-    x: 921
-    y: 2
+    x: 265
+    y: 43
     width: 98
     height: 103
     borderLeft: 46
@@ -171,8 +186,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: kuang-zhan-shi
-    x: 2
-    y: 548
+    x: 366
+    y: 575
     width: 157
     height: 449
     borderLeft: 0
@@ -184,8 +199,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 3
   - name: kuang-zhan-shi-tou-xiang2
-    x: 314
-    y: 160
+    x: 0
+    y: 56
     width: 146
     height: 90
     borderLeft: 0
@@ -197,8 +212,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: kuang-zhan-shi-tou-xiang3
-    x: 878
-    y: 324
+    x: 676
+    y: 841
     width: 117
     height: 91
     borderLeft: 0
@@ -210,8 +225,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: qiang_shou_tou_xiang3
-    x: 878
-    y: 231
+    x: 794
+    y: 841
     width: 117
     height: 91
     borderLeft: 0
@@ -223,8 +238,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: qiang-shou
-    x: 2
-    y: 116
+    x: 0
+    y: 147
     width: 273
     height: 421
     borderLeft: 0
@@ -236,8 +251,8 @@ MonoBehaviour:
     paddingTop: 18
     paddingBottom: 16
   - name: xuan-ze-jue-se
-    x: 161
-    y: 548
+    x: 524
+    y: 595
     width: 151
     height: 43
     borderLeft: 0
@@ -249,8 +264,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zhuang-jian-jue-se
-    x: 878
-    y: 107
+    x: 0
+    y: 25
     width: 136
     height: 30
     borderLeft: 0
@@ -276,4 +291,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
