@@ -233,7 +233,12 @@ public class MainCamera : UnityEngine.MonoBehaviour
         {
             m_Distance = m_OrigDistance;
         }
-        m_MaxDistance = m_Distance;
+
+        if (m_MaxDistance != m_Distance)
+        {
+            m_MaxDistance = m_Distance;
+            m_CurDistance = m_MaxDistance;
+        }
         m_DistanceSmoothLag = lag;
         //m_NeedLookat = true;
     }
@@ -452,6 +457,17 @@ public class MainCamera : UnityEngine.MonoBehaviour
                         float slipDeltaDistance = m_SlipDestDistance - m_CurDistance;
                         m_SlipZoomSpeed = slipDeltaDistance / m_SlipTime;
                     }
+                }
+
+                // Unlock watch mode in battle scene.
+                if (WorldSystem.Instance.IsPvpScene() ||
+                    WorldSystem.Instance.IsPveScene() ||
+                    WorldSystem.Instance.IsPvapScene() ||
+                    WorldSystem.Instance.IsMultiPveScene())
+                {
+                    m_CameraSlipping = false;
+                    m_CameraSlippingIn = false;
+                    m_InWatchMode = false;
                 }
 
                 if (m_CameraSlipping)
@@ -1099,7 +1115,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_MinCameraAngle = 10.0f;
     private float m_MaxCameraAngle = 80.0f;
     private float m_MaxDistance = 30.0f;
-    private float m_MinDistance = 5.0f;
+    private float m_MinDistance = 3.0f;
     private float m_ZoomSpeed = 50.0f;
 
     // Is camera slipping or not.
@@ -1109,9 +1125,9 @@ public class MainCamera : UnityEngine.MonoBehaviour
     // If camera stop after slipping in, the camera is in WATCH MODE.
     private bool m_InWatchMode = false;
     // Once camera distance lower than this value, auto slip the camera close and face to character. 
-    private float m_SlipInDistance = 10.0f;
+    private float m_SlipInDistance = 5.0f;
     // Once camera distance great than this value, auto slip the camera far away from character and back to the original angle.
-    private float m_SlipOutDistance = 7.0f;
+    private float m_SlipOutDistance = 4.0f;
     // Original yaw and roll angle as slip-in occured.
     private float m_SlipOriginalYaw = 0.0f;
     private float m_SlipOriginalRoll = 0.0f;
