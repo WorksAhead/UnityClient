@@ -94,7 +94,11 @@ public class Login : UnityEngine.MonoBehaviour
             }
             
             // get device info ,including uuid, system info, etc.
+#if (UNITY_ANDROID || UNITY_IOS)
+            string deviceUniqueIdentifier = SystemInfo.deviceUniqueIdentifier.ToString();
+#else
             string deviceUniqueIdentifier = ((uint)UnityEngine.Application.dataPath.GetHashCode()).ToString();
+#endif
             string system = "all";
             LogicSystem.PublishLogicEvent("ge_device_info", "lobby", deviceUniqueIdentifier, version, system);
             NormLog.Instance.UpdateDeviceidAndVersion(deviceUniqueIdentifier, version);
