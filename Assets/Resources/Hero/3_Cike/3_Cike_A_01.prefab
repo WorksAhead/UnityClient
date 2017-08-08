@@ -793,7 +793,6 @@ GameObject:
   - component: {fileID: 11400002}
   - component: {fileID: 8200000}
   - component: {fileID: 11400000}
-  - component: {fileID: 11400004}
   - component: {fileID: 11400006}
   m_Layer: 8
   m_Name: 3_Cike_A_01
@@ -1623,7 +1622,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100058}
-  m_LocalRotation: {x: 0.74831235, y: -0.35031942, z: -0.10440296, w: 0.55353874}
+  m_LocalRotation: {x: 0.74831235, y: -0.35031942, z: -0.10440295, w: 0.55353874}
   m_LocalPosition: {x: -0.07719886, y: 0.03428909, z: -0.07382536}
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
   m_Children:
@@ -1782,7 +1781,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
-  m_LocalRotation: {x: -0.74831235, y: 0.35031942, z: -0.10440293, w: 0.55353874}
+  m_LocalRotation: {x: -0.74831235, y: 0.35031942, z: -0.10440292, w: 0.55353874}
   m_LocalPosition: {x: -0.07719886, y: 0.034289245, z: 0.07382537}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children:
@@ -1918,7 +1917,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 74.98345, y: 19.742556, z: 56.767254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400128}
@@ -2420,7 +2419,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2444,7 +2443,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!111 &11100000
 Animation:
   m_ObjectHideFlags: 1
@@ -2654,37 +2653,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CampId: 2
   m_IsEndure: 0
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea70978a5e6141b3aa6cb5599348412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxProjectionDistance: 10
-  girth: 0.8
-  shadowHoverHeight: 0.1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 65537
-  shadowMaterial: {fileID: 2100000, guid: 5231caf19bce04df29d48d73a92356f2, type: 2}
-  isStatic: 0
-  useLightSource: 0
-  lightSource: {fileID: 0}
-  lightDirection: {x: 0, y: -1, z: 0}
-  isPerspectiveProjection: 0
-  doVisibilityCulling: 0
-  shadowpostion: {x: 0, y: 0.05, z: 0}
-  uvs:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
