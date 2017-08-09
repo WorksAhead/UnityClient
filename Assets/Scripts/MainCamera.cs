@@ -1142,4 +1142,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_SlipZoomSpeed = 0.0f;
     // Camera slipping must be finished in the slip time.
     private float m_SlipTime = 1.0f;
+
+    public static UnityEngine.Vector3 CameraOriginalPosition = UnityEngine.Vector3.zero;
+    public static UnityEngine.Quaternion CameraOriginalRotation = UnityEngine.Quaternion.identity;
 }

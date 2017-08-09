@@ -14,6 +14,17 @@ public class CreateSelectCreateHero : UnityEngine.MonoBehaviour
             {
                 Instantiate(go);
             }
+
+            if (MainCamera.CameraOriginalPosition == UnityEngine.Vector3.zero)
+            {
+                MainCamera.CameraOriginalPosition = UnityEngine.Camera.main.transform.position;
+                MainCamera.CameraOriginalRotation = UnityEngine.Camera.main.transform.rotation;
+            }
+            else
+            {
+                UnityEngine.Camera.main.transform.position = MainCamera.CameraOriginalPosition;
+                UnityEngine.Camera.main.transform.rotation = MainCamera.CameraOriginalRotation;
+            }
         }
         catch (System.Exception ex)
         {
