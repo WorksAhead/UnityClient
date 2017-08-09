@@ -207,6 +207,12 @@ public class GameLogic : UnityEngine.MonoBehaviour
             {
                 GfxModule.Skill.GfxSkillSystem.Instance.PreLoadRoleSkills(ri.SkillInfos);
                 GfxModule.Skill.GfxSkillSystem.Instance.PreLoadSceneNpcSkills(DFMUiRoot.NowSceneID);
+
+                // temp: gain newbie tools
+                if (ri.Level < 2)
+                {
+                    PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
+                }
             }
         }
         catch (System.Exception ex)
