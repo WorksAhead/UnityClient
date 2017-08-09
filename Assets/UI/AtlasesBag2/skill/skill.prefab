@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
   m_Layer: 0
   m_Name: skill
   m_TagString: Untagged
@@ -23,10 +23,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.7628992, y: -3.320003, z: -8.289178}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,8 +43,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: d42cdfc48d138bf4ab7ba2d4f69d8f0a, type: 2}
   mSprites:
   - name: attack2
-    x: 193
-    y: 199
+    x: 0
+    y: 372
     width: 123
     height: 124
     borderLeft: 0
@@ -54,8 +56,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: attack3
-    x: 881
-    y: 101
+    x: 0
+    y: 247
     width: 123
     height: 124
     borderLeft: 0
@@ -67,8 +69,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b0
-    x: 581
-    y: 83
+    x: 453
+    y: 325
     width: 69
     height: 82
     borderLeft: 0
@@ -80,8 +82,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b1
-    x: 149
-    y: 920
+    x: 527
+    y: 111
     width: 53
     height: 80
     borderLeft: 0
@@ -93,8 +95,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: b2
-    x: 1
-    y: 834
+    x: 373
+    y: 326
     width: 75
     height: 82
     borderLeft: 0
@@ -106,8 +108,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b3
-    x: 712
-    y: 603
+    x: 373
+    y: 160
     width: 73
     height: 82
     borderLeft: 0
@@ -119,8 +121,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b4
-    x: 632
-    y: 633
+    x: 453
+    y: 408
     width: 73
     height: 80
     borderLeft: 0
@@ -132,8 +134,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: b5
-    x: 81
-    y: 780
+    x: 373
+    y: 409
     width: 75
     height: 82
     borderLeft: 0
@@ -145,8 +147,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b6
-    x: 796
-    y: 531
+    x: 373
+    y: 77
     width: 73
     height: 82
     borderLeft: 0
@@ -158,8 +160,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b7
-    x: 121
-    y: 459
+    x: 120
+    y: 166
     width: 71
     height: 80
     borderLeft: 0
@@ -171,8 +173,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: b8
-    x: 161
-    y: 762
+    x: 373
+    y: 243
     width: 75
     height: 82
     borderLeft: 0
@@ -184,8 +186,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: b9
-    x: 75
-    y: 917
+    x: 453
+    y: 489
     width: 73
     height: 82
     borderLeft: 0
@@ -197,8 +199,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bcg
-    x: 1
-    y: 405
+    x: 544
+    y: 889
     width: 177
     height: 53
     borderLeft: 0
@@ -210,8 +212,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: beijing
-    x: 1005
-    y: 102
+    x: 171
+    y: 405
     width: 16
     height: 16
     borderLeft: 13
@@ -223,8 +225,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: biaoti
-    x: 539
-    y: 166
+    x: 575
+    y: 754
     width: 106
     height: 12
     borderLeft: 0
@@ -236,8 +238,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bt_1
-    x: 193
-    y: 363
+    x: 852
+    y: 776
     width: 121
     height: 38
     borderLeft: 0
@@ -249,8 +251,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bt_2
-    x: 428
-    y: 425
+    x: 852
+    y: 768
     width: 88
     height: 7
     borderLeft: 0
@@ -262,8 +264,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: cd
-    x: 830
-    y: 442
+    x: 192
+    y: 65
     width: 88
     height: 88
     borderLeft: 0
@@ -275,8 +277,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: cd1
-    x: 741
-    y: 434
+    x: 398
+    y: 657
     width: 88
     height: 88
     borderLeft: 0
@@ -288,8 +290,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: choujiang
-    x: 589
-    y: 501
+    x: 974
+    y: 749
     width: 42
     height: 65
     borderLeft: 0
@@ -301,8 +303,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: choujiang1
-    x: 979
-    y: 300
+    x: 977
+    y: 819
     width: 42
     height: 65
     borderLeft: 0
@@ -314,8 +316,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: cike
-    x: 1
-    y: 917
+    x: 948
+    y: 928
     width: 73
     height: 96
     borderLeft: 0
@@ -327,8 +329,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck01
-    x: 433
-    y: 618
+    x: 693
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -340,8 +342,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck02
-    x: 346
-    y: 687
+    x: 527
+    y: 494
     width: 77
     height: 77
     borderLeft: 0
@@ -353,8 +355,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: ck03
-    x: 1
-    y: 754
+    x: 853
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -366,8 +368,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck04
-    x: 81
-    y: 700
+    x: 933
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -379,8 +381,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck05
-    x: 161
-    y: 682
+    x: 373
+    y: 492
     width: 79
     height: 79
     borderLeft: 0
@@ -392,8 +394,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck06
-    x: 266
-    y: 632
+    x: 293
+    y: 172
     width: 79
     height: 79
     borderLeft: 0
@@ -405,8 +407,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck07
-    x: 353
-    y: 560
+    x: 834
+    y: 666
     width: 79
     height: 79
     borderLeft: 0
@@ -418,8 +420,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck08
-    x: 1
-    y: 674
+    x: 914
+    y: 666
     width: 79
     height: 79
     borderLeft: 0
@@ -431,8 +433,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck09
-    x: 81
-    y: 620
+    x: 293
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -444,8 +446,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck10
-    x: 186
-    y: 602
+    x: 293
+    y: 492
     width: 79
     height: 79
     borderLeft: 0
@@ -457,8 +459,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ck11
-    x: 273
-    y: 552
+    x: 293
+    y: 412
     width: 79
     height: 79
     borderLeft: 0
@@ -470,8 +472,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: cqjl
-    x: 353
-    y: 83
+    x: 421
+    y: 815
     width: 227
     height: 69
     borderLeft: 0
@@ -483,8 +485,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d0
-    x: 587
-    y: 714
+    x: 527
+    y: 192
     width: 57
     height: 75
     borderLeft: 0
@@ -496,8 +498,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d1
-    x: 979
-    y: 226
+    x: 969
+    y: 498
     width: 43
     height: 73
     borderLeft: 0
@@ -509,8 +511,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: d2
-    x: 203
-    y: 920
+    x: 124
+    y: 296
     width: 63
     height: 75
     borderLeft: 0
@@ -522,8 +524,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d3
-    x: 908
-    y: 660
+    x: 527
+    y: 342
     width: 59
     height: 75
     borderLeft: 0
@@ -535,8 +537,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d4
-    x: 826
-    y: 735
+    x: 527
+    y: 268
     width: 59
     height: 73
     borderLeft: 0
@@ -548,8 +550,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: d5
-    x: 766
-    y: 690
+    x: 527
+    y: 418
     width: 59
     height: 75
     borderLeft: 0
@@ -561,8 +563,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d6
-    x: 848
-    y: 659
+    x: 909
+    y: 496
     width: 59
     height: 75
     borderLeft: 0
@@ -574,8 +576,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d7
-    x: 513
-    y: 661
+    x: 373
+    y: 3
     width: 73
     height: 73
     borderLeft: 0
@@ -587,8 +589,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: d8
-    x: 786
-    y: 614
+    x: 727
+    y: 496
     width: 61
     height: 75
     borderLeft: 0
@@ -600,8 +602,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: d9
-    x: 938
-    y: 584
+    x: 789
+    y: 496
     width: 59
     height: 75
     borderLeft: 0
@@ -613,8 +615,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: di
-    x: 745
-    y: 317
+    x: 192
+    y: 247
     width: 100
     height: 94
     borderLeft: 0
@@ -626,8 +628,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EX1
-    x: 1
-    y: 490
+    x: 0
+    y: 23
     width: 104
     height: 103
     borderLeft: 0
@@ -639,8 +641,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EX2
-    x: 539
-    y: 179
+    x: 843
+    y: 921
     width: 104
     height: 103
     borderLeft: 0
@@ -652,8 +654,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: EX3
-    x: 919
-    y: 498
+    x: 592
+    y: 660
     width: 88
     height: 85
     borderLeft: 0
@@ -665,8 +667,8 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 10
   - name: fashi
-    x: 424
-    y: 698
+    x: 453
+    y: 247
     width: 71
     height: 77
     borderLeft: 0
@@ -678,8 +680,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: guang
-    x: 353
-    y: 1
+    x: 544
+    y: 943
     width: 298
     height: 81
     borderLeft: 0
@@ -691,8 +693,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hd_1
-    x: 193
-    y: 324
+    x: 605
+    y: 533
     width: 121
     height: 38
     borderLeft: 0
@@ -704,8 +706,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hd_2
-    x: 428
-    y: 417
+    x: 575
+    y: 746
     width: 88
     height: 7
     borderLeft: 0
@@ -717,8 +719,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: hits
-    x: 428
-    y: 433
+    x: 192
+    y: 18
     width: 80
     height: 46
     borderLeft: 0
@@ -730,8 +732,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jianbian
-    x: 315
-    y: 379
+    x: 156
+    y: 255
     width: 23
     height: 40
     borderLeft: 20
@@ -743,8 +745,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jianshi
-    x: 939
-    y: 401
+    x: 105
+    y: 30
     width: 81
     height: 96
     borderLeft: 0
@@ -756,8 +758,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jibidi
-    x: 1
-    y: 459
+    x: 605
+    y: 502
     width: 119
     height: 30
     borderLeft: 111
@@ -769,8 +771,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jie
-    x: 644
-    y: 210
+    x: 293
+    y: 652
     width: 104
     height: 93
     borderLeft: 0
@@ -782,8 +784,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jin-bi-tu-biao
-    x: 315
-    y: 325
+    x: 124
+    y: 263
     width: 31
     height: 32
     borderLeft: 0
@@ -795,8 +797,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jinengerduan
-    x: 881
-    y: 1
+    x: 575
+    y: 767
     width: 140
     height: 47
     borderLeft: 0
@@ -808,8 +810,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: jnk
-    x: 939
-    y: 366
+    x: 843
+    y: 886
     width: 82
     height: 34
     borderLeft: 36
@@ -821,8 +823,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js01
-    x: 473
-    y: 538
+    x: 373
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -834,8 +836,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js02
-    x: 393
-    y: 480
+    x: 453
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -847,8 +849,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js03
-    x: 632
-    y: 553
+    x: 533
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -860,8 +862,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js04
-    x: 716
-    y: 523
+    x: 613
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -873,8 +875,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js05
-    x: 636
-    y: 473
+    x: 773
+    y: 572
     width: 79
     height: 79
     borderLeft: 0
@@ -886,8 +888,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js06
-    x: 509
-    y: 458
+    x: 754
+    y: 666
     width: 79
     height: 79
     borderLeft: 0
@@ -899,8 +901,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js07
-    x: 1
-    y: 594
+    x: 293
+    y: 332
     width: 79
     height: 79
     borderLeft: 0
@@ -912,8 +914,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js08
-    x: 106
-    y: 540
+    x: 293
+    y: 12
     width: 79
     height: 79
     borderLeft: 0
@@ -925,8 +927,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js09
-    x: 193
-    y: 522
+    x: 293
+    y: 252
     width: 79
     height: 79
     borderLeft: 0
@@ -938,8 +940,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: js10
-    x: 313
-    y: 472
+    x: 293
+    y: 92
     width: 79
     height: 79
     borderLeft: 0
@@ -951,8 +953,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: lianji
-    x: 1
-    y: 1
+    x: 192
+    y: 885
     width: 351
     height: 139
     borderLeft: 0
@@ -964,8 +966,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: light
-    x: 193
-    y: 402
+    x: 0
+    y: 127
     width: 119
     height: 119
     borderLeft: 0
@@ -977,8 +979,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: lingjiang
-    x: 652
-    y: 1
+    x: 192
+    y: 815
     width: 228
     height: 69
     borderLeft: 0
@@ -990,8 +992,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 4
   - name: lm01
-    x: 878
-    y: 226
+    x: 192
+    y: 342
     width: 100
     height: 100
     borderLeft: 0
@@ -1003,8 +1005,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: lm02
-    x: 539
-    y: 357
+    x: 192
+    y: 443
     width: 100
     height: 100
     borderLeft: 0
@@ -1016,8 +1018,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: lm03
-    x: 644
-    y: 304
+    x: 192
+    y: 544
     width: 100
     height: 100
     borderLeft: 0
@@ -1029,8 +1031,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: lm04
-    x: 749
-    y: 216
+    x: 192
+    y: 645
     width: 100
     height: 100
     borderLeft: 0
@@ -1042,8 +1044,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: nei-bu-ji-neng-kuang
-    x: 846
-    y: 327
+    x: 192
+    y: 154
     width: 92
     height: 92
     borderLeft: 0
@@ -1055,8 +1057,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: pai1
-    x: 347
-    y: 153
+    x: 0
+    y: 761
     width: 191
     height: 263
     borderLeft: 0
@@ -1068,8 +1070,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: pai2
-    x: 1
-    y: 141
+    x: 0
+    y: 497
     width: 191
     height: 263
     borderLeft: 0
@@ -1081,8 +1083,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: qiangshou
-    x: 706
-    y: 686
+    x: 849
+    y: 496
     width: 59
     height: 75
     borderLeft: 0
@@ -1094,8 +1096,8 @@ MonoBehaviour:
     paddingTop: 2
     paddingBottom: 0
   - name: shib
-    x: 652
-    y: 71
+    x: 192
+    y: 746
     width: 228
     height: 68
     borderLeft: 0
@@ -1107,8 +1109,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: sll
-    x: 833
-    y: 420
+    x: 716
+    y: 750
     width: 91
     height: 21
     borderLeft: 0
@@ -1120,8 +1122,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: sll1
-    x: 741
-    y: 412
+    x: 0
+    y: 1
     width: 91
     height: 21
     borderLeft: 0
@@ -1133,8 +1135,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: teamer
-    x: 539
-    y: 283
+    x: 487
+    y: 672
     width: 104
     height: 73
     borderLeft: 0
@@ -1146,8 +1148,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: teamerblood
-    x: 1009
-    y: 92
+    x: 171
+    y: 395
     width: 12
     height: 9
     borderLeft: 3
@@ -1159,8 +1161,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: tzshibai
-    x: 881
-    y: 49
+    x: 716
+    y: 772
     width: 135
     height: 42
     borderLeft: 0
@@ -1172,8 +1174,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: xian
-    x: 749
-    y: 213
+    x: 544
+    y: 886
     width: 104
     height: 2
     borderLeft: 0
@@ -1185,8 +1187,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: xian_1
-    x: 749
-    y: 210
+    x: 487
+    y: 669
     width: 104
     height: 2
     borderLeft: 0
@@ -1198,8 +1200,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: xian1
-    x: 75
-    y: 1000
+    x: 948
+    y: 916
     width: 72
     height: 11
     borderLeft: 0
@@ -1211,8 +1213,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: xinxi
-    x: 241
-    y: 759
+    x: 105
+    y: 5
     width: 76
     height: 24
     borderLeft: 0
@@ -1224,8 +1226,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: xz
-    x: 339
-    y: 417
+    x: 722
+    y: 888
     width: 88
     height: 54
     borderLeft: 38
@@ -1237,8 +1239,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_bjan
-    x: 241
-    y: 712
+    x: 824
+    y: 447
     width: 76
     height: 46
     borderLeft: 0
@@ -1250,8 +1252,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp
-    x: 315
-    y: 358
+    x: 976
+    y: 895
     width: 27
     height: 20
     borderLeft: 2
@@ -1263,8 +1265,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp_huang
-    x: 317
-    y: 304
+    x: 120
+    y: 145
     width: 27
     height: 20
     borderLeft: 2
@@ -1276,8 +1278,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp_lan
-    x: 317
-    y: 283
+    x: 148
+    y: 145
     width: 27
     height: 20
     borderLeft: 2
@@ -1289,8 +1291,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp_lv
-    x: 317
-    y: 262
+    x: 811
+    y: 922
     width: 27
     height: 20
     borderLeft: 2
@@ -1302,8 +1304,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp_qing
-    x: 317
-    y: 241
+    x: 811
+    y: 901
     width: 27
     height: 20
     borderLeft: 2
@@ -1315,8 +1317,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp_white
-    x: 317
-    y: 220
+    x: 682
+    y: 746
     width: 27
     height: 20
     borderLeft: 2
@@ -1328,8 +1330,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hp_zi
-    x: 317
-    y: 199
+    x: 948
+    y: 895
     width: 27
     height: 20
     borderLeft: 2
@@ -1341,8 +1343,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_boss_hpbg
-    x: 640
-    y: 405
+    x: 876
+    y: 817
     width: 100
     height: 67
     borderLeft: 90
@@ -1354,8 +1356,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_fsan
-    x: 346
-    y: 640
+    x: 587
+    y: 447
     width: 78
     height: 46
     borderLeft: 0
@@ -1367,8 +1369,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_fsan1
-    x: 157
-    y: 845
+    x: 453
+    y: 97
     width: 69
     height: 74
     borderLeft: 0
@@ -1380,8 +1382,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_fsan2
-    x: 870
-    y: 584
+    x: 124
+    y: 422
     width: 67
     height: 74
     borderLeft: 0
@@ -1393,8 +1395,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_txan
-    x: 553
-    y: 614
+    x: 666
+    y: 447
     width: 78
     height: 46
     borderLeft: 0
@@ -1406,8 +1408,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_txan1
-    x: 237
-    y: 784
+    x: 453
+    y: 172
     width: 69
     height: 74
     borderLeft: 0
@@ -1419,8 +1421,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_txan2
-    x: 318
-    y: 765
+    x: 453
+    y: 22
     width: 69
     height: 74
     borderLeft: 0
@@ -1432,8 +1434,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_tzan
-    x: 553
-    y: 567
+    x: 745
+    y: 447
     width: 78
     height: 46
     borderLeft: 0
@@ -1445,8 +1447,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_xgxt_dk
-    x: 589
-    y: 458
+    x: 124
+    y: 379
     width: 46
     height: 42
     borderLeft: 36
@@ -1458,8 +1460,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_xidk
-    x: 193
-    y: 141
+    x: 421
+    y: 757
     width: 153
     height: 57
     borderLeft: 146
@@ -1471,8 +1473,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_zdjd
-    x: 881
-    y: 92
+    x: 421
+    y: 748
     width: 127
     height: 8
     borderLeft: 0
@@ -1484,8 +1486,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zd_zdjd_dk
-    x: 854
-    y: 210
+    x: 120
+    y: 128
     width: 23
     height: 16
     borderLeft: 7
@@ -1497,8 +1499,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: zdsl
-    x: 651
-    y: 140
+    x: 649
+    y: 815
     width: 226
     height: 69
     borderLeft: 0
@@ -1509,8 +1511,20 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: fashi2
+    x: 681
+    y: 653
+    width: 72
+    height: 92
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 2
   mPixelSize: 1
-  mScale: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
   sprites: []
@@ -1525,4 +1539,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
