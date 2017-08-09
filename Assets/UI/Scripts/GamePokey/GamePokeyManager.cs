@@ -178,7 +178,7 @@ public class GamePokeyManager : UnityEngine.MonoBehaviour
                 {
                     if (player.HeroId == 1)
                     {
-                        us.spriteName = "kuang-zhan-shi";
+                        us.spriteName = "fa-shi";
                     }
                     else
                     {
