@@ -468,6 +468,16 @@ public class MainCamera : UnityEngine.MonoBehaviour
                     m_CameraSlipping = false;
                     m_CameraSlippingIn = false;
                     m_InWatchMode = false;
+
+                    if (!m_IsInBattleScene)
+                    {
+                        m_IsInBattleScene = true;
+                        m_CurDistance = m_MaxDistance;
+                    }
+                }
+                else
+                {
+                    m_IsInBattleScene = false;
                 }
 
                 if (m_CameraSlipping)
@@ -1145,4 +1155,6 @@ public class MainCamera : UnityEngine.MonoBehaviour
 
     public static UnityEngine.Vector3 CameraOriginalPosition = UnityEngine.Vector3.zero;
     public static UnityEngine.Quaternion CameraOriginalRotation = UnityEngine.Quaternion.identity;
+
+    private bool m_IsInBattleScene = false;
 }
