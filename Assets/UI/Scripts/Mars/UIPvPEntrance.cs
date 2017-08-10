@@ -64,7 +64,8 @@ public class UIPvPEntrance : UnityEngine.MonoBehaviour
             levelLockCfg = LevelLockProvider.Instance.GetDataById(c_ArenaUnlockLevelId);
             if (levelLockCfg != null)
             {
-                m_ArenaUnlockLevel = levelLockCfg.m_Level;
+                m_ArenaUnlockLevel = 60;
+                // m_ArenaUnlockLevel = levelLockCfg.m_Level;
             }
 
             List<GowTimeConfig> timeCfgs = GowConfigProvider.Instance.GowTimeConfigMgr.GetData();
