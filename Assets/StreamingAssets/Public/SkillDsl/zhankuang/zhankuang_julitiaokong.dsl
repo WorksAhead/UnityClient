@@ -8,7 +8,7 @@
 		addbreaksection(20, 0, 1000);
 		addbreaksection(30, 900, 1000);
 		movecontrol(true);
-		animation("zhankuang_julitiaokong_01");
+		animation("hero_skill03");
 		movechild(0, "1_JianShi_w_01", "ef_rightweapon01");
 		
 		//findmovetarget(0, vector3(0, 0, 0), 5, 60, 0.8, 0.2, 0, -2.5);
@@ -19,25 +19,25 @@
 				
 		addimpacttoself(0, 16040102, 0);
 		//帧1
-		setanimspeed(33, "zhankuang_julitiaokong_01", 2.5);
+		setanimspeed(33, "hero_skill03", 2.5);
 
 		//帧11
-		setanimspeed(200, "zhankuang_julitiaokong_01", 1.5);
+		setanimspeed(200, "hero_skill03", 1.5);
 
 		//帧14
-		setanimspeed(266, "zhankuang_julitiaokong_01", 2);
+		setanimspeed(266, "hero_skill03", 2);
 
 		//帧18
-		setanimspeed(333, "zhankuang_julitiaokong_01", 1.5);
+		setanimspeed(333, "hero_skill03", 1.5);
 
 		//帧24
-		setanimspeed(466, "zhankuang_julitiaokong_01", 0.125);
+		setanimspeed(466, "hero_skill03", 0.125);
 		
 		//帧25
-		setanimspeed(733, "zhankuang_julitiaokong_01", 0.5);
+		setanimspeed(733, "hero_skill03", 0.5);
 
 		//帧27
-		setanimspeed(900, "zhankuang_julitiaokong_01", 1);
+		setanimspeed(900, "hero_skill03", 1);
 		//帧48
 		
 		playsound(350, "skill0401", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/zhankuang_julitiaokong_01", false);
@@ -82,29 +82,29 @@ skill(160402)
 		addbreaksection(20, 0, 1933);
 		addbreaksection(30, 600, 1933);
 		movecontrol(true);
-		animation("zhankuang_julitiaokong_02");
+		animation("hero_skill03");
 		movechild(0, "1_JianShi_w_01", "ef_rightweapon01");
 		enablechangedir(0, 200);
 		addimpacttoself(0, 16040299, -1);	
 		//startcurvemove(0, true, 0.2, 0, 0, 1, 0, 0, 10, 0.15, 0, 0, 3, 0, 0, -20, 0.2, 0, 0, 0, 0, 0, 0, 0.3, 0, 0, 20, 0, 0, -60);
 		
 		//帧1
-		setanimspeed(33, "zhankuang_julitiaokong_02", 2.5);
+		setanimspeed(33, "hero_skill03", 2.5);
 
 		//帧11
-		setanimspeed(166, "zhankuang_julitiaokong_02", 1);
+		setanimspeed(166, "hero_skill03", 1);
 
 		//帧14
-		setanimspeed(266, "zhankuang_julitiaokong_02", 2);
+		setanimspeed(266, "hero_skill03", 2);
 		
 		//帧22
-		setanimspeed(400, "zhankuang_julitiaokong_02", 1);
+		setanimspeed(400, "hero_skill03", 1);
 
 		//帧24
-		setanimspeed(466, "zhankuang_julitiaokong_02", 0.1);
+		setanimspeed(466, "hero_skill03", 0.1);
 		
 		//帧26
-		setanimspeed(1133, "zhankuang_julitiaokong_02", 1);
+		setanimspeed(1133, "hero_skill03", 1);
 		//帧50
 		
 		playsound(300, "skill0411", "Sound/zhankuang/zhankuang_sound", 1500, "Sound/zhankuang/zhankuang_julitiaokong_02", false);
