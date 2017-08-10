@@ -522,7 +522,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
                 OpenAndCloseWindow("Store");
                 break;
             case "Entrance-Award":
-                OpenAndCloseWindow("ActivityAward");
+                //OpenAndCloseWindow("ActivityAward");
                 break;
             case "Entrance-Settings":
                 break;
@@ -932,18 +932,47 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
 
     public void OnSystemSettingClicked()
     {
-        GfxSystem.SetEquipmentColor(LobbyClient.Instance.CurrentRole.HeroId, EquipmentType.E_Clothes, 
-            new UnityEngine.Color(UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), 1.0f));
+        //GfxSystem.SetEquipmentColor(LobbyClient.Instance.CurrentRole.HeroId, EquipmentType.E_Clothes, 
+            //new UnityEngine.Color(UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), 1.0f));
     }
 
-    public void OnNewBieRewardClicked()
+    public void OnPVEClicked()
     {
-        PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
+        UIManager.Instance.ShowWindowByName("Trial");
     }
 
     public void OnNetworkSpeedupClicked()
     {
-        UIManager.Instance.ShowWindowByName("Trial");
+        bool isAlreadySpeedup = !DelayManager.IsDelayEnabled;
+        Action<bool> fun_y = new Action<bool>(delegate (bool selected)
+        {
+            if (selected)
+            {
+                string info = "开启网络加速成功！";
+                DelayManager.IsDelayEnabled = false;
+                GfxSystem.PublishGfxEvent("ge_highlight_prompt", "ui", info);
+            }
+        });
+
+        Action<bool> fun_n = new Action<bool>(delegate (bool selected)
+        {
+            if (selected)
+            {
+                DelayManager.IsDelayEnabled = true;
+                string info = "关闭网络加速成功！";
+                GfxSystem.PublishGfxEvent("ge_highlight_prompt", "ui", info);
+            }
+        });
+
+        if (isAlreadySpeedup)
+        {
+            ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_yesornot", "ui", "关闭网络加速", "确认关闭", fun_n);
+        }
+        else
+        {
+            ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_yesornot", "ui", "开启网络加速", "确认开启", fun_y);
+        }
+        
     }
 
     public void OnPVPClicked()
@@ -955,7 +984,7 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
     {
         for (int index = 0; index < buttons.Length; ++index)
         {
-            if (buttons[index] != null && /*buttons[index].name != "Entrance-Mission" && buttons[index].name != "Entrance-Shop" && buttons[index].name != "Entrance-Award"*/buttons[index].name != "Entrance-Settings")
+            if (buttons[index] != null && /*buttons[index].name != "Entrance-Mission" && buttons[index].name != "Entrance-Shop" && buttons[index].name != "Entrance-Award"*/buttons[index].name != "Entrance-Award")
                 NGUITools.SetActive(buttons[index], false);
         }
     }
