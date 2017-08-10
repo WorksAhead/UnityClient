@@ -5,27 +5,27 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400000}
-  - 114: {fileID: 11400000}
-  - 114: {fileID: 11400046}
-  - 114: {fileID: 11400122}
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  - component: {fileID: 11400046}
+  - component: {fileID: 11400122}
   m_Layer: 9
   m_Name: blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400002}
+  - component: {fileID: 400002}
   m_Layer: 9
   m_Name: info2
   m_TagString: Untagged
@@ -38,12 +38,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400004}
-  - 114: {fileID: 11400002}
-  - 114: {fileID: 11400066}
-  - 114: {fileID: 11400058}
+  - component: {fileID: 400004}
+  - component: {fileID: 11400002}
+  - component: {fileID: 11400066}
+  - component: {fileID: 11400058}
   m_Layer: 9
   m_Name: Lv
   m_TagString: Untagged
@@ -56,10 +56,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400006}
-  - 114: {fileID: 11400004}
+  - component: {fileID: 400006}
+  - component: {fileID: 11400004}
   m_Layer: 9
   m_Name: name
   m_TagString: Untagged
@@ -72,12 +72,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400008}
-  - 114: {fileID: 11400006}
-  - 114: {fileID: 11400064}
-  - 114: {fileID: 11400056}
+  - component: {fileID: 400008}
+  - component: {fileID: 11400006}
+  - component: {fileID: 11400064}
+  - component: {fileID: 11400056}
   m_Layer: 9
   m_Name: zhandouli
   m_TagString: Untagged
@@ -90,10 +90,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400010}
-  - 114: {fileID: 11400008}
+  - component: {fileID: 400010}
+  - component: {fileID: 11400008}
   m_Layer: 9
   m_Name: value
   m_TagString: Untagged
@@ -106,10 +106,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400012}
-  - 114: {fileID: 11400010}
+  - component: {fileID: 400012}
+  - component: {fileID: 11400010}
   m_Layer: 9
   m_Name: value
   m_TagString: Untagged
@@ -122,12 +122,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400014}
-  - 114: {fileID: 11400012}
-  - 114: {fileID: 11400068}
-  - 114: {fileID: 11400060}
+  - component: {fileID: 400014}
+  - component: {fileID: 11400012}
+  - component: {fileID: 11400068}
+  - component: {fileID: 11400060}
   m_Layer: 9
   m_Name: zhandouli
   m_TagString: Untagged
@@ -140,10 +140,10 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400016}
-  - 114: {fileID: 11400014}
+  - component: {fileID: 400016}
+  - component: {fileID: 11400014}
   m_Layer: 9
   m_Name: name
   m_TagString: Untagged
@@ -156,12 +156,12 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400018}
-  - 114: {fileID: 11400016}
-  - 114: {fileID: 11400070}
-  - 114: {fileID: 11400062}
+  - component: {fileID: 400018}
+  - component: {fileID: 11400016}
+  - component: {fileID: 11400070}
+  - component: {fileID: 11400062}
   m_Layer: 9
   m_Name: Lv
   m_TagString: Untagged
@@ -174,9 +174,9 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400020}
+  - component: {fileID: 400020}
   m_Layer: 9
   m_Name: info1
   m_TagString: Untagged
@@ -189,27 +189,27 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400022}
-  - 114: {fileID: 11400018}
-  - 114: {fileID: 11400042}
-  - 114: {fileID: 11400118}
+  - component: {fileID: 400022}
+  - component: {fileID: 11400018}
+  - component: {fileID: 11400042}
+  - component: {fileID: 11400118}
   m_Layer: 9
   m_Name: bc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100024
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400024}
+  - component: {fileID: 400024}
   m_Layer: 9
   m_Name: VS
   m_TagString: Untagged
@@ -222,70 +222,70 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400026}
-  - 114: {fileID: 11400022}
-  - 114: {fileID: 11400074}
-  - 114: {fileID: 11400048}
-  - 114: {fileID: 11400124}
+  - component: {fileID: 400026}
+  - component: {fileID: 11400022}
+  - component: {fileID: 11400074}
+  - component: {fileID: 11400048}
+  - component: {fileID: 11400124}
   m_Layer: 9
   m_Name: player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100028
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400028}
-  - 114: {fileID: 11400024}
-  - 114: {fileID: 11400076}
-  - 114: {fileID: 11400050}
-  - 114: {fileID: 11400126}
+  - component: {fileID: 400028}
+  - component: {fileID: 11400024}
+  - component: {fileID: 11400076}
+  - component: {fileID: 11400050}
+  - component: {fileID: 11400126}
   m_Layer: 9
   m_Name: player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100030
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400030}
-  - 114: {fileID: 11400026}
-  - 114: {fileID: 11400044}
-  - 114: {fileID: 11400120}
+  - component: {fileID: 400030}
+  - component: {fileID: 11400026}
+  - component: {fileID: 11400044}
+  - component: {fileID: 11400120}
   m_Layer: 9
   m_Name: red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &100032
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400032}
-  - 114: {fileID: 11400028}
-  - 54: {fileID: 5400000}
-  - 114: {fileID: 11400140}
-  - 114: {fileID: 11400142}
-  - 65: {fileID: 6500000}
+  - component: {fileID: 400032}
+  - component: {fileID: 11400028}
+  - component: {fileID: 5400000}
+  - component: {fileID: 11400140}
+  - component: {fileID: 11400142}
+  - component: {fileID: 6500000}
   m_Layer: 9
   m_Name: Marsloading
   m_TagString: Untagged
@@ -298,15 +298,15 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400034}
-  - 114: {fileID: 11400030}
-  - 114: {fileID: 11400084}
-  - 114: {fileID: 11400082}
-  - 114: {fileID: 11400080}
-  - 114: {fileID: 11400078}
-  - 114: {fileID: 11400148}
+  - component: {fileID: 400034}
+  - component: {fileID: 11400030}
+  - component: {fileID: 11400084}
+  - component: {fileID: 11400082}
+  - component: {fileID: 11400080}
+  - component: {fileID: 11400078}
+  - component: {fileID: 11400148}
   m_Layer: 9
   m_Name: fight
   m_TagString: Untagged
@@ -319,14 +319,14 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400036}
-  - 114: {fileID: 11400032}
-  - 114: {fileID: 11400092}
-  - 114: {fileID: 11400088}
-  - 114: {fileID: 11400086}
-  - 114: {fileID: 11400090}
+  - component: {fileID: 400036}
+  - component: {fileID: 11400032}
+  - component: {fileID: 11400092}
+  - component: {fileID: 11400088}
+  - component: {fileID: 11400086}
+  - component: {fileID: 11400090}
   m_Layer: 9
   m_Name: 1
   m_TagString: Untagged
@@ -339,14 +339,14 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400038}
-  - 114: {fileID: 11400034}
-  - 114: {fileID: 11400100}
-  - 114: {fileID: 11400096}
-  - 114: {fileID: 11400094}
-  - 114: {fileID: 11400098}
+  - component: {fileID: 400038}
+  - component: {fileID: 11400034}
+  - component: {fileID: 11400100}
+  - component: {fileID: 11400096}
+  - component: {fileID: 11400094}
+  - component: {fileID: 11400098}
   m_Layer: 9
   m_Name: 2
   m_TagString: Untagged
@@ -359,15 +359,15 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400040}
-  - 114: {fileID: 11400036}
-  - 114: {fileID: 11400040}
-  - 114: {fileID: 11400104}
-  - 114: {fileID: 11400102}
-  - 114: {fileID: 11400106}
-  - 114: {fileID: 11400144}
+  - component: {fileID: 400040}
+  - component: {fileID: 11400036}
+  - component: {fileID: 11400040}
+  - component: {fileID: 11400104}
+  - component: {fileID: 11400102}
+  - component: {fileID: 11400106}
+  - component: {fileID: 11400144}
   m_Layer: 9
   m_Name: 3
   m_TagString: Untagged
@@ -380,9 +380,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400042}
+  - component: {fileID: 400042}
   m_Layer: 9
   m_Name: time
   m_TagString: Untagged
@@ -395,9 +395,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400044}
+  - component: {fileID: 400044}
   m_Layer: 9
   m_Name: loading
   m_TagString: Untagged
@@ -410,15 +410,15 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400046}
-  - 114: {fileID: 11400072}
-  - 114: {fileID: 11400020}
-  - 114: {fileID: 11400054}
-  - 114: {fileID: 11400052}
-  - 114: {fileID: 11400038}
-  - 114: {fileID: 11400146}
+  - component: {fileID: 400046}
+  - component: {fileID: 11400072}
+  - component: {fileID: 11400020}
+  - component: {fileID: 11400054}
+  - component: {fileID: 11400052}
+  - component: {fileID: 11400038}
+  - component: {fileID: 11400146}
   m_Layer: 9
   m_Name: S
   m_TagString: Untagged
@@ -431,14 +431,14 @@ GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400048}
-  - 114: {fileID: 11400108}
-  - 114: {fileID: 11400116}
-  - 114: {fileID: 11400114}
-  - 114: {fileID: 11400112}
-  - 114: {fileID: 11400110}
+  - component: {fileID: 400048}
+  - component: {fileID: 11400108}
+  - component: {fileID: 11400116}
+  - component: {fileID: 11400114}
+  - component: {fileID: 11400112}
+  - component: {fileID: 11400110}
   m_Layer: 9
   m_Name: V
   m_TagString: Untagged
@@ -451,12 +451,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400050}
-  - 114: {fileID: 11400136}
-  - 114: {fileID: 11400134}
-  - 114: {fileID: 11400132}
+  - component: {fileID: 400050}
+  - component: {fileID: 11400136}
+  - component: {fileID: 11400134}
+  - component: {fileID: 11400132}
   m_Layer: 9
   m_Name: fight_white
   m_TagString: Untagged
@@ -469,12 +469,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400052}
-  - 114: {fileID: 11400138}
-  - 114: {fileID: 11400130}
-  - 114: {fileID: 11400128}
+  - component: {fileID: 400052}
+  - component: {fileID: 11400138}
+  - component: {fileID: 11400130}
+  - component: {fileID: 11400128}
   m_Layer: 9
   m_Name: fight_whiteSan
   m_TagString: Untagged
@@ -487,9 +487,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400054}
+  - component: {fileID: 400054}
   m_Layer: 0
   m_Name: PosVS
   m_TagString: Untagged
@@ -502,9 +502,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400056}
+  - component: {fileID: 400056}
   m_Layer: 0
   m_Name: PosCount
   m_TagString: Untagged
@@ -517,9 +517,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400058}
+  - component: {fileID: 400058}
   m_Layer: 0
   m_Name: PosFight
   m_TagString: Untagged
@@ -532,9 +532,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400060}
+  - component: {fileID: 400060}
   m_Layer: 0
   m_Name: PosBodyR
   m_TagString: Untagged
@@ -547,9 +547,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 400062}
+  - component: {fileID: 400062}
   m_Layer: 0
   m_Name: PosBodyL
   m_TagString: Untagged
@@ -564,10 +564,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 426.666687, y: 19, z: 0}
+  m_LocalPosition: {x: 683, y: 19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400044}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -581,6 +583,8 @@ Transform:
   - {fileID: 400004}
   - {fileID: 400008}
   m_Father: {fileID: 400022}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400004
 Transform:
   m_ObjectHideFlags: 1
@@ -593,6 +597,8 @@ Transform:
   m_Children:
   - {fileID: 400006}
   m_Father: {fileID: 400002}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -604,6 +610,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400004}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400008
 Transform:
   m_ObjectHideFlags: 1
@@ -616,6 +624,8 @@ Transform:
   m_Children:
   - {fileID: 400010}
   m_Father: {fileID: 400002}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400010
 Transform:
   m_ObjectHideFlags: 1
@@ -627,6 +637,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400008}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400012
 Transform:
   m_ObjectHideFlags: 1
@@ -638,6 +650,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400014
 Transform:
   m_ObjectHideFlags: 1
@@ -650,6 +664,8 @@ Transform:
   m_Children:
   - {fileID: 400012}
   m_Father: {fileID: 400020}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400016
 Transform:
   m_ObjectHideFlags: 1
@@ -661,6 +677,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400018}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
@@ -673,6 +691,8 @@ Transform:
   m_Children:
   - {fileID: 400016}
   m_Father: {fileID: 400020}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400020
 Transform:
   m_ObjectHideFlags: 1
@@ -686,6 +706,8 @@ Transform:
   - {fileID: 400018}
   - {fileID: 400014}
   m_Father: {fileID: 400022}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400022
 Transform:
   m_ObjectHideFlags: 1
@@ -693,12 +715,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -111, z: 0}
+  m_LocalPosition: {x: 0, y: -143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
   - {fileID: 400002}
   m_Father: {fileID: 400044}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400024
 Transform:
   m_ObjectHideFlags: 1
@@ -712,6 +736,8 @@ Transform:
   - {fileID: 400046}
   - {fileID: 400048}
   m_Father: {fileID: 400044}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400026
 Transform:
   m_ObjectHideFlags: 1
@@ -723,17 +749,21 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400044}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400028
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100028}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   m_LocalPosition: {x: -640, y: 73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400044}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400030
 Transform:
   m_ObjectHideFlags: 1
@@ -741,10 +771,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -426.666687, y: 19, z: 0}
+  m_LocalPosition: {x: -683, y: 19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400044}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400032
 Transform:
   m_ObjectHideFlags: 1
@@ -766,6 +798,8 @@ Transform:
   - {fileID: 400050}
   - {fileID: 400052}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400034
 Transform:
   m_ObjectHideFlags: 1
@@ -777,6 +811,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400036
 Transform:
   m_ObjectHideFlags: 1
@@ -788,6 +824,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400042}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400038
 Transform:
   m_ObjectHideFlags: 1
@@ -799,6 +837,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400042}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400040
 Transform:
   m_ObjectHideFlags: 1
@@ -810,6 +850,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400042}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400042
 Transform:
   m_ObjectHideFlags: 1
@@ -824,6 +866,8 @@ Transform:
   - {fileID: 400040}
   - {fileID: 400038}
   m_Father: {fileID: 400032}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400044
 Transform:
   m_ObjectHideFlags: 1
@@ -841,6 +885,8 @@ Transform:
   - {fileID: 400030}
   - {fileID: 400024}
   m_Father: {fileID: 400032}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400046
 Transform:
   m_ObjectHideFlags: 1
@@ -852,6 +898,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400048
 Transform:
   m_ObjectHideFlags: 1
@@ -863,6 +911,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400024}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400050
 Transform:
   m_ObjectHideFlags: 1
@@ -874,6 +924,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400052
 Transform:
   m_ObjectHideFlags: 1
@@ -885,6 +937,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400054
 Transform:
   m_ObjectHideFlags: 1
@@ -896,6 +950,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400056
 Transform:
   m_ObjectHideFlags: 1
@@ -907,6 +963,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400058
 Transform:
   m_ObjectHideFlags: 1
@@ -918,6 +976,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400060
 Transform:
   m_ObjectHideFlags: 1
@@ -929,6 +989,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &400062
 Transform:
   m_ObjectHideFlags: 1
@@ -940,6 +1002,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400032}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -949,7 +1013,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -980,7 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: -42
   rightAnchor:
     target: {fileID: 400032}
@@ -988,34 +1052,39 @@ MonoBehaviour:
     absolute: 0
   bottomAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: -78
   topAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: 116
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 5
-  mWidth: 469
+  mWidth: 725
   mHeight: 194
   mDepth: 0
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.41752577
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: blue
+  aspectRatio: 2.4175258
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: blue
+  mFillCenter: 1
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1043,15 +1112,17 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 5
   mWidth: 102
   mHeight: 30
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.4000001
+  aspectRatio: 3.4
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 11b91e79f888904469368c609e22f5e8, type: 3}
   mFont: {fileID: 0}
@@ -1066,12 +1137,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1104,11 +1180,13 @@ MonoBehaviour:
     target: {fileID: 400004}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 149
   mHeight: 30
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1127,12 +1205,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1165,15 +1248,17 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
-  mColor: {r: 1, g: .641379297, b: 0, a: 1}
+  updateAnchors: 1
+  mColor: {r: 1, g: 0.6413793, b: 0, a: 1}
   mPivot: 5
-  mWidth: 82
+  mWidth: 80
   mHeight: 26
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.15384626
+  aspectRatio: 3.0769231
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 11b91e79f888904469368c609e22f5e8, type: 3}
   mFont: {fileID: 0}
@@ -1188,12 +1273,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 2
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1226,11 +1316,13 @@ MonoBehaviour:
     target: {fileID: 400008}
     relative: 1
     absolute: 0
-  mColor: {r: 1, g: .641379297, b: 0, a: 1}
+  updateAnchors: 1
+  mColor: {r: 1, g: 0.6413793, b: 0, a: 1}
   mPivot: 3
   mWidth: 156
   mHeight: 26
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1249,12 +1341,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1287,11 +1384,13 @@ MonoBehaviour:
     target: {fileID: 400014}
     relative: 1
     absolute: 0
-  mColor: {r: 1, g: .641379297, b: 0, a: 1}
+  updateAnchors: 1
+  mColor: {r: 1, g: 0.6413793, b: 0, a: 1}
   mPivot: 3
   mWidth: 156
   mHeight: 26
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1310,12 +1409,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1348,15 +1452,17 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
-  mColor: {r: 1, g: .641379297, b: 0, a: 1}
+  updateAnchors: 1
+  mColor: {r: 1, g: 0.6413793, b: 0, a: 1}
   mPivot: 5
-  mWidth: 82
+  mWidth: 80
   mHeight: 26
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.15384626
+  aspectRatio: 3.0769231
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 11b91e79f888904469368c609e22f5e8, type: 3}
   mFont: {fileID: 0}
@@ -1371,12 +1477,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 2
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1409,11 +1520,13 @@ MonoBehaviour:
     target: {fileID: 400018}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 149
   mHeight: 30
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1432,12 +1545,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1470,15 +1588,17 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 5
   mWidth: 102
   mHeight: 30
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.4000001
+  aspectRatio: 3.4
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 11b91e79f888904469368c609e22f5e8, type: 3}
   mFont: {fileID: 0}
@@ -1493,12 +1613,17 @@ MonoBehaviour:
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
   mOverflow: 0
-  mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: .699999988, g: .699999988, b: .699999988, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
   mShrinkToFit: 0
   mMaxLineWidth: 0
   mMaxLineHeight: 0
@@ -1529,30 +1654,35 @@ MonoBehaviour:
     absolute: 174
   topAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: -76
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 853
-  mHeight: 70
+  mWidth: 1365
+  mHeight: 134
   mDepth: 2
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 12.1857147
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: bc
+  aspectRatio: 12.185715
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: bc
+  mFillCenter: 1
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1569,23 +1699,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .150000006
-  duration: .75
+  delay: 0.15
+  duration: 0.75
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -1618,28 +1752,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 300
   mHeight: 341
   mDepth: 1
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .879765391
-  mAtlas: {fileID: 11400000, guid: 4c603f8fa81c59f4a93a5e3c3d81450a, type: 2}
-  mSpriteName: kuangzhan_heling
+  aspectRatio: 0.8797654
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 4c603f8fa81c59f4a93a5e3c3d81450a, type: 2}
+  mSpriteName: kuangzhan_heling
+  mFillCenter: 1
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1667,28 +1806,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 300
   mHeight: 341
   mDepth: 1
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .879765391
-  mAtlas: {fileID: 11400000, guid: 4c603f8fa81c59f4a93a5e3c3d81450a, type: 2}
-  mSpriteName: cike_heling
+  aspectRatio: 0.8797654
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 4c603f8fa81c59f4a93a5e3c3d81450a, type: 2}
+  mSpriteName: cike_heling
+  mFillCenter: 1
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1706,38 +1850,43 @@ MonoBehaviour:
     absolute: 0
   rightAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: 42
   bottomAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: -78
   topAnchor:
     target: {fileID: 400032}
-    relative: .5
+    relative: 0.5
     absolute: 116
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
-  mWidth: 469
+  mWidth: 725
   mHeight: 194
   mDepth: 0
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.41752577
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: red
+  aspectRatio: 2.4175258
   mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: red
+  mFillCenter: 1
 --- !u!114 &11400028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1765,20 +1914,28 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   showInPanelTool: 1
   generateNormals: 0
+  generateUV2: 0
+  shadowMode: 0
   widgetsAreStatic: 0
   cullWhileDragging: 0
   alwaysOnScreen: 0
   anchorOffset: 0
+  softBorderPadding: 1
   renderQueue: 0
   startingRenderQueue: 3000
+  mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
   mDepth: 151
+  mSortingOrder: 0
+  mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
+  useSortingOrder: 0
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1806,28 +1963,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 430
   mHeight: 98
   mDepth: 11
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.38775492
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: fight
+  aspectRatio: 4.387755
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: fight
+  mFillCenter: 1
 --- !u!114 &11400032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1855,28 +2017,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 76
   mHeight: 96
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .791666687
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: time1
+  aspectRatio: 0.7916667
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: time1
+  mFillCenter: 1
 --- !u!114 &11400034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1904,28 +2071,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 76
   mHeight: 96
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .791666687
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: time2
+  aspectRatio: 0.7916667
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: time2
+  mFillCenter: 1
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1953,28 +2125,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 76
   mHeight: 96
   mDepth: 10
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .791666687
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: time3
+  aspectRatio: 0.7916667
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: time3
+  mFillCenter: 1
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1991,23 +2168,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.04999995
-  duration: .300000012
+  delay: 2.05
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2030,23 +2211,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.20000005
-  duration: .25
+  delay: 2.2
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2068,23 +2253,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.29999995
-  duration: .219999999
+  delay: 2.3
+  duration: 0.22
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2107,23 +2296,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.22000003
-  duration: .379999995
+  delay: 2.22
+  duration: 0.38
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2146,23 +2339,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2.25
-  duration: .379999995
+  duration: 0.38
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2185,33 +2382,38 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.035912741
-      outSlope: -.035912741
+      inSlope: -0.03591274
+      outSlope: -0.03591274
       tangentMode: 0
-    - time: .237149969
-      value: -.0323293209
-      inSlope: -.293810457
-      outSlope: -.293810457
+    - serializedVersion: 2
+      time: 0.23714997
+      value: -0.03232932
+      inSlope: -0.29381046
+      outSlope: -0.29381046
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 3.12463069
-      outSlope: 3.12463069
+      inSlope: 3.1246307
+      outSlope: 3.1246307
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2
-  duration: .550000012
+  duration: 0.55
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 210, y: 72.6999969, z: 0}
-  to: {x: 640, y: 72.6999969, z: 0}
+  from: {x: 210, y: 72.7, z: 0}
+  to: {x: 640, y: 72.7, z: 0}
   worldSpace: 0
 --- !u!114 &11400050
 MonoBehaviour:
@@ -2229,33 +2431,38 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.035912741
-      outSlope: -.035912741
+      inSlope: -0.03591274
+      outSlope: -0.03591274
       tangentMode: 0
-    - time: .237149969
-      value: -.0323293209
-      inSlope: -.293810457
-      outSlope: -.293810457
+    - serializedVersion: 2
+      time: 0.23714997
+      value: -0.03232932
+      inSlope: -0.29381046
+      outSlope: -0.29381046
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 3.12463069
-      outSlope: 3.12463069
+      inSlope: 3.1246307
+      outSlope: 3.1246307
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2
-  duration: .550000012
+  duration: 0.55
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: -210, y: 72.6999969, z: 0}
-  to: {x: -640, y: 72.6999969, z: 0}
+  from: {x: -210, y: 72.7, z: 0}
+  to: {x: -640, y: 72.7, z: 0}
   worldSpace: 0
 --- !u!114 &11400052
 MonoBehaviour:
@@ -2273,23 +2480,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.04999995
-  duration: .25
+  delay: 2.05
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2311,43 +2522,51 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: -.00271002296
-      inSlope: 2.09229469
-      outSlope: .438268721
+    - serializedVersion: 2
+      time: 0
+      value: -0.002710023
+      inSlope: 2.0922947
+      outSlope: 0.43826872
       tangentMode: 1
-    - time: .669787049
-      value: .998964787
-      inSlope: 2.98795152
-      outSlope: -.909597695
+    - serializedVersion: 2
+      time: 0.66978705
+      value: 0.9989648
+      inSlope: 2.9879515
+      outSlope: -0.9095977
       tangentMode: 1
-    - time: .764784992
-      value: .955244601
-      inSlope: .00357557344
-      outSlope: .00357557344
+    - serializedVersion: 2
+      time: 0.764785
+      value: 0.9552446
+      inSlope: 0.0035755734
+      outSlope: 0.0035755734
       tangentMode: 0
-    - time: .869733095
-      value: 1.00271976
-      inSlope: 1.01824725
-      outSlope: -.706896782
+    - serializedVersion: 2
+      time: 0.8697331
+      value: 1.0027198
+      inSlope: 1.0182472
+      outSlope: -0.7068968
       tangentMode: 1
-    - time: .939320922
-      value: .982468486
-      inSlope: .028014183
-      outSlope: .028014183
+    - serializedVersion: 2
+      time: 0.9393209
+      value: 0.9824685
+      inSlope: 0.028014183
+      outSlope: 0.028014183
       tangentMode: 1
-    - time: .999764085
-      value: .997301877
-      inSlope: .557189405
-      outSlope: -.0125169754
+    - serializedVersion: 2
+      time: 0.9997641
+      value: 0.9973019
+      inSlope: 0.5571894
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .150000006
-  duration: .75
+  delay: 0.15
+  duration: 0.75
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2370,23 +2589,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2
-  duration: .600000024
+  duration: 0.6
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2409,27 +2632,31 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1.89999998
-  duration: .5
+  delay: 1.9
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: -246.470001, y: -164, z: 0}
+  from: {x: -246.47, y: -164, z: 0}
   to: {x: 200, y: -164, z: 0}
   worldSpace: 0
 --- !u!114 &11400060
@@ -2448,28 +2675,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 1.89999998
-  duration: .5
+  delay: 1.9
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: -176, y: -192.899994, z: 0}
-  to: {x: -610, y: -192.899994, z: 0}
+  from: {x: -176, y: -192.9, z: 0}
+  to: {x: -610, y: -192.9, z: 0}
   worldSpace: 0
 --- !u!114 &11400062
 MonoBehaviour:
@@ -2487,27 +2718,31 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2
-  duration: .5
+  duration: 0.5
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: -246.470001, y: -164, z: 0}
+  from: {x: -246.47, y: -164, z: 0}
   to: {x: -680, y: -164, z: 0}
   worldSpace: 0
 --- !u!114 &11400064
@@ -2526,23 +2761,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .699999988
+  duration: 0.7
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2565,28 +2804,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .200000003
-  duration: .600000024
+  delay: 0.2
+  duration: 0.6
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: 200, y: -164, z: 0}
-  to: {x: -246.470001, y: -164, z: 0}
+  to: {x: -246.47, y: -164, z: 0}
   worldSpace: 0
 --- !u!114 &11400068
 MonoBehaviour:
@@ -2604,28 +2847,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .200000003
-  duration: .600000024
+  delay: 0.2
+  duration: 0.6
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: -610, y: -192.899994, z: 0}
-  to: {x: -176, y: -192.899994, z: 0}
+  from: {x: -610, y: -192.9, z: 0}
+  to: {x: -176, y: -192.9, z: 0}
   worldSpace: 0
 --- !u!114 &11400070
 MonoBehaviour:
@@ -2643,28 +2890,32 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
-  duration: .699999988
+  duration: 0.7
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: -680, y: -164, z: 0}
-  to: {x: -246.470001, y: -164, z: 0}
+  to: {x: -246.47, y: -164, z: 0}
   worldSpace: 0
 --- !u!114 &11400072
 MonoBehaviour:
@@ -2693,28 +2944,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 203
   mHeight: 143
   mDepth: 3
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.41958046
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: V_s
+  aspectRatio: 1.4195805
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: V_s
+  mFillCenter: 1
 --- !u!114 &11400074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2731,38 +2987,44 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 2.09229469
-      outSlope: 1.96155608
+      inSlope: 2.0922947
+      outSlope: 1.9615561
       tangentMode: 1
-    - time: .16520901
-      value: .734997332
-      inSlope: 1.77309752
-      outSlope: 1.77309752
+    - serializedVersion: 2
+      time: 0.16520901
+      value: 0.73499733
+      inSlope: 1.7730975
+      outSlope: 1.7730975
       tangentMode: 0
-    - time: .29953748
-      value: .850754976
-      inSlope: .326106787
-      outSlope: .326106787
+    - serializedVersion: 2
+      time: 0.29953748
+      value: 0.850755
+      inSlope: 0.3261068
+      outSlope: 0.3261068
       tangentMode: 0
-    - time: .999764085
+    - serializedVersion: 2
+      time: 0.9997641
       value: 1.0000118
-      inSlope: .113332585
-      outSlope: -.0125169754
+      inSlope: 0.113332585
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
   duration: 2
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 640, y: 72.6999969, z: 0}
-  to: {x: 210, y: 72.6999969, z: 0}
+  from: {x: 640, y: 72.7, z: 0}
+  to: {x: 210, y: 72.7, z: 0}
   worldSpace: 0
 --- !u!114 &11400076
 MonoBehaviour:
@@ -2780,38 +3042,44 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 2.09229469
-      outSlope: 1.96155608
+      inSlope: 2.0922947
+      outSlope: 1.9615561
       tangentMode: 1
-    - time: .16520901
-      value: .734997332
-      inSlope: 1.77309752
-      outSlope: 1.77309752
+    - serializedVersion: 2
+      time: 0.16520901
+      value: 0.73499733
+      inSlope: 1.7730975
+      outSlope: 1.7730975
       tangentMode: 0
-    - time: .29953748
-      value: .850754976
-      inSlope: .326106787
-      outSlope: .326106787
+    - serializedVersion: 2
+      time: 0.29953748
+      value: 0.850755
+      inSlope: 0.3261068
+      outSlope: 0.3261068
       tangentMode: 0
-    - time: .999764085
+    - serializedVersion: 2
+      time: 0.9997641
       value: 1.0000118
-      inSlope: .113332585
-      outSlope: -.0125169754
+      inSlope: 0.113332585
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 0
   duration: 2
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: -640, y: 72.6999969, z: 0}
-  to: {x: -210, y: 72.6999969, z: 0}
+  from: {x: -640, y: 72.7, z: 0}
+  to: {x: -210, y: 72.7, z: 0}
   worldSpace: 0
 --- !u!114 &11400078
 MonoBehaviour:
@@ -2829,23 +3097,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 6.19999981
-  duration: .300000012
+  delay: 6.2
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2868,26 +3140,31 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 6.19999981
-  duration: .300000012
+  delay: 6.2
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished:
   - mTarget: {fileID: 11400140}
     mMethodName: OnMarsLoadingFinished
+    mParameters: []
     oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2909,28 +3186,33 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: -.00271002296
-      inSlope: 2.09229469
-      outSlope: .209008619
+    - serializedVersion: 2
+      time: 0
+      value: -0.002710023
+      inSlope: 2.0922947
+      outSlope: 0.20900862
       tangentMode: 1
-    - time: .748234987
-      value: .999342024
-      inSlope: 4.53411913
-      outSlope: -1.06763518
+    - serializedVersion: 2
+      time: 0.748235
+      value: 0.999342
+      inSlope: 4.534119
+      outSlope: -1.0676352
       tangentMode: 1
-    - time: .999764085
-      value: .997301877
-      inSlope: .649056137
-      outSlope: -.0125169754
+    - serializedVersion: 2
+      time: 0.9997641
+      value: 0.9973019
+      inSlope: 0.64905614
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 4.80000019
-  duration: .600000024
+  delay: 4.8
+  duration: 0.6
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2953,23 +3235,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 2.71936369
-      outSlope: 2.71936369
+      inSlope: 2.7193637
+      outSlope: 2.7193637
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 4.80000019
-  duration: .600000024
+  delay: 4.8
+  duration: 0.6
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -2991,27 +3277,31 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 4.80000019
-  duration: .25
+  delay: 4.8
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 0, y: 85.2000046, z: 0}
+  from: {x: 0, y: 85.200005, z: 0}
   to: {x: 0, y: 190, z: 0}
   worldSpace: 0
 --- !u!114 &11400088
@@ -3030,23 +3320,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 4.80000019
-  duration: .25
+  delay: 4.8
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3068,32 +3362,37 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: -.00271002296
-      inSlope: 2.09229469
-      outSlope: .451946348
+    - serializedVersion: 2
+      time: 0
+      value: -0.002710023
+      inSlope: 2.0922947
+      outSlope: 0.45194635
       tangentMode: 1
-    - time: .650426567
-      value: .999340177
-      inSlope: 3.69508934
-      outSlope: -1.81724846
+    - serializedVersion: 2
+      time: 0.65042657
+      value: 0.9993402
+      inSlope: 3.6950893
+      outSlope: -1.8172485
       tangentMode: 1
-    - time: .999764085
-      value: .997301877
-      inSlope: 2.10256147
-      outSlope: -.0125169754
+    - serializedVersion: 2
+      time: 0.9997641
+      value: 0.9973019
+      inSlope: 2.1025615
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 4
-  duration: .349999994
+  duration: 0.35
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 2.20000005, y: 2.20000005, z: 1}
+  from: {x: 2.2, y: 2.2, z: 1}
   to: {x: 1, y: 1, z: 1}
   updateTable: 0
 --- !u!114 &11400092
@@ -3112,23 +3411,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 4
-  duration: .25
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3150,27 +3453,31 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 3.9000001
-  duration: .25
+  delay: 3.9
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 0, y: 85.2000046, z: 0}
+  from: {x: 0, y: 85.200005, z: 0}
   to: {x: 0, y: 190, z: 0}
   worldSpace: 0
 --- !u!114 &11400096
@@ -3189,23 +3496,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 3.9000001
-  duration: .25
+  delay: 3.9
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3227,32 +3538,37 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: -.00271002296
-      inSlope: 2.09229469
-      outSlope: .451946348
+    - serializedVersion: 2
+      time: 0
+      value: -0.002710023
+      inSlope: 2.0922947
+      outSlope: 0.45194635
       tangentMode: 1
-    - time: .650426567
-      value: .999340177
-      inSlope: 3.69508934
-      outSlope: -1.81724846
+    - serializedVersion: 2
+      time: 0.65042657
+      value: 0.9993402
+      inSlope: 3.6950893
+      outSlope: -1.8172485
       tangentMode: 1
-    - time: .999764085
-      value: .997301877
-      inSlope: 2.10256147
-      outSlope: -.0125169754
+    - serializedVersion: 2
+      time: 0.9997641
+      value: 0.9973019
+      inSlope: 2.1025615
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 3.0999999
-  duration: .349999994
+  delay: 3.1
+  duration: 0.35
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 2.20000005, y: 2.20000005, z: 1}
+  from: {x: 2.2, y: 2.2, z: 1}
   to: {x: 1, y: 1, z: 1}
   updateTable: 0
 --- !u!114 &11400100
@@ -3271,23 +3587,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 3.0999999
-  duration: .25
+  delay: 3.1
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3309,27 +3629,31 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 3
-  duration: .25
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 0, y: 85.1999969, z: 0}
+  from: {x: 0, y: 85.2, z: 0}
   to: {x: 0, y: 190, z: 0}
   worldSpace: 0
 --- !u!114 &11400104
@@ -3348,23 +3672,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 3
-  duration: .25
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3386,32 +3714,37 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: -.00271002296
-      inSlope: 2.09229469
-      outSlope: .451946348
+    - serializedVersion: 2
+      time: 0
+      value: -0.002710023
+      inSlope: 2.0922947
+      outSlope: 0.45194635
       tangentMode: 1
-    - time: .650426567
-      value: .999340177
-      inSlope: 3.69508934
-      outSlope: -1.81724846
+    - serializedVersion: 2
+      time: 0.65042657
+      value: 0.9993402
+      inSlope: 3.6950893
+      outSlope: -1.8172485
       tangentMode: 1
-    - time: .999764085
-      value: .997301877
-      inSlope: 2.10256147
-      outSlope: -.0125169754
+    - serializedVersion: 2
+      time: 0.9997641
+      value: 0.9973019
+      inSlope: 2.1025615
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.20000005
-  duration: .349999994
+  delay: 2.2
+  duration: 0.35
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: {x: 2.20000005, y: 2.20000005, z: 1}
+  from: {x: 2.2, y: 2.2, z: 1}
   to: {x: 1, y: 1, z: 1}
   updateTable: 0
 --- !u!114 &11400108
@@ -3441,28 +3774,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 191
   mHeight: 234
   mDepth: 4
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: .816239297
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: v
+  aspectRatio: 0.8162393
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: v
+  mFillCenter: 1
 --- !u!114 &11400110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3479,23 +3817,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.04999995
-  duration: .300000012
+  delay: 2.05
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3518,23 +3860,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.04999995
-  duration: .25
+  delay: 2.05
+  duration: 0.25
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3556,43 +3902,51 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
-      value: -.00271002296
-      inSlope: 2.09229469
-      outSlope: .438268721
+    - serializedVersion: 2
+      time: 0
+      value: -0.002710023
+      inSlope: 2.0922947
+      outSlope: 0.43826872
       tangentMode: 1
-    - time: .669787049
-      value: .998964787
-      inSlope: 2.98795152
-      outSlope: -.909597695
+    - serializedVersion: 2
+      time: 0.66978705
+      value: 0.9989648
+      inSlope: 2.9879515
+      outSlope: -0.9095977
       tangentMode: 1
-    - time: .764784992
-      value: .955244601
-      inSlope: .00357557344
-      outSlope: .00357557344
+    - serializedVersion: 2
+      time: 0.764785
+      value: 0.9552446
+      inSlope: 0.0035755734
+      outSlope: 0.0035755734
       tangentMode: 0
-    - time: .869733095
-      value: 1.00271976
-      inSlope: 1.01824725
-      outSlope: -.706896782
+    - serializedVersion: 2
+      time: 0.8697331
+      value: 1.0027198
+      inSlope: 1.0182472
+      outSlope: -0.7068968
       tangentMode: 1
-    - time: .939320922
-      value: .982468486
-      inSlope: .028014183
-      outSlope: .028014183
+    - serializedVersion: 2
+      time: 0.9393209
+      value: 0.9824685
+      inSlope: 0.028014183
+      outSlope: 0.028014183
       tangentMode: 1
-    - time: .999764085
-      value: .997301877
-      inSlope: .557189405
-      outSlope: -.0125169754
+    - serializedVersion: 2
+      time: 0.9997641
+      value: 0.9973019
+      inSlope: 0.5571894
+      outSlope: -0.012516975
       tangentMode: 1
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .150000006
-  duration: .75
+  delay: 0.15
+  duration: 0.75
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3615,23 +3969,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: .150000006
-  duration: .75
+  delay: 0.15
+  duration: 0.75
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3653,23 +4011,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 2.25999999
-  duration: .119999997
+  delay: 2.26
+  duration: 0.12
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3691,23 +4053,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2.25
-  duration: .150000006
+  duration: 0.15
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3729,23 +4095,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2.25
-  duration: .150000006
+  duration: 0.15
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3767,23 +4137,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2.25
-  duration: .150000006
+  duration: 0.15
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3805,23 +4179,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 0
       outSlope: 1
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
       inSlope: 1
       outSlope: 0
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 2.25
-  duration: .150000006
+  duration: 0.15
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3843,23 +4221,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: .366066396
-      outSlope: .366066396
+      inSlope: 0.3660664
+      outSlope: 0.3660664
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.60247731
-      outSlope: 1.60247731
+      inSlope: 1.6024773
+      outSlope: 1.6024773
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
   delay: 5.25
-  duration: .349999994
+  duration: 0.35
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3882,28 +4264,33 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: 2.29154301
-      outSlope: 2.29154301
+      inSlope: 2.291543
+      outSlope: 2.291543
       tangentMode: 0
-    - time: .0514116287
-      value: .298579067
-      inSlope: -.00674334075
-      outSlope: -.00674334075
+    - serializedVersion: 2
+      time: 0.05141163
+      value: 0.29857907
+      inSlope: -0.0067433408
+      outSlope: -0.0067433408
       tangentMode: 0
-    - time: 1
-      value: -.000388838351
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+    - serializedVersion: 2
+      time: 1
+      value: -0.00038883835
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 5.28999996
-  duration: .300000012
+  delay: 5.29
+  duration: 0.3
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3925,23 +4312,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
-      inSlope: -.0236054696
-      outSlope: -.0236054696
+      inSlope: -0.02360547
+      outSlope: -0.02360547
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 5.48999977
-  duration: .550000012
+  delay: 5.49
+  duration: 0.55
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -3963,23 +4354,27 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: 0
+    - serializedVersion: 2
+      time: 0
       value: 0
       inSlope: 2.2837832
       outSlope: 2.2837832
       tangentMode: 0
-    - time: 1
+    - serializedVersion: 2
+      time: 1
       value: 1
-      inSlope: 1.59283854e-06
-      outSlope: 1.59283854e-06
+      inSlope: 0.0000015928385
+      outSlope: 0.0000015928385
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   ignoreTimeScale: 1
-  delay: 5.26000023
-  duration: .200000003
+  delay: 5.26
+  duration: 0.2
   steeperCurves: 0
   tweenGroup: 0
+  useFixedUpdate: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
@@ -4012,28 +4407,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 216
   mHeight: 50
   mDepth: 12
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.32000017
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: fight1
+  aspectRatio: 4.32
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: fight1
+  mFillCenter: 1
 --- !u!114 &11400138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4061,28 +4461,33 @@ MonoBehaviour:
     target: {fileID: 0}
     relative: 1
     absolute: 0
+  updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 0}
   mPivot: 4
   mWidth: 216
   mHeight: 50
   mDepth: 13
+  mMat: {fileID: 0}
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.32000017
-  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
-  mSpriteName: fight1
+  aspectRatio: 4.32
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
-  mFillCenter: 1
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   centerType: 1
   leftType: 1
   rightType: 1
   bottomType: 1
   topType: 1
+  mAtlas: {fileID: 11400000, guid: 70e99533a2e067a49b95a6b3b952938f, type: 2}
+  mSpriteName: fight1
+  mFillCenter: 1
 --- !u!114 &11400140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4094,17 +4499,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a4b12eed39cd84486babf957b8c59f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playTimeBody: .5
-  playTimeCount1: 4.69999981
-  playTimeCount2: 3.4000001
+  playTimeBody: 0.5
+  playTimeCount1: 4.7
+  playTimeCount2: 3.4
   playTimeCount3: 2.5
-  playTimeFight: 5.4000001
+  playTimeFight: 5.4
   playTimeVS: 1
   duration: 2
-  effectBody: {fileID: 100016, guid: ab656f9019c0a3d40bf8b29e56a41b5f, type: 2}
-  effectCount: {fileID: 100000, guid: 69a2684eb84b7794b9ecd99e83478a92, type: 2}
-  effectFight: {fileID: 100008, guid: 551124e154892394d88280963d592b27, type: 2}
-  effectVS: {fileID: 100010, guid: be1bbc40ab8baed48b17204bd7e77b71, type: 2}
+  effectBody: {fileID: 0}
+  effectCount: {fileID: 0}
+  effectFight: {fileID: 0}
+  effectVS: {fileID: 0}
   posBodyL: {fileID: 100062}
   posBodyR: {fileID: 100060}
   posCount: {fileID: 100056}
@@ -4153,7 +4558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: c8b619baf42a501498ecf4ce11e1fe4b, type: 3}
-  delay: 2.20000005
+  delay: 2.2
   volume: 1
   pitch: 1
 --- !u!114 &11400146
@@ -4168,7 +4573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 326feb8adc89fcb47ae983e5c5242e43, type: 3}
-  delay: .200000003
+  delay: 0.2
   volume: 1
   pitch: 1
 --- !u!114 &11400148
@@ -4197,4 +4602,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100032}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
