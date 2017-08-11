@@ -2280,6 +2280,7 @@ GameObject:
   - component: {fileID: 11400346}
   - component: {fileID: 11400388}
   - component: {fileID: 11400466}
+  - component: {fileID: 114091585271693360}
   m_Layer: 9
   m_Name: MainCityUI
   m_TagString: Untagged
@@ -8508,7 +8509,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3003
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -8557,7 +8558,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3002
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 3
@@ -9391,7 +9392,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c9f1766ca6acd1488384667c27a931a, type: 3}
   m_Name: 
@@ -13109,6 +13110,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bd99dcf43f97d48bb6215c70f0cd40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114091585271693360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9f1766ca6acd1488384667c27a931a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goAwardHint: {fileID: 100222}
 --- !u!114 &114102310337836578
 MonoBehaviour:
   m_ObjectHideFlags: 1
