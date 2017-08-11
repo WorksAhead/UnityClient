@@ -386,7 +386,7 @@ public abstract class Gesture
         if (null == UnityEngine.Camera.main)
             return -1;
         int object_id = -1;
-        float skill_blear_radius = 0.5f;
+        float skill_blear_radius = 2.5f;
         UnityEngine.Vector3 touch_pos = new UnityEngine.Vector3(position.x, position.y, 0);
         UnityEngine.Ray ray = UnityEngine.Camera.main.ScreenPointToRay(touch_pos);
         UnityEngine.RaycastHit hitInfo;
