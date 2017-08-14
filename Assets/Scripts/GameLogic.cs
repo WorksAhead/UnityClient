@@ -139,6 +139,27 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
             // Todo: try move to ui root
             ClickNpcManager.Instance.Tick();
+
+            // temp: gain newbie tools
+            ArkCrossEngine.RoleInfo ri = ArkCrossEngine.LobbyClient.Instance.CurrentRole;
+            if (ri != null && ri.Level < 10)
+            {
+                PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
+            }
+
+            // fake
+            if (DelayManager.IsDelayEnabled)
+            {
+                int number = UnityEngine.Random.Range(0, 100);
+                if (number < 30)
+                {
+                    UnityEngine.Time.timeScale = 0.1f;
+                }
+                else
+                {
+                    Time.timeScale = 1.0f;
+                }
+            }
         }
         catch (Exception ex)
         {
@@ -207,12 +228,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
             {
                 GfxModule.Skill.GfxSkillSystem.Instance.PreLoadRoleSkills(ri.SkillInfos);
                 GfxModule.Skill.GfxSkillSystem.Instance.PreLoadSceneNpcSkills(DFMUiRoot.NowSceneID);
-
-                // temp: gain newbie tools
-                if (ri.Level < 2)
-                {
-                    PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
-                }
             }
         }
         catch (System.Exception ex)
