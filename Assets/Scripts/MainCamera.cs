@@ -1107,7 +1107,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     private float m_HeightSmoothLag = 0.3f;
     private float m_DistanceSmoothLag = 3.0f;
     private float m_AngularSmoothLag = 0.3f;
-    private float m_AngularMaxSpeed = 50.0f;
+    private float m_AngularMaxSpeed = 100.0f;
     private float m_SnapSmoothLag = 0.2f;
     private float m_SnapMaxSpeed = 720.0f;
     private float m_ClampHeadPositionScreenSpace = 0.75f;
