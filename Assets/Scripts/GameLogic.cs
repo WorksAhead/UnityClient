@@ -140,12 +140,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             // Todo: try move to ui root
             ClickNpcManager.Instance.Tick();
 
-            // temp: gain newbie tools
-            ArkCrossEngine.RoleInfo ri = ArkCrossEngine.LobbyClient.Instance.CurrentRole;
-            if (ri != null && ri.Level < 10)
-            {
-                PlayerControl.Instance.ToolPool(0, (int)Keyboard.Event.Up);
-            }
+            
 
             // fake
             if (DelayManager.IsDelayEnabled)
@@ -159,6 +154,10 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 {
                     Time.timeScale = 1.0f;
                 }
+            }
+            else
+            {
+                Time.timeScale = 1.0f;
             }
         }
         catch (Exception ex)
