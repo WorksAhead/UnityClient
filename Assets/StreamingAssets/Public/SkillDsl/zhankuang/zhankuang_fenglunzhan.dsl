@@ -30,10 +30,10 @@
 		setanimspeed(800, "hero_skill02", 1);
 		//帧77
 			
-		playsound(250, "skill0201", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/hero_skill02", false);
+		//playsound(250, "skill0201", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/hero_skill02", false);
 
-		playsound(800, "skill0202", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_02", false);
-		playsound(750, "skill0203", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_01", false);
+		//playsound(800, "skill0202", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_02", false);
+		//playsound(750, "skill0203", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_01", false);
 
 		startcurvemove(200, true, 0.1, 0, 0, 5, 0, 0, 100, 0.03, 0, 0, 6, 0, 0, -80, 0.3, 0, 3, 0, 0, 30, 50, 0.1, 0, 3, 15, 0, -60, -120, 0.2, 0, -3, 10, 0, -300, -40);
 
@@ -56,15 +56,15 @@
 			stateimpact("kLauncher", 16020112);
 		};
 
-		playsound(320, "hit0201", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
-		{
-			audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
-		};
+		//playsound(320, "hit0201", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
+		//{
+		//	audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
+		//};
 
-		playsound(850, "hit0202", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
-		{
-			audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
-		};
+		//playsound(850, "hit0202", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
+		//{
+		//	audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
+		//};
 		//shakecamera2(833, 200, false, true, vector3(0.3, 0.4, 0), vector3(40, 40, 0), vector3(12, 14, 0), vector3(80, 60, 0));
 		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02",1000,vector3(0,0,0),866,eular(0,0,0),vector3(1.3,1.3,1.3),true);
 		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_04",1000,vector3(0,0,2.3),866);
@@ -116,11 +116,11 @@ skill(160202)
 		//帧81
 				
         setlayer(0, 800, "NoBlockCharacter");
-		playsound(200, "skill0211", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_03", false);
-		playsound(50, "skill0212", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_02", false);
+		//playsound(200, "skill0211", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_03", false);
+		//playsound(50, "skill0212", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_02", false);
 
-		playsound(650, "skill0213", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_NO.4_04_01", false);
-		playsound(700, "skill0214", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_03", false);
+		//playsound(650, "skill0213", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_NO.4_04_01", false);
+		//playsound(700, "skill0214", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_03", false);
 
 		startcurvemove(0, true, 0.57, 0, 10, 10, 0, -12, 0, 0.07, 0, -80, 30, 0, 0, 0);
 
@@ -134,18 +134,18 @@ skill(160202)
 			bonecollider("hero/5_zhankuang/fenglunzhancollider","Bone_Root", true);
 		};
 
-		playsound(250, "hit02021", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
-		{
-			audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
-		};
-		playsound(350, "hit02022", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
-		{
-			audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
-		};
-		playsound(450, "hit02023", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
-		{
-			audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
-		};
+		//playsound(250, "hit02021", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
+		//{
+		//	audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
+		//};
+		//playsound(350, "hit02022", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
+		//{
+		//	audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
+		//};
+		//playsound(450, "hit02023", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/Cike/guaiwu_shouji_01", true)
+		//{
+		//	audiogroup("Sound/Cike/guaiwu_shouji_02", "Sound/Cike/guaiwu_shouji_03", "Sound/Cike/guaiwu_shouji_04");
+		//};
 
 		sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_03_02",1000,vector3(0,0,1.8),700);
 		areadamage(700, 0, 1.5, 1, 4, true) 

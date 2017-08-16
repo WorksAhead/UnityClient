@@ -30,9 +30,9 @@
 		startcurvemove(930, true, 0.1, 0, -50, 20, 0, -500, 0);
 		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill01_01",1000,vector3(0,0,0),0,eular(0,0,0),vector3(1,1,1),true);
 		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill01_02",2500,vector3(0,0,1),1030,eular(0,0,0),vector3(1,1,1),true);		
-		playsound(0, "skill1001", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/hero_skill01", false);		
-		playsound(1000, "skill1002", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/ZK_Voice_TiaoZa", false);		
-		playsound(1200, "skill1003", "Sound/zhankuang/zhankuang_sound", 3000, "Sound/zhankuang/zhankuang_tiaozhan_02", false);
+		//playsound(0, "skill1001", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/hero_skill01", false);		
+		//playsound(1000, "skill1002", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/ZK_Voice_TiaoZa", false);		
+		//playsound(1200, "skill1003", "Sound/zhankuang/zhankuang_sound", 3000, "Sound/zhankuang/zhankuang_tiaozhan_02", false);
 		colliderdamage(1030, 1000, true, true, 100, 10)
 		{
 			stateimpact("kLauncher", 16100101);
