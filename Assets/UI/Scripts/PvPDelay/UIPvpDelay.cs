@@ -9,6 +9,7 @@ public class UIPvpDelay : UnityEngine.MonoBehaviour
     public float RefreshTime = 1.0f;//刷新时间
     private float CountDown = 0f;
     public UILabel lblDelayValue;
+    public UILabel lblUIDelay;
     // Use this for initialization
     void Start()
     {
@@ -37,8 +38,26 @@ public class UIPvpDelay : UnityEngine.MonoBehaviour
     }
     public void UpdateDelayValue()
     {
-        long delay_time = TimeUtility.AverageRoundtripTime;
+        //long delay_time = TimeUtility.AverageRoundtripTime;
+        long delay_time = DelayManager.GetFakePingValue();
+        string prefix = DelayManager.IsDelayEnabled ? "[ff0000]" : "[00ff00]";
+        string suffix = "[-]";
+
         if (lblDelayValue != null)
-            lblDelayValue.text = delay_time.ToString();
+            lblDelayValue.text = prefix + delay_time.ToString() + suffix;
+        if (lblUIDelay != null)
+        {
+            lblUIDelay.text = prefix + "ping:[-]";
+        }
+
+        if (delay_time > 130)
+        {
+            lblUIDelay.color = UnityEngine.Color.red;
+        }
+        else
+        {
+            lblUIDelay.color = UnityEngine.Color.red;
+        }
+
     }
 }

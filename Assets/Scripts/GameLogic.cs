@@ -139,16 +139,14 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
             // Todo: try move to ui root
             ClickNpcManager.Instance.Tick();
-
             
-
             // fake
             if (DelayManager.IsDelayEnabled)
             {
                 int number = UnityEngine.Random.Range(0, 100);
-                if (number < 30)
+                if (number < DelayManager.c_TimeScaleDelayRate)
                 {
-                    UnityEngine.Time.timeScale = 0.1f;
+                    UnityEngine.Time.timeScale = DelayManager.c_TimeScaleTime;
                 }
                 else
                 {
