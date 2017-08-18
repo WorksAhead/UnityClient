@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 64aebc5f20cc14fe09b4e483fe82075c, type: 3}
   m_Sun: {fileID: 871433171}
-  m_IndirectSpecularColor: {r: 0.50081956, g: 0.5593617, b: 0.8621078, a: 1}
+  m_IndirectSpecularColor: {r: 0.5091404, g: 0.55408794, b: 0.87398344, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -66,7 +66,7 @@ LightmapSettings:
     m_Padding: 2
     m_LightmapParameters: {fileID: 15201, guid: 0000000000000000f000000000000000,
       type: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 0
     m_FinalGather: 1
     m_FinalGatherFiltering: 1
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
-  m_LightingDataAsset: {fileID: 112000002, guid: 553958aaafbf5c94a94287bf54e81337,
+  m_LightingDataAsset: {fileID: 112000002, guid: 4bc6ca4b1c74b7a41a1f747352eca619,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -265,6 +265,10 @@ Prefab:
     - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
@@ -2732,7 +2736,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &686277721
 Transform:
@@ -3008,7 +3012,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &876453030
 Transform:
@@ -3085,6 +3089,10 @@ Prefab:
     - target: {fileID: 100000, guid: a59d3d3139f78cf43a3ebc0f60242ffd, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a59d3d3139f78cf43a3ebc0f60242ffd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: a59d3d3139f78cf43a3ebc0f60242ffd, type: 3}
@@ -5048,7 +5056,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1489123448
 Transform:
@@ -5691,6 +5699,10 @@ Prefab:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
@@ -6022,7 +6034,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1720441480
 Transform:
@@ -6180,6 +6192,10 @@ Prefab:
     - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
@@ -6484,7 +6500,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1794395729
 Transform:
@@ -7747,6 +7763,10 @@ Prefab:
     - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 603395eec26e855448b298f39b838dc3, type: 3}
