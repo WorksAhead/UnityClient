@@ -141,7 +141,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             ClickNpcManager.Instance.Tick();
             
             // fake
-            if (DelayManager.IsDelayEnabled)
+            if (DelayManager.IsDelayEnabled && LobbyClient.Instance.CurrentRole != null)
             {
                 int number = UnityEngine.Random.Range(0, 100);
                 if (number < DelayManager.c_TimeScaleDelayRate)
