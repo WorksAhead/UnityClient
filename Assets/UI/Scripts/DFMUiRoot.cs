@@ -828,6 +828,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                     heroView.SetExitActive(false);
                 }
             }
+            
             RoleInfo role_info = LobbyClient.Instance.CurrentRole;
             if (role_info != null)
             {
@@ -858,6 +859,11 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                     HeroPanel scriptHp = go.GetComponent<HeroPanel>();
                     if (scriptHp != null)
                         scriptHp.SetUserInfo(gfxUser);
+
+                    // huawei
+                    {
+                        UnityEngine.GameObject w = UIManager.Instance.LoadWindowByName("HuaweiAcc", UICamera.mainCamera);
+                    }
                 }
                 else
                 {
