@@ -4,7 +4,7 @@
   {
     wait(2000);
     restarttimeout(1);
-    startcountdown(180);
+    startcountdown(1800);
     updatecoefficient();
 	  publishgfxevent("ge_show_marsloading","ui");    
 	  wait(6500);
@@ -12,7 +12,7 @@
   };
   onmessage("userenterscene")
   {
-    startcountdown(180);
+    startcountdown(1800);
     updatecoefficient($0);
   };
   onmessage("userkilled")
