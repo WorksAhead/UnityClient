@@ -28,7 +28,14 @@ public class PlayerHuaWeiEffect : MonoBehaviour {
 	void Update () {
         if (m_effect != null)
         {
-            m_effect.SetActive(!ArkCrossEngine.DelayManager.IsDelayEnabled);
+            if ((!ArkCrossEngine.DelayManager.IsDelayEnabled) && (ArkCrossEngine.LogicSystem.PlayerSelf == gameObject))
+            {
+                m_effect.SetActive(true);
+            }
+            else
+            {
+                m_effect.SetActive(false);
+            }
         }
     }
 }
