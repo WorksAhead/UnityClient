@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 8200000}
   - component: {fileID: 11400000}
   - component: {fileID: 11400006}
+  - component: {fileID: 114827717356359662}
   m_Layer: 8
   m_Name: 3_Cike_A_01
   m_TagString: Untagged
@@ -1622,7 +1623,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100058}
-  m_LocalRotation: {x: 0.7483123, y: -0.3503194, z: -0.10440287, w: 0.5535387}
+  m_LocalRotation: {x: 0.7483123, y: -0.3503194, z: -0.10440284, w: 0.5535387}
   m_LocalPosition: {x: -0.07719886, y: 0.03428909, z: -0.07382536}
   m_LocalScale: {x: 1.0000001, y: 0.99999994, z: 0.9999999}
   m_Children:
@@ -1781,7 +1782,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
-  m_LocalRotation: {x: -0.7483123, y: 0.3503194, z: -0.10440284, w: 0.5535387}
+  m_LocalRotation: {x: -0.7483123, y: 0.3503194, z: -0.10440281, w: 0.5535387}
   m_LocalPosition: {x: -0.07719886, y: 0.034289245, z: 0.07382537}
   m_LocalScale: {x: 1.0000001, y: 1, z: 1}
   m_Children:
@@ -1917,7 +1918,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.38511, y: 27.451126, z: 76.59431}
+  m_LocalPosition: {x: 26.891602, y: 151.11488, z: 19.985308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400128}
@@ -9100,6 +9101,17 @@ TrailRenderer:
     textureMode: 0
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
+--- !u!114 &114827717356359662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7989c3fdcaf7a84cb906bd75ab9fffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198147787045606296
 ParticleSystem:
   m_ObjectHideFlags: 1
