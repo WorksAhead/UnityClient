@@ -1,8 +1,13 @@
-﻿using UnityEngine;
+﻿#if UNITY_ANDROID || UNITY_WEBGL || UNITY_EDITOR
+    //#define LoadDataTableFromCache
+#endif
+
+using UnityEngine;
 using System;
 using System.IO;
 using System.Collections;
 using ArkCrossEngine;
+using System.Collections.Generic;
 
 /// <summary>
 /// Game root entry
@@ -20,7 +25,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
     // Use this for initialization
     internal void Start()
     {
-#if UNITY_IOS || UNITY_ANDROID
+#if UNITY_IOS || UNITY_ANDROID || UNITY_WEBGL
         UnityEngine.Application.targetFrameRate = 30;
         QualitySettings.vSyncCount = 2;
         UnityEngine.Application.runInBackground = true;
@@ -73,12 +78,16 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 GlobalVariables.Instance.IsDevice = false;
 #endif
 
-#if UNITY_ANDROID
+#if UNITY_ANDROID ||　UNITY_WEBGL
                 if (!UnityEngine.Application.isEditor)
                 {
                     streamingAssetsPath = persistentDataPath + "/Tables";
                 }
 #endif
+
+                // init web socket before gamelogic initialize
+                // ArkCrossEngine.Network.WebSocketWrapper.Instance.SetInstance(new WebGLSocket());
+
                 GameControler.Init(tempPath, streamingAssetsPath);
 
                 // override log output
@@ -139,24 +148,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
             // Todo: try move to ui root
             ClickNpcManager.Instance.Tick();
-            
-            // fake
-            if (DelayManager.IsDelayEnabled && LobbyClient.Instance.CurrentRole != null)
-            {
-                int number = UnityEngine.Random.Range(0, 100);
-                if (number < DelayManager.c_TimeScaleDelayRate)
-                {
-                    UnityEngine.Time.timeScale = DelayManager.c_TimeScaleTime;
-                }
-                else
-                {
-                    Time.timeScale = 1.0f;
-                }
-            }
-            else
-            {
-                Time.timeScale = 1.0f;
-            }
         }
         catch (Exception ex)
         {
@@ -232,7 +223,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
-
+     
     /// Story Handlers
     public void TriggerStory(int storyId)
     {
@@ -312,7 +303,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             yield return StartCoroutine(HandleGameLoadingPublish());
         }
 
-#if UNITY_ANDROID
+#if UNITY_ANDROID || UNITY_WEBGL
         // if not play game in editor, extract config data to disk
         else if (!UnityEngine.Application.isEditor)
         {
@@ -439,7 +430,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
                         {
                             try
                             {
+#if LoadDataTableFromCache
+                                byte[] newAlloced = new byte[temp.bytes.Length];
+                                temp.bytes.CopyTo(newAlloced, 0);
+                                CachedTables.Add(Path.GetFullPath(filePath).ToLower(), newAlloced);
+#else
                                 File.WriteAllBytes(filePath, temp.bytes);
+#endif
                             }
                             catch (System.Exception ex)
                             {
@@ -451,6 +448,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
                         {
                             //Debug.Log(path + " can't load");
                         }
+
+                        temp.Dispose();
                         temp = null;
                     }
                     else
@@ -557,6 +556,10 @@ public class GameLogic : UnityEngine.MonoBehaviour
             // store name of loading bar scene to game logic thread
             LogicSystem.SetLoadingBarScene("LoadingBar");
 
+#if LoadDataTableFromCache
+            //CleanupCachedTables();
+#endif
+
             // manual change to loading scene if not in shipping mode
             if (!GlobalVariables.Instance.IsPublish)
             {
@@ -620,12 +623,25 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
     private byte[] EngineReadFileProxy(string filePath)
     {
-        byte[] buffer = null;
         try
         {
             // Todo: load from bundle
+#if LoadDataTableFromCache
+            filePath = Path.GetFullPath(filePath).ToLower();
+            byte[] bytes;
+            if (CachedTables.TryGetValue(filePath, out bytes))
+            {
+                return bytes;
+            }
+            else
+            {
+                return null;
+            }
+#else
+            byte[] buffer = null;
             buffer = File.ReadAllBytes(filePath);
             return buffer;
+#endif
         }
         catch (Exception e)
         {
@@ -637,8 +653,22 @@ public class GameLogic : UnityEngine.MonoBehaviour
     private bool EngineFileExistsProxy(string filePath)
     {
         // TODO: handle bundle
+#if LoadDataTableFromCache
+        filePath = Path.GetFullPath(filePath).ToLower();
+        byte[] bytes;
+        return CachedTables.TryGetValue(filePath, out bytes);
+#else
         return File.Exists(filePath);
+#endif
     }
+
+#if LoadDataTableFromCache
+    private void CleanupCachedTables()
+    {
+        CachedTables.Clear();
+        GC.Collect();
+    }
+#endif
 
     private bool m_IsDataFileExtracted = false;
     private bool m_IsDataFileExtractedPaused = false;
@@ -649,4 +679,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
     private float m_Frames = 0;
     private float m_TimeLeft = 0;
     private const float c_UpdateInterval = 1.0f;
+
+#if LoadDataTableFromCache
+    private Dictionary<string, byte[]> CachedTables = new Dictionary<string, byte[]>();
+#endif
 }
