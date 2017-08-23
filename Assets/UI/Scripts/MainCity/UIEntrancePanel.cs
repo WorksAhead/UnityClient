@@ -941,41 +941,6 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
         UIManager.Instance.ShowWindowByName("Trial");
     }
 
-    public void OnNetworkSpeedupClicked()
-    {
-        UIManager.Instance.ShowWindowByName("HuaweiNASwitch");
-        //bool isAlreadySpeedup = !DelayManager.IsDelayEnabled;
-        //Action<bool> fun_y = new Action<bool>(delegate (bool selected)
-        //{
-        //    if (selected)
-        //    {
-        //        string info = "开启网络加速成功！";
-        //        DelayManager.IsDelayEnabled = false;
-        //        GfxSystem.PublishGfxEvent("ge_highlight_prompt", "ui", info);
-        //    }
-        //});
-
-        //Action<bool> fun_n = new Action<bool>(delegate (bool selected)
-        //{
-        //    if (selected)
-        //    {
-        //        DelayManager.IsDelayEnabled = true;
-        //        string info = "关闭网络加速成功！";
-        //        GfxSystem.PublishGfxEvent("ge_highlight_prompt", "ui", info);
-        //    }
-        //});
-
-        //if (isAlreadySpeedup)
-        //{
-        //    ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_yesornot", "ui", "关闭网络加速", "确认关闭", fun_n);
-        //}
-        //else
-        //{
-        //    ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_yesornot", "ui", "开启网络加速", "确认开启", fun_y);
-        //}
-        
-    }
-
     public void OnPVPClicked()
     {
         UIManager.Instance.ShowWindowByName("PvPEntrance");
