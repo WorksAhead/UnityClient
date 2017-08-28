@@ -1,4 +1,4 @@
-﻿#if UNITY_ANDROID || UNITY_WEBGL || UNITY_EDITOR
+﻿#if UNITY_ANDROID || UNITY_WEBGL
     //#define LoadDataTableFromCache
 #endif
 
@@ -25,9 +25,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
     // Use this for initialization
     internal void Start()
     {
-#if UNITY_IOS || UNITY_ANDROID || UNITY_WEBGL
+#if (UNITY_IOS || UNITY_ANDROID) && !(UNITY_EDITOR)
         UnityEngine.Application.targetFrameRate = 30;
         QualitySettings.vSyncCount = 2;
+        UnityEngine.Application.runInBackground = true;
+#endif
+
+#if UNITY_WEBGL
         UnityEngine.Application.runInBackground = true;
 #endif
         try
@@ -78,15 +82,18 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 GlobalVariables.Instance.IsDevice = false;
 #endif
 
-#if UNITY_ANDROID ||　UNITY_WEBGL
+#if UNITY_ANDROID || UNITY_WEBGL
                 if (!UnityEngine.Application.isEditor)
                 {
                     streamingAssetsPath = persistentDataPath + "/Tables";
                 }
 #endif
 
+#if UNITY_WEBGL
                 // init web socket before gamelogic initialize
-                // ArkCrossEngine.Network.WebSocketWrapper.Instance.SetInstance(new WebGLSocket());
+                m_WebSocket = new WebGLSocket();
+                ArkCrossEngine.Network.WebSocketWrapper.Instance.SetInstance(m_WebSocket);
+#endif
 
                 GameControler.Init(tempPath, streamingAssetsPath);
 
@@ -140,7 +147,11 @@ public class GameLogic : UnityEngine.MonoBehaviour
                     LogicSystem.IsLastHitUi = isLastHitUi;
                     //DebugConsole.IsLastHitUi = isLastHitUi;
                 }
-                
+
+#if UNITY_WEBGL
+                m_WebSocket.Tick();
+#endif
+
                 GameControler.TickGame();
 
                 LuaManager.Instance.Tick();
@@ -679,6 +690,10 @@ public class GameLogic : UnityEngine.MonoBehaviour
     private float m_Frames = 0;
     private float m_TimeLeft = 0;
     private const float c_UpdateInterval = 1.0f;
+
+#if UNITY_WEBGL
+    private WebGLSocket m_WebSocket;
+#endif
 
 #if LoadDataTableFromCache
     private Dictionary<string, byte[]> CachedTables = new Dictionary<string, byte[]>();
