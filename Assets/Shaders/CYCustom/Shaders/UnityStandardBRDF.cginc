@@ -285,7 +285,7 @@ half4 BRDF1_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
 
     // specularTerm * nl can be NaN on Metal in some cases, use max() to make sure it's a sane value
     specularTerm = max(0, specularTerm * nl);
-#if defined(_SPECULARHIGHLIGHTS_OFF) || defined(PBS_LOW_QUALITY)
+#if defined(_SPECULARHIGHLIGHTS_OFF)
     specularTerm = 0.0;
 #endif
 
@@ -300,17 +300,10 @@ half4 BRDF1_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
     // To provide true Lambert lighting, we need to be able to kill specular completely.
     specularTerm *= any(specColor) ? 1.0 : 0.0;
 
-#ifdef PBS_LOW_QUALITY
-	// 略去fresnel计算
-	half3 color = diffColor * (gi.diffuse + light.color * diffuseTerm)
-		+ specularTerm * light.color * specColor
-		+ surfaceReduction * gi.specular * specColor;
-#else
     half grazingTerm = saturate(smoothness + (1-oneMinusReflectivity));
     half3 color =   diffColor * (gi.diffuse + light.color * diffuseTerm)
                     + specularTerm * light.color * FresnelTerm (specColor, lh)
                     + surfaceReduction * gi.specular * FresnelLerp (specColor, grazingTerm, nv);
-#endif
 
     return half4(color, 1);
 }
@@ -385,7 +378,7 @@ half4 BRDF2_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
 #if defined (SHADER_API_MOBILE)
     specularTerm = clamp(specularTerm, 0.0, 100.0); // Prevent FP16 overflow on mobiles
 #endif
-#if defined(_SPECULARHIGHLIGHTS_OFF) || defined(PBS_LOW_QUALITY)
+#if defined(_SPECULARHIGHLIGHTS_OFF)
     specularTerm = 0.0;
 #endif
 
@@ -401,16 +394,10 @@ half4 BRDF2_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
 
     surfaceReduction = 1.0 - roughness*perceptualRoughness*surfaceReduction;
 
-#ifdef PBS_LOW_QUALITY
-	half3 color = (diffColor + specularTerm * specColor) * light.color * nl
-		+ gi.diffuse * diffColor
-		+ surfaceReduction * gi.specular * specColor;
-#else
     half grazingTerm = saturate(smoothness + (1-oneMinusReflectivity));
     half3 color =   (diffColor + specularTerm * specColor) * light.color * nl
                     + gi.diffuse * diffColor
                     + surfaceReduction * gi.specular * FresnelLerpFast (specColor, grazingTerm, nv);
-#endif
 
     return half4(color, 1);
 }
@@ -421,7 +408,7 @@ half3 BRDF3_Direct(half3 diffColor, half3 specColor, half rlPow4, half smoothnes
     half LUT_RANGE = 16.0; // must match range in NHxRoughness() function in GeneratedTextures.cpp
     // Lookup texture to save instructions
     half specular = tex2D(unity_NHxRoughness, half2(rlPow4, SmoothnessToPerceptualRoughness(smoothness))).UNITY_ATTEN_CHANNEL * LUT_RANGE;
-#if defined(_SPECULARHIGHLIGHTS_OFF) || defined(PBS_LOW_QUALITY)
+#ifdef _SPECULARHIGHLIGHTS_OFF
     specular = 0.0;
 #endif
 
@@ -447,10 +434,6 @@ half4 BRDF3_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
     half3 normal, half3 viewDir,
     UnityLight light, UnityIndirect gi)
 {
-#ifdef PBS_LOW_QUALITY
-	half3 color = s.diffColor * gi.light.color;
-	color += gi.indirect.diffuse * s.diffColor + gi.indirect.specular * s.specColor;
-#else
     half3 reflDir = reflect (viewDir, normal);
 
     half nl = saturate(dot(normal, light.dir));
@@ -466,7 +449,6 @@ half4 BRDF3_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
     half3 color = BRDF3_Direct(diffColor, specColor, rlPow4, smoothness);
     color *= light.color * nl;
     color += BRDF3_Indirect(diffColor, specColor, gi, grazingTerm, fresnelTerm);
-#endif
 
     return half4(color, 1);
 }

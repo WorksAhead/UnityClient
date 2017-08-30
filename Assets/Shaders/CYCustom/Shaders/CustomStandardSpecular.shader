@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Standard (Specular setup)(Custom)"
+Shader "CY/Standard (Specular setup)(Custom)"
 {
 	Properties
 	{
@@ -55,7 +55,168 @@ Shader "Standard (Specular setup)(Custom)"
 		Tags { "RenderType"="Opaque" "PerformanceChecks"="False" }
 		LOD 300
 
-		Cull Off
+		// ------------------------------------------------------------------
+		//  Base forward pass (directional light, emission, lightmaps, ...)
+		Pass
+		{
+			Name "FORWARD" 
+			Tags { "LightMode" = "ForwardBase" }
+
+			Blend [_SrcBlend] [_DstBlend]
+			ZWrite [_ZWrite]
+
+			CGPROGRAM
+			#pragma target 3.0
+
+			// -------------------------------------
+
+			#pragma shader_feature _NORMALMAP
+			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+			#pragma shader_feature _EMISSION
+			#pragma shader_feature _SPECGLOSSMAP
+			#pragma shader_feature ___ _DETAIL_MULX2
+			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
+			#pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
+			#pragma shader_feature _PARALLAXMAP
+
+			#pragma multi_compile_fwdbase
+			#pragma multi_compile_fog
+			#pragma multi_compile_instancing
+
+			#pragma vertex vertBase
+			#pragma fragment fragBase
+			#include "UnityStandardCoreForward.cginc"
+
+			ENDCG
+		}
+		// ------------------------------------------------------------------
+		//  Additive forward pass (one light per pass)
+		Pass
+		{
+			Name "FORWARD_DELTA"
+			Tags { "LightMode" = "ForwardAdd" }
+			Blend [_SrcBlend] One
+			Fog { Color (0,0,0,0) } // in additive pass fog should be black
+			ZWrite Off
+			ZTest LEqual
+
+			CGPROGRAM
+			#pragma target 3.0
+
+			// -------------------------------------
+
+			#pragma shader_feature _NORMALMAP
+			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+			#pragma shader_feature _SPECGLOSSMAP
+			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
+			#pragma shader_feature ___ _DETAIL_MULX2
+			#pragma shader_feature _PARALLAXMAP
+			
+
+			#pragma multi_compile_fwdadd_fullshadows
+			#pragma multi_compile_fog
+
+			#pragma vertex vertAdd
+			#pragma fragment fragAdd
+			#include "UnityStandardCoreForward.cginc"
+
+			ENDCG
+		}
+		// ------------------------------------------------------------------
+		//  Shadow rendering pass
+		Pass {
+			Name "ShadowCaster"
+			Tags { "LightMode" = "ShadowCaster" }
+
+			ZWrite On ZTest LEqual
+
+			CGPROGRAM
+			#pragma target 3.0
+
+			// -------------------------------------
+
+
+			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+			#pragma shader_feature _SPECGLOSSMAP
+			#pragma shader_feature _PARALLAXMAP
+			#pragma multi_compile_shadowcaster
+			#pragma multi_compile_instancing
+			
+
+			#pragma vertex vertShadowCaster
+			#pragma fragment fragShadowCaster
+
+			#include "UnityStandardShadow.cginc"
+
+			ENDCG
+		}
+		// ------------------------------------------------------------------
+		//  Deferred pass
+		Pass
+		{
+			Name "DEFERRED"
+			Tags { "LightMode" = "Deferred" }
+
+			CGPROGRAM
+			#pragma target 3.0
+			#pragma exclude_renderers nomrt
+
+
+			// -------------------------------------
+
+			#pragma shader_feature _NORMALMAP
+			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+			#pragma shader_feature _EMISSION
+			#pragma shader_feature _SPECGLOSSMAP
+			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
+			#pragma shader_feature ___ _DETAIL_MULX2
+			#pragma shader_feature _PARALLAXMAP
+			
+
+			#pragma multi_compile_prepassfinal
+			#pragma multi_compile_instancing
+
+			#pragma vertex vertDeferred
+			#pragma fragment fragDeferred
+
+			#include "UnityStandardCore.cginc"
+
+			ENDCG
+		}
+
+		// ------------------------------------------------------------------
+		// Extracts information for lightmapping, GI (emission, albedo, ...)
+		// This pass it not used during regular rendering.
+		Pass
+		{
+			Name "META" 
+			Tags { "LightMode"="Meta" }
+
+			Cull Off
+
+			CGPROGRAM
+			#pragma vertex vert_meta
+			#pragma fragment frag_meta
+
+			#pragma shader_feature _EMISSION
+			#pragma shader_feature _SPECGLOSSMAP
+			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+			#pragma shader_feature ___ _DETAIL_MULX2
+			#pragma shader_feature EDITOR_VISUALIZATION
+			
+
+			#include "UnityStandardMeta.cginc"
+			ENDCG
+		}
+	}
+
+	SubShader
+	{
+		Tags { "RenderType"="Opaque" "PerformanceChecks"="False" }
+		LOD 200
 
 		// ------------------------------------------------------------------
 		//  Base forward pass (directional light, emission, lightmaps, ...)
@@ -81,7 +242,9 @@ Shader "Standard (Specular setup)(Custom)"
 			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
 			#pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
 			#pragma shader_feature _PARALLAXMAP
-			
+
+			// 中配走unity自带的simple分支PBS流程
+			#define UNITY_NO_FULL_STANDARD_SHADER
 
 			#pragma multi_compile_fwdbase
 			#pragma multi_compile_fog
@@ -243,7 +406,13 @@ Shader "Standard (Specular setup)(Custom)"
 			#pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
 			#pragma shader_feature ___ _DETAIL_MULX2
 			// SM2.0: NOT SUPPORTED shader_feature _PARALLAXMAP
-			#define PBS_LOW_QUALITY
+
+			// 低配关掉normalmap，高光，环境球IBL,并走simple版PBS流程
+			#pragma skip_variants _NORMALMAP
+			#define _SPECULARHIGHLIGHTS_OFF
+			#define _GLOSSYREFLECTIONS_OFF
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define CY_PBS_LOW
 
 			#pragma skip_variants SHADOWS_SOFT DYNAMICLIGHTMAP_ON DIRLIGHTMAP_COMBINED
 			
@@ -278,7 +447,8 @@ Shader "Standard (Specular setup)(Custom)"
 			#pragma shader_feature ___ _DETAIL_MULX2
 			// SM2.0: NOT SUPPORTED shader_feature _PARALLAXMAP
 			#pragma skip_variants SHADOWS_SOFT
-			#define PBS_LOW_QUALITY
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define CY_PBS_LOW
 			
 			#pragma multi_compile_fwdadd_fullshadows
 			#pragma multi_compile_fog
@@ -304,7 +474,8 @@ Shader "Standard (Specular setup)(Custom)"
 			#pragma shader_feature _SPECGLOSSMAP
 			#pragma skip_variants SHADOWS_SOFT
 			#pragma multi_compile_shadowcaster
-			#define PBS_LOW_QUALITY
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define CY_PBS_LOW
 
 			#pragma vertex vertShadowCaster
 			#pragma fragment fragShadowCaster
@@ -332,7 +503,8 @@ Shader "Standard (Specular setup)(Custom)"
 			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature EDITOR_VISUALIZATION
-			#define PBS_LOW_QUALITY
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define CY_PBS_LOW
 
 			#include "UnityStandardMeta.cginc"
 			ENDCG
