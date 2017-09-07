@@ -49,8 +49,8 @@ public class WebGLSocket : WebSocketWrapper.WebSocketBase
 #endif
     }
 
-
-#if UNITY_WEBGL && !UNITY_EDITOR
+#if UNITY_WEBGL
+#if !UNITY_EDITOR
     [DllImport("__Internal")]
 	private static extern int SocketCreate (string url);
 
@@ -201,6 +201,7 @@ public class WebGLSocket : WebSocketWrapper.WebSocketBase
 	{
 		m_Socket.Close();
 	}
+#endif
 #endif
 }
 #endif
