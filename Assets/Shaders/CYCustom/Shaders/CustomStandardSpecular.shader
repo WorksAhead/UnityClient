@@ -17,6 +17,7 @@ Shader "CY/Standard (Specular setup)(Custom)"
 		_SpecGlossMap("Specular", 2D) = "white" {}
 		[ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
 		[ToggleOff] _GlossyReflections("Glossy Reflections", Float) = 1.0
+		[ToggleOff] _ShaderHighQuality("Shader High Quality", Float) = 1.0
 
 		_BumpScale("Scale", Float) = 1.0
 		_BumpMap("Normal Map", 2D) = "bump" {}
@@ -78,7 +79,17 @@ Shader "CY/Standard (Specular setup)(Custom)"
 			#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
 			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
 			#pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
+			#pragma shader_feature _ _SHADERHIGHQUALITY_OFF
 			#pragma shader_feature _PARALLAXMAP
+
+			#ifdef _SHADERHIGHQUALITY_OFF
+				// 低配关掉normalmap，高光，环境球IBL,并走simple版PBS流程
+				#undef _NORMALMAP
+				#define _SPECULARHIGHLIGHTS_OFF
+				#define _GLOSSYREFLECTIONS_OFF
+				#define UNITY_NO_FULL_STANDARD_SHADER
+				#define CY_PBS_LOW
+			#endif
 
 			#pragma multi_compile_fwdbase
 			#pragma multi_compile_fog
@@ -245,6 +256,16 @@ Shader "CY/Standard (Specular setup)(Custom)"
 
 			// 中配走unity自带的simple分支PBS流程
 			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define _GLOSSYREFLECTIONS_OFF
+
+			#ifdef _SHADERHIGHQUALITY_OFF
+				// 低配关掉normalmap，高光，环境球IBL,并走simple版PBS流程
+				#undef _NORMALMAP
+				#define _SPECULARHIGHLIGHTS_OFF
+				#define _GLOSSYREFLECTIONS_OFF
+				#define UNITY_NO_FULL_STANDARD_SHADER
+				#define CY_PBS_LOW
+			#endif
 
 			#pragma multi_compile_fwdbase
 			#pragma multi_compile_fog
@@ -280,6 +301,9 @@ Shader "CY/Standard (Specular setup)(Custom)"
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature _PARALLAXMAP
 			
+			// 中配走unity自带的simple分支PBS流程
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define _GLOSSYREFLECTIONS_OFF
 
 			#pragma multi_compile_fwdadd_fullshadows
 			#pragma multi_compile_fog
@@ -309,6 +333,10 @@ Shader "CY/Standard (Specular setup)(Custom)"
 			#pragma shader_feature _PARALLAXMAP
 			#pragma multi_compile_shadowcaster
 			#pragma multi_compile_instancing
+
+			// 中配走unity自带的simple分支PBS流程
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define _GLOSSYREFLECTIONS_OFF
 			
 
 			#pragma vertex vertShadowCaster
@@ -340,6 +368,10 @@ Shader "CY/Standard (Specular setup)(Custom)"
 			#pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature _PARALLAXMAP
+
+			// 中配走unity自带的simple分支PBS流程
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define _GLOSSYREFLECTIONS_OFF
 			
 
 			#pragma multi_compile_prepassfinal
@@ -373,6 +405,9 @@ Shader "CY/Standard (Specular setup)(Custom)"
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature EDITOR_VISUALIZATION
 			
+			// 中配走unity自带的simple分支PBS流程
+			#define UNITY_NO_FULL_STANDARD_SHADER
+			#define _GLOSSYREFLECTIONS_OFF
 
 			#include "UnityStandardMeta.cginc"
 			ENDCG

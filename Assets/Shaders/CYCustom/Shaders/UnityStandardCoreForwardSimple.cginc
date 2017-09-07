@@ -202,33 +202,29 @@ half4 fragForwardBaseSimpleInternal (VertexOutputBaseSimple i)
     half ndotl = saturate(dot(s.normalWorld, mainLight.dir));
     #endif
 
+	// ÷–µÕ≈‰¬‘»•“ı”∞À•ºı
 #ifdef CY_PBS_LOW
-	// µÕ≈‰¬‘»•“ı”∞À•ºı
 	half rl = 1.f;
 	UnityGI gi = FragmentGI(s, 1, i.ambientOrLightmapUV, 1, mainLight, false);
 #else
 	//we can't have worldpos here (not enough interpolator on SM 2.0) so no shadow fade in that case.
-	half shadowMaskAttenuation = UnitySampleBakedOcclusion(i.ambientOrLightmapUV, 0);
-	half realtimeShadowAttenuation = SHADOW_ATTENUATION(i);
-	half atten = UnityMixRealtimeAndBakedShadows(realtimeShadowAttenuation, shadowMaskAttenuation, 0);
+	//half shadowMaskAttenuation = UnitySampleBakedOcclusion(i.ambientOrLightmapUV, 0);
+	//half realtimeShadowAttenuation = SHADOW_ATTENUATION(i);
+	//half atten = UnityMixRealtimeAndBakedShadows(realtimeShadowAttenuation, shadowMaskAttenuation, 0);
 
 	half occlusion = Occlusion(i.tex.xy);
 	half rl = dot(REFLECTVEC_FOR_SPECULAR(i, s), LightDirForSpecular(i, mainLight));
 
-	UnityGI gi = FragmentGI(s, occlusion, i.ambientOrLightmapUV, atten, mainLight);
+	UnityGI gi = FragmentGI(s, occlusion, i.ambientOrLightmapUV, 1, mainLight);
 #endif
 
     half3 attenuatedLightColor = gi.light.color * ndotl;
 
-#ifdef CY_PBS_LOW
-	// µÕ≈‰¬‘»•fresnelº∆À„
+	// ÷–µÕ≈‰¬‘»•fresnelº∆À„
 	half3 c = gi.indirect.diffuse * s.diffColor;
 	c += gi.indirect.specular * s.specColor;
-#else
-	half3 c = BRDF3_Indirect(s.diffColor, s.specColor*4, gi.indirect, PerVertexGrazingTerm(i, s), PerVertexFresnelTerm(i));
-#endif
 	
-    c += BRDF3DirectSimple(s.diffColor, s.specColor*2, s.smoothness, rl) * attenuatedLightColor;
+    c += BRDF3DirectSimple(s.diffColor, s.specColor, s.smoothness, rl) * attenuatedLightColor;
     c += Emission(i.tex.xy);
 
     UNITY_APPLY_FOG(i.fogCoord, c);

@@ -41,6 +41,7 @@ namespace UnityEditor
             public static GUIContent smoothnessMapChannelText = new GUIContent("Source", "Smoothness texture and channel");
             public static GUIContent highlightsText = new GUIContent("Specular Highlights", "Specular Highlights");
             public static GUIContent reflectionsText = new GUIContent("Reflections", "Glossy Reflections");
+            public static GUIContent shaderQualityText = new GUIContent("High Shader Quality", "Shader High Quality");
             public static GUIContent normalMapText = new GUIContent("Normal Map", "Normal Map");
             public static GUIContent heightMapText = new GUIContent("Height Map", "Height Map (G)");
             public static GUIContent occlusionText = new GUIContent("Occlusion", "Occlusion (G)");
@@ -71,6 +72,7 @@ namespace UnityEditor
         MaterialProperty smoothnessMapChannel = null;
         MaterialProperty highlights = null;
         MaterialProperty reflections = null;
+        MaterialProperty shaderQuality = null;
         MaterialProperty bumpScale = null;
         MaterialProperty bumpMap = null;
         MaterialProperty occlusionStrength = null;
@@ -112,6 +114,7 @@ namespace UnityEditor
             smoothnessMapChannel = FindProperty("_SmoothnessTextureChannel", props, false);
             highlights = FindProperty("_SpecularHighlights", props, false);
             reflections = FindProperty("_GlossyReflections", props, false);
+            shaderQuality = FindProperty("_ShaderHighQuality", props, false);
             bumpScale = FindProperty("_BumpScale", props);
             bumpMap = FindProperty("_BumpMap", props);
             heigtMapScale = FindProperty("_Parallax", props);
@@ -184,6 +187,8 @@ namespace UnityEditor
                     m_MaterialEditor.ShaderProperty(highlights, Styles.highlightsText);
                 if (reflections != null)
                     m_MaterialEditor.ShaderProperty(reflections, Styles.reflectionsText);
+                if (shaderQuality != null)
+                    m_MaterialEditor.ShaderProperty(shaderQuality, Styles.shaderQualityText);
             }
             if (EditorGUI.EndChangeCheck())
             {

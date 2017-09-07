@@ -118,14 +118,16 @@ half Alpha(float2 uv)
 
 half Occlusion(float2 uv)
 {
-#if (SHADER_TARGET < 30)
-    // SM20: instruction count limitation
-    // SM20: simpler occlusion
-    return tex2D(_OcclusionMap, uv).g;
-#else
-    half occ = tex2D(_OcclusionMap, uv).g;
-    return LerpOneTo (occ, _OcclusionStrength);
-#endif
+	// 性能优化，禁用indirect光照的掩码图
+	return 1.0f;
+//#if (SHADER_TARGET < 30)
+//    // SM20: instruction count limitation
+//    // SM20: simpler occlusion
+//    return tex2D(_OcclusionMap, uv).g;
+//#else
+//    half occ = tex2D(_OcclusionMap, uv).g;
+//    return LerpOneTo (occ, _OcclusionStrength);
+//#endif
 }
 
 half4 SpecularGloss(float2 uv)
