@@ -109,7 +109,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -165,7 +165,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -391,7 +391,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void SetHeroVisibleById(int heroId, bool visible)
@@ -522,7 +522,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void OnDestroy()
@@ -534,7 +534,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void OkToLoadHero(List<ArkCrossEngine.RoleInfo> playlist)
@@ -1053,7 +1053,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void OnReceiveNicknames(List<string> nicknameList)
@@ -1071,7 +1071,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     public void Change()
@@ -1172,7 +1172,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void ChangeActionShowAbout(bool actionsign)
@@ -1357,7 +1357,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void CreateHeroResult(bool result)
@@ -1378,7 +1378,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void OnRoleEnterResult(int ret)
@@ -1412,7 +1412,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private int CalculateStringByte(string str)
@@ -1458,7 +1458,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 }

@@ -31,7 +31,7 @@ public class TestSkillInput : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -141,7 +141,7 @@ public class TestSkillInput : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 

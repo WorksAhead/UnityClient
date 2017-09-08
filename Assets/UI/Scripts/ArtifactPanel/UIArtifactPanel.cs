@@ -33,7 +33,7 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void Start()
@@ -56,7 +56,7 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     //点击神器按钮
@@ -75,7 +75,7 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     //获取神器信息
@@ -102,7 +102,7 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -131,7 +131,7 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -235,7 +235,7 @@ public class UIArtifactPanel : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     //根据id定位到某一项

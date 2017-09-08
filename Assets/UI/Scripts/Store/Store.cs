@@ -29,7 +29,7 @@ public class Store : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     // Use this for initialization
@@ -73,7 +73,7 @@ public class Store : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -118,7 +118,7 @@ public class Store : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void SyncExchangeData(int currency, List<int> ids, List<int> nums)
@@ -216,7 +216,7 @@ public class Store : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void AddItem(int storeid, int buytimes)

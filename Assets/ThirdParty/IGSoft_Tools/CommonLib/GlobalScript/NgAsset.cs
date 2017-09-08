@@ -692,7 +692,7 @@ public class NgAsset
 	{
 		m_fOldCameraSize = Camera.main.fieldOfView;
 		Camera.main.fieldOfView = m_fOldCameraSize / captureZoomRate;
-		ScreenCapture.CaptureScreenshot(filename);
+		// ScreenCapture.CaptureScreenshot(filename);
 	}
 
 	// 저장된 화면을 특정 디렉토리로 이동한다.

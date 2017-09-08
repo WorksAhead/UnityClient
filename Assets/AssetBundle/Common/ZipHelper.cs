@@ -16,7 +16,7 @@ namespace ArkCrossEngine
         {
             if (!File.Exists(targetFilePath))
             {
-                LogicSystem.LogicLog("ZipFile failed. targetFilePath not exist: {0}", targetFilePath);
+                LogicSystem.LogFromGfx("ZipFile failed. targetFilePath not exist: {0}", targetFilePath);
                 return false;
             }
             bool needTempZipFile = false;
@@ -87,7 +87,7 @@ namespace ArkCrossEngine
             }
             catch (Exception ex)
             {
-                LogicSystem.LogicLog("ZipFile failed. targetFilePath: {0} zipFilePath:{1} ex:{2}",
+                LogicSystem.LogFromGfx("ZipFile failed. targetFilePath: {0} zipFilePath:{1} ex:{2}",
                   targetFilePath, zipFilePath, ex);
                 return false;
             }
@@ -116,7 +116,7 @@ namespace ArkCrossEngine
         {
             if (!File.Exists(zipFilePath))
             {
-                LogicSystem.LogicLog("UnzipFile failed. zipFilePath not exist: {0}", zipFilePath);
+                LogicSystem.LogFromGfx("UnzipFile failed. zipFilePath not exist: {0}", zipFilePath);
                 return false;
             }
             bool needTempZipFile = false;
@@ -200,7 +200,7 @@ namespace ArkCrossEngine
             }
             catch (System.Exception ex)
             {
-                LogicSystem.LogicLog("UnzipFile failed. zipFilePath:{0} ex:{1}:{2}", zipFilePath, ex.Message, ex.StackTrace);
+                LogicSystem.LogFromGfx("UnzipFile failed. zipFilePath:{0} ex:{1}:{2}", zipFilePath, ex.Message, ex.StackTrace);
                 return false;
             }
             finally
@@ -227,7 +227,7 @@ namespace ArkCrossEngine
         {
             if (buffer == null || buffer.Length <= 0)
             {
-                LogicSystem.LogicLog("UnzipFile failed. ");
+                LogicSystem.LogFromGfx("UnzipFile failed. ");
                 return false;
             }
             string fileName = string.Empty;
@@ -295,7 +295,7 @@ namespace ArkCrossEngine
             }
             catch (System.Exception ex)
             {
-                LogicSystem.LogicLog("UnzipFile failed. fileName:{0} ex:{1}:{2}", fileName, ex.Message, ex.StackTrace);
+                LogicSystem.LogFromGfx("UnzipFile failed. fileName:{0} ex:{1}:{2}", fileName, ex.Message, ex.StackTrace);
                 return false;
             }
             finally

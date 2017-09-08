@@ -331,7 +331,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -588,7 +588,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            LogicSystem.LogicLog("MainCamera.LateUpdate throw exception {0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogFromGfx("MainCamera.LateUpdate throw exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -658,7 +658,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            LogicSystem.LogicLog("MainCamera.OnLevelWasLoaded throw exception {0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogFromGfx("MainCamera.OnLevelWasLoaded throw exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 

@@ -25,7 +25,7 @@ public class RecordPvP : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void Awake()
@@ -36,7 +36,7 @@ public class RecordPvP : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     // Use this for initialization
@@ -81,7 +81,7 @@ public class RecordPvP : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     // Update is called once per frame
@@ -107,7 +107,7 @@ public class RecordPvP : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     // 返回记录信息
@@ -126,7 +126,7 @@ public class RecordPvP : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     //挑战排序

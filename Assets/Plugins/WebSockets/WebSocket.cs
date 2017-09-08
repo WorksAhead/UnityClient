@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 using WebSocket4Net;
 using ArkCrossEngine.Network;
 
-#if true
+#if UNITY_WEBGL
 
 public class WebGLSocket : WebSocketWrapper.WebSocketBase
 {
@@ -48,8 +48,7 @@ public class WebGLSocket : WebSocketWrapper.WebSocketBase
         Recv();
 #endif
     }
-
-#if UNITY_WEBGL
+    
 #if !UNITY_EDITOR
     [DllImport("__Internal")]
 	private static extern int SocketCreate (string url);
@@ -201,7 +200,6 @@ public class WebGLSocket : WebSocketWrapper.WebSocketBase
 	{
 		m_Socket.Close();
 	}
-#endif
 #endif
 }
 #endif

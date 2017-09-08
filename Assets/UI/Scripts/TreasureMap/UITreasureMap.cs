@@ -53,7 +53,7 @@ public class UITreasureMap : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     // Use this for initialization
@@ -81,7 +81,7 @@ public class UITreasureMap : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     // Update is called once per frame
@@ -93,7 +93,7 @@ public class UITreasureMap : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     void OnEnable()
@@ -104,7 +104,7 @@ public class UITreasureMap : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     //初始化远征界面
@@ -430,7 +430,7 @@ public class UITreasureMap : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:{0},{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:{0},{1}", ex.Message, ex.StackTrace);
         }
     }
     private void HandlerResetResult(ArkCrossEngine.Network.GeneralOperationResult result)
@@ -456,7 +456,7 @@ public class UITreasureMap : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void HideLevelInfo()

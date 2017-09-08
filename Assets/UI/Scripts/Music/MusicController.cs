@@ -13,7 +13,7 @@
             }
             catch (System.Exception ex)
             {
-                ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+                ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
             }
         }
         private void InitBackgroudMusic(int scene_id)

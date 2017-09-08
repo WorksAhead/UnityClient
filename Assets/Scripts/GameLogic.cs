@@ -28,18 +28,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
 #if (UNITY_IOS || UNITY_ANDROID) && !(UNITY_EDITOR)
         UnityEngine.Application.targetFrameRate = 30;
         QualitySettings.vSyncCount = 2;
-        UnityEngine.Application.runInBackground = true;
-#endif
-
-#if UNITY_WEBGL
-        UnityEngine.Application.runInBackground = true;
 #endif
         try
         {
             if (!GameControler.IsInited)
             {
                 // register to game thread
-                ArkProfiler.RegisterOutput(LogicSystem.LogicLog);
+                ArkProfiler.RegisterOutput(LogicSystem.LogFromGfx);
                 // register to gfx thread, output to game console
                 ArkProfiler.RegisterOutput2(UnityEngine.Debug.Log);
 
@@ -48,9 +43,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 HardWareQuality.ComputeHardwarePerformance();
                 HardWareQuality.SetResolution();
                 HardWareQuality.SetQualityAll();
-                
-                // push notify message to sdk, notify user when time matches
-                NotificationLogic.Instance.Init();
 
                 // if in shipping mode, initialize resource update module
                 if (GlobalVariables.Instance.IsPublish)
@@ -71,11 +63,11 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 string streamingAssetsPath = UnityEngine.Application.streamingAssetsPath;
                 /// Point to temp data path, may clean by system
                 string tempPath = UnityEngine.Application.temporaryCachePath;
-                LogicSystem.LogicLog("dataPath:{0} persistentDataPath:{1} streamingAssetsPath:{2} tempPath:{3}", dataPath, persistentDataPath, streamingAssetsPath, tempPath);
+                LogicSystem.LogFromGfx("dataPath:{0} persistentDataPath:{1} streamingAssetsPath:{2} tempPath:{3}", dataPath, persistentDataPath, streamingAssetsPath, tempPath);
                 Debug.Log(string.Format("dataPath:{0} persistentDataPath:{1} streamingAssetsPath:{2} tempPath:{3}", dataPath, persistentDataPath, streamingAssetsPath, tempPath));
 
                 // store log in tempPath, others to persistentDataPath
-#if (UNITY_ANDROID || UNITY_IPHONE || UNITY_WEBGL) && !UNITY_EDITOR
+#if !UNITY_EDITOR
                 GlobalVariables.Instance.IsDevice = true;
 #else
                 // if in editor, use streamingAssetsPath instead
@@ -95,9 +87,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 ArkCrossEngine.Network.WebSocketWrapper.Instance.SetInstance(m_WebSocket);
 #endif
 
-                GameControler.Init(tempPath, streamingAssetsPath);
-
-                // override log output
                 LogSystem.OnOutput2 = (Log_Type type, string msg) =>
                 {
 #if DEBUG
@@ -111,8 +100,13 @@ public class GameLogic : UnityEngine.MonoBehaviour
                     }
 #endif
                 };
+
+                GameControler.Init(tempPath, streamingAssetsPath);
+
                 NormLog.Instance.Init();
                 NormLog.Instance.Record(GameEventCode.GameStart);
+
+                LogicSystem.LogFromGfx("game log saved to: {0}", tempPath);
             }
 
             // try preload all skills used by npc in spec scene, also character
@@ -120,7 +114,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            LogicSystem.LogicLog("GameLogic.Start throw exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("GameLogic.Start throw exception:{0}\n{1}", ex.Message, ex.StackTrace);
             Debug.Log(string.Format("GameLogic.Start throw exception:{0}\n{1}", ex.Message, ex.StackTrace));
         }
     }
@@ -129,8 +123,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
     {
         try
         {
-            //LogicSystem.BeginLoading();
-            
             // if we are fisrt time start game, extract and loading game first
             if (!m_IsDataFileExtracted && !m_IsDataFileExtractedPaused)
             {
@@ -162,7 +154,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            LogicSystem.LogicErrorLog("GameLogic.Update throw exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("GameLogic.Update throw exception:{0}\n{1}", ex.Message, ex.StackTrace);
             Debug.LogError(string.Format("GameLogic.Update throw exception:{0}\n{1}", ex.Message, ex.StackTrace));
         }
 
@@ -182,7 +174,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     internal void OnApplicationPause(bool isPause)
@@ -194,7 +186,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     internal void OnApplicationQuit()
@@ -210,7 +202,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     internal string GetFPS()
@@ -231,7 +223,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
      
@@ -270,7 +262,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     public void StopCurrentStory()
@@ -298,7 +290,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -451,7 +443,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
                             }
                             catch (System.Exception ex)
                             {
-                                LogicSystem.LogicErrorLog("ExtractDataFileAndStartGame copy config failed. ex:{0} st:{1}",
+                                LogicSystem.LogErrorFromGfx("ExtractDataFileAndStartGame copy config failed. ex:{0} st:{1}",
                                   ex.Message, ex.StackTrace);
                             }
                         }
@@ -531,7 +523,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
     private void PauseExtractDataFileAndStartGame()
@@ -545,7 +537,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            ArkCrossEngine.LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -589,7 +581,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             // at this time, logic queue may not initialize yet
             UnityEngine.Debug.LogErrorFormat("[Error]:Exception:{0}\n{1}",
               ex.Message, ex.StackTrace);
-            LogicSystem.LogicErrorLog("[Error]:Exception:{0}\n{1}",
+            LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}",
               ex.Message, ex.StackTrace);
         }
     }
@@ -606,7 +598,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (Exception ex)
         {
-            LogicSystem.LogicLog("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -656,7 +648,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
         catch (Exception e)
         {
-            GfxSystem.GfxLog("Exception:{0}\n{1}", e.Message, e.StackTrace);
+            LogicSystem.LogErrorFromGfx("Exception:{0}\n{1}", e.Message, e.StackTrace);
             return null;
         }
     }

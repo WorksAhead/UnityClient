@@ -9,7 +9,7 @@ public class HardWareQuality
 {
     // Fields
     private static int mCpuQuality = 1;
-    //private static int mGpuQuality = 1;
+    private static int mGpuQuality = 1;
     private static QualityInfo mHighQuality = new QualityInfo();
     private static UnityEngine.Vector2 mHighResolution = new UnityEngine.Vector2(1536f, 1152f);
     public static bool mIsFirst;
@@ -72,7 +72,7 @@ public class HardWareQuality
             mMemoryQuality = (int)QualityLevelType.High;
         }
         SetQualityLevel(Math.Max(mCpuQuality, mMemoryQuality));
-        LogicSystem.LogicLog("HardWareQuality Quality:{0} ProcessCount:{1} SystemMemorySize:{2}",
+        LogicSystem.LogFromGfx("HardWareQuality Quality:{0} ProcessCount:{1} SystemMemorySize:{2}",
           GetQualityLevel(), SystemInfo.processorCount, SystemInfo.systemMemorySize);
     }
 
@@ -185,7 +185,7 @@ public class HardWareQuality
         {
             mSplitSceneLoaded = true;
         }
-        LogicSystem.LogicLog("cpuName = {0}, mSplitSceneLoaded = {1}", str, mSplitSceneLoaded);
+        LogicSystem.LogFromGfx("cpuName = {0}, mSplitSceneLoaded = {1}", str, mSplitSceneLoaded);
     }
 
     public static bool IsCPUVeryLow()

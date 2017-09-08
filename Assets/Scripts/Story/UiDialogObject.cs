@@ -73,7 +73,7 @@ public class UiDialogObject : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 
@@ -95,7 +95,7 @@ public class UiDialogObject : UnityEngine.MonoBehaviour
         }
         catch (System.Exception ex)
         {
-            LogicSystem.LogicErrorLog("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+            LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 }

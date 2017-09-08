@@ -329,12 +329,12 @@ namespace ArkCrossEngine
         #endregion
         public static void Log(string msg)
         {
-            LogicSystem.LogicLog(msg);
+            LogicSystem.LogFromGfx(msg);
             //UnityEngine.Debug.Log(msg);
         }
         public static void ErrLog(string msg)
         {
-            LogicSystem.LogicErrorLog(msg);
+            LogicSystem.LogErrorFromGfx(msg);
             //UnityEngine.Debug.LogError(msg);
         }
         public static string GetDynamicUrl(string url)

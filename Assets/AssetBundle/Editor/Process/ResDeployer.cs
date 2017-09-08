@@ -94,7 +94,7 @@ public class ResDeployer
   {
     bool ret = false;
     try {
-      Caching.ClearCache();
+      //Caching.ClearCache();
       string resCachePath = Path.Combine(UnityEngine.Application.persistentDataPath, ResBuildConfig.ResCommitCachePath);
       if (Directory.Exists(resCachePath)) {
         ResBuildHelper.DeleteDirectory(resCachePath);
