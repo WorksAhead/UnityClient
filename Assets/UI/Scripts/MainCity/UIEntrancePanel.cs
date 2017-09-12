@@ -932,8 +932,12 @@ public class UIEntrancePanel : UnityEngine.MonoBehaviour
 
     public void OnSystemSettingClicked()
     {
-        //GfxSystem.SetEquipmentColor(LobbyClient.Instance.CurrentRole.HeroId, EquipmentType.E_Clothes, 
-            //new UnityEngine.Color(UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), UnityEngine.Random.Range(0.0f, 1.0f), 1.0f));
+        UIManager.Instance.ShowWindowByName("SystemSetting");
+    }
+
+    public void OnSystemSettingCloseClicked()
+    {
+        UIManager.Instance.HideWindowByName("SystemSetting");
     }
 
     public void OnPVEClicked()

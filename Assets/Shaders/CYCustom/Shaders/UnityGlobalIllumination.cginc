@@ -158,7 +158,7 @@ inline half3 UnityGI_IndirectSpecular(UnityGIInput data, half occlusion, Unity_G
         glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[0], data.boxMin[0], data.boxMax[0]);
     #endif
 
-    #if defined(_GLOSSYREFLECTIONS_OFF) || defined(PBS_LOW_QUALITY)
+    #if defined(_GLOSSYREFLECTIONS_OFF)
         specular = unity_IndirectSpecColor.rgb;
     #else
         half3 env0 = Unity_GlossyEnvironment (UNITY_PASS_TEXCUBE(unity_SpecCube0), data.probeHDR[0], glossIn);
