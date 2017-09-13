@@ -1,8 +1,4 @@
-﻿#if UNITY_ANDROID || UNITY_WEBGL
-    //#define LoadDataTableFromCache
-#endif
-
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using System.IO;
 using System.Collections;
@@ -12,7 +8,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Game root entry
 /// </summary>
-public class GameLogic : UnityEngine.MonoBehaviour
+public class GameLogic : UnityEngine.MonoBehaviour, CoroutineLoader
 {
     internal void Awake()
     {
@@ -51,7 +47,9 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 }
 
                 // register file read handler
-                FileReaderProxy.RegisterReadFileHandler(EngineReadFileProxy, EngineFileExistsProxy);
+                // FileReaderProxy.RegisterReadFileHandler(EngineReadFileProxy, EngineFileExistsProxy);
+                FileReaderProxy.RegisterReadFileCoroutineHandler(EngineReadFileCoroutine, EngineFileExistsProxy);
+                CoroutineManager.Instance.SetCoroutineLoader(this);
 
                 /// Unity Editor: <path_to_project_folder>/Assets
                 /// iOS player: <path_to_player_app_bundle>/<AppName.app>/Data (this folder is read only, use Application.persistentDataPath to save data).
@@ -72,13 +70,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
 #else
                 // if in editor, use streamingAssetsPath instead
                 GlobalVariables.Instance.IsDevice = false;
-#endif
-
-#if UNITY_ANDROID || UNITY_WEBGL
-                if (!UnityEngine.Application.isEditor)
-                {
-                    streamingAssetsPath = persistentDataPath + "/Tables";
-                }
 #endif
 
 #if UNITY_WEBGL
@@ -123,6 +114,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
     {
         try
         {
+            CoroutineManager.Instance.Tick();
+
             // if we are fisrt time start game, extract and loading game first
             if (!m_IsDataFileExtracted && !m_IsDataFileExtractedPaused)
             {
@@ -305,20 +298,15 @@ public class GameLogic : UnityEngine.MonoBehaviour
         {
             yield return StartCoroutine(HandleGameLoadingPublish());
         }
-
-#if UNITY_ANDROID || UNITY_WEBGL
-        // if not play game in editor, extract config data to disk
-        else if (!UnityEngine.Application.isEditor)
+        else
         {
-            string destPath = UnityEngine.Application.persistentDataPath + "/Tables";
-            if (!Directory.Exists(destPath))
-                yield return StartCoroutine(HandleGameLoadingNonEditor());
+            yield return StartCoroutine(HandleGameLoadingNonPublish());
         }
-#endif
 
         LogicSystem.UpdateLoadingProgress(0.45f);
 
         // async load notice string from server
+        /*
         ResAsyncInfo requestNoticeConfigInfo = NoticeConfigLoader.RequestNoticeConfig();
         yield return requestNoticeConfigInfo.CurCoroutine;
 
@@ -326,9 +314,10 @@ public class GameLogic : UnityEngine.MonoBehaviour
         {
             UnityEngine.Debug.Log("获取公告列表错误");
         }
+        */
 
         // init all game system and start game
-        StartLogic();
+        StartCoroutine(StartLogic());
 
         // fire ge_loading_finish event handled by ui module, notify ui finished
         LogicSystem.EndLoading();
@@ -387,7 +376,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
         ResUpdateControler.ExitUpdate();
     }
 
-    private IEnumerator HandleGameLoadingNonEditor()
+    private IEnumerator HandleGameLoadingNonPublish()
     {
         LogicSystem.UpdateLoadingTip("加载配置数据");
         string srcPath = UnityEngine.Application.streamingAssetsPath;
@@ -395,9 +384,16 @@ public class GameLogic : UnityEngine.MonoBehaviour
         Debug.Log(srcPath);
         Debug.Log(destPath);
 
+        string listPath = "/list.txt";
         if (!srcPath.Contains("://"))
-            srcPath = "file://" + srcPath;
-        string listPath = srcPath + "/list.txt";
+        {
+            listPath = "file://" + srcPath + "/list.txt";
+        }
+        else
+        {
+            listPath = srcPath + "/list.txt";
+        }
+
         WWW listData = new WWW(listPath);
         yield return listData;
 
@@ -422,45 +418,48 @@ public class GameLogic : UnityEngine.MonoBehaviour
                     {
                         path = path.Trim();
                         string url = srcPath + "/" + path;
-                        //Debug.Log("extract " + url);
-                        string filePath = Path.Combine(destPath, path);
-                        string dir = Path.GetDirectoryName(filePath);
-                        if (!Directory.Exists(dir))
-                            Directory.CreateDirectory(dir);
-                        WWW temp = new WWW(url);
-                        yield return temp;
-                        if (null != temp.bytes)
-                        {
-                            try
-                            {
-#if LoadDataTableFromCache
-                                byte[] newAlloced = new byte[temp.bytes.Length];
-                                temp.bytes.CopyTo(newAlloced, 0);
-                                CachedTables.Add(Path.GetFullPath(filePath).ToLower(), newAlloced);
-#else
-                                File.WriteAllBytes(filePath, temp.bytes);
-#endif
-                            }
-                            catch (System.Exception ex)
-                            {
-                                LogicSystem.LogErrorFromGfx("ExtractDataFileAndStartGame copy config failed. ex:{0} st:{1}",
-                                  ex.Message, ex.StackTrace);
-                            }
-                        }
-                        else
-                        {
-                            //Debug.Log(path + " can't load");
-                        }
 
-                        temp.Dispose();
-                        temp = null;
+                        FileReaderProxy.preloadTable(url);
+
+                        //Debug.Log("extract " + url);
+//                         string filePath = Path.Combine(destPath, path);
+//                         string dir = Path.GetDirectoryName(filePath);
+//                         if (!Directory.Exists(dir))
+//                             Directory.CreateDirectory(dir);
+//                         WWW temp = new WWW(url);
+//                         yield return temp;
+//                         if (null != temp.bytes)
+//                         {
+//                             try
+//                             {
+// #if LoadDataTableFromCache
+//                                 byte[] newAlloced = new byte[temp.bytes.Length];
+//                                 temp.bytes.CopyTo(newAlloced, 0);
+//                                 CachedTables.Add(Path.GetFullPath(filePath).ToLower(), newAlloced);
+// #else
+//                                 File.WriteAllBytes(filePath, temp.bytes);
+// #endif
+//                             }
+//                             catch (System.Exception ex)
+//                             {
+//                                 LogicSystem.LogErrorFromGfx("ExtractDataFileAndStartGame copy config failed. ex:{0} st:{1}",
+//                                   ex.Message, ex.StackTrace);
+//                             }
+//                         }
+//                         else
+//                         {
+//                             //Debug.Log(path + " can't load");
+//                         }
+// 
+//                         temp.Dispose();
+//                         temp = null;
                     }
                     else
                     {
                         break;
                     }
 
-                    LogicSystem.UpdateLoadingProgress(0.8f + 0.2f * num / totalNum);
+                    //LogicSystem.UpdateLoadingProgress(0.8f + 0.2f * num / totalNum);
                 }
                 sr.Close();
             }
@@ -541,15 +540,15 @@ public class GameLogic : UnityEngine.MonoBehaviour
         }
     }
 
-    private void StartLogic()
+    private IEnumerator StartLogic()
     {
+        ArkProfiler.Start("StartLogic");
+
+        // initialize all sub system of game, load data from world system
+        yield return GameControler.InitLogic();
+
         try
         {
-            ArkProfiler.Start("StartLogic");
-
-            // initialize all sub system of game, load data from world system
-            GameControler.InitLogic();
-
             // start game logic thread
             GameControler.StartLogic();
 
@@ -624,54 +623,39 @@ public class GameLogic : UnityEngine.MonoBehaviour
         ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_pvp_counttime", "ui", countDownTime);
     }
 
-    private byte[] EngineReadFileProxy(string filePath)
+    private IEnumerator EngineReadFileCoroutine(string file, callback_readFile callback)
     {
-        try
+        string finalPath = HomePath.GetAbsolutePath(file);
+        if (!finalPath.Contains("://"))
         {
-            // Todo: load from bundle
-#if LoadDataTableFromCache
-            filePath = Path.GetFullPath(filePath).ToLower();
-            byte[] bytes;
-            if (CachedTables.TryGetValue(filePath, out bytes))
-            {
-                return bytes;
-            }
-            else
-            {
-                return null;
-            }
-#else
-            byte[] buffer = null;
-            buffer = File.ReadAllBytes(filePath);
-            return buffer;
-#endif
+            finalPath = "file://" + finalPath;
         }
-        catch (Exception e)
-        {
-            LogicSystem.LogErrorFromGfx("Exception:{0}\n{1}", e.Message, e.StackTrace);
-            return null;
-        }
+        WWW data = new WWW(finalPath);
+        yield return data;
+
+        // update progress
+        // LogicSystem.UpdateLoadingProgress(0.8f + 0.2f * m_LoadingTableIndex++ / m_LoadingTableCount);
+
+        callback(data.bytes);
     }
 
     private bool EngineFileExistsProxy(string filePath)
     {
-        // TODO: handle bundle
-#if LoadDataTableFromCache
-        filePath = Path.GetFullPath(filePath).ToLower();
-        byte[] bytes;
-        return CachedTables.TryGetValue(filePath, out bytes);
-#else
-        return File.Exists(filePath);
-#endif
+        return true;
     }
 
-#if LoadDataTableFromCache
-    private void CleanupCachedTables()
+    public bool IsCoroutineFinished(CoroutineObject obj)
     {
-        CachedTables.Clear();
-        GC.Collect();
+        return obj.RetObject != null;
     }
-#endif
+
+    public CoroutineObject StartCoroutineLoader(IEnumerator f, CoroutineObject obj)
+    {
+        obj.CoroutineFunction = f;
+        obj.Coroutine = StartCoroutine(f);
+        obj.RetObject = null;
+        return obj;
+    }
 
     private bool m_IsDataFileExtracted = false;
     private bool m_IsDataFileExtractedPaused = false;
@@ -683,11 +667,10 @@ public class GameLogic : UnityEngine.MonoBehaviour
     private float m_TimeLeft = 0;
     private const float c_UpdateInterval = 1.0f;
 
+    private int m_LoadingTableCount = 500;
+    private int m_LoadingTableIndex = 0;
+
 #if UNITY_WEBGL
     private WebGLSocket m_WebSocket;
-#endif
-
-#if LoadDataTableFromCache
-    private Dictionary<string, byte[]> CachedTables = new Dictionary<string, byte[]>();
 #endif
 }
