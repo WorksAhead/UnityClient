@@ -107,14 +107,6 @@ namespace ArkCrossEngine
             info.gamechannel = "2010071003";
 #endif
             string version = "";
-            if (null != ResUpdateControler.ClientVersionInfo)
-            {
-                VersionNum clientVersionNum = ResUpdateControler.ClientVersionInfo.Version;
-                if (null != clientVersionNum)
-                {
-                    version = clientVersionNum.GetVersionStr();
-                }
-            }
             if (version.Length > 0)
             {
                 info.gameversion = version;

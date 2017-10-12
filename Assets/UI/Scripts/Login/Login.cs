@@ -84,14 +84,6 @@ public class Login : UnityEngine.MonoBehaviour
 
             // update client version
             string version = "";
-            if (null != ResUpdateControler.ClientVersionInfo)
-            {
-                VersionNum clientVersionNum = ResUpdateControler.ClientVersionInfo.Version;
-                if (null != clientVersionNum)
-                {
-                    version = clientVersionNum.GetVersionStr();
-                }
-            }
 
             // get device info ,including uuid, system info, etc.
 #if UNITY_ANDROID || UNITY_IOS
@@ -113,11 +105,7 @@ public class Login : UnityEngine.MonoBehaviour
     
     void OpenNotice()
     {
-        if (String.IsNullOrEmpty(NoticeConfigLoader.s_NoticeContent.Trim()))
-        {
-            return;
-        }
-        UIManager.Instance.ShowWindowByName("LoginNotice");
+        
     }
 
     public void OnLoginButtonClick()
@@ -374,22 +362,6 @@ public class Login : UnityEngine.MonoBehaviour
         if (goServerBtn != null) NGUITools.SetActive(goServerBtn, enable);
         if (spLogo != null) NGUITools.SetActive(spLogo.gameObject, enable);
         if (lblStartNotice != null) NGUITools.SetActive(lblStartNotice.gameObject, enable);
-    }
-
-    private void SetAnimationFinished()
-    {
-        UnityEngine.GameObject go = UnityEngine.GameObject.Find(m_CameraObjName);
-        if (go != null)
-        {
-            UILoginSceneCameraCtrl cameraCtrl = go.GetComponent<UILoginSceneCameraCtrl>();
-            if (cameraCtrl != null)
-            {
-                cameraCtrl.SetAnimationFinished();
-            }
-        }
-        
-        if (spLogo != null) spLogo.fillAmount = 1f;
-        ShowLogin();
     }
 
     public IEnumerator PlayLogoAnimation()

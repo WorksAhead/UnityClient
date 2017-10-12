@@ -79,7 +79,6 @@ public class UISystemTip : UnityEngine.MonoBehaviour
             CheckPvPEntrance();
             CheckArtifact();
             CheckXhun();
-            CheckActivityAward();
             CheckPartner();
             CheckActivity();
         }
@@ -255,69 +254,6 @@ public class UISystemTip : UnityEngine.MonoBehaviour
             }
         }
         ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_systemnewtip_state_change", "ui", SystemNewTipType.Xhun, has);
-    }
-
-    public static void CheckActivityAward()
-    {
-        bool has1 = false;
-        bool has2 = false;
-        DateTime dtNow = DateTime.Now;
-        int daysInMonth = DateTime.DaysInMonth(dtNow.Year, dtNow.Month);
-        RoleInfo role_info = LobbyClient.Instance.CurrentRole;
-        if (role_info != null)
-        {
-            for (int day = 1; day <= daysInMonth; ++day)
-            {
-                int itemId, itemNum;
-                if (SignInRewardConfigProvider.Instance.GetDataByDate(dtNow.Month, day, out itemId, out itemNum))
-                {
-                    if ((day == role_info.SignInCountCurMonth + 1) && role_info.RestSignInCount > 0)
-                    {//签到
-                        has1 = true;
-                        break;
-                    }
-                }
-            }
-
-            if (WeeklyLoginConfigProvider.Instance.IsUnderProgress())
-            {//7天
-                int todayIndex = WeeklyLoginConfigProvider.Instance.GetTodayIndex();
-                if (!role_info.WeeklyLoginRewardRecord.Contains(todayIndex))
-                {
-                    has2 = true;
-                }
-            }
-
-            UnityEngine.GameObject go = UIManager.Instance.GetWindowGoByName("ActivityAward");
-            if (go != null)
-            {
-                UIActivityAward script = go.GetComponent<UIActivityAward>();
-                if (script != null)
-                {
-                    // 显示签到按钮上提示
-                    UnityEngine.Transform tfTip = null;
-                    if (script.goSignButtonTab != null)
-                    {
-                        tfTip = script.goSignButtonTab.transform.Find("Tip");
-                        if (tfTip != null)
-                        {
-                            NGUITools.SetActive(tfTip.gameObject, has1);
-                        }
-                    }
-                    // 显示登陆按钮上提示
-                    if (script.goLoginButtonTab != null)
-                    {
-                        tfTip = script.goLoginButtonTab.transform.Find("Tip");
-                        if (tfTip != null)
-                        {
-                            NGUITools.SetActive(tfTip.gameObject, has2);
-                        }
-                    }
-                }
-            }
-        }
-
-        ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_systemnewtip_state_change", "ui", SystemNewTipType.Award, has1 || has2);
     }
 
     public static void CheckMail(Dictionary<UnityEngine.GameObject, MailInfo> mailDic = null, Dictionary<ulong, bool> mailStateDic = null)

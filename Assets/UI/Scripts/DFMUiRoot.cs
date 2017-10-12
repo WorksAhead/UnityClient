@@ -59,7 +59,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<List<GfxUserInfo>>("ge_show_name_plates", "ui", CreateHeroNickName);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<GfxUserInfo>("ge_show_npc_name_plate", "ui", CreateNpcNickName);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<string, string, Action<bool>>("ge_show_yesornot", "ui", ShowYesOrNot);
-            ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<List<int>>("ge_show_newbieguide", "ui", ShowNewbieGuide);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<string>("ge_highlight_prompt", "ui", ShowHighlightPrompt);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<string, UIScreenTipPosEnum, UnityEngine.Vector3>("ge_screen_tip", "ui", ShowScreenTip);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<string, UIScreenTipPosEnum, UnityEngine.Vector3>("ge_screen_tip_invoke", "ui", ShowScreenTipEnvok);
@@ -70,7 +69,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe("player_self_created", "ui", OnPlayerSelfCreated);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<bool>("set_gesture_enable", "ui", SetGestureEnable);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe("ge_restamina_time", "ui", HandlerRestaminaTime);
-            ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe("ge_trigger_newbie_guide", "ui", this.TriggerNewbieGuide);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<ArkCrossEngine.Network.GeneralOperationResult>("ge_request_expedition_failure", "expedition", this.ExpeditionFailure);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe("ge_show_marsloading", "ui", this.ShowMarsLoading);
             ArkCrossEngine.LogicSystem.EventChannelForGfx.Subscribe<int>("ge_show_pathfinding", "ui", this.ShowPathFinding);
@@ -548,7 +546,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             /*EnterInScene在场景刚开始加载时被调用，逻辑层还未向UI同步GfxUserInfo*/
             DFMUiRoot.GfxUserInfoListForUI.Clear();
             DFMUiRoot.NickNameGameObjectDic.Clear();
-            UIBeginnerGuideManager.Instance.IsBeginnerGuiderStarted = false;
             NowSceneID = sceneId;
             SceneSubTypeEnum prevSceneType = m_SubSceneType;//上一场景类型
             UIDataCache.Instance.prevSceneType = prevSceneType;
@@ -561,7 +558,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                 {
                     m_SceneType = SceneTypeEnum.TYPE_SERVER_SELECT;
                     LoadUiInGame(UISceneType.LoginScene);
-                    UIBeginnerGuideManager.Instance.ResetLocalTriggerData();
                 }
                 //主城
                 if (dsc.m_Type == (int)SceneTypeEnum.TYPE_PURE_CLIENT_SCENE)
@@ -570,8 +566,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                     LoadUiInGame(UISceneType.MainCityScene);
                     InitStoryDlg();
                     GameObjectManager.Instance.ClearAllObjectList();
-                    if (prevSceneType != SceneSubTypeEnum.TYPE_EXPEDITION)
-                        StartCoroutine(DelayForNewbieGuide());
                     LoadResourcesInMainCity();
                 }
                 //PVP
@@ -1116,24 +1110,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
                 }
             }
         }
-    }
-    public IEnumerator DelayForNewbieGuide()
-    {
-        yield return new WaitForSeconds(0.5f);
-        try
-        {
-            UIBeginnerGuideManager.Instance.IsBeginnerGuiderStarted = true;
-            UIBeginnerGuideManager.Instance.TriggerNewbieGuide(UINewbieGuideTriggerType.T_MainCity, gameObject);
-        }
-        catch (System.Exception ex)
-        {
-            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
-        }
-    }
-    private void TriggerNewbieGuide()
-    {
-        UIBeginnerGuideManager.Instance.IsBeginnerGuiderStarted = true;
-        UIBeginnerGuideManager.Instance.TriggerNewbieGuide(UINewbieGuideTriggerType.T_MainCity, gameObject);
     }
     private void ExpeditionFailure(ArkCrossEngine.Network.GeneralOperationResult result)
     {
@@ -1721,26 +1697,7 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
             ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
-
-    private void ShowNewbieGuide(List<int> idlist)
-    {
-        try
-        {
-            if (idlist != null)
-            {
-                NewbieGuideManager ngm = gameObject.AddComponent<NewbieGuideManager>();
-                if (ngm != null)
-                {
-                    ngm.SetMySelf(ngm, transform);
-                    ngm.DoInitGuid(idlist);
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            ArkCrossEngine.LogicSystem.LogFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
-        }
-    }
+    
     private void SetPveFightInfo(int type, int num0, int num1, int num2)
     {
         Debug.Log("----pvap: in pvap info!!");

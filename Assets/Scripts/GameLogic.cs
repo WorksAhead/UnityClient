@@ -10,7 +10,7 @@ using ArkCrossEngine;
 using System.Collections.Generic;
 
 /// <summary>
-/// Game root entry
+/// Game root entry 
 /// </summary>
 public class GameLogic : UnityEngine.MonoBehaviour
 {
@@ -25,8 +25,9 @@ public class GameLogic : UnityEngine.MonoBehaviour
     // Use this for initialization
     internal void Start()
     {
-#if (UNITY_IOS || UNITY_ANDROID) && !(UNITY_EDITOR)
         UnityEngine.Application.targetFrameRate = 30;
+#if (UNITY_IOS || UNITY_ANDROID) && !(UNITY_EDITOR)
+        
         QualitySettings.vSyncCount = 2;
 #endif
         try
@@ -37,18 +38,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 ArkProfiler.RegisterOutput(LogicSystem.LogFromGfx);
                 // register to gfx thread, output to game console
                 ArkProfiler.RegisterOutput2(UnityEngine.Debug.Log);
-
-                // hardware ability
-                HardWareQuality.Clear();
-                HardWareQuality.ComputeHardwarePerformance();
-                HardWareQuality.SetResolution();
-                HardWareQuality.SetQualityAll();
-
-                // if in shipping mode, initialize resource update module
-                if (GlobalVariables.Instance.IsPublish)
-                {
-                    ResUpdateControler.InitContext();
-                }
 
                 // register file read handler
                 FileReaderProxy.RegisterReadFileHandler(EngineReadFileProxy, EngineFileExistsProxy);
@@ -196,7 +185,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
             Debug.LogWarning("OnApplicationQuit");
             GameControler.StopLogic();
             GameControler.Release();
-            AssetExManager.Instance.ClearAllAssetEx();
             UnityEngine.Resources.UnloadUnusedAssets();
             LuaManager.Instance.DisposeEnv();
         }
@@ -318,15 +306,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
         LogicSystem.UpdateLoadingProgress(0.45f);
 
-        // async load notice string from server
-        ResAsyncInfo requestNoticeConfigInfo = NoticeConfigLoader.RequestNoticeConfig();
-        yield return requestNoticeConfigInfo.CurCoroutine;
-
-        if (requestNoticeConfigInfo.IsError)
-        {
-            UnityEngine.Debug.Log("获取公告列表错误");
-        }
-
         // init all game system and start game
         StartLogic();
 
@@ -336,55 +315,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
     private IEnumerator HandleGameLoadingPublish()
     {
-        AssetExManager.Instance.Cleanup();
-        
-        ResUpdateControler.InitUpdate();
-        ResUpdateControler.HandleUpdateFailed = ReExtractDataFileAndStartGame;
-
-#region DetectVersion
-        ResUpdateControler.OnUpdateProgress(0);
-        ResAsyncInfo detectVersionInfo = ResUpdateControler.DetectVersion();
-        yield return detectVersionInfo.CurCoroutine;
-        if (detectVersionInfo.IsError)
-        {
-            ReExtractDataFileAndStartGame();
-            yield break;
-        }
-
-        if (ResUpdateControler.IsNeedPauseUpdate)
-        {
-            PauseExtractDataFileAndStartGame();
-            yield break;
-        }
-#endregion
-
-#region StartUpdate
-        int targetChapter = UnityEngine.Mathf.Max(ResUpdateControler.CurChapter, 1);
-        ResAsyncInfo startUpdateInfo = ResUpdateControler.StartUpdate(targetChapter);
-        yield return startUpdateInfo.CurCoroutine;
-        if (ResUpdateControler.IsNeedPauseUpdate)
-        {
-            PauseExtractDataFileAndStartGame();
-            yield break;
-        }
-        if (startUpdateInfo.IsError)
-        {
-            ReExtractDataFileAndStartGame();
-            yield break;
-        }
-#endregion
-
-#region LoadLevelAsync
-        ResAsyncInfo loadCacheResForMainMenuInfo = ResLevelLoader.LoadLevelAsync(ResUpdateControler.s_LoadSceneId);
-        yield return loadCacheResForMainMenuInfo.CurCoroutine;
-        if (loadCacheResForMainMenuInfo.IsError)
-        {
-            ReExtractDataFileAndStartGame();
-            yield break;
-        }
-#endregion
-
-        ResUpdateControler.ExitUpdate();
+        // TODO: use bundle server
+        return null;
     }
 
     private IEnumerator HandleGameLoadingNonEditor()
@@ -469,75 +401,6 @@ public class GameLogic : UnityEngine.MonoBehaviour
         else
         {
             Debug.Log("Can't load list.txt");
-        }
-    }
-
-    private void ReExtractDataFileAndStartGame()
-    {
-        try
-        {
-            ResUpdateControler.IncReconnectNum();
-            m_IsDataFileExtractedPaused = true;
-            string info = string.Empty;
-            string dlgButton = string.Empty;
-
-            if (ResUpdateControler.s_UpdateError == ResUpdateError.Network_Error)
-            {
-                info = Dict.Get(26);
-                if (string.IsNullOrEmpty(info))
-                {
-                    info = "网络连接失败！";
-                }
-                dlgButton = Dict.Get(28);
-                if (string.IsNullOrEmpty(dlgButton))
-                {
-                    dlgButton = "重试";
-                }
-            }
-            else
-            {
-                string infoFormat = Dict.Get(27);
-                if (string.IsNullOrEmpty(infoFormat))
-                {
-                    infoFormat = "更新失败，请稍后重试！\n失败原因（{0}）";
-                }
-                info = string.Format(infoFormat, (int)ResUpdateControler.s_UpdateError);
-                dlgButton = Dict.Get(28);
-                if (string.IsNullOrEmpty(dlgButton))
-                {
-                    dlgButton = "重试";
-                }
-            }
-
-            Action<bool> fun = new Action<bool>(delegate (bool selected)
-            {
-                if (selected)
-                {
-                    m_IsDataFileExtractedPaused = false;
-                    ResUpdateControler.ExitUpdate();
-                    m_IsDataFileExtracted = false;
-                    m_IsInit = false;
-                }
-            });
-            ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_yesornot", "ui", info, dlgButton, fun);
-        }
-        catch (System.Exception ex)
-        {
-            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
-        }
-    }
-    private void PauseExtractDataFileAndStartGame()
-    {
-        try
-        {
-            m_IsDataFileExtractedPaused = true;
-            ResUpdateControler.ExitUpdate();
-            m_IsDataFileExtracted = false;
-            m_IsInit = false;
-        }
-        catch (System.Exception ex)
-        {
-            ArkCrossEngine.LogicSystem.LogErrorFromGfx("[Error]:Exception:{0}\n{1}", ex.Message, ex.StackTrace);
         }
     }
 

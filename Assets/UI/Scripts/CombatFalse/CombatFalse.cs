@@ -16,12 +16,6 @@ public class CombatFalse : UnityEngine.MonoBehaviour
                     ArkCrossEngine.LogicSystem.EventChannelForGfx.Unsubscribe(m_EventList[i]);
                 }
             }
-            /*
-            foreach (object obj in m_EventList) {
-              if (null != obj) {
-                ArkCrossEngine.LogicSystem.EventChannelForGfx.Unsubscribe(obj);
-              }
-            }*/
             m_EventList.Clear();
         }
         catch (Exception ex)
@@ -57,7 +51,6 @@ public class CombatFalse : UnityEngine.MonoBehaviour
                 }
             }
             time = 0.0f;
-            //UIManager.Instance.HideWindowByName("CombatFalse");
         }
         catch (System.Exception ex)
         {
@@ -234,13 +227,6 @@ public class CombatFalse : UnityEngine.MonoBehaviour
                         pfi.AboutHeroDead();
                     }
                 }
-                /*
-                    if (DFMUiRoot.PveFightInfo != null) {
-                      PveFightInfo pfi = DFMUiRoot.PveFightInfo.GetComponent<PveFightInfo>();
-                      if (pfi != null) {
-                        pfi.AboutHeroDead();
-                      }
-                    }*/
                 time = 0.0f;
                 ArkCrossEngine.GfxSystem.EventChannelForLogic.Publish("ge_request_relive", "lobby", true);
                 ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_ui_connect_hint", "ui", true, true);
