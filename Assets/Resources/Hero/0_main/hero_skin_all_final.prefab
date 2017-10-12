@@ -290,6 +290,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1266577531876162
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4969547288576380}
+  m_Layer: 0
+  m_Name: skill_trail_refpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1290342777722502
 GameObject:
   m_ObjectHideFlags: 1
@@ -718,6 +733,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1735648154429426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4346342168347660}
+  m_Layer: 0
+  m_Name: pugong_effect_refpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1801405822144824
 GameObject:
   m_ObjectHideFlags: 1
@@ -806,6 +836,7 @@ GameObject:
   - component: {fileID: 114212324307747864}
   - component: {fileID: 143729708341567644}
   - component: {fileID: 111828017329184602}
+  - component: {fileID: 114412270901916518}
   m_Layer: 8
   m_Name: hero_skin_all_final
   m_TagString: Untagged
@@ -1082,7 +1113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1822458212313432}
   m_LocalRotation: {x: -0, y: 0.66146326, z: -0, w: 0.7499776}
-  m_LocalPosition: {x: 69.309845, y: 151.08418, z: 17.054981}
+  m_LocalPosition: {x: 80.05, y: 4.58, z: 120.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4481333650223734}
@@ -1090,6 +1121,7 @@ Transform:
   - {fileID: 4637199935674246}
   - {fileID: 4141195195456004}
   - {fileID: 4310171357414194}
+  - {fileID: 4346342168347660}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1244,6 +1276,19 @@ Transform:
   - {fileID: 4163479185425258}
   m_Father: {fileID: 4780070746971024}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4346342168347660
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735648154429426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.66, z: 1.327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4154942880116156}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4362672842723002
 Transform:
@@ -1574,6 +1619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Children:
   - {fileID: 4770667461596310}
+  - {fileID: 4969547288576380}
   m_Father: {fileID: 4362672842723002}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1809,6 +1855,19 @@ Transform:
   m_Father: {fileID: 4451756275201880}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4969547288576380
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1266577531876162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0.496}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4678205822144032}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4970451044769882
 Transform:
   m_ObjectHideFlags: 1
@@ -1962,6 +2021,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CampId: 2
   m_IsEndure: 0
+--- !u!114 &114412270901916518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1822458212313432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e20ea3fb87c674891885b896eef593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AttackKey: 106
+  m_SkillAKey: 105
+  m_SkillBKey: 111
+  m_SkillCKey: 107
+  m_SkillDKey: 108
+  m_SkillQKey: 113
+  m_SkillEKey: 101
+  m_SkillEX: 121
+  m_ChangeInput: 289
 --- !u!114 &114530806060138754
 MonoBehaviour:
   m_ObjectHideFlags: 1

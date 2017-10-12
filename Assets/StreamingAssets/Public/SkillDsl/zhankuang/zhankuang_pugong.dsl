@@ -28,7 +28,8 @@
 		//{
 		//	audiogroup("Sound/zhankuang/ZK_Voice_PuGong_01", "Sound/zhankuang/ZK_Voice_PuGong_05");
 		//}; 
-		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_attack_0_01", 500, "Bone_Root", 285, false);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_qishou_01", 500, "pugong_effect_refpoint", 200, false);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_wuqituowei_trail", 500, "skill_trail_refpoint", 0, true);
 		areadamage(285, 0, 1.7, 1, 2.3, true) 
 		{
 			stateimpact("kKnockDown", 16000000);
@@ -75,7 +76,8 @@ skill(160002)
 		//{
 		//	audiogroup("Sound/zhankuang/ZK_Voice_PuGong_02", "Sound/zhankuang/ZK_Voice_PuGong_06");
 		//}; 
-		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_attack_1_01", 500, "Bone_Root", 300, false);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_qishou_02", 633, "pugong_effect_refpoint", 200, false);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_wuqituowei_trail", 633, "skill_trail_refpoint", 0, true);
     
 		areadamage(300, 0, 1.7, 1, 2.3, true) 
 		{
@@ -135,11 +137,12 @@ skill(160003)
 		//{
 		//	audiogroup("Sound/zhankuang/ZK_Voice_PuGong_03", "Sound/zhankuang/ZK_Voice_PuGong_07");
 		//}; 
-		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_attack_2_01", 500, "Bone_Root", 233, false);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_qishou_03", 1500, "pugong_effect_refpoint", 200, false);
 		
 		//playsound(550, "skill0303", "Sound/zhankuang/zhankuang_sound", 1500, "Sound/zhankuang/hero_attack_0", false);
 
-		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_attack_2_02", 500, "Bone_Root", 550, false);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_wuqituowei_trail", 1300, "skill_trail_refpoint", 0, true);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_attack_01_wuqituowei", 1300, "skill_trail_refpoint", 0, true);
     
 		areadamage(250, 0, 1.7, 1, 2.3, true) 
 		{
