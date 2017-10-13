@@ -1,9 +1,4 @@
-﻿/*
- * name：DFMUtils；
- * function: 工具类 此类为单例；
- * author: 李齐；
- * */
-public enum ItemIconType : int
+﻿public enum ItemIconType : int
 {
     Task_Award = 1, //任务奖励
     Sign_in = 2, // 签到

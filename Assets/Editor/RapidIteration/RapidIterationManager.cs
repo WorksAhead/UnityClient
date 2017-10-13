@@ -192,7 +192,7 @@ namespace RapidIteration
             }
         }
 
-        [MenuItem("RapidIteration/Diff Scene")]
+        //[MenuItem("RapidIteration/Diff Scene")]
         static void DiffScene()
         {
             sIsSceneDirty = UnityEngine.SceneManagement.SceneManager.GetActiveScene().isDirty;

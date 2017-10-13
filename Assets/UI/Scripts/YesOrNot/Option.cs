@@ -62,8 +62,7 @@ public class Option : UnityEngine.MonoBehaviour
     public void SwitchID()
     {
         UIManager.Instance.HideWindowByName("Option");
-
-        ArkCrossEngine.NoticeConfigLoader.s_NoticeContent = "";
+        
         ArkCrossEngine.MyAction<int> fun = SwitchIDButtonWhich;
         ArkCrossEngine.LogicSystem.EventChannelForGfx.Publish("ge_show_dialog", "ui", ArkCrossEngine.StrDictionaryProvider.Instance.GetDictString(17), null,
         ArkCrossEngine.StrDictionaryProvider.Instance.GetDictString(140), ArkCrossEngine.StrDictionaryProvider.Instance.GetDictString(157), fun, false);

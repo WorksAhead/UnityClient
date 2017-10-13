@@ -33,7 +33,6 @@ public class UIManager
     public void Init()
     {
         uiConfigDataDic = UiConfigProvider.Instance.GetData();
-        UIBeginnerGuideManager.Instance.InitNewbieGuideData();
     }
     public void Init(UnityEngine.GameObject rootWindow)
     {

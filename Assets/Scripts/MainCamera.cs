@@ -264,30 +264,6 @@ public class MainCamera : UnityEngine.MonoBehaviour
             }
         }
     }
-
-    public void DisableBloom()
-    {
-        if (null != UnityEngine.Camera.main)
-        {
-            ScreenBloom bloom = UnityEngine.Camera.main.GetComponent<ScreenBloom>();
-            if (null != bloom)
-            {
-                bloom.enabled = false;
-            }
-        }
-    }
-    public void EnableBloom()
-    {
-        if (null != UnityEngine.Camera.main)
-        {
-            ScreenBloom bloom = UnityEngine.Camera.main.GetComponent<ScreenBloom>();
-            if (null != bloom)
-            {
-                bloom.enabled = true;
-            }
-        }
-    }
-
     public void SetDistanceAndHeight(float[] args)
     {
         if (null == args || args.Length != 2)

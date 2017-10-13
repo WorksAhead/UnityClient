@@ -245,13 +245,7 @@ public class SkillBar : UnityEngine.MonoBehaviour
             {
                 NGUITools.SetActive(spAshEx.gameObject, false);
             }
-            NewbieGuideConfig guideCfg = UIBeginnerGuideManager.Instance.GetNewbieGuideCfg(UINewbieGuideTriggerType.T_SkillBar);
-            if (guideCfg != null)
-            {
-                m_TriggerSceneId = guideCfg.m_TriggerSceneId;
-                m_NewbieGuideId = guideCfg.Id;
-            }
-            if (m_TriggerSceneId != UIDataCache.Instance.curSceneId && !UIBeginnerGuideManager.Instance.IsGuideFinished(m_NewbieGuideId))
+            if (m_TriggerSceneId != UIDataCache.Instance.curSceneId)
             {
                 if (!IsSceneFinished(m_TriggerSceneId))
                     NGUITools.SetActive(spAshEx.gameObject, false);
@@ -569,10 +563,9 @@ public class SkillBar : UnityEngine.MonoBehaviour
             //增加一个判断条件：等loading界面结束
             if (value >= 1 && spFullEx != null && UIDataCache.Instance.isLoadingEnd)
             {
-                if (NGUITools.GetActive(spAshEx.gameObject) && !UIBeginnerGuideManager.Instance.IsGuideFinished(m_NewbieGuideId) && m_IsInNewbieGuide == false)
+                if (NGUITools.GetActive(spAshEx.gameObject) && m_IsInNewbieGuide == false)
                 {
                     //第一次释放技能，需要新手引导
-                    UIBeginnerGuideManager.Instance.TriggerNewbieGuide(UINewbieGuideTriggerType.T_SkillBar, SkillBarView);
                     m_IsInNewbieGuide = true;
                     m_IsNeedLockGameFrame = true;
                     SetLockFrame(true);
@@ -628,23 +621,6 @@ public class SkillBar : UnityEngine.MonoBehaviour
         SetLockFrame(true);
         m_IsInNewbieGuide = false;
         UnityEngine.GameObject go = UIManager.Instance.LoadWindowByName("ExGuideDlg", UICamera.mainCamera);
-        UIExGuideDlg guideDlg = go.GetComponent<UIExGuideDlg>();
-        if (guideDlg != null)
-        {
-            RoleInfo role_info = LobbyClient.Instance.CurrentRole;
-            if (role_info != null && role_info.HeroId == (int)UIHeroType.Jianshi)
-            {
-                string chn = StrDictionaryProvider.Instance.GetDictString(506);
-                guideDlg.SetTeachWords(chn);
-                guideDlg.SetTweenAlphaDelay(UIHeroType.Jianshi);
-            }
-            if (role_info != null && role_info.HeroId == (int)UIHeroType.Cike)
-            {
-                string chn = StrDictionaryProvider.Instance.GetDictString(507);
-                guideDlg.SetTeachWords(chn);
-                guideDlg.SetTweenAlphaDelay(UIHeroType.Cike);
-            }
-        }
     }
     private void LockGameFrame()
     {
