@@ -164,7 +164,7 @@ namespace ArkCrossEngine
             {
                 UnityEngine.Vector3 pos = revivePoint.transform.position;
                 float rot = revivePoint.transform.rotation.eulerAngles.y;
-                builder.AppendFormat("{0}\t{1}\t{2}\t{3} {4} {5}\t\t{6}\t{7}\t\t{8}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n", 20001, 0, 3, pos.x, pos.y, pos.z, rot, "FALSE", 0);
+                builder.AppendFormat("{0}\t{1}\t{2}\t{3} {4} {5}\t\t{6}\t{7}\t\t{8}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n", 20001, 0, 3, pos.x, pos.y, pos.z, rot, "FALSE", 0);
             }
 
             int baseId = 1001;
@@ -181,7 +181,7 @@ namespace ArkCrossEngine
                 // RotAngle
                 float rot = npc.transform.rotation.eulerAngles.y;
 
-                builder.AppendFormat("{0}\t{1}\t{2}\t{3} {4} {5}\t\t{6}\t{7}\t\t{8}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n", id, linkId, campId, pos.x, pos.y, pos.z, rot, "FALSE", 0);
+                builder.AppendFormat("{0}\t{1}\t{2}\t{3} {4} {5}\t\t{6}\t{7}\t\t{8}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n", id, linkId, campId, pos.x, pos.y, pos.z, rot, "FALSE", 0);
             }
 
             StreamReader rf = new StreamReader(unitFilePath);
@@ -205,7 +205,7 @@ namespace ArkCrossEngine
             
             rf.Close();
 
-            StreamWriter wf = new StreamWriter(unitFilePath);
+            StreamWriter wf = new StreamWriter(unitFilePath, false, Encoding.UTF8);
             wf.Write(finalUnitFile);
             wf.Write(builder.ToString());
             wf.Close();
@@ -215,11 +215,23 @@ namespace ArkCrossEngine
 
         private static int GetLinkIdByObject(GameObject obj)
         {
+            EditorIndicator_NPC npc = obj.GetComponentInChildren<EditorIndicator_NPC>();
+            if (npc != null)
+            {
+                return npc.LinkId;
+            }
+
             return 0;
         }
 
         private static int GetCampIdByObject(GameObject obj)
         {
+            EditorIndicator_NPC npc = obj.GetComponentInChildren<EditorIndicator_NPC>();
+            if (npc != null)
+            {
+                return npc.CampId;
+            }
+
             return 0;
         }
 

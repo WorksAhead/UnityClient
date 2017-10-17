@@ -29,7 +29,7 @@
 	  wait(10);
 	  loop(6)
 	  {
-	    createnpc(1005+$$);
+	    createnpc(1001+$$);
 	  };
 	  //wait(1000);
 	  //setblockedshader(0x0000ff90,0.5,0,0xff000090,0.5,0);
@@ -64,7 +64,6 @@
 	  {
 	    
   	  };
-	  };
 	  if($0==2)
 	  {
 	    

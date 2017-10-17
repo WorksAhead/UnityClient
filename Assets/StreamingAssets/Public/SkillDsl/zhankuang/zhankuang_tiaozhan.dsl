@@ -28,8 +28,9 @@
 		startcurvemove(0, false, 0.1, 0, 30, 30, 0, -100, -150, 0.1, 0, 20, 15, 0, -100, -120, 0.73, 0, 10, 3, 0, -20, 0);
 		findmovetarget(920, vector3(0, 0, 3), 3, 90, 0.8, 0.2, 0, -0.8);
 		startcurvemove(930, true, 0.1, 0, -50, 20, 0, -500, 0);
-		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill01_01",1000,vector3(0,0,0),0,eular(0,0,0),vector3(1,1,1),true);
-		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill01_02",2500,vector3(0,0,1),1030,eular(0,0,0),vector3(1,1,1),true);		
+		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill01_01",1000,vector3(0,0,0),0,eular(0,0,0),vector3(1,1,1),true);
+		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill01_02",2500,vector3(0,0,1),1030,eular(0,0,0),vector3(1,1,1),true);
+                charactereffect("Aaron_fx_skill/Prefab/fashi_skill02",4000,"hero_coordinateCenter_refpoint",300, false);		
 		//playsound(0, "skill1001", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/hero_skill01", false);		
 		//playsound(1000, "skill1002", "Sound/zhankuang/zhankuang_sound", 1000, "Sound/zhankuang/ZK_Voice_TiaoZa", false);		
 		//playsound(1200, "skill1003", "Sound/zhankuang/zhankuang_sound", 3000, "Sound/zhankuang/zhankuang_tiaozhan_02", false);

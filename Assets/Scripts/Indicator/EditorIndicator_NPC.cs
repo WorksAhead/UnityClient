@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using ArkCrossEngine;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 [ExecuteInEditMode]
 public class EditorIndicator_NPC : UnityEngine.MonoBehaviour
 {
@@ -19,6 +23,12 @@ public class EditorIndicator_NPC : UnityEngine.MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
+
+        if (EditorApplication.isPlaying)
+        {
+            return;
+        }
+
         if (LoadedPrefabId != LinkId)
         {
             FileReaderProxy.MakeSureAllHandlerRegistered();

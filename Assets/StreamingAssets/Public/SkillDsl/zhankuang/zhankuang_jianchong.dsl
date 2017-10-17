@@ -69,7 +69,8 @@ skill(160802)
 		//sound("Sound/JianShi/JianChong_02",233);
 		//playsound(250, "skill0802", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_JiaoSha_02", false);
 		
-		charactereffect("Hero_FX/5_zhankuang/5_hero_zhankuang_jianchong_01_02",1000,"Bone_Root",266, false);
+		//charactereffect("Hero_FX/5_zhankuang/5_hero_zhankuang_jianchong_01_02",1000,"Bone_Root",266, false);
+                
 	
 		colliderdamage(250, 950, true, true, 50, 14)
 		{
@@ -116,7 +117,7 @@ skill(160811)
 		{
 			stateimpact("kDefault", 16120201);
 		};        
-        sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_02_03",1000,vector3(0,0,0),33);
+        sceneeffect("Aaron_fx_skill/Prefab/fashi_skill01",4000,vector3(-0.5,0,7),05);
         //playsound(0, "skill08011", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/hero_skill01", false);
 		destroyself(1000);
     };
@@ -142,8 +143,9 @@ skill(160812)
 		{
 			stateimpact("kDefault", 16120202);
 		};        
-        sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_02_03",1000,vector3(0,0,0),233);
+        //sceneeffect("Aaron_fx_skill/Prefab/fashi_skill01",3000,vector3(0,0,0),33);
         //playsound(200, "skill08012", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_jiaosha_02", false);
+	//charactereffect("Aaron_fx_skill/Prefab/fashi_skill01",3000,"hero_coordinateCenter_refpoint",100，false);
         destroyself(1000);
     };
 	oninterrupt()
@@ -167,8 +169,9 @@ skill(160813)
 		{
 			stateimpact("kDefault", 16120201);
 		};        
-        sceneeffect("Hero_FX/5_zhankuang/5_hero_zhankuang_fenglunzhan_02_03",1000,vector3(0,0,0),533);
+        //sceneeffect("Aaron_fx_skill/Prefab/fashi_skill01",3000,vector3(0,0,0),33);
         //playsound(500, "skill08013", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_jiaosha_03", false);
+	//charactereffect("Aaron_fx_skill/Prefab/fashi_skill01",3000,"hero_coordinateCenter_refpoint",100，false);
         destroyself(1000);
     };
 	oninterrupt()

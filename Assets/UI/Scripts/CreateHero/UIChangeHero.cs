@@ -312,6 +312,14 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 // play queued animation
                 HeroPlayAnimation(m_HeroJianshi, GetAnimNameByHeroId(heroId));
                 HeroPlayAniationQueued(m_HeroJianshi, GetIdleAnimByHeroId(heroId));
+
+                // play particle effect
+                ParticleSystem[] pss = m_HeroJianshi.GetComponentsInChildren<ParticleSystem>();
+                foreach(var ps in pss)
+                {
+                    ps.Play();
+                }
+
                 // change weapon queued
                 StartCoroutine(DelayChangeWeaponPos(m_HeroJianshi, m_WeaponJianshi, m_JianshiBack, m_JianshiChangeWeaponDelay));
                 // set initial rotation

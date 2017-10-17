@@ -35,11 +35,11 @@
 		//playsound(800, "skill0202", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/zhankuang_fenglunzhan_02", false);
 		//playsound(750, "skill0203", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/ZK_Voice_FengLunZhan_01", false);
 
-		startcurvemove(200, true, 0.1, 0, 0, 5, 0, 0, 100, 0.03, 0, 0, 6, 0, 0, -80, 0.3, 0, 3, 0, 0, 30, 50, 0.1, 0, 3, 15, 0, -60, -120, 0.2, 0, -3, 10, 0, -300, -40);
+		//startcurvemove(200, true, 0.1, 0, 0, 5, 0, 0, 100, 0.03, 0, 0, 6, 0, 0, -80, 0.3, 0, 3, 0, 0, 30, 50, 0.1, 0, 3, 15, 0, -60, -120, 0.2, 0, -3, 10, 0, -300, -40);
 
 		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02",1000,vector3(0,0,0.5),233,eular(0,0,0),vector3(1,1,1),true);
 	
-		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_01",1000,"Bone_Root",200);
+		charactereffect("Aaron_fx_skill/Prefab/fashi_skill02",4000,"hero_coordinateCenter_refpoint",300, true);
 
 		areadamage(300, 0, 1, 1, 3, true) 
 		{
@@ -47,8 +47,6 @@
 			stateimpact("kLauncher", 16020102);
 			stateimpact("kDefault", 16020101);
 		};
-	
-		charactereffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_03",1000,"Bone_Root",766);
 
 		areadamage(833, 0, 1, 1.5, 3, true) 
 		{
@@ -67,17 +65,17 @@
 		//};
 		//shakecamera2(833, 200, false, true, vector3(0.3, 0.4, 0), vector3(40, 40, 0), vector3(12, 14, 0), vector3(80, 60, 0));
 		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02",1000,vector3(0,0,0),866,eular(0,0,0),vector3(1.3,1.3,1.3),true);
-		sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_04",1000,vector3(0,0,2.3),866);
+		//sceneeffect("Hero_FX/5_zhankuang/5_hero_hero_skill02_04",1000,vector3(0,0,2.3),866);
 	};
 	
 	oninterrupt()
 	{
-		stopeffect(0);
+		//stopeffect(0);
 	};
 	
 	onstop()
 	{
-		stopeffect(500);
+		//stopeffect(500);
 	};
 };
 
@@ -160,13 +158,13 @@ skill(160202)
 	
 	oninterrupt()
 	{
-		stopeffect(0);
+		//stopeffect(0);
         setlayer(0, 10, "Player");
 	};
 	
 	onstop()
 	{
-		stopeffect(500);
+		//stopeffect(500);
         setlayer(0, 10, "Player");
 	};
 };
