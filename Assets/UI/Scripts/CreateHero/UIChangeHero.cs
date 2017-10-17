@@ -36,6 +36,9 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     public UnityEngine.GameObject m_WeaponCikeRight;
     public UnityEngine.GameObject m_HeroJianshi;
     public UnityEngine.GameObject m_WeaponJianshi;
+    // temp
+    public UnityEngine.GameObject m_HeroJianshi_r1;
+    public int m_HeroReplaceIndex = 0;
     // mount points
     public UnityEngine.Transform m_CikeHandLeft;
     public UnityEngine.Transform m_CikeHandRight;
@@ -196,6 +199,17 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroJianshi.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
                 m_HeroJianshi.transform.SetLayer(0);
             }
+            if (m_HeroJianshi_r1 != null)
+            {
+                m_HeroJianshi_r1.transform.SetParent(null);
+                m_HeroJianshi_r1.transform.transform.position = holder.transform.position;
+                m_HeroJianshi_r1.transform.transform.localPosition = holder.transform.localPosition;
+                m_HeroJianshi_r1.transform.transform.rotation = holder.transform.rotation;
+                m_HeroJianshi_r1.transform.transform.localRotation = holder.transform.localRotation;
+                m_HeroJianshi_r1.transform.transform.localScale = new UnityEngine.Vector3(0.9f, 0.9f, 0.9f); //holder.transform.localScale;
+                m_HeroJianshi_r1.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
+                m_HeroJianshi_r1.transform.SetLayer(0);
+            }
         }
     }
 
@@ -223,6 +237,49 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 }
                 m_LastFingerPos = motionEventArgs.Position;
             }
+            return;
+        }
+
+        FingerDownEvent downEventArgs = args as FingerDownEvent;
+        if (downEventArgs != null)
+        {
+            if (UICamera.hoveredObject == m_HeroCollider)
+            {
+                // only fashi use this
+                if (m_CurHeroId != (int)HeroIdEnum.WARRIOR)
+                {
+                    return;
+                }
+
+                if (m_HeroReplaceIndex == 0)
+                {
+                    if (m_HeroJianshi.GetComponent<UnityEngine.Animation>().IsPlaying(m_HeroJianshiAnim))
+                    {
+                        return;
+                    }
+
+                    m_HeroJianshi.SetActive(false);
+                    m_HeroJianshi_r1.SetActive(true);
+
+                    HeroPlayAnimation(m_HeroJianshi_r1, m_HeroJianshiAnim);
+                    HeroPlayAniationQueued(m_HeroJianshi_r1, m_HeroJianshiIdleAnim);
+                }
+                else
+                {
+                    if (m_HeroJianshi_r1.GetComponent<UnityEngine.Animation>().IsPlaying(m_HeroJianshiAnim))
+                    {
+                        return;
+                    }
+
+                    m_HeroJianshi.SetActive(true);
+                    m_HeroJianshi_r1.SetActive(false);
+
+                    HeroPlayAnimation(m_HeroJianshi, m_HeroJianshiAnim);
+                    HeroPlayAniationQueued(m_HeroJianshi, m_HeroJianshiIdleAnim);
+                }
+                m_HeroReplaceIndex = (m_HeroReplaceIndex + 1) % 2;
+            }
+            return;
         }
     }
 
@@ -288,7 +345,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         // cache hero id
         m_CurHeroId = heroId;
         // initailize weapon mount position
-        InitWeaponMountPos(heroId);
+        // InitWeaponMountPos(heroId);
 
         // play music
         PlaySelectMusicByHeroId(heroId);
