@@ -573,6 +573,8 @@ GameObject:
   - component: {fileID: 1837760140}
   - component: {fileID: 1837760139}
   - component: {fileID: 1837760138}
+  - component: {fileID: 1837760144}
+  - component: {fileID: 1837760143}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -650,6 +652,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 5.728, y: 2.1320002, z: 0}
+--- !u!114 &1837760143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837760137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccbc39e95af89845a8026643e00fc45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FilmicShoulderScale: 1.6
+  FilmicMidtoneScale: 0.84
+  FilmicToeScale: 1
+  FilmicWhitePoint: 2
+--- !u!114 &1837760144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837760137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261bd1bf8ad8ac24ca2499e836dee497, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloomIntensity: 1
+  bloomThreshold: 6
+  brightOffset: 5
+  HDRBrightLevel: 1.25
+  HDRBloomMul: 0.7
+  rtBloomFinal: {fileID: 0}
+  rtAvgLuminance: {fileID: 0}
+  screenBlendShader: {fileID: 4800000, guid: b781369ee32647545a5dc8587cea660a, type: 3}
+  brightPassFilterShader: {fileID: 4800000, guid: a9895c5afc699ac4b93bd675b0489059,
+    type: 3}
 --- !u!1 &1891754845
 GameObject:
   m_ObjectHideFlags: 0
