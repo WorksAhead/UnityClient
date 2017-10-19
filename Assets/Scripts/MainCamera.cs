@@ -950,6 +950,16 @@ public class MainCamera : UnityEngine.MonoBehaviour
 
         if (touches.Count == 1 && !m_InWatchMode)
         {
+            if (m_Finger1 == null)
+            {
+                m_Finger1 = touches[0];
+            }
+
+            float xDistance = m_Finger1.DeltaPosition.x;
+            float yDistance = m_Finger1.DeltaPosition.y;
+            float xMoveScaler = xDistance / UnityEngine.Screen.width;
+            float yMoveScaler = yDistance / UnityEngine.Screen.height;
+
             TouchManager.Finger finger = touches[0];
             if (finger.IsMoving)
             {
@@ -961,18 +971,21 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 if (finger.DeltaPosition.x > 0)
                 {
                     // Rotate Left
-                    m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * Time.deltaTime * xScaleFactor;
+                    // m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * Time.deltaTime * xScaleFactor;
+                    m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * 2.0f * xMoveScaler;
                 }
                 else if (finger.DeltaPosition.x < 0)
                 {
                     // Rotate Right
-                    m_FixedYaw = m_CameraTransform.eulerAngles.y - m_AngularMaxSpeed * Time.deltaTime * xScaleFactor;
+                    // m_FixedYaw = m_CameraTransform.eulerAngles.y - m_AngularMaxSpeed * Time.deltaTime * xScaleFactor;
+                    m_FixedYaw = m_CameraTransform.eulerAngles.y + m_AngularMaxSpeed * 2.0f * xMoveScaler;
                 }
 
                 if (finger.DeltaPosition.y > 0)
                 {
                     // Rotate Down
-                    float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * Time.deltaTime * yScaleFactor;
+                    // float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * Time.deltaTime * yScaleFactor;
+                    float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * 0.6f * yMoveScaler;
                     if (camXAngle < m_MinCameraAngle)
                     {
                         camXAngle = m_MinCameraAngle;
@@ -982,7 +995,8 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 else if (finger.DeltaPosition.y < 0)
                 {
                     // Rotate Up
-                    float camXAngle = m_CameraTransform.eulerAngles.x + m_AngularMaxSpeed * Time.deltaTime * yScaleFactor;
+                    // float camXAngle = m_CameraTransform.eulerAngles.x + m_AngularMaxSpeed * Time.deltaTime * yScaleFactor;
+                    float camXAngle = m_CameraTransform.eulerAngles.x - m_AngularMaxSpeed * 0.6f * yMoveScaler;
                     if (camXAngle > m_MaxCameraAngle)
                     {
                         camXAngle = m_MaxCameraAngle;
@@ -993,6 +1007,8 @@ public class MainCamera : UnityEngine.MonoBehaviour
         }
         else if (touches.Count == 2)
         {
+            m_Finger1 = null;
+
             TouchManager.Finger finger1 = touches[0];
             TouchManager.Finger finger2 = touches[1];
 
@@ -1024,6 +1040,10 @@ public class MainCamera : UnityEngine.MonoBehaviour
                 }
                 m_FingerDistance = currentDistance;
             }
+        }
+        else
+        {
+            m_Finger1 = null;
         }
     }
 
@@ -1133,4 +1153,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
     public static UnityEngine.Quaternion CameraOriginalRotation = UnityEngine.Quaternion.identity;
 
     private bool m_IsInBattleScene = false;
+
+    // The first touch finger.
+    TouchManager.Finger m_Finger1 = null;
 }
