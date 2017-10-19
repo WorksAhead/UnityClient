@@ -56,9 +56,11 @@ Shader "CY/FilmicTonemapper" {
 		half fAdaptedLum = tex2D(_LumTex, i.uv).x;
 		float4 cBloom = DecodeRGBK(tex2D(_BloomTex, i.uv), SCENE_HDR_MULTIPLIER, true);
 
+		// Krawczyk scene key estimation adjusted to better fit our range - low (0.05) to high key (0.8) interpolation based on avg scene luminance
+		const half fSceneKey = 1.03f - 2.0f / (2.0f + log2(fAdaptedLum + 1.0f));
+
 		// Exposure compensation -/+1.5 f-stops
-		float sceneKey = 0.18f;
-		half exposure = clamp(sceneKey / fAdaptedLum, 0.36f, 2.8f);
+		half exposure = clamp(fSceneKey / fAdaptedLum, 0.36, 2.8);
 
 		float4 cBloomColor = float4(1, 1, 1, 1);
 		cBloom *= cBloomColor * _BloomIntensity * 3.0 / 8.0;

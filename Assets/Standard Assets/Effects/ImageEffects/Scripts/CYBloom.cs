@@ -9,7 +9,7 @@ namespace UnityStandardAssets.ImageEffects
     public class CYBloom : PostEffectsBase
     {
         public float bloomIntensity = 0.5f;
-        public float bloomThreshold = 0.5f;
+        public float bloomThreshold = 6.0f;
         public float brightOffset = 5.0f;
         public float HDRBrightLevel = 1.25f;
         public float HDRBloomMul = 0.7f;

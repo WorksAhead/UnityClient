@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 64aebc5f20cc14fe09b4e483fe82075c, type: 3}
   m_Sun: {fileID: 1232139202}
-  m_IndirectSpecularColor: {r: 0.506846, g: 0.6754121, b: 0.84146136, a: 1}
+  m_IndirectSpecularColor: {r: 0.49861896, g: 0.66440195, b: 0.8273864, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -12941,7 +12941,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccbc39e95af89845a8026643e00fc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tonemapper: {fileID: 4800000, guid: 478e345bb3d26554a914cded0a3e855f, type: 3}
   FilmicShoulderScale: 1.6
   FilmicMidtoneScale: 0.84
   FilmicToeScale: 1
@@ -13009,8 +13008,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1475200079}
-  m_LocalRotation: {x: -0.13436143, y: -0.35277227, z: 0.051264726, w: -0.9245922}
-  m_LocalPosition: {x: 40.221817, y: 14.23469, z: 38.992664}
+  m_LocalRotation: {x: -0.16304715, y: -0.019233003, z: 0.0031790328, w: -0.98642576}
+  m_LocalPosition: {x: 49.978836, y: 14.234699, z: 34.662624}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013380669}
