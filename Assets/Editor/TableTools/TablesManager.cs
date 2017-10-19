@@ -180,8 +180,12 @@ namespace ArkCrossEngine
                 UnityEngine.Vector3 pos = npc.transform.position;
                 // RotAngle
                 float rot = npc.transform.rotation.eulerAngles.y;
+                // idle animation set
+                string idleAnimSet = GetIdleAnimSetByObject(npc);
+                // AI logic
+                int aiLogic = GetAILogicByObject(npc);
 
-                builder.AppendFormat("{0}\t{1}\t{2}\t{3} {4} {5}\t\t{6}\t{7}\t\t{8}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n", id, linkId, campId, pos.x, pos.y, pos.z, rot, "FALSE", 0);
+                builder.AppendFormat("{0}\t{1}\t{2}\t{3} {4} {5}\t\t{6}\t{7}\t{8}\t{9}\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\r\n", id, linkId, campId, pos.x, pos.y, pos.z, rot, "FALSE", idleAnimSet, aiLogic);
             }
 
             StreamReader rf = new StreamReader(unitFilePath);
@@ -230,6 +234,28 @@ namespace ArkCrossEngine
             if (npc != null)
             {
                 return npc.CampId;
+            }
+
+            return 0;
+        }
+
+        private static string GetIdleAnimSetByObject(GameObject obj)
+        {
+            EditorIndicator_NPC npc = obj.GetComponentInChildren<EditorIndicator_NPC>();
+            if (npc != null)
+            {
+                return npc.IdleAnimSet;
+            }
+
+            return "";
+        }
+
+        private static int GetAILogicByObject(GameObject obj)
+        {
+            EditorIndicator_NPC npc = obj.GetComponentInChildren<EditorIndicator_NPC>();
+            if (npc != null)
+            {
+                return npc.AILogic;
             }
 
             return 0;

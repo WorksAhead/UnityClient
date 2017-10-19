@@ -11,6 +11,8 @@ public class EditorIndicator_NPC : UnityEngine.MonoBehaviour
 {
     public int LinkId = -1;
     public int CampId = 1;
+    public string IdleAnimSet = "";
+    public int AILogic = 0;
 
     private GameObject LoadedPrefab;
     private int LoadedPrefabId = -1;

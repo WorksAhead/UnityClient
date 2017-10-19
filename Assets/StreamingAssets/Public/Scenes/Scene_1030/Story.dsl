@@ -22,7 +22,7 @@
 	  showwall("AtoB",false);
 	  showwall("BDoor",true);
 	  wait(10);
-	  sendgfxmessage("UIPortal_Activity","PlayParticle");
+	  sendgfxmessage("7_Scene_Portal_02","PlayParticle");
 	  sendgfxmessage("UIPortal_PVE","PlayParticle");
 	  sendgfxmessage("UIPortal_PVP","PlayParticle");
 	  sendgfxmessage("UIPortal_Gateway","PlayParticle");
