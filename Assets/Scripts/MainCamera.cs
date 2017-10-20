@@ -60,6 +60,7 @@ public class MainCamera : UnityEngine.MonoBehaviour
             m_CurTargetId = id;
             m_Target = obj.transform;
             m_FixedRoll = 45;
+            m_FixedYaw = 180;
             UnityEngine.Collider collider = m_Target.GetComponent<UnityEngine.Collider>();
             if (null != collider)
             {
