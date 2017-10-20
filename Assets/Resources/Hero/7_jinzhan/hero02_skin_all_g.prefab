@@ -1945,10 +1945,10 @@ Animation:
   m_GameObject: {fileID: 1372103226961028}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: f9c22f7e3141ca9408714b7238dc968d, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations:
   - {fileID: 7400000, guid: f9c22f7e3141ca9408714b7238dc968d, type: 2}
-  - {fileID: 7400000, guid: 995a3db6994b4d54682f425139fd108a, type: 2}
+  - {fileID: 7400000, guid: d33fac772ac6d6d48820697f47837557, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2682,8 +2682,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 4839361105398500}
   m_AABB:
-    m_Center: {x: 0.0036711693, y: 0.18629646, z: 2.6378279}
-    m_Extent: {x: 1.5656643, y: 1.3822708, z: 2.1871288}
+    m_Center: {x: 0.0012235641, y: 0.062098354, z: 0.879276}
+    m_Extent: {x: 0.52188814, y: 0.46075726, z: 0.729043}
   m_DirtyAABB: 0
 --- !u!137 &137890790315801002
 SkinnedMeshRenderer:

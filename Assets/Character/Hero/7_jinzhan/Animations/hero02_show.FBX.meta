@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b4f6fe57ebd6c52418d11226b9595a64
-timeCreated: 1500949336
+guid: d33fac772ac6d6d48820697f47837557
+timeCreated: 1508482252
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -33,29 +33,27 @@ ModelImporter:
     100050: Bip001 R UpperArm
     100052: Bip001 Spine
     100054: Bip001 Spine1
-    100056: hair01
-    100058: hair02
-    100060: hair03
-    100062: //RootNode
-    100064: Pectoral_L
-    100066: Pectoral_R
-    100068: qunbai_01
-    100070: qunbai_02
-    100072: qunbai_03
-    100074: qunbai_04
-    100076: qunbai_05
-    100078: qunbai_06
-    100080: qunbai_07
-    100082: qunbai_08
-    100084: qunbai_09
-    100086: qunbai_10
+    100056: Bone001
+    100058: Bone002
+    100060: Bone003
+    100062: Bone004
+    100064: Bone005
+    100066: hair01
+    100068: hair02
+    100070: hair03
+    100072: //RootNode
+    100074: Pectoral_L
+    100076: Pectoral_L(mirrored)
+    100078: qunbai_01
+    100080: qunbai_02
+    100082: qunbai_03
+    100084: qunbai_10
+    100086: qunbai_10(mirrored)
     100088: qunbai_11
-    100090: qunbai_12
-    100092: Weapon_R
-    100094: xiuzi_01
-    100096: xiuzi_02
-    100098: xiuzi_03
-    100100: xiuzi_04
+    100090: qunbai_11(mirrored)
+    100092: qunbai_12
+    100094: qunbai_12(mirrored)
+    100096: Weapon_R
     400000: Bip001
     400002: Bip001 Head
     400004: Bip001 L Calf
@@ -84,30 +82,28 @@ ModelImporter:
     400050: Bip001 R UpperArm
     400052: Bip001 Spine
     400054: Bip001 Spine1
-    400056: hair01
-    400058: hair02
-    400060: hair03
-    400062: //RootNode
-    400064: Pectoral_L
-    400066: Pectoral_R
-    400068: qunbai_01
-    400070: qunbai_02
-    400072: qunbai_03
-    400074: qunbai_04
-    400076: qunbai_05
-    400078: qunbai_06
-    400080: qunbai_07
-    400082: qunbai_08
-    400084: qunbai_09
-    400086: qunbai_10
+    400056: Bone001
+    400058: Bone002
+    400060: Bone003
+    400062: Bone004
+    400064: Bone005
+    400066: hair01
+    400068: hair02
+    400070: hair03
+    400072: //RootNode
+    400074: Pectoral_L
+    400076: Pectoral_L(mirrored)
+    400078: qunbai_01
+    400080: qunbai_02
+    400082: qunbai_03
+    400084: qunbai_10
+    400086: qunbai_10(mirrored)
     400088: qunbai_11
-    400090: qunbai_12
-    400092: Weapon_R
-    400094: xiuzi_01
-    400096: xiuzi_02
-    400098: xiuzi_03
-    400100: xiuzi_04
-    7400000: hero_run
+    400090: qunbai_11(mirrored)
+    400092: qunbai_12
+    400094: qunbai_12(mirrored)
+    400096: Weapon_R
+    7400000: hero_show_g
     9500000: //RootNode
     11100000: //RootNode
   materials:
@@ -134,17 +130,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: hero_run
+      name: hero_show_g
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 24
-      wrapMode: 2
+      lastFrame: 124
+      wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -186,6 +182,16 @@ ModelImporter:
         weight: 1
       - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head
         weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/Bone001
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/Bone001/Bone002
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/Bone001/Bone002/Bone003
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/Bone004
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/Bone004/Bone005
+        weight: 1
       - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/hair01
         weight: 1
       - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/hair01/hair02
@@ -218,12 +224,6 @@ ModelImporter:
           Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001 L Finger1/Bip001
           L Finger11
         weight: 1
-      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L
-          Clavicle/Bip001 L UpperArm/Bip001 L Forearm/xiuzi_03
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L
-          Clavicle/Bip001 L UpperArm/Bip001 L Forearm/xiuzi_03/xiuzi_04
-        weight: 1
       - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R
           Clavicle
         weight: 1
@@ -253,15 +253,9 @@ ModelImporter:
       - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R
           Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Weapon_R
         weight: 1
-      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R
-          Clavicle/Bip001 R UpperArm/Bip001 R Forearm/xiuzi_01
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R
-          Clavicle/Bip001 R UpperArm/Bip001 R Forearm/xiuzi_01/xiuzi_02
-        weight: 1
       - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Pectoral_L
         weight: 1
-      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Pectoral_R
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Pectoral_L(mirrored)
         weight: 1
       - path: Bip001/Bip001 Pelvis/qunbai_01
         weight: 1
@@ -269,23 +263,17 @@ ModelImporter:
         weight: 1
       - path: Bip001/Bip001 Pelvis/qunbai_01/qunbai_02/qunbai_03
         weight: 1
-      - path: Bip001/Bip001 Pelvis/qunbai_04
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/qunbai_04/qunbai_05
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/qunbai_04/qunbai_05/qunbai_06
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/qunbai_07
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/qunbai_07/qunbai_08
-        weight: 1
-      - path: Bip001/Bip001 Pelvis/qunbai_07/qunbai_08/qunbai_09
-        weight: 1
       - path: Bip001/Bip001 Pelvis/qunbai_10
         weight: 1
       - path: Bip001/Bip001 Pelvis/qunbai_10/qunbai_11
         weight: 1
       - path: Bip001/Bip001 Pelvis/qunbai_10/qunbai_11/qunbai_12
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/qunbai_10(mirrored)
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/qunbai_10(mirrored)/qunbai_11(mirrored)
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/qunbai_10(mirrored)/qunbai_11(mirrored)/qunbai_12(mirrored)
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}

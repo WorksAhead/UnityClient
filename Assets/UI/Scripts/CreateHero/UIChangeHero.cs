@@ -309,7 +309,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroJianshi.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
                 break;
             case (int)HeroIdEnum.Hero3:
-                m_HeroJianshi.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
+                m_Hero3.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
                 break;
         }
     }
