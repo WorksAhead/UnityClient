@@ -36,6 +36,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     public UnityEngine.GameObject m_WeaponCikeRight;
     public UnityEngine.GameObject m_HeroJianshi;
     public UnityEngine.GameObject m_WeaponJianshi;
+    public UnityEngine.GameObject m_Hero3;
     // temp
     public UnityEngine.GameObject m_HeroJianshi_r1;
     public int m_HeroReplaceIndex = 0;
@@ -87,6 +88,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     {
         WARRIOR = 1,
         MAGICA = 2,
+        Hero3,
     }
     internal enum RoleEnterResult
     {
@@ -187,6 +189,17 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroCike.transform.transform.localScale = holder.transform.localScale;
                 m_HeroCike.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
                 m_HeroCike.transform.SetLayer(0);
+            }
+            if (m_Hero3 != null)
+            {
+                m_Hero3.transform.SetParent(null);
+                m_Hero3.transform.transform.position = holder.transform.position;
+                m_Hero3.transform.transform.localPosition = holder.transform.localPosition;
+                m_Hero3.transform.transform.rotation = holder.transform.rotation;
+                m_Hero3.transform.transform.localRotation = holder.transform.localRotation;
+                m_Hero3.transform.transform.localScale = holder.transform.localScale;
+                m_Hero3.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
+                m_Hero3.transform.SetLayer(0);
             }
             if (m_HeroJianshi != null)
             {
@@ -295,6 +308,9 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             case (int)HeroIdEnum.WARRIOR:
                 m_HeroJianshi.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
                 break;
+            case (int)HeroIdEnum.Hero3:
+                m_HeroJianshi.transform.Rotate(UnityEngine.Vector3.up, angle, Space.Self);
+                break;
         }
     }
     
@@ -365,6 +381,10 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 StartCoroutine(DelayChangeWeaponPos(m_HeroCike, m_WeaponCikeRight, m_CikeBackRight, m_CikeChangeWeaponDelay));
                 // set initial rotation
                 m_HeroCike.transform.rotation = m_CikeInitRotation;
+                break;
+            case (int)HeroIdEnum.Hero3:
+                HeroPlayAnimation(m_Hero3, GetAnimNameByHeroId(heroId));
+                HeroPlayAniationQueued(m_Hero3, GetIdleAnimByHeroId(heroId));
                 break;
             case (int)HeroIdEnum.WARRIOR:
                 // play queued animation
@@ -471,12 +491,16 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             case (int)HeroIdEnum.MAGICA:
                 m_HeroCike.SetActive(visible);
                 break;
+            case (int)HeroIdEnum.Hero3:
+                m_Hero3.SetActive(visible);
+                break;
         }
     }
     private void SetHeroVisibleFalse()
     {
         m_HeroJianshi.SetActive(false);
         m_HeroCike.SetActive(false);
+        m_Hero3.SetActive(false);
     }
     private void SetOnlyHeroVisible(int onlyHeroId)
     {
@@ -523,6 +547,9 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             case (int)HeroIdEnum.WARRIOR:
                 result = m_HeroJianshiAnim;
                 break;
+            case (int)HeroIdEnum.Hero3:
+                result = m_HeroJianshiAnim;
+                break;
         }
         return result;
     }
@@ -535,6 +562,9 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 result = m_HeroCikeIdleAnim;
                 break;
             case (int)HeroIdEnum.WARRIOR:
+                result = m_HeroJianshiIdleAnim;
+                break;
+            case (int)HeroIdEnum.Hero3:
                 result = m_HeroJianshiIdleAnim;
                 break;
         }
@@ -771,7 +801,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             // hide hero
             SetHeroVisibleById(m_CurHeroId, false);
             // enter game scene
-            LogicSystem.PublishLogicEvent("ge_role_enter", "lobby", signforbuttonpress);
+            /// temp
+            LogicSystem.PublishLogicEvent("ge_role_enter", "lobby", 0);
             LogicSystem.EventChannelForGfx.Publish("ge_connect_hint", "ui", UIConnectEnumType.RoleEnter, true, 20.0f);
         }
     }
@@ -937,8 +968,8 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     }
     public void ButtonCreateHero2()
     {
-        //ShowHeroAndDoAction((int)HeroIdEnum.MAGIC);
-        //ButtonCreateHeroColourScale(3);
+        ShowHeroAndDoAction((int)HeroIdEnum.Hero3);
+        ButtonCreateHeroColourScale(3);
     }
     public void ButtonCreateHero3()
     {

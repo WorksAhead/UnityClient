@@ -2544,7 +2544,7 @@ BoxCollider:
   m_GameObject: {fileID: 100234}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 117, y: 91, z: 0}
   m_Center: {x: -58.5, y: -45.5, z: 0}
@@ -4227,6 +4227,7 @@ MonoBehaviour:
   m_WeaponCikeRight: {fileID: 0}
   m_HeroJianshi: {fileID: 1286043638088922}
   m_WeaponJianshi: {fileID: 0}
+  m_Hero3: {fileID: 1605566127273836}
   m_HeroJianshi_r1: {fileID: 1359070705030250}
   m_HeroReplaceIndex: 0
   m_CikeHandLeft: {fileID: 0}
@@ -4435,7 +4436,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100234}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
   m_Name: 
@@ -4464,7 +4465,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100234}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
@@ -13324,7 +13325,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1930605959475426}
-  m_LocalRotation: {x: 0.56530994, y: 0.23344243, z: 0.76515746, w: -0.2011555}
+  m_LocalRotation: {x: 0.5653099, y: 0.2334424, z: 0.76515734, w: -0.20115547}
   m_LocalPosition: {x: 0.036884785, y: 0.015834928, z: -0.039753944}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
