@@ -14,7 +14,7 @@
 	  showui(true);
 	  //lockframe(1.0);
 	  //wait(10);
-	  camerayaw(0,10);
+	  camerayaw(0,-180);
 	  cameraheight(-1,10);
 		cameradistance(-1,10);
 	  camerafollow();

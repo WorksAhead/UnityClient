@@ -1723,10 +1723,10 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.12
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
@@ -7045,10 +7045,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccbc39e95af89845a8026643e00fc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FilmicShoulderScale: 1.6
-  FilmicMidtoneScale: 0.84
-  FilmicToeScale: 1
-  FilmicWhitePoint: 2
+  FilmicShoulderScale: 1.12
+  FilmicMidtoneScale: 0.35
+  FilmicToeScale: 1.71
+  FilmicWhitePoint: 2.4
 --- !u!114 &1402663835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7060,7 +7060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261bd1bf8ad8ac24ca2499e836dee497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloomIntensity: 0.2
+  bloomIntensity: 0.14
   bloomThreshold: 4
   brightOffset: 5
   HDRBrightLevel: 1.25
@@ -8919,6 +8919,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1790625812}
+  - component: {fileID: 1790625813}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -9030,6 +9031,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1790625813
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790625811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1843063110
 Prefab:
   m_ObjectHideFlags: 0

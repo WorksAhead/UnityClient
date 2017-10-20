@@ -663,10 +663,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccbc39e95af89845a8026643e00fc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FilmicShoulderScale: 1.6
-  FilmicMidtoneScale: 0.84
-  FilmicToeScale: 1
-  FilmicWhitePoint: 2
+  FilmicShoulderScale: 1.67
+  FilmicMidtoneScale: 0.61
+  FilmicToeScale: 2.12
+  FilmicWhitePoint: 1.19
 --- !u!114 &1837760144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,8 +678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261bd1bf8ad8ac24ca2499e836dee497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloomIntensity: 0.1
-  bloomThreshold: 2.4
+  bloomIntensity: 0.2
+  bloomThreshold: 1.42
   brightOffset: 5
   HDRBrightLevel: 1.25
   HDRBloomMul: 0.7

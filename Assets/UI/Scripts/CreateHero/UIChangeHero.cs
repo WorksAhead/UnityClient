@@ -245,6 +245,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         {
             if (UICamera.hoveredObject == m_HeroCollider)
             {
+                return;
                 // only fashi use this
                 if (m_CurHeroId != (int)HeroIdEnum.WARRIOR)
                 {
@@ -465,7 +466,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         {
             case (int)HeroIdEnum.WARRIOR:
                 m_HeroJianshi.SetActive(visible);
-                m_HeroJianshi_r1.SetActive(false);
+                //m_HeroJianshi_r1.SetActive(false);
                 break;
             case (int)HeroIdEnum.MAGICA:
                 m_HeroCike.SetActive(visible);
