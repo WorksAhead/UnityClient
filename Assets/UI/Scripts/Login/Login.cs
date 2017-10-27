@@ -93,6 +93,8 @@ public class Login : UnityEngine.MonoBehaviour
 #else
             string deviceUniqueIdentifier = System.Guid.NewGuid().ToString();
 #endif
+
+            Debug.Log("device uuid: " + deviceUniqueIdentifier);
             string system = "all";
             LogicSystem.PublishLogicEvent("ge_device_info", "lobby", deviceUniqueIdentifier, version, system);
             NormLog.Instance.UpdateDeviceidAndVersion(deviceUniqueIdentifier, version);

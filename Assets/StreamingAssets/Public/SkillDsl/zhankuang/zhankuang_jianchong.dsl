@@ -117,7 +117,10 @@ skill(160811)
 		{
 			stateimpact("kDefault", 16120201);
 		};        
+
+	//charactereffect("Aaron_fx_skill/Prefab/fashi_skill01_qishou", 5000, "skill_trail_refpoint", 0, true);
         sceneeffect("Aaron_fx_skill/Prefab/fashi_skill01",4000,vector3(-0.5,0,7),05);
+        sceneeffect("Aaron_fx_skill/Prefab/fashi_skill01_qishou",4000,vector3(0,3.5,-0.8),05);
         //playsound(0, "skill08011", "Sound/zhankuang/zhankuang_sound", 2000, "Sound/zhankuang/hero_skill01", false);
 		destroyself(1000);
     };

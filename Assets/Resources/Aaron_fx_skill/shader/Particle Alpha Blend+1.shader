@@ -1,6 +1,6 @@
 // Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
-Shader "Aaron/Alpha Blended+1" {
+Shader "FXEffect/Alpha Blended+1" {
 Properties {
 	_Brightness ("Brightness", Float) = 1.0
 	_TintColor ("Tint Color", Color) = (0.5,0.5,0.5,0.5)
