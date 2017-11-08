@@ -175,6 +175,15 @@ LOD 200
 			uniform sampler2D _CubeNormal; 
 			uniform samplerCUBE _CubeReflection;
 		#endif
+		
+		float4 Texture2DGamma(sampler2D s, float2 uv)
+		{
+			float4 c = tex2D(s, uv);
+
+			c.xyz = pow(c.xyz, 2.2f);
+
+			return c;
+		}
 
 		half4 frag( v2f i ) : SV_Target
 		{
@@ -209,13 +218,13 @@ LOD 200
 			#endif
 			
 			#if defined(WATER_REFLECTIVE)
-				half4 water = tex2D( _ReflectiveColor, float2(fresnelFac,fresnelFac) );
+				half4 water = Texture2DGamma( _ReflectiveColor, float2(fresnelFac,fresnelFac) );
 				color.rgb = lerp( water.rgb, refl.rgb, water.a );
 				color.a = i.color.a;
 			#endif
 			
 			#if defined(WATER_SIMPLE)
-				fixed4 water0 = tex2D( _MainTex, i.WaterUV0);
+				fixed4 water0 = Texture2DGamma( _MainTex, i.WaterUV0);
 				color = water0*i.color;
 				color.a = 1;
 			#endif
@@ -233,12 +242,16 @@ LOD 200
 				half3 _UVOffset2 = UnpackNormal(tex2D(_BumpMap,TRANSFORM_TEX(uv2, _BumpMap)));
 				half3 _UVOffset = (_UVOffset1+_UVOffset2)*0.5;
 				float2 uv3 = i.uv0+_UVOffset.rb*_CubeRelDistortion;
-				fixed4 _WaterTexture_var = tex2D(_CubeWaterTexture,TRANSFORM_TEX(uv3, _CubeWaterTexture));
-				float3 diffuse = (_CubeAmbientColor.rgb) * (_WaterTexture_var.rgb +texCUBE( _CubeReflection, normalize( (_UVOffset.rgb - 0.5) *_CubeRelDistortion + viewReflectDirection) ).rgb * _CubeCubeAdd );
+				fixed4 _WaterTexture_var = Texture2DGamma(_CubeWaterTexture,TRANSFORM_TEX(uv3, _CubeWaterTexture));
+				float3 diffuse = (_CubeAmbientColor.rgb) * (_WaterTexture_var.rgb +pow(texCUBE( _CubeReflection, normalize( (_UVOffset.rgb - 0.5) *_CubeRelDistortion + viewReflectDirection) ).rgb, 2.2f) * _CubeCubeAdd);
 				float3 finalColor = diffuse;
 				color = fixed4(finalColor,0.9);
 			#endif
+	
 			UNITY_APPLY_FOG(i.fogCoord, color);
+			
+			color.rgb = pow(color.rgb, 1.0f/2.2f);
+			
 			return color;
 		}
 		ENDCG
