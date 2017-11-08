@@ -448,6 +448,9 @@ half4 fragForwardBaseInternal(VertexOutputForwardBase i)
 	c.rgb *= 1 - (_DyeColor*x);
 
 	UNITY_APPLY_FOG(i.fogCoord, c.rgb);
+	
+	c.rgb = pow(c.rgb, 1.0f/2.2f);
+	
 	return OutputForward(c, s.alpha);
 }
 
