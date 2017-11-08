@@ -465,8 +465,6 @@ namespace DigitalOpus.MB.Core{
 #if UNITY_EDITOR			
 			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android) atlasMaxDimension = 2048;
 			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS) atlasMaxDimension = 2048;
-			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayer) atlasMaxDimension = 2048;
-			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayerStreamed) atlasMaxDimension = 2048;
 #else			
 			if (UnityEngine.Application.platform == RuntimePlatform.Android) atlasMaxDimension = 2048;
 			if (UnityEngine.Application.platform == RuntimePlatform.IPhonePlayer) atlasMaxDimension = 2048;
@@ -659,10 +657,6 @@ namespace DigitalOpus.MB.Core{
 				EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneWindows64 ||
 				EditorUserBuildSettings.activeBuildTarget == BuildTarget.StandaloneOSXIntel){
 				return "Standalone";	
-			}
-			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayer ||
-				EditorUserBuildSettings.activeBuildTarget == BuildTarget.WebPlayerStreamed){
-				return "Web";
 			}
 			return null;
 		}

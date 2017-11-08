@@ -10,6 +10,8 @@ namespace ArkCrossEngine
     public static class EditorTableManager
     {
         const string EditModeMenuItem = "TableTools/EditMode";
+        const string RootGameObjectName = "TableTools/Indicator/";
+        const string WayPointPrefix = "WayPoints";
 
         static bool EditModeState
         {
@@ -55,21 +57,36 @@ namespace ArkCrossEngine
             return true;
         }
 
-        public static GameObject AddEmptyObject()
+        public static GameObject AddEmptyObject(string prefix)
         {
             // find root indicator
-            GameObject go = GameObject.Find("TableTools/NPC/Indicator");
+            GameObject go = GameObject.Find(RootGameObjectName);
             if (go == null)
             {
-                go = new GameObject("TableTools/NPC/Indicator");
+                go = new GameObject(RootGameObjectName);
                 go.transform.position = UnityEngine.Vector3.zero;
                 go.transform.rotation = UnityEngine.Quaternion.identity;
                 go.transform.localScale = UnityEngine.Vector3.one;
             }
+            Transform t = go.transform.Find(prefix);
+            GameObject prefixGo;
+            if (t == null)
+            {
+                prefixGo = new GameObject(prefix);
+                prefixGo.transform.position = UnityEngine.Vector3.zero;
+                prefixGo.transform.rotation = UnityEngine.Quaternion.identity;
+                prefixGo.transform.localScale = UnityEngine.Vector3.one;
+                prefixGo.transform.SetParent(go.transform);
+            }
+            else
+            {
+                prefixGo = t.gameObject;
+            }
+
 
             // add new npc to root
             GameObject newObject = new GameObject();
-            newObject.transform.SetParent(go.transform);
+            newObject.transform.SetParent(prefixGo.transform);
             if (Camera.current != null)
             {
                 newObject.transform.position = Camera.current.transform.position;
@@ -82,7 +99,7 @@ namespace ArkCrossEngine
         {
             FileReaderProxy.MakeSureAllHandlerRegistered();
 
-            GameObject newNpc = AddEmptyObject();
+            GameObject newNpc = AddEmptyObject("NPC");
             newNpc.AddComponent<EditorIndicator_NPC>();
         }
 
@@ -91,13 +108,42 @@ namespace ArkCrossEngine
         {
             FileReaderProxy.MakeSureAllHandlerRegistered();
 
-            GameObject newRevivePoint = AddEmptyObject();
+            GameObject newRevivePoint = AddEmptyObject("RevivePoint");
             newRevivePoint.AddComponent<EditorIndicator_RevivePoint>();
+        }
+
+        [MenuItem("TableTools/WayPoints/AddWayPoint")]
+        public static void AddWayPoint()
+        {
+            FileReaderProxy.MakeSureAllHandlerRegistered();
+
+            GameObject newNpc = AddEmptyObject("WayPoint");
+            newNpc.AddComponent<EditorIndicator_WayPoint>();
+        }
+
+        [MenuItem("TableTools/WayPoints/Export")]
+        public static void ExportWayPoint()
+        {
+            FileReaderProxy.MakeSureAllHandlerRegistered();
+
+            List<GameObject> Objects = CollectAllWayPointsInCurrentScene();
+
+            string path = EditorUtility.SaveFilePanel("Save", "", "", "wp");
+            if (path != null)
+            {
+                StreamWriter wf = new StreamWriter(path, false, Encoding.UTF8);
+                
+                foreach(GameObject go in Objects)
+                {
+                    wf.WriteLine(String.Format("{0}\t{1}\t{2}", go.transform.position.x, go.transform.position.y, go.transform.position.z));
+                }
+                wf.Close();
+            }
         }
 
         private static List<GameObject> CollectAllNPCInCurrentScene()
         {
-            GameObject go = GameObject.Find("TableTools/NPC/Indicator");
+            GameObject go = GameObject.Find(RootGameObjectName);
             if (go != null)
             {
                 Component[] components = go.GetComponentsInChildren<EditorIndicator_NPC>();
@@ -111,9 +157,25 @@ namespace ArkCrossEngine
             return null;
         }
 
+        private static List<GameObject> CollectAllWayPointsInCurrentScene()
+        {
+            GameObject go = GameObject.Find(RootGameObjectName);
+            if (go != null)
+            {
+                Component[] components = go.GetComponentsInChildren<EditorIndicator_WayPoint>();
+                List<GameObject> objects = new List<GameObject>();
+                foreach (var c in components)
+                {
+                    objects.Add(c.gameObject);
+                }
+                return objects;
+            }
+            return null;
+        }
+
         private static GameObject CollectRevivePointInCurrentScene()
         {
-            GameObject go = GameObject.Find("TableTools/NPC/Indicator");
+            GameObject go = GameObject.Find(RootGameObjectName);
             if (go != null)
             {
                 Component[] components = go.GetComponentsInChildren<EditorIndicator_RevivePoint>();

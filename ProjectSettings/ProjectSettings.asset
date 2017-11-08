@@ -167,7 +167,7 @@ PlayerSettings:
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 
   uIPrerenderedIcon: 0
-  uIRequiresPersistentWiFi: 0
+  uIRequiresPersistentWiFi: 1
   uIRequiresFullScreen: 1
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
@@ -544,6 +544,7 @@ PlayerSettings:
   additionalIl2CppArgs: 
   apiCompatibilityLevelPerPlatform:
     Android: 1
+    iOS: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Publish

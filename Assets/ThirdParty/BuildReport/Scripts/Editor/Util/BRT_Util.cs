@@ -92,11 +92,6 @@ public static class Util
 	{
 		switch (b)
 		{
-			case BuildTarget.WebPlayer:
-				return BuildPlatform.Web;
-			case BuildTarget.WebPlayerStreamed:
-				return BuildPlatform.Web;
-
 			case BuildTarget.iOS:
 				return BuildPlatform.iOS;
 
