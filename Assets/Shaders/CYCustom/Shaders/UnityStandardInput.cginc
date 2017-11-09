@@ -1,5 +1,3 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 #ifndef UNITY_STANDARD_INPUT_INCLUDED
 #define UNITY_STANDARD_INPUT_INCLUDED
 
@@ -118,8 +116,9 @@ half Alpha(float2 uv)
 
 half Occlusion(float2 uv)
 {
-	// 性能优化，禁用indirect光照的掩码图
+	// 鎬ц兘浼樺寲锛岀鐢╥ndirect鍏夌収鐨勬帺鐮佸浘
 	return 1.0f;
+
 //#if (SHADER_TARGET < 30)
 //    // SM20: instruction count limitation
 //    // SM20: simpler occlusion
@@ -171,6 +170,23 @@ half2 MetallicGloss(float2 uv)
     #else
         mg.g = _Glossiness;
     #endif
+#endif
+    return mg;
+}
+
+half2 MetallicRough(float2 uv)
+{
+    half2 mg;
+#ifdef _METALLICGLOSSMAP
+    mg.r = tex2D(_MetallicGlossMap, uv).r;
+#else
+    mg.r = _Metallic;
+#endif
+
+#ifdef _SPECGLOSSMAP
+    mg.g = 1.0f - tex2D(_SpecGlossMap, uv).r;
+#else
+    mg.g = 1.0f - _Glossiness;
 #endif
     return mg;
 }

@@ -1,9 +1,9 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 #ifndef UNITY_STANDARD_CORE_INCLUDED
 #define UNITY_STANDARD_CORE_INCLUDED
 
 #include "UnityCG.cginc"
+#include "UnityShaderVariables.cginc"
+#include "UnityInstancing.cginc"
 #include "UnityStandardConfig.cginc"
 #include "UnityStandardInput.cginc"
 #include "UnityPBSLighting.cginc"
@@ -204,6 +204,24 @@ inline FragmentCommonData SpecularSetup (float4 i_tex)
     return o;
 }
 
+inline FragmentCommonData RoughnessSetup(float4 i_tex)
+{
+    half2 metallicGloss = MetallicRough(i_tex.xy);
+    half metallic = metallicGloss.x;
+    half smoothness = metallicGloss.y; // this is 1 minus the square root of real roughness m.
+
+    half oneMinusReflectivity;
+    half3 specColor;
+    half3 diffColor = DiffuseAndSpecularFromMetallic(Albedo(i_tex), metallic, /*out*/ specColor, /*out*/ oneMinusReflectivity);
+
+    FragmentCommonData o = (FragmentCommonData)0;
+    o.diffColor = diffColor;
+    o.specColor = specColor;
+    o.oneMinusReflectivity = oneMinusReflectivity;
+    o.smoothness = smoothness;
+    return o;
+}
+
 inline FragmentCommonData MetallicSetup (float4 i_tex)
 {
     half2 metallicGloss = MetallicGloss(i_tex.xy);
@@ -222,7 +240,8 @@ inline FragmentCommonData MetallicSetup (float4 i_tex)
     return o;
 }
 
-inline FragmentCommonData FragmentSetup (float4 i_tex, half3 i_eyeVec, half3 i_viewDirForParallax, half4 tangentToWorld[3], half3 i_posWorld)
+// parallax transformed texcoord is used to sample occlusion
+inline FragmentCommonData FragmentSetup (inout float4 i_tex, half3 i_eyeVec, half3 i_viewDirForParallax, half4 tangentToWorld[3], half3 i_posWorld)
 {
     i_tex = Parallax(i_tex, i_viewDirForParallax);
 
@@ -341,7 +360,7 @@ inline half4 VertexGIForward(VertexInput v, float3 posWorld, half3 normalWorld)
 
 struct VertexOutputForwardBase
 {
-    float4 pos                          : SV_POSITION;
+    UNITY_POSITION(pos);
     float4 tex                          : TEXCOORD0;
     half3 eyeVec                        : TEXCOORD1;
     half4 tangentToWorldAndPackedData[3]    : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:viewDirForParallax or worldPos]
@@ -382,7 +401,7 @@ VertexOutputForwardBase vertForwardBase (VertexInput v)
     o.eyeVec = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
     float3 normalWorld = UnityObjectToWorldNormal(v.normal);
 
-	// 让双面材质的光照正确
+	// 璁╁弻闈㈡潗璐ㄧ殑鍏夌収姝ｇ‘
 #ifdef CY_DOUBLE_FACE_SHADER
 	normalWorld *= -sign(dot(normalWorld, o.eyeVec));
 #endif
@@ -417,19 +436,19 @@ VertexOutputForwardBase vertForwardBase (VertexInput v)
     return o;
 }
 
-half4       _DyeColor;
-
-half4 fragForwardBaseInternal(VertexOutputForwardBase i)
+half4 fragForwardBaseInternal (VertexOutputForwardBase i)
 {
-	FRAGMENT_SETUP(s)
+    UNITY_APPLY_DITHER_CROSSFADE(i.pos.xy);
 
-	UNITY_SETUP_INSTANCE_ID(i);
-	UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
+    FRAGMENT_SETUP(s)
 
-	UnityLight mainLight = MainLight();
+    UNITY_SETUP_INSTANCE_ID(i);
+    UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 
+    UnityLight mainLight = MainLight ();
+    
 #ifdef PBS_LOW_QUALITY
-	// 简化掉光衰减和occlusion map
+	// 绠�鍖栨帀鍏夎“鍑忓拰occlusion map
 	UnityGI gi = FragmentGI(s, 1, i.ambientOrLightmapUV, 1, mainLight, false);
 #else
 	UNITY_LIGHT_ATTENUATION(atten, i, s.posWorld);
@@ -437,20 +456,12 @@ half4 fragForwardBaseInternal(VertexOutputForwardBase i)
 	UnityGI gi = FragmentGI(s, occlusion, i.ambientOrLightmapUV, atten, mainLight);
 #endif
 
-	half4 c = UNITY_BRDF_PBS(s.diffColor, s.specColor, s.oneMinusReflectivity, s.smoothness, s.normalWorld, -s.eyeVec, gi.light, gi.indirect);
-	c.rgb += Emission(i.tex.xy);
+    half4 c = UNITY_BRDF_PBS (s.diffColor, s.specColor, s.oneMinusReflectivity, s.smoothness, s.normalWorld, -s.eyeVec, gi.light, gi.indirect);
+    c.rgb += Emission(i.tex.xy);
 
-	half3 albedo = tex2D(_MainTex, i.tex.xy).rgb;
-	half intensity = albedo.x + albedo.y + albedo.z;
-
-	// Dye color
-	half x = 1-max(sign(intensity - 0.2f), 0);
-	c.rgb *= 1 - (_DyeColor*x);
-
-	UNITY_APPLY_FOG(i.fogCoord, c.rgb);
-	return OutputForward(c, s.alpha);
+    UNITY_APPLY_FOG(i.fogCoord, c.rgb);
+    return OutputForward (c, s.alpha);
 }
-
 
 half4 fragForwardBase (VertexOutputForwardBase i) : SV_Target   // backward compatibility (this used to be the fragment entry function)
 {
@@ -462,7 +473,7 @@ half4 fragForwardBase (VertexOutputForwardBase i) : SV_Target   // backward comp
 
 struct VertexOutputForwardAdd
 {
-    float4 pos                          : SV_POSITION;
+    UNITY_POSITION(pos);
     float4 tex                          : TEXCOORD0;
     half3 eyeVec                        : TEXCOORD1;
     half4 tangentToWorldAndLightDir[3]  : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:lightDir]
@@ -526,6 +537,8 @@ VertexOutputForwardAdd vertForwardAdd (VertexInput v)
 
 half4 fragForwardAddInternal (VertexOutputForwardAdd i)
 {
+    UNITY_APPLY_DITHER_CROSSFADE(i.pos.xy);
+
     FRAGMENT_SETUP_FWDADD(s)
 
     UNITY_LIGHT_ATTENUATION(atten, i, s.posWorld)
@@ -548,7 +561,7 @@ half4 fragForwardAdd (VertexOutputForwardAdd i) : SV_Target     // backward comp
 
 struct VertexOutputDeferred
 {
-    float4 pos                          : SV_POSITION;
+    UNITY_POSITION(pos);
     float4 tex                          : TEXCOORD0;
     half3 eyeVec                        : TEXCOORD1;
     half4 tangentToWorldAndPackedData[3]: TEXCOORD2;    // [3x3:tangentToWorld | 1x3:viewDirForParallax or worldPos]
@@ -639,6 +652,8 @@ void fragDeferred (
         #endif
         return;
     #endif
+
+    UNITY_APPLY_DITHER_CROSSFADE(i.pos.xy);
 
     FRAGMENT_SETUP(s)
 

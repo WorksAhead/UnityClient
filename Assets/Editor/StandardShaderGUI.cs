@@ -1,5 +1,3 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 using System;
 using UnityEngine;
 
@@ -89,7 +87,8 @@ namespace UnityEditor
 
         MaterialEditor m_MaterialEditor;
         WorkflowMode m_WorkflowMode = WorkflowMode.Specular;
-        ColorPickerHDRConfig m_ColorPickerHDRConfig = new ColorPickerHDRConfig(0f, 99f, 1 / 99f, 3f);
+        private const float kMaxfp16 = 65536f; // Clamp to a value that fits into fp16.
+        ColorPickerHDRConfig m_ColorPickerHDRConfig = new ColorPickerHDRConfig(0f, kMaxfp16, 1 / kMaxfp16, 3f);
 
         bool m_FirstTimeApply = true;
 
@@ -198,9 +197,10 @@ namespace UnityEditor
 
             EditorGUILayout.Space();
 
+            // NB renderqueue editor is not shown on purpose: we want to override it based on blend mode
             GUILayout.Label(Styles.advancedText, EditorStyles.boldLabel);
-            m_MaterialEditor.RenderQueueField();
             m_MaterialEditor.EnableInstancingField();
+            m_MaterialEditor.DoubleSidedGIField();
         }
 
         internal void DetermineWorkflow(MaterialProperty[] props)

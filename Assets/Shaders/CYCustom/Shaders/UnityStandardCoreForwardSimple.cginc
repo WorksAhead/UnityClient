@@ -1,5 +1,3 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 #ifndef UNITY_STANDARD_CORE_FORWARD_SIMPLE_INCLUDED
 #define UNITY_STANDARD_CORE_FORWARD_SIMPLE_INCLUDED
 
@@ -14,7 +12,7 @@
 
 struct VertexOutputBaseSimple
 {
-    float4 pos                          : SV_POSITION;
+    UNITY_POSITION(pos);
     float4 tex                          : TEXCOORD0;
     half4 eyeVec                        : TEXCOORD1; // w: grazingTerm
 
@@ -192,6 +190,8 @@ half3 BRDF3DirectSimple(half3 diffColor, half3 specColor, half smoothness, half 
 
 half4 fragForwardBaseSimpleInternal (VertexOutputBaseSimple i)
 {
+    UNITY_APPLY_DITHER_CROSSFADE(i.pos.xy);
+
     FragmentCommonData s = FragmentSetupSimple(i);
 
     UnityLight mainLight = MainLightSimple(i, s);
@@ -202,7 +202,7 @@ half4 fragForwardBaseSimpleInternal (VertexOutputBaseSimple i)
     half ndotl = saturate(dot(s.normalWorld, mainLight.dir));
     #endif
 
-	// ÷–µÕ≈‰¬‘»•“ı”∞À•ºı
+	// ‰∏≠‰ΩéÈÖçÁï•ÂéªÈò¥ÂΩ±Ë°∞Âáè
 #ifdef CY_PBS_LOW
 	half rl = 1.f;
 	UnityGI gi = FragmentGI(s, 1, i.ambientOrLightmapUV, 1, mainLight, false);
@@ -217,13 +217,14 @@ half4 fragForwardBaseSimpleInternal (VertexOutputBaseSimple i)
 
 	UnityGI gi = FragmentGI(s, occlusion, i.ambientOrLightmapUV, 1, mainLight);
 #endif
-
+    
     half3 attenuatedLightColor = gi.light.color * ndotl;
 
-	// ÷–µÕ≈‰¬‘»•fresnelº∆À„
+    //half3 c = BRDF3_Indirect(s.diffColor, s.specColor, gi.indirect, PerVertexGrazingTerm(i, s), PerVertexFresnelTerm(i));
+    // ‰∏≠‰ΩéÈÖçÁï•ÂéªfresnelËÆ°ÁÆó
 	half3 c = gi.indirect.diffuse * s.diffColor;
 	c += gi.indirect.specular * s.specColor;
-	
+
     c += BRDF3DirectSimple(s.diffColor, s.specColor, s.smoothness, rl) * attenuatedLightColor;
     c += Emission(i.tex.xy);
 
@@ -239,7 +240,7 @@ half4 fragForwardBaseSimple (VertexOutputBaseSimple i) : SV_Target  // backward 
 
 struct VertexOutputForwardAddSimple
 {
-    float4 pos                          : SV_POSITION;
+    UNITY_POSITION(pos);
     float4 tex                          : TEXCOORD0;
     float3 posWorld                     : TEXCOORD1;
 
@@ -352,6 +353,8 @@ half3 LightSpaceNormal(VertexOutputForwardAddSimple i, FragmentCommonData s)
 
 half4 fragForwardAddSimpleInternal (VertexOutputForwardAddSimple i)
 {
+    UNITY_APPLY_DITHER_CROSSFADE(i.pos.xy);
+
     FragmentCommonData s = FragmentSetupSimpleAdd(i);
 
     half3 c = BRDF3DirectSimple(s.diffColor, s.specColor, s.smoothness, dot(REFLECTVEC_FOR_SPECULAR(i, s), i.lightDir));
@@ -360,7 +363,8 @@ half4 fragForwardAddSimpleInternal (VertexOutputForwardAddSimple i)
         c *= _LightColor0.rgb;
     #endif
 
-    c *= UNITY_SHADOW_ATTENUATION(i, s.posWorld) * saturate(dot(LightSpaceNormal(i, s), i.lightDir));
+    UNITY_LIGHT_ATTENUATION(atten, i, s.posWorld)
+    c *= atten * saturate(dot(LightSpaceNormal(i, s), i.lightDir));
 
     UNITY_APPLY_FOG_COLOR(i.fogCoord, c.rgb, half4(0,0,0,0)); // fog towards black in additive pass
     return OutputForward (half4(c, 1), s.alpha);
