@@ -1,5 +1,3 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 #ifndef UNITY_GLOBAL_ILLUMINATION_INCLUDED
 #define UNITY_GLOBAL_ILLUMINATION_INCLUDED
 

@@ -1,5 +1,3 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 #ifndef UNITY_STANDARD_BRDF_INCLUDED
 #define UNITY_STANDARD_BRDF_INCLUDED
 
@@ -269,6 +267,8 @@ half4 BRDF1_Unity_PBS (half3 diffColor, half3 specColor, half oneMinusReflectivi
     // and 2) on engine side "Non-important" lights have to be divided by Pi too in cases when they are injected into ambient SH
     half roughness = PerceptualRoughnessToRoughness(perceptualRoughness);
 #if UNITY_BRDF_GGX
+    // GGX with roughtness to 0 would mean no specular at all, using max(roughness, 0.002) here to match HDrenderloop roughtness remapping.
+    roughness = max(roughness, 0.002);
     half V = SmithJointGGXVisibilityTerm (nl, nv, roughness);
     half D = GGXTerm (nh, roughness);
 #else
@@ -408,7 +408,7 @@ half3 BRDF3_Direct(half3 diffColor, half3 specColor, half rlPow4, half smoothnes
     half LUT_RANGE = 16.0; // must match range in NHxRoughness() function in GeneratedTextures.cpp
     // Lookup texture to save instructions
     half specular = tex2D(unity_NHxRoughness, half2(rlPow4, SmoothnessToPerceptualRoughness(smoothness))).UNITY_ATTEN_CHANNEL * LUT_RANGE;
-#ifdef _SPECULARHIGHLIGHTS_OFF
+#if defined(_SPECULARHIGHLIGHTS_OFF)
     specular = 0.0;
 #endif
 
