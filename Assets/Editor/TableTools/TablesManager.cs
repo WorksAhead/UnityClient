@@ -126,17 +126,30 @@ namespace ArkCrossEngine
         {
             FileReaderProxy.MakeSureAllHandlerRegistered();
 
+            ReloadSceneConfig();
+
+            string sceneName = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
+            CurrentSceneConfig = FindSceneConfig(sceneName);
+            if (CurrentSceneConfig == null)
+            {
+                UnityEngine.Debug.LogError("Missing scene config info. scene = " + sceneName);
+                return;
+            }
+
+            int sceneId = CurrentSceneConfig.m_Id;
+
             List<GameObject> Objects = CollectAllWayPointsInCurrentScene();
 
-            string path = EditorUtility.SaveFilePanel("Save", "", "", "wp");
+            string path = EditorUtility.SaveFilePanel("Save", "", sceneId.ToString(), "wp");
             if (path != null)
             {
                 StreamWriter wf = new StreamWriter(path, false, Encoding.UTF8);
                 
                 foreach(GameObject go in Objects)
                 {
-                    wf.WriteLine(String.Format("{0}\t{1}\t{2}", go.transform.position.x, go.transform.position.y, go.transform.position.z));
+                    wf.Write(String.Format("{0}\t{1}\t{2}\r\n", go.transform.position.x, go.transform.position.y, go.transform.position.z));
                 }
+
                 wf.Close();
             }
         }
