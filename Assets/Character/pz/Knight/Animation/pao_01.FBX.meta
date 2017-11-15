@@ -1,0 +1,636 @@
+fileFormatVersion: 2
+guid: 650b34108874f254b8950e54a2bf1167
+timeCreated: 1509358595
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: _Bip01 Prop1
+    100002: _Bip01 Prop2
+    100004: Bip01
+    100006: Bip01 Head
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Finger0
+    100014: Bip01 L Finger01
+    100016: Bip01 L Finger02
+    100018: Bip01 L Finger1
+    100020: Bip01 L Finger11
+    100022: Bip01 L Finger12
+    100024: Bip01 L Finger2
+    100026: Bip01 L Finger21
+    100028: Bip01 L Finger22
+    100030: Bip01 L Foot
+    100032: Bip01 L Forearm
+    100034: Bip01 L ForeTwist
+    100036: Bip01 L Hand
+    100038: Bip01 L Thigh
+    100040: Bip01 L Toe0
+    100042: Bip01 L UpperArm
+    100044: Bip01 L UpperArm_Twist
+    100046: Bip01 Neck
+    100048: Bip01 Pelvis
+    100050: Bip01 R Calf
+    100052: Bip01 R Clavicle
+    100054: Bip01 R Finger0
+    100056: Bip01 R Finger01
+    100058: Bip01 R Finger02
+    100060: Bip01 R Finger1
+    100062: Bip01 R Finger11
+    100064: Bip01 R Finger12
+    100066: Bip01 R Finger2
+    100068: Bip01 R Finger21
+    100070: Bip01 R Finger22
+    100072: Bip01 R Foot
+    100074: Bip01 R Forearm
+    100076: Bip01 R ForeTwist
+    100078: Bip01 R Hand
+    100080: Bip01 R Thigh
+    100082: Bip01 R Toe0
+    100084: Bip01 R UpperArm
+    100086: Bip01 R UpperArm_Twist
+    100088: Bip01 Spine
+    100090: Bip01 Spine1
+    100092: Bip01 Spine2
+    100094: Bip01 Spine3
+    100096: Bone_P_01
+    100098: Bone_P_02
+    100100: Bone_P_03
+    100102: Bone_P_04
+    100104: Bone_P_21
+    100106: Bone_P_22
+    100108: Bone_P_23
+    100110: Bone_P_24
+    100112: Bone_P_41
+    100114: Bone_P_42
+    100116: Bone_P_43
+    100118: Bone_P_44
+    100120: Bone_root01
+    100122: Bone_root02
+    100124: Bone_youjian
+    100126: Bone_zuojian
+    100128: //RootNode
+    100130: zuoqiweizhidian_
+    100132: _Bip01 Prop3
+    100134: _Bone_F_05
+    100136: _Bone_P_05
+    100138: _Bone_P_15
+    100140: _Bone_P_25
+    100142: _Bone_P_35
+    100144: _Bone_P_45
+    100146: _Bone_P_55
+    100148: _L UpperArm_Twist
+    100150: _R UpperArm_Twist
+    100152: Bone_F_01
+    100154: Bone_F_02
+    100156: Bone_F_03
+    100158: Bone_F_04
+    100160: Bone_houbeiwuqi_1
+    100162: Bone_houbeiwuqi_2
+    100164: Bone_houbeiwuqi_3
+    100166: Bone_MGY_01
+    100168: Bone_MGY_02
+    100170: Bone_MGZ_01
+    100172: Bone_MGZ_02
+    100174: Bone_P_11
+    100176: Bone_P_12
+    100178: Bone_P_13
+    100180: Bone_P_14
+    100182: Bone_P_31
+    100184: Bone_P_32
+    100186: Bone_P_33
+    100188: Bone_P_34
+    100190: Bone_P_51
+    100192: Bone_P_52
+    100194: Bone_P_53
+    100196: Bone_P_54
+    100198: Bone_XEG
+    100200: Bone_yaobuwuqi_1
+    100202: Bone_yaobuwuqi_2
+    100204: Bone_YGY_02
+    100206: Bone_YGZ_02
+    100208: Bone_YJG_01
+    100210: Bone_YJG_02
+    100212: Bone_YPY_01
+    100214: Bone_YPY_02
+    100216: Bone_YPZ_01
+    100218: Bone_YPZ_02
+    100220: Bone_ZCG_03
+    100222: Bone_ZCG_04
+    100224: Bone_ZJG_01
+    100226: Bone_ZJG_02
+    100228: meigukongzhiqi_01
+    100230: meigukongzhiqi_02
+    100232: zuijiaokongzhiqi_
+    400000: _Bip01 Prop1
+    400002: _Bip01 Prop2
+    400004: Bip01
+    400006: Bip01 Head
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Finger0
+    400014: Bip01 L Finger01
+    400016: Bip01 L Finger02
+    400018: Bip01 L Finger1
+    400020: Bip01 L Finger11
+    400022: Bip01 L Finger12
+    400024: Bip01 L Finger2
+    400026: Bip01 L Finger21
+    400028: Bip01 L Finger22
+    400030: Bip01 L Foot
+    400032: Bip01 L Forearm
+    400034: Bip01 L ForeTwist
+    400036: Bip01 L Hand
+    400038: Bip01 L Thigh
+    400040: Bip01 L Toe0
+    400042: Bip01 L UpperArm
+    400044: Bip01 L UpperArm_Twist
+    400046: Bip01 Neck
+    400048: Bip01 Pelvis
+    400050: Bip01 R Calf
+    400052: Bip01 R Clavicle
+    400054: Bip01 R Finger0
+    400056: Bip01 R Finger01
+    400058: Bip01 R Finger02
+    400060: Bip01 R Finger1
+    400062: Bip01 R Finger11
+    400064: Bip01 R Finger12
+    400066: Bip01 R Finger2
+    400068: Bip01 R Finger21
+    400070: Bip01 R Finger22
+    400072: Bip01 R Foot
+    400074: Bip01 R Forearm
+    400076: Bip01 R ForeTwist
+    400078: Bip01 R Hand
+    400080: Bip01 R Thigh
+    400082: Bip01 R Toe0
+    400084: Bip01 R UpperArm
+    400086: Bip01 R UpperArm_Twist
+    400088: Bip01 Spine
+    400090: Bip01 Spine1
+    400092: Bip01 Spine2
+    400094: Bip01 Spine3
+    400096: Bone_P_01
+    400098: Bone_P_02
+    400100: Bone_P_03
+    400102: Bone_P_04
+    400104: Bone_P_21
+    400106: Bone_P_22
+    400108: Bone_P_23
+    400110: Bone_P_24
+    400112: Bone_P_41
+    400114: Bone_P_42
+    400116: Bone_P_43
+    400118: Bone_P_44
+    400120: Bone_root01
+    400122: Bone_root02
+    400124: Bone_youjian
+    400126: Bone_zuojian
+    400128: //RootNode
+    400130: zuoqiweizhidian_
+    400132: _Bip01 Prop3
+    400134: _Bone_F_05
+    400136: _Bone_P_05
+    400138: _Bone_P_15
+    400140: _Bone_P_25
+    400142: _Bone_P_35
+    400144: _Bone_P_45
+    400146: _Bone_P_55
+    400148: _L UpperArm_Twist
+    400150: _R UpperArm_Twist
+    400152: Bone_F_01
+    400154: Bone_F_02
+    400156: Bone_F_03
+    400158: Bone_F_04
+    400160: Bone_houbeiwuqi_1
+    400162: Bone_houbeiwuqi_2
+    400164: Bone_houbeiwuqi_3
+    400166: Bone_MGY_01
+    400168: Bone_MGY_02
+    400170: Bone_MGZ_01
+    400172: Bone_MGZ_02
+    400174: Bone_P_11
+    400176: Bone_P_12
+    400178: Bone_P_13
+    400180: Bone_P_14
+    400182: Bone_P_31
+    400184: Bone_P_32
+    400186: Bone_P_33
+    400188: Bone_P_34
+    400190: Bone_P_51
+    400192: Bone_P_52
+    400194: Bone_P_53
+    400196: Bone_P_54
+    400198: Bone_XEG
+    400200: Bone_yaobuwuqi_1
+    400202: Bone_yaobuwuqi_2
+    400204: Bone_YGY_02
+    400206: Bone_YGZ_02
+    400208: Bone_YJG_01
+    400210: Bone_YJG_02
+    400212: Bone_YPY_01
+    400214: Bone_YPY_02
+    400216: Bone_YPZ_01
+    400218: Bone_YPZ_02
+    400220: Bone_ZCG_03
+    400222: Bone_ZCG_04
+    400224: Bone_ZJG_01
+    400226: Bone_ZJG_02
+    400228: meigukongzhiqi_01
+    400230: meigukongzhiqi_02
+    400232: zuijiaokongzhiqi_
+    7400000: hero_run
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: hero_run
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone_root01
+        weight: 1
+      - path: Bone_root01/Bone_root02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          L Thigh
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          L Thigh/Bip01 L Calf
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          L Thigh/Bip01 L Calf/Bip01 L Foot
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          L Thigh/Bip01 L Calf/Bip01 L Foot/Bip01 L Toe0
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          R Thigh
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          R Thigh/Bip01 R Calf
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          R Thigh/Bip01 R Calf/Bip01 R Foot
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          R Thigh/Bip01 R Calf/Bip01 R Foot/Bip01 R Toe0
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_F_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_F_01/Bone_F_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_F_01/Bone_F_02/Bone_F_03
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_F_01/Bone_F_02/Bone_F_03/Bone_F_04
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_F_01/Bone_F_02/Bone_F_03/Bone_F_04/_Bone_F_05
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_XEG
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YGY_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YGZ_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YJG_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YJG_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YPY_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YPY_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YPZ_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/Bone_YPZ_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/meigukongzhiqi_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/meigukongzhiqi_01/Bone_MGZ_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/meigukongzhiqi_01/Bone_MGZ_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/meigukongzhiqi_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/meigukongzhiqi_02/Bone_MGY_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/meigukongzhiqi_02/Bone_MGY_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/zuijiaokongzhiqi_
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/zuijiaokongzhiqi_/Bone_ZCG_03
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/zuijiaokongzhiqi_/Bone_ZCG_04
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/zuijiaokongzhiqi_/Bone_ZJG_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 Head/zuijiaokongzhiqi_/Bone_ZJG_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger0
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger0/Bip01 L Finger01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger0/Bip01 L Finger01/Bip01 L Finger02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger1
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger1/Bip01 L Finger11
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger1/Bip01 L Finger11/Bip01 L Finger12
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger2
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger2/Bip01 L Finger21
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bip01 L UpperArm/Bip01
+          L Forearm/Bip01 L Hand/Bip01 L Finger2/Bip01 L Finger21/Bip01 L Finger22
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 L Clavicle/Bone_zuojian
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger0
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger0/Bip01 R Finger01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger0/Bip01 R Finger01/Bip01 R Finger02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger1
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger1/Bip01 R Finger11
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger1/Bip01 R Finger11/Bip01 R Finger12
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger2
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger2/Bip01 R Finger21
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bip01 R UpperArm/Bip01
+          R Forearm/Bip01 R Hand/Bip01 R Finger2/Bip01 R Finger21/Bip01 R Finger22
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bip01 Spine/Bip01
+          Spine1/Bip01 Spine2/Bip01 Spine3/Bip01 Neck/Bip01 R Clavicle/Bone_youjian
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_01
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_01/Bone_P_02
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_01/Bone_P_02/Bone_P_03
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_01/Bone_P_02/Bone_P_03/Bone_P_04
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_01/Bone_P_02/Bone_P_03/Bone_P_04/_Bone_P_05
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_11
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_11/Bone_P_12
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_11/Bone_P_12/Bone_P_13
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_11/Bone_P_12/Bone_P_13/Bone_P_14
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_11/Bone_P_12/Bone_P_13/Bone_P_14/_Bone_P_15
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_21
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_21/Bone_P_22
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_21/Bone_P_22/Bone_P_23
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_21/Bone_P_22/Bone_P_23/Bone_P_24
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_21/Bone_P_22/Bone_P_23/Bone_P_24/_Bone_P_25
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_31
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_31/Bone_P_32
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_31/Bone_P_32/Bone_P_33
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_31/Bone_P_32/Bone_P_33/Bone_P_34
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_31/Bone_P_32/Bone_P_33/Bone_P_34/_Bone_P_35
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_41
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_41/Bone_P_42
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_41/Bone_P_42/Bone_P_43
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_41/Bone_P_42/Bone_P_43/Bone_P_44
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_41/Bone_P_42/Bone_P_43/Bone_P_44/_Bone_P_45
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_51
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_51/Bone_P_52
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_51/Bone_P_52/Bone_P_53
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_51/Bone_P_52/Bone_P_53/Bone_P_54
+        weight: 1
+      - path: Bone_root01/Bone_root02/zuoqiweizhidian_/Bip01/Bip01 Pelvis/Bone_P_51/Bone_P_52/Bone_P_53/Bone_P_54/_Bone_P_55
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -468,8 +468,6 @@ namespace DigitalOpus.MB.Core{
 #else			
 			if (UnityEngine.Application.platform == RuntimePlatform.Android) atlasMaxDimension = 2048;
 			if (UnityEngine.Application.platform == RuntimePlatform.IPhonePlayer) atlasMaxDimension = 2048;
-			if (UnityEngine.Application.platform == RuntimePlatform.WindowsWebPlayer) atlasMaxDimension = 2048;
-			if (UnityEngine.Application.platform == RuntimePlatform.OSXWebPlayer) atlasMaxDimension = 2048;
 #endif
 			
 			Rect[] uvRects = tp.GetRects(imageSizes,atlasMaxDimension,_padding,out atlasSizeX, out atlasSizeY);
