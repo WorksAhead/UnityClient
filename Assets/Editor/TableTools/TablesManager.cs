@@ -154,6 +154,24 @@ namespace ArkCrossEngine
             }
         }
 
+        [MenuItem("TableTools/SkillEdit/SaveSelected")]
+        public static void SkillSaveSelected()
+        {
+            GameObject go = (GameObject)Selection.activeObject;
+
+            if (go == null || go.GetComponent<SkillEdit>() == null)
+            {
+                UnityEditor.EditorUtility.DisplayDialog("SkillEdit", "Please select the editing character first!", "OK");
+                return;
+            }
+
+            SkillEdit se = go.GetComponent<SkillEdit>();
+            if (se != null)
+            {
+                se.SaveSelected();
+            }
+        }
+
         private static List<GameObject> CollectAllNPCInCurrentScene()
         {
             GameObject go = GameObject.Find(RootGameObjectName);
