@@ -802,7 +802,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             SetHeroVisibleById(m_CurHeroId, false);
             // enter game scene
             /// temp
-            LogicSystem.PublishLogicEvent("ge_role_enter", "lobby", 0);
+            LogicSystem.PublishLogicEvent("ge_role_enter", "lobby", signforbuttonpress);
             LogicSystem.EventChannelForGfx.Publish("ge_connect_hint", "ui", UIConnectEnumType.RoleEnter, true, 20.0f);
         }
     }
