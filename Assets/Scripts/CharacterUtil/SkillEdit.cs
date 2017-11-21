@@ -35,6 +35,7 @@ public class SkillEdit : MonoBehaviour
     {
         public string 技能动画;
         public eHitType 攻击类型;
+        public int 动画长度;
     }
     public SkillCfg 普通攻击第一段;
     public SkillCfg 普通攻击第二段;
@@ -197,10 +198,10 @@ public class SkillEdit : MonoBehaviour
 
         // Load skill files
         ArkCrossEngine.SkillConfigProvider.Instance.Clear();
-        ArkCrossEngine.SkillConfigProvider.Instance.CollectData(ArkCrossEngine.SkillConfigType.SCT_SKILL, "Assets\\StreamingAssets\\Public\\Skill\\SkillData.txt", "SkillConfig");
+        ArkCrossEngine.SkillConfigProvider.Instance.CollectData(ArkCrossEngine.SkillConfigType.SCT_SKILL, Application.dataPath + "\\StreamingAssets\\Public\\Skill\\SkillData.txt", "SkillConfig");
 
         // Normal attack skill
-        _GenerateSkillFile(normalAttackSkillId, 普通攻击第一段.技能动画, 普通攻击第一段.攻击类型, true);
+        _GenerateSkillFile(normalAttackSkillId, 普通攻击第一段.技能动画, 普通攻击第一段.攻击类型, 普通攻击第一段.动画长度, true);
 
         // Other skills
         int[] activeSkillLst = new int[6];
@@ -221,7 +222,7 @@ public class SkillEdit : MonoBehaviour
                 SkillCfg c = 技能配置[idx++];
                 if (c.技能动画.Length > 0)
                 {
-                    _GenerateSkillFile(skillId, c.技能动画, c.攻击类型, false);
+                    _GenerateSkillFile(skillId, c.技能动画, c.攻击类型, c.动画长度, false);
                 }
             }
         }
@@ -241,12 +242,12 @@ public class SkillEdit : MonoBehaviour
         return skillData.Category;
     }
 
-    private void _GenerateSkillImpl(StreamWriter sw, int skillId, string anim, eHitType hitType)
+    private void _GenerateSkillImpl(StreamWriter sw, int skillId, string anim, eHitType hitType, int animLen)
     {
         string str = "skill(" + skillId.ToString() + ")";
         sw.WriteLine(str);
         sw.WriteLine("{");
-        sw.WriteLine("\tsection(450)");
+        sw.WriteLine("\tsection("+animLen.ToString()+")");
         sw.WriteLine("\t{");
 
         str = "\t\t";
@@ -273,8 +274,14 @@ public class SkillEdit : MonoBehaviour
         sw.WriteLine("};");
     }
 
-    private void _GenerateSkillFile(int skillId, string anim, eHitType hitType, bool bNormalAttack)
+    private void _GenerateSkillFile(int skillId, string anim, eHitType hitType, int animLen, bool bNormalAttack)
     {
+        if (animLen == 0)
+        {
+            UnityEditor.EditorUtility.DisplayDialog("SkillEdit", "请检查技能动画长度，不能为0！", "OK");
+            return;
+        }
+
         const string skillfilePrefix = "Assets\\StreamingAssets\\Public\\SkillDsl\\";
         ArkCrossEngine.SkillLogicData skillData = (ArkCrossEngine.SkillLogicData)ArkCrossEngine.SkillConfigProvider.Instance.ExtractData(ArkCrossEngine.SkillConfigType.SCT_SKILL, skillId);
         if (skillData != null)
@@ -283,7 +290,7 @@ public class SkillEdit : MonoBehaviour
             string skillFilePath = skillfilePrefix + skillData.SkillDataFile;
             StreamWriter skillFilesw = new StreamWriter(skillFilePath, false, Encoding.UTF8);
 
-            _GenerateSkillImpl(skillFilesw, skillId, anim, hitType);
+            _GenerateSkillImpl(skillFilesw, skillId, anim, hitType, animLen);
 
             // 三段普攻
             if (bNormalAttack)
@@ -291,7 +298,7 @@ public class SkillEdit : MonoBehaviour
                 // 第二段
                 if (skillData.NextSkillId > 0)
                 {
-                    _GenerateSkillImpl(skillFilesw, skillData.NextSkillId, 普通攻击第二段.技能动画, 普通攻击第二段.攻击类型);
+                    _GenerateSkillImpl(skillFilesw, skillData.NextSkillId, 普通攻击第二段.技能动画, 普通攻击第二段.攻击类型, 普通攻击第二段.动画长度);
                 } 
                 else
                 {
@@ -303,7 +310,7 @@ public class SkillEdit : MonoBehaviour
 
                 if (skillData.NextSkillId > 0)
                 {
-                    _GenerateSkillImpl(skillFilesw, skillData.NextSkillId, 普通攻击第三段.技能动画, 普通攻击第三段.攻击类型);
+                    _GenerateSkillImpl(skillFilesw, skillData.NextSkillId, 普通攻击第三段.技能动画, 普通攻击第三段.攻击类型, 普通攻击第三段.动画长度);
                 }
                 else
                 {
