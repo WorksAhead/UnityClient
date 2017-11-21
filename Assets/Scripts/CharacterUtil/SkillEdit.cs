@@ -4,6 +4,8 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
+#if UNITY_EDITOR
+
 public class SkillEdit : MonoBehaviour
 {
     [System.Serializable]
@@ -316,3 +318,4 @@ public class SkillEdit : MonoBehaviour
 }
 
 
+#endif
