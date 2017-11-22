@@ -1,9 +1,9 @@
 fileFormatVersion: 2
 guid: 55b279424aed7eb4c9ae1fe6637c55d6
-timeCreated: 1509096602
+timeCreated: 1510647258
 licenseType: Pro
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: 1_nr_qishi_T6_j_001
     100002: 1_nr_qishi_T6_s_001
@@ -127,6 +127,15 @@ ModelImporter:
     100238: skeleton_character
     100240: zuijiaokongzhiqi_
     100242: zuoqiweizhidian_
+    100244: 1_nr_qishi_T6_j_003
+    100246: 1_nr_qishi_T6_j_004
+    100248: 1_nr_qishi_T6_s_003
+    100250: 1_nr_qishi_T6_tk_003
+    100252: 1_nr_qishi_T6_xz_003
+    100254: 5_d1_t6_001
+    100256: 5_j2_t6_001
+    100258: Object001
+    100260: Object002
     400000: 1_nr_qishi_T6_j_001
     400002: 1_nr_qishi_T6_s_001
     400004: 1_nr_qishi_T6_sb_001
@@ -249,24 +258,96 @@ ModelImporter:
     400238: skeleton_character
     400240: zuijiaokongzhiqi_
     400242: zuoqiweizhidian_
+    400244: 1_nr_qishi_T6_j_003
+    400246: 1_nr_qishi_T6_j_004
+    400248: 1_nr_qishi_T6_s_003
+    400250: 1_nr_qishi_T6_tk_003
+    400252: 1_nr_qishi_T6_xz_003
+    400254: 5_d1_t6_001
+    400256: 5_j2_t6_001
+    400258: Object001
+    400260: Object002
+    2300000: 5_d1_t6_001
+    2300002: 5_j2_t6_001
+    3300000: 5_d1_t6_001
+    3300002: 5_j2_t6_001
     4300000: 1_nr_qishi_T6_tk_001
     4300002: 1_nr_qishi_T6_j_001
     4300004: 1_nr_qishi_T6_sb_001
     4300006: 1_nr_qishi_T6_s_001
     4300008: 1_nr_qishi_T6_xz_001
     4300010: skeleton_character
+    4300012: 1_nr_qishi_T6_j_003
+    4300014: 1_nr_qishi_T6_tk_003
+    4300016: 1_nr_qishi_T6_xz_003
+    4300018: Object001
+    4300020: Object002
+    4300022: 5_d1_t6_001
+    4300024: 5_j2_t6_001
+    4300026: 1_nr_qishi_T6_s_003
+    4300028: 1_nr_qishi_T6_j_004
     7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
     13700000: 1_nr_qishi_T6_j_001
     13700002: 1_nr_qishi_T6_s_001
     13700004: 1_nr_qishi_T6_sb_001
     13700006: 1_nr_qishi_T6_tk_001
     13700008: 1_nr_qishi_T6_xz_001
     13700010: skeleton_character
+    13700012: 1_nr_qishi_T6_j_003
+    13700014: 1_nr_qishi_T6_j_004
+    13700016: 1_nr_qishi_T6_s_003
+    13700018: 1_nr_qishi_T6_tk_003
+    13700020: 1_nr_qishi_T6_xz_003
+    13700022: Object001
+    13700024: Object002
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 13 - Default
+    second: {fileID: 2100000, guid: 7a2c6c66465e7a640b4f8c86537f6cc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 14 - Default
+    second: {fileID: 2100000, guid: a0af825cd7101f241b8458e7d933cc26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1_nr_qishi_T6_j_001
+    second: {fileID: 2100000, guid: 00f12d9e09ca84a4b9cec8e61c7cbb28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1_nr_qishi_T6_s_001
+    second: {fileID: 2100000, guid: 147b0fb8882b7104298c5bc3dd042608, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1_nr_qishi_T6_sb_001
+    second: {fileID: 2100000, guid: 2eb3091018166bf46a2887da70ff976b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1_nr_qishi_T6_tk_001
+    second: {fileID: 2100000, guid: d4370dda7eb049e4388832b06b08ac84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1_nr_qishi_T6_xz_001
+    second: {fileID: 2100000, guid: ad2fad9edf19a7e4b8e78cf542d33977, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #1'
+    second: {fileID: 2100000, guid: 3302b4ea5d62c6843adc4253562e24bb, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -279,12 +360,14 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -292,7 +375,10 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -308,6 +394,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -324,10 +411,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
