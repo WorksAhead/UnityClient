@@ -30,6 +30,12 @@ public class EditorIndicator_WayPoint : UnityEngine.MonoBehaviour
 
         if (LoadedPrefab == null)
         {
+            int count = this.gameObject.transform.childCount;
+            for (int i = 0; i < count; ++i)
+            {
+                GameObject.DestroyImmediate(gameObject.transform.GetChild(i).gameObject);
+            }
+
             // create new one
             Object obj = Resources.Load("Cylinder");
             LoadedPrefab = GameObject.Instantiate(obj, gameObject.transform) as GameObject;

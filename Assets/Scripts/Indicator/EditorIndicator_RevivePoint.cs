@@ -21,6 +21,12 @@ public class EditorIndicator_RevivePoint : UnityEngine.MonoBehaviour
 
         if (LoadedPrefab == null)
         {
+            int count = this.gameObject.transform.childCount;
+            for (int i = 0; i < count; ++i)
+            {
+                GameObject.DestroyImmediate(gameObject.transform.GetChild(i).gameObject);
+            }
+
             Object obj = Resources.Load("BlueCylinder");
             LoadedPrefab = GameObject.Instantiate(obj, gameObject.transform) as GameObject;
         }

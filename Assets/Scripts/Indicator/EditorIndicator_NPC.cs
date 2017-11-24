@@ -40,7 +40,13 @@ public class EditorIndicator_NPC : UnityEngine.MonoBehaviour
             Data_NpcConfig config = NpcConfigProvider.Instance.GetNpcConfigById(LinkId);
             if (config != null)
             {
-                GameObject.DestroyImmediate(LoadedPrefab);
+                // destroy all subobject
+                int count = this.gameObject.transform.childCount;
+                for (int i = 0; i < count; ++i)
+                {
+                    GameObject.DestroyImmediate(gameObject.transform.GetChild(i).gameObject);
+                }
+                //GameObject.DestroyImmediate(LoadedPrefab);
 
                 // create new one
                 Object obj = Resources.Load(config.m_Model);

@@ -27,7 +27,7 @@
 	  sendgfxmessage("UIPortal_PVP","PlayParticle");
 	  sendgfxmessage("UIPortal_Gateway","PlayParticle");
 	  wait(10);
-	  loop(8)
+	  loop(100)
 	  {
 	    createnpc(1001+$$);
 	  };
