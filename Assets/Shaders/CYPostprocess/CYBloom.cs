@@ -130,7 +130,7 @@ namespace UnityStandardAssets.ImageEffects
             for (int i = 0; i < NUM_HDR_TONEMAP_TEXTURES; i++)
             {
                 int iSampleLen = 1 << (2 * i);
-                rtLuminances[i] = RenderTexture.GetTemporary(iSampleLen, iSampleLen, 0, RenderTextureFormat.RGHalf);
+                rtLuminances[i] = RenderTexture.GetTemporary(iSampleLen, iSampleLen, 0, RenderTextureFormat.RFloat);
             }
 
             float tU, tV;
@@ -178,7 +178,7 @@ namespace UnityStandardAssets.ImageEffects
             }
 
             RenderTexture.ReleaseTemporary(rtAvgLuminance);
-            rtAvgLuminance = RenderTexture.GetTemporary(1, 1, 0, RenderTextureFormat.RGHalf);
+            rtAvgLuminance = RenderTexture.GetTemporary(1, 1, 0, RenderTextureFormat.RFloat);
             Graphics.Blit(rtLuminances[0], rtAvgLuminance);
 
             // cleanup
