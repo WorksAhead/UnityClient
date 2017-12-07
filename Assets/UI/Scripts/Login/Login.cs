@@ -85,11 +85,12 @@ public class Login : UnityEngine.MonoBehaviour
             // update client version
             string version = "";
 
-            // get device info ,including uuid, system info, etc.
-#if UNITY_ANDROID || UNITY_IOS
-            string deviceUniqueIdentifier = SystemInfo.deviceUniqueIdentifier;
-#elif UNITY_EDITOR
+            // get device info ,including uuid, system info, etc. UNITY_EDITOR
+
+#if UNITY_EDITOR
             string deviceUniqueIdentifier = SystemInfo.deviceUniqueIdentifier + ((uint)UnityEngine.Application.dataPath.GetHashCode()).ToString();
+#elif UNITY_ANDROID || UNITY_IOS
+            string deviceUniqueIdentifier = SystemInfo.deviceUniqueIdentifier;
 #else
             string deviceUniqueIdentifier = System.Guid.NewGuid().ToString();
 #endif
