@@ -67,7 +67,6 @@ GameObject:
   - component: {fileID: 114000892341434902}
   - component: {fileID: 114916670778458278}
   - component: {fileID: 114144979960448964}
-  - component: {fileID: 143196661549132750}
   - component: {fileID: 111117762447634156}
   - component: {fileID: 114188518678284356}
   m_Layer: 0
@@ -1061,7 +1060,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124311799727694}
   m_LocalRotation: {x: -0, y: 0.66146326, z: -0, w: 0.7499776}
-  m_LocalPosition: {x: 75.0324, y: 20.010448, z: 56.351315}
+  m_LocalPosition: {x: 108.6919, y: 8.220388, z: 110.667206}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4384978567403016}
@@ -1122,7 +1121,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1140035933394734}
-  m_LocalRotation: {x: 0.56530994, y: 0.23344244, z: 0.76515746, w: -0.20115551}
+  m_LocalRotation: {x: 0.5653099, y: 0.23344241, z: 0.76515734, w: -0.20115548}
   m_LocalPosition: {x: 0.036885023, y: 0.015834898, z: -0.039753944}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 1}
   m_Children:
@@ -2175,20 +2174,3 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.030474573, y: -0.050513286, z: 0.0004323125}
     m_Extent: {x: 0.16783097, y: 0.12642658, z: 0.06841149}
   m_DirtyAABB: 0
---- !u!143 &143196661549132750
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1124311799727694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2.5
-  m_Radius: 0.8
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.3, z: 0}

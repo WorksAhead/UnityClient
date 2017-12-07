@@ -46,12 +46,12 @@
 	onmessage("cityusermove")
 	{
 	  //log("cityusermove:{0} {1} {2}",$0,$1,$2);
-	  //objmove($0,vector3($1,0,$2));
+	  objmove($0,vector3($1,0,$2));
 	};
 	onmessage("objarrived")
 	{
 	  //log("objarrived, adjust face {0}", $0);
-	  //objface($0,-1);
+	  objface($0,-1);
 	};
 	//0——单人PVE，1——多人活动，2——PVP
 	onmessage("cityplayermove")
