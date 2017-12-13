@@ -46,44 +46,45 @@ Shader "CY/BrightPassFilter"
 
 		return vSample * 8.0; // scale range to keep some precision in darks (gets rescaled down to original value during final tone map scene)
 	}
+	
+	inline half Max3(half3 x) { return max(x.x, max(x.y, x.z)); }
+	inline half Max3(half x, half y, half z) { return max(x, max(y, z)); }
+	
+	// Brightness function
+	half Brightness(half3 c)
+	{
+		return Max3(c);
+	}
 
 	half4 SampleLumOffsets0;
 	half4 SampleLumOffsets1;
 
 	half4 HDRSampleLumInitialPS(v2f i) : SV_Target
 	{
-		half4 color = 0;
-		half fRecipSampleCount = 0.25f;
-		half2 vLumInfo = half2(0.0f, 64.0f);
+		half vLumInfo = 0.0f;
 
-		half3 cTex = tex2D(_MainTex, i.uv + SampleLumOffsets0.xy).rgb;
-		half fLum = Luminance(cTex.rgb);
-
-		vLumInfo.x += fLum;
-		vLumInfo.y = min(vLumInfo.y, fLum);
-
-		cTex = tex2D(_MainTex, i.uv + SampleLumOffsets0.zw).rgb;
-		fLum = Luminance(cTex.rgb);
-
-		vLumInfo.x += fLum;
-		vLumInfo.y = min(vLumInfo.y, fLum);
-
-		cTex = tex2D(_MainTex, i.uv + SampleLumOffsets1.xy).rgb;
-		fLum = Luminance(cTex.rgb);
-
-		vLumInfo.x += fLum;
-		vLumInfo.y = min(vLumInfo.y, fLum);
-
-		cTex = tex2D(_MainTex, i.uv + SampleLumOffsets1.zw).rgb;
-		fLum = Luminance(cTex.rgb);
-
-		vLumInfo.x += fLum;
-		vLumInfo.y = min(vLumInfo.y, fLum);
+		half3 s1 = tex2D(_MainTex, i.uv + SampleLumOffsets0.xy).rgb;
+		half s1w = 1.0 / (Brightness(s1) + 1.0);
+		
+		half3 s2 = tex2D(_MainTex, i.uv + SampleLumOffsets0.zw).rgb;
+		half s2w = 1.0 / (Brightness(s2) + 1.0);
+		
+		half3 s3 = tex2D(_MainTex, i.uv + SampleLumOffsets1.xy).rgb;
+		half s3w = 1.0 / (Brightness(s3) + 1.0);
+		
+		half3 s4 = tex2D(_MainTex, i.uv + SampleLumOffsets1.zw).rgb;
+		half s4w = 1.0 / (Brightness(s4) + 1.0);
+		
+		half one_div_wsum = 1.0 / (s1w + s2w + s3w + s4w);
+		
+		// Karis's luma weighted average (using brightness instead of luma)
+		half3 sa = (s1 * s1w + s2 * s2w + s3 * s3w + s4 * s4w) * one_div_wsum;
+		vLumInfo = Luminance(sa);
 
 		// clamp to acceptable range
-		color.xy = min(vLumInfo.xy * half2(fRecipSampleCount, 1), 64);
+		vLumInfo = clamp(vLumInfo, 0.0f, 64.0f);
 
-		return color;
+		return vLumInfo;
 	}
 
 	float4 SampleOffsets[16];
