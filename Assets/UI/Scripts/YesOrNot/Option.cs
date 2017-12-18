@@ -70,12 +70,22 @@ public class Option : UnityEngine.MonoBehaviour
 
     public void DebugPVP()
     {
-        PlayerControl.Instance.JoinPlatformDefense(0, (int)Keyboard.Event.Up);
+        int currentUser = WorldSystem.Instance.GetMaxCityUserCount();
+        WorldSystem.Instance.UpdateMaxCityUserCount(currentUser + 30);
+
+        string notifyUsrCount = string.Format("人数+30，当前人数: {0}", currentUser + 30);
+        GfxSystem.PublishGfxEvent("ge_highlight_prompt", "ui", notifyUsrCount);
     }
 
     public void DebugPVE()
     {
-        PlayerControl.Instance.MatchMpve(0, (int)Keyboard.Event.Up);
+        int currentUser = WorldSystem.Instance.GetMaxCityUserCount();
+        if (currentUser > 30)
+        {
+            WorldSystem.Instance.UpdateMaxCityUserCount(currentUser - 30);
+            string notifyUsrCount = string.Format("人数-30，当前人数: {0}", currentUser - 30);
+            GfxSystem.PublishGfxEvent("ge_highlight_prompt", "ui", notifyUsrCount);
+        }
     }
 
     public void DebugLevelup()

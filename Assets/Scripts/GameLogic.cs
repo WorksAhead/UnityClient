@@ -7,13 +7,15 @@ using System;
 using System.IO;
 using System.Collections;
 using ArkCrossEngine;
-using System.Collections.Generic;
+using System.Text;
 
 /// <summary>
 /// Game root entry 
 /// </summary>
 public class GameLogic : UnityEngine.MonoBehaviour
 {
+    readonly static string BOMMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+
     internal void Awake()
     {
         GlobalVariables.Instance.IsClient = true;
@@ -343,6 +345,10 @@ public class GameLogic : UnityEngine.MonoBehaviour
                 if (null != numStr)
                 {
                     numStr = numStr.Trim();
+                    if (numStr.StartsWith(BOMMarkUtf8))
+                    {
+                        numStr = numStr.Remove(0, BOMMarkUtf8.Length);
+                    }
                     totalNum = (float)int.Parse(numStr);
                     if (totalNum <= 0)
                         totalNum = 50;

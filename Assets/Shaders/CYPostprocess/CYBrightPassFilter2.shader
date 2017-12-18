@@ -40,8 +40,8 @@ Shader "CY/BrightPassFilter"
 
 		// Determine what the pixel's value will be after tone-mapping occurs
 		vSample.rgb *= Level / (fAdaptedLum + 1e-6);
-		vSample.rgb -= _BloomParams.xxx;
-		vSample.rgb = clamp(vSample.rgb, 0.0f, 65536.0f);
+		vSample.rgb -= _BloomParams.x;
+		vSample.rgb = max(vSample.rgb, (half3)0.0);
 		vSample.rgb /= (_BloomParams.y + vSample.rgb); // map result to 0 to 1 range
 
 		return vSample * 8.0; // scale range to keep some precision in darks (gets rescaled down to original value during final tone map scene)

@@ -7,14 +7,13 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: toufa_02
-  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 4b1e649672c4aca46a864bdb201cd64d, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -39,12 +38,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _HairMask:
+        m_Texture: {fileID: 2800000, guid: 416772da5f015ba4b80ea5724732b2c6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 6c110795031f0da46a9645fcc36607ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 6c63871d7f68cc3469dc264951a96754, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -61,7 +68,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.116
+    - _Cutoff: 0.271
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 0.668
@@ -71,7 +78,11 @@ Material:
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ShiftValue1: -0.11
+    - _ShiftValue2: -0.66
     - _SmoothnessTextureChannel: 0
+    - _SpecularGloss1: 103
+    - _SpecularGloss2: 253
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
@@ -79,4 +90,7 @@ Material:
     m_Colors:
     - _Color: {r: 0.6691177, g: 0.6691177, b: 0.6691177, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HairTint1: {r: 0.04705883, g: 0.03529412, b: 0.03529412, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularColor1: {r: 0.5137255, g: 0.4901961, b: 0.53333336, a: 1}
+    - _SpecularColor2: {r: 0.24313727, g: 0.24313727, b: 0.24313727, a: 1}
