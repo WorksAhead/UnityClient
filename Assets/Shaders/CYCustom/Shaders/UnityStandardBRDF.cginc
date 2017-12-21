@@ -157,11 +157,7 @@ inline half GGXTerm (half NdotH, half roughness)
 {
 	half a2 = roughness * roughness;
 	half d = (NdotH * a2 - NdotH) * NdotH + 1.0f; // 2 mad
-	half dt = UNITY_INV_PI * a2 / (d * d + 1e-7f);
-#if !defined(SHADER_API_METAL)
-	dt = min(dt, 65536.0);
-#endif
-    return dt; // This function is not intended to be running on Mobile,
+    return UNITY_INV_PI * a2 / (d * d + 1e-7f); // This function is not intended to be running on Mobile,
                                             // therefore epsilon is smaller than what can be represented by half
 }
 
