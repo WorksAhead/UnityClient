@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
 using UnityEngine;
-
-#if ENABLE_LUA
 using XLua;
 
 public static class LuaExportConfig
@@ -44,6 +42,7 @@ public static class LuaExportConfig
     public static List<Type> CSharpCallLua = new List<Type>()
     {
         typeof(Action),
+        typeof(Action<UnityEngine.Object>),
         typeof(Func<double, double, double>),
         typeof(Action<string>),
         typeof(Action<double>),
@@ -72,4 +71,3 @@ public static class LuaExportConfig
         new List<string>(){"UnityEngine.MonoBehaviour", "runInEditMode"},
     };
 }
-#endif

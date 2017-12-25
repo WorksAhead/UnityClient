@@ -8,6 +8,7 @@ using System.IO;
 using System.Collections;
 using ArkCrossEngine;
 using System.Text;
+using ScriptableData;
 
 /// <summary>
 /// Game root entry 
@@ -15,14 +16,20 @@ using System.Text;
 public class GameLogic : UnityEngine.MonoBehaviour
 {
     readonly static string BOMMarkUtf8 = Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble());
+    public string ScriptPathForDebugger;
 
     internal void Awake()
     {
         GlobalVariables.Instance.IsClient = true;
         DontDestroyOnLoad(this.gameObject);
 
-        // initialize lua environment
-        LuaManager.Instance.InitEnv();
+        // initialize lua environment, setup for debugger
+        if ( String.IsNullOrEmpty(ScriptPathForDebugger) )
+        {
+            ScriptPathForDebugger = UnityEngine.Application.dataPath + "/Scripts/Lua/LuaScripts/Resources/";
+        }
+        
+        ScriptManager.Instance.Init(new XLuaImpl(), LoadGameResource, ScriptPathForDebugger);
     }
     // Use this for initialization
     internal void Start()
@@ -137,7 +144,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
                 GameControler.TickGame();
 
-                LuaManager.Instance.Tick();
+                ScriptManager.Instance.Tick();
             }
 
             // Todo: try move to ui root
@@ -188,7 +195,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             GameControler.StopLogic();
             GameControler.Release();
             UnityEngine.Resources.UnloadUnusedAssets();
-            LuaManager.Instance.DisposeEnv();
+            ScriptManager.Instance.Destroy();
         }
         catch (System.Exception ex)
         {
@@ -541,6 +548,22 @@ public class GameLogic : UnityEngine.MonoBehaviour
         GC.Collect();
     }
 #endif
+
+    private byte[] LoadGameResource(ref string resource)
+    {
+        string fileName = resource + ".lua";
+        TextAsset text = ResourceSystem.GetSharedResource(fileName) as TextAsset;
+        if ( text != null )
+        {
+            // for debugger
+            resource = ScriptManager.Instance.GetLuaScriptPathForDebugger(resource);
+            return System.Text.Encoding.UTF8.GetBytes(text.text);
+        }
+        else
+        {
+            return null;
+        }
+    }
 
     private bool m_IsDataFileExtracted = false;
     private bool m_IsDataFileExtractedPaused = false;
