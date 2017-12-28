@@ -1,0 +1,40 @@
+﻿ArkCrossEngine = CS.ArkCrossEngine;
+
+function start(v)
+
+	ArkCrossEngine.GfxSystem.SendMessage("PortalWorld", "PlayParticle", 0);
+	for i=0, 6, 1 do
+		ArkCrossEngine.WorldSystem.Instance:CreateNpcEntity(1001+i);
+	end
+	--CS.ArkCrossEngine.CommandStack.ExecSendGfxMessage("PortalWorld","PlayParticle");
+	--for i=0, 6, 1 do
+		--CS.ArkCrossEngine.CommandStack.ExecCreateNpcCommand(1001+i);
+	--end
+end
+
+function npcstore(v)
+	--LogToConsole("scene logic: npcstore.");
+end
+
+function cityusermove(v)
+	CS.ArkCrossEngine.CommandStack.ExecObjMoveCommand(v[0], v[1], 0, v[2]);
+	--LogToConsole("scene logic: cityusermove." .. v[0]);
+end
+
+function objarrived(v)
+	CS.ArkCrossEngine.CommandStack.ExecObjFaceCommand(v[0], -1);
+	--LogToConsole("scene logic: objarrived.");
+end
+
+function cityplayermove(v)
+	--LogToConsole("scene logic: cityplayermove.");
+end
+
+function playermovetopos(v)
+	CS.ArkCrossEngine.CommandStack.ExecObjFaceCommand(v[0], v[1], v[2]);
+	--LogToConsole("scene logic: playermovetopos.");
+end
+
+function aimovestopped(v)
+	--LogToConsole("scene logic: aimovestopped.");
+end

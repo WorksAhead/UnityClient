@@ -35,15 +35,22 @@ public static class LuaExportConfig
         typeof(WWW),
         typeof(System.Collections.Generic.List<int>),
         typeof(Action<string>),
-        typeof(UnityEngine.Debug)
+        typeof(UnityEngine.Debug),
+
+        /// Client Classes
+        typeof(ArkCrossEngine.GfxSystem),
+        typeof(ArkCrossEngine.WorldSystem),
     };
 
     [CSharpCallLua]
     public static List<Type> CSharpCallLua = new List<Type>()
     {
         typeof(Action),
+        typeof(Action<System.Object>),
+        typeof(Action<System.Object[]>),
         typeof(Action<UnityEngine.Object>),
         typeof(Func<double, double, double>),
+        typeof(Action<int>),
         typeof(Action<string>),
         typeof(Action<double>),
         typeof(UnityEngine.Events.UnityAction),

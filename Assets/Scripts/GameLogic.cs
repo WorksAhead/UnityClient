@@ -29,7 +29,8 @@ public class GameLogic : UnityEngine.MonoBehaviour
             ScriptPathForDebugger = UnityEngine.Application.dataPath + "/Scripts/Lua/LuaScripts/Resources/";
         }
         
-        ScriptManager.Instance.Init(new XLuaImpl(), LoadGameResource, ScriptPathForDebugger);
+        ScriptManager.Instance.Init(new XLuaImpl(), LoadGameResource, true, ScriptPathForDebugger);
+        ScriptManager.Instance.Init(new XLuaImpl(), LoadLogicResource, false, ScriptPathForDebugger);
     }
     // Use this for initialization
     internal void Start()
@@ -144,7 +145,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
 
                 GameControler.TickGame();
 
-                ScriptManager.Instance.Tick();
+                ScriptManager.Instance.Tick(true);
             }
 
             // Todo: try move to ui root
@@ -195,7 +196,7 @@ public class GameLogic : UnityEngine.MonoBehaviour
             GameControler.StopLogic();
             GameControler.Release();
             UnityEngine.Resources.UnloadUnusedAssets();
-            ScriptManager.Instance.Destroy();
+            ScriptManager.Instance.Destroy(true);
         }
         catch (System.Exception ex)
         {
@@ -556,13 +557,25 @@ public class GameLogic : UnityEngine.MonoBehaviour
         if ( text != null )
         {
             // for debugger
-            resource = ScriptManager.Instance.GetLuaScriptPathForDebugger(resource);
+            resource = ScriptManager.Instance.GetLuaScriptPathForDebugger(resource, true);
             return System.Text.Encoding.UTF8.GetBytes(text.text);
         }
         else
         {
             return null;
         }
+    }
+
+    private byte[] LoadLogicResource ( ref string resource )
+    {
+        byte[] content = FileReaderProxy.ReadFileAsArray(resource);
+        string text = Encoding.UTF8.GetString(content);
+        if ( text.StartsWith(BOMMarkUtf8) )
+        {
+            text = text.Remove(0, BOMMarkUtf8.Length);
+        }
+        resource = ScriptManager.Instance.GetLuaScriptPathForDebugger(resource, false);
+        return System.Text.Encoding.UTF8.GetBytes(text);
     }
 
     private bool m_IsDataFileExtracted = false;

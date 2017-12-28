@@ -29,8 +29,8 @@ public class LuaBehaviour : MonoBehaviour
     
     void Awake()
     {
-        LuaEnv env = ScriptManager.Instance.ScriptObject as LuaEnv;
-
+        LuaEnv env = ScriptManager.Instance.GetScriptObjectByThread(true) as LuaEnv;
+        
         // set index meta table
         ScriptEnv = env.NewTable();
         LuaTable metaTable = env.NewTable();
@@ -97,6 +97,6 @@ public class LuaBehaviour : MonoBehaviour
     void ExecuteLua()
     {
         string luaExecutable = System.IO.Path.GetFileNameWithoutExtension(LuaScript.name);
-        ScriptManager.Instance.ExecuteFile(luaExecutable, ScriptEnv);
+        ScriptManager.Instance.ExecuteFile(luaExecutable, true, ScriptEnv);
     }
 }
