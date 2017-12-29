@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
-#if ENABLE_LUA
+using ScriptableData;
 using XLua;
-#endif
 
 [Serializable]
 public class Injection
@@ -13,30 +11,26 @@ public class Injection
     public string Name;
     public object Object;
 }
-#if ENABLE_LUA
+
 [LuaCallCSharp]
-#endif
 public class LuaBehaviour : MonoBehaviour
 {
     public TextAsset LuaScript;
     public Injection[] Injections;
 
     /// common function call
-    private Action LuafAwake;
+    private Action<UnityEngine.Object> LuafAwake;
     private Action LuafStart;
     private Action LuafUpdate;
     private Action LuafDestroy;
 
     /// self table
-#if ENABLE_LUA
     private LuaTable ScriptEnv;
-#endif
     
     void Awake()
     {
-#if ENABLE_LUA
-        LuaEnv env = LuaManager.Instance.Env;
-
+        LuaEnv env = ScriptManager.Instance.GetScriptObjectByThread(true) as LuaEnv;
+        
         // set index meta table
         ScriptEnv = env.NewTable();
         LuaTable metaTable = env.NewTable();
@@ -65,9 +59,8 @@ public class LuaBehaviour : MonoBehaviour
         // fire awake in lua
         if (LuafAwake != null)
         {
-            LuafAwake();
+            LuafAwake((UnityEngine.Object)this);
         }
-#endif
     }
 
     void Start ()
@@ -98,16 +91,12 @@ public class LuaBehaviour : MonoBehaviour
         LuafUpdate = null;
         LuafDestroy = null;
         Injections = null;
-#if ENABLE_LUA
         ScriptEnv.Dispose();
-#endif
     }
 
     void ExecuteLua()
     {
-#if ENABLE_LUA
-        string luaExecutable = LuaManager.Instance.LoadLuaFromFile(System.IO.Path.GetFileNameWithoutExtension(LuaScript.name));
-        LuaManager.Instance.DoString(luaExecutable, ScriptEnv);
-#endif
+        string luaExecutable = System.IO.Path.GetFileNameWithoutExtension(LuaScript.name);
+        ScriptManager.Instance.ExecuteFile(luaExecutable, true, ScriptEnv);
     }
 }

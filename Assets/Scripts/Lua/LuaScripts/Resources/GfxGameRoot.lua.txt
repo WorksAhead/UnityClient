@@ -2,11 +2,12 @@
 LogToConsole = CS.UnityEngine.Debug.Log;
 
 -- lua debugger, disable in release build
+-- use ZeroBraneStudio
 -- require('mobdebug').start("10.12.25.109")
 
-function awake()
-	CS.UnityEngine.Object.DontDestroyOnLoad(self.gameObject);
-	LogToConsole('awake call from lua');
+function awake(vars)
+	CS.UnityEngine.Object.DontDestroyOnLoad(vars.gameObject);
+	LogToConsole('awake call from lua ' .. vars.name);
 end
 
 function start()
