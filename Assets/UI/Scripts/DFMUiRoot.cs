@@ -2,7 +2,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using StoryDlg;
 using ArkCrossEngine;
 
 public class DFMUiRoot : UnityEngine.MonoBehaviour
@@ -1140,7 +1139,6 @@ public class DFMUiRoot : UnityEngine.MonoBehaviour
     }
     private void InitStoryDlg()
     {
-        StoryDlgManager.Instance.Init();
         ClickNpcManager.Instance.Init();
     }
     private void OnEnterNewScene()

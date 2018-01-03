@@ -35,7 +35,6 @@ namespace ArkCrossEngine
                     }
                 }
             }
-            StoryDlg.StoryDlgManager.Instance.AddStoryEndListener(OnStoryEnd);
         }
 
         private void OnStoryEnd(int storyId)

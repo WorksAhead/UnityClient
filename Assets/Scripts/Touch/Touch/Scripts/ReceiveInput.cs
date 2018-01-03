@@ -311,19 +311,11 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
             {
                 push_skill_buffer.Add(waite_skill_buffer[i]);
             }
-            /*
-      foreach (CandidateSkillInfo node in waite_skill_buffer) {
-        push_skill_buffer.Add(node);
-      }*/
             waite_skill_buffer.Clear();
             for (int i = 0; i < push_skill_buffer.Count; i++)
             {
                 GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, push_skill_buffer[i].skillType, new UnityEngine.Vector3(push_skill_buffer[i].targetPos.x, push_skill_buffer[i].targetPos.y, push_skill_buffer[i].targetPos.z));
             }
-            /*
-      foreach (CandidateSkillInfo node in push_skill_buffer) {
-        GfxModule.Skill.GfxSkillSystem.Instance.PushSkill(ArkCrossEngine.LogicSystem.PlayerSelf, node.skillType, node.targetPos);
-      }*/
             push_skill_buffer.Clear();
         }
         catch (Exception ex)
@@ -348,14 +340,6 @@ public class ReceiveInput : UnityEngine.MonoBehaviour
                     can_conjure_e_skill = true;
                 }
             }
-            /*
-      foreach (SkillNode node in skills) {
-        if (SkillCategory.kSkillQ == node.Category) {
-          can_conjure_q_skill = true;
-        } else {
-          can_conjure_e_skill = true;
-        }
-      }*/
         }
     }
 

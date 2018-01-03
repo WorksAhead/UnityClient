@@ -9,7 +9,6 @@ public enum PanelType
 }
 public class HeroPanel : UnityEngine.MonoBehaviour
 {
-
     // Use this for initialization
     public UnityEngine.GameObject HeroView = null;
     public UISprite spHeroPortrait = null;
@@ -73,6 +72,36 @@ public class HeroPanel : UnityEngine.MonoBehaviour
         catch (System.Exception ex)
         {
             ArkCrossEngine.LogicSystem.LogErrorFromGfx("Exception {0}\n{1}", ex.Message, ex.StackTrace);
+        }
+    }
+    public void ButtonShowOption ()
+    {
+        UnityEngine.GameObject go = UIManager.Instance.GetWindowGoByName("Option");
+        if ( go != null )
+        {
+            if ( NGUITools.GetActive(go) )
+            {
+                UIManager.Instance.HideWindowByName("Option");
+            }
+            else
+            {
+                UIManager.Instance.ShowWindowByName("Option");
+            }
+        }
+    }
+    public void ShowWorldMap()
+    {
+        UnityEngine.GameObject go = UIManager.Instance.GetWindowGoByName("WorldMap");
+        if ( go != null )
+        {
+            if ( NGUITools.GetActive(go) )
+            {
+                UIManager.Instance.HideWindowByName("WorldMap");
+            }
+            else
+            {
+                UIManager.Instance.ShowWindowByName("WorldMap");
+            }
         }
     }
     //重新布局退出按钮

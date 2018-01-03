@@ -10,8 +10,6 @@ public class TouchManager : UnityEngine.MonoBehaviour
     public static readonly RuntimePlatform[] TouchScreenPlatforms = {
     RuntimePlatform.IPhonePlayer,
     RuntimePlatform.Android,
-    //RuntimePlatform.BB10Player,
-    //RuntimePlatform.WP8Player,
   };
 
     /// 手指触摸状态
@@ -46,12 +44,8 @@ public class TouchManager : UnityEngine.MonoBehaviour
 
         if (null != gesture.Recognizer && "OnEasyGesture" != gesture.Recognizer.EventMessageName)
         {
-            //if ("OnSingleTap" == gesture.Recognizer.EventMessageName
-            //  && (gesture.Position.y < Screen.height / 3 && gesture.Position.x < Screen.width / 4)) {
-            //} else {
             GestureArgs e = ToGestureArgs(gesture);
             LogicSystem.FireGestureEvent(e);
-            //}
         }
 
         if (ArkCrossEngine.PlayerControl.Instance.EnableSkillInput)

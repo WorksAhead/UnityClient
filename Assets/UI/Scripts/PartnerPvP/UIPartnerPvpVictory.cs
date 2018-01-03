@@ -188,11 +188,6 @@ public class UIPartnerPvpVictory : UnityEngine.MonoBehaviour
             {
                 progress.value = 0;
             }
-            TweenProgressBar tweenProgress = tf.GetComponent<TweenProgressBar>();
-            if (tweenProgress != null)
-            {
-                tweenProgress.SetValue((float)damage / m_MaxDamage);
-            }
             tf = tf.Find("Label");
             if (tf != null)
             {

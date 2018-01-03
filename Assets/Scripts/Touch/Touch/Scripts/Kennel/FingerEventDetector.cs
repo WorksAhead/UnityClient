@@ -63,10 +63,7 @@ public class FingerEvent
         UnityEngine.Vector3 cur_touch_pos = new UnityEngine.Vector3(Position.x, Position.y, 0);
         Ray ray = UnityEngine.Camera.main.ScreenPointToRay(cur_touch_pos);
         RaycastHit hitInfo;
-        //int layermask = 1 << LayerMask.NameToLayer("AirWall");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObjEffect");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObj");
-        //layermask = ~layermask;
+        
         int layermask = 1 << LayerMask.NameToLayer("Terrains");
         if (Physics.Raycast(ray, out hitInfo, 200f, layermask))
         {
@@ -91,12 +88,7 @@ public class FingerEvent
                 go.Add(rch[i].collider.gameObject);
             }
         }
-        /*
-    foreach (RaycastHit node in rch) {
-      if (null != node.collider.gameObject) {
-        go.Add(node.collider.gameObject);
-      }
-    }*/
+
         return go.Count > 0 ? go : null;
     }
 }

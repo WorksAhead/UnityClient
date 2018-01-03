@@ -9,77 +9,64 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
 {
     /// Publics
     
-    // camera follow initial transform
-    public UnityEngine.Quaternion CameraQuatenion = new UnityEngine.Quaternion(0, 0, 0, 0);
-    public UnityEngine.Vector3 OffsetPlayer = new UnityEngine.Vector3();
     public float m_AngleVelocity = 4.0f;
 
     // move camera to target delta
     public float MoveCameraDelta = 0.2f;
-    // name of hero
-    public string Hero_Jianshi = "";
-    public string Hero_Cike = "";
+
     // audio of hero
     public UnityEngine.AudioSource m_AudioSource;
     public UnityEngine.AudioSource m_WeaponAudioSource;
     public List<UnityEngine.AudioClip> m_CikeSelectMusic = new List<UnityEngine.AudioClip>();
-    public float m_CikeWeaponMusicDelay = 0.0f;
     public List<UnityEngine.AudioClip> m_CikeWeaponMusic = new List<UnityEngine.AudioClip>();
     public List<UnityEngine.AudioClip> m_JianshiSelectMusic = new List<UnityEngine.AudioClip>();
-    public float m_JianshiWeaponMusicDelay = 0.0f;
     public List<UnityEngine.AudioClip> m_JianshiWeaponMusic = new List<UnityEngine.AudioClip>();
+
     // hero ui collider
     public UnityEngine.GameObject m_HeroCollider;
+
     // hero object
     public UnityEngine.GameObject m_HeroCike;
-    public UnityEngine.GameObject m_WeaponCikeLeft;
-    public UnityEngine.GameObject m_WeaponCikeRight;
     public UnityEngine.GameObject m_HeroJianshi;
-    public UnityEngine.GameObject m_WeaponJianshi;
     public UnityEngine.GameObject m_Hero3;
-    // temp
-    public UnityEngine.GameObject m_HeroJianshi_r1;
-    public int m_HeroReplaceIndex = 0;
-    // mount points
-    public UnityEngine.Transform m_CikeHandLeft;
-    public UnityEngine.Transform m_CikeHandRight;
-    public UnityEngine.Transform m_CikeBackLeft;
-    public UnityEngine.Transform m_CikeBackRight;
-    public UnityEngine.Transform m_JianshiHand;
-    public UnityEngine.Transform m_JianshiBack;
-    // delay of weapon change
-    public float m_CikeChangeWeaponDelay = 2.0f;
-    public float m_JianshiChangeWeaponDelay = 2.0f;
+    
     // default animation of hero
     public string m_HeroCikeAnim = "";
     public string m_HeroCikeIdleAnim = "";
     public string m_HeroJianshiAnim = "";
     public string m_HeroJianshiIdleAnim = "";
+
     // ui root object
     public UIRoot UIRootGO = null;
-    
 
     /// Privates
     
     // initial rotation
     private UnityEngine.Quaternion m_CikeInitRotation = UnityEngine.Quaternion.identity;
     private UnityEngine.Quaternion m_JianshiInitRotation = UnityEngine.Quaternion.identity;
+
     // current visible hero id
     private int m_CurHeroId = 0;
+
     // for event system
     private List<object> eventlist = new List<object>();
+
     // button states
     private int m_characterIndex = 4;
     private int signforbuttonpress = 0;
     private bool signforcreate = false;
     private int lastselectbut = 0;
+
     // cached guid
     private List<ulong> playguidlist = new List<ulong>();
     private List<int> heroidlist = new List<int>();
+
     // for finger gusture
     private UnityEngine.Vector2 m_LastFingerPos = UnityEngine.Vector2.zero;
+
     // max hero number
     private static int HeroCount = 4;
+
     // for nick name from server
     private int m_NicknameCount = 0;
     private List<string> m_NicknameList = new List<string>();
@@ -88,7 +75,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
     {
         WARRIOR = 1,
         MAGICA = 2,
-        Hero3,
+        Hero3 = 3,
     }
     internal enum RoleEnterResult
     {
@@ -212,17 +199,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_HeroJianshi.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
                 m_HeroJianshi.transform.SetLayer(0);
             }
-            if (m_HeroJianshi_r1 != null)
-            {
-                m_HeroJianshi_r1.transform.SetParent(null);
-                m_HeroJianshi_r1.transform.transform.position = holder.transform.position;
-                m_HeroJianshi_r1.transform.transform.localPosition = holder.transform.localPosition;
-                m_HeroJianshi_r1.transform.transform.rotation = holder.transform.rotation;
-                m_HeroJianshi_r1.transform.transform.localRotation = holder.transform.localRotation;
-                m_HeroJianshi_r1.transform.transform.localScale = new UnityEngine.Vector3(0.9f, 0.9f, 0.9f); //holder.transform.localScale;
-                m_HeroJianshi_r1.transform.transform.Rotate(new UnityEngine.Vector3(0, 180, 0), Space.Self);
-                m_HeroJianshi_r1.transform.SetLayer(0);
-            }
         }
     }
 
@@ -259,39 +235,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             if (UICamera.hoveredObject == m_HeroCollider)
             {
                 return;
-                // only fashi use this
-                if (m_CurHeroId != (int)HeroIdEnum.WARRIOR)
-                {
-                    return;
-                }
-
-                if (m_HeroReplaceIndex == 0)
-                {
-                    if (m_HeroJianshi.GetComponent<UnityEngine.Animation>().IsPlaying(m_HeroJianshiAnim))
-                    {
-                        return;
-                    }
-
-                    m_HeroJianshi.SetActive(false);
-                    m_HeroJianshi_r1.SetActive(true);
-
-                    HeroPlayAnimation(m_HeroJianshi_r1, m_HeroJianshiAnim);
-                    HeroPlayAniationQueued(m_HeroJianshi_r1, m_HeroJianshiIdleAnim);
-                }
-                else
-                {
-                    if (m_HeroJianshi_r1.GetComponent<UnityEngine.Animation>().IsPlaying(m_HeroJianshiAnim))
-                    {
-                        return;
-                    }
-
-                    m_HeroJianshi.SetActive(true);
-                    m_HeroJianshi_r1.SetActive(false);
-
-                    HeroPlayAnimation(m_HeroJianshi, m_HeroJianshiAnim);
-                    HeroPlayAniationQueued(m_HeroJianshi, m_HeroJianshiIdleAnim);
-                }
-                m_HeroReplaceIndex = (m_HeroReplaceIndex + 1) % 2;
             }
             return;
         }
@@ -313,46 +256,11 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 break;
         }
     }
-    
-    private string GetHeroNameByHeroId(int heroId)
-    {
-        switch (heroId)
-        {
-            case 1:
-                return Hero_Jianshi;
-            case 2:
-                return Hero_Cike;
-            default:
-                return Hero_Jianshi;
-        }
-    }
 
     // FixMe: another way to get active hero game object
     void CameraLookAtHero(int heroId)
     {
         return;
-        string playerName = GetHeroNameByHeroId(heroId);
-
-        // find all player in layers
-        UnityEngine.GameObject[] playersArr = UnityEngine.GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < playersArr.Length; ++i)
-        {
-            if (playersArr[i] != null && playersArr[i].name.ToLower() == playerName.ToLower())
-            {
-                UnityEngine.GameObject go = UnityEngine.GameObject.Find(ArkCrossEngine.GlobalVariables.cGameRootName);
-                if (go != null)
-                {
-                    MainCamera cameraScript = go.GetComponent<MainCamera>();
-                    if (cameraScript != null)
-                    {
-                        // follow target hero
-                        UnityEngine.GameObject play = playersArr[i];
-                        cameraScript.CameraFollowGameObject(play, OffsetPlayer, CameraQuatenion);
-
-                    }
-                }
-            }
-        }
     }
 
     private void ShowHeroAndDoAction(int heroId)
@@ -361,8 +269,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         SetOnlyHeroVisible(heroId);
         // cache hero id
         m_CurHeroId = heroId;
-        // initailize weapon mount position
-        // InitWeaponMountPos(heroId);
 
         // play music
         PlaySelectMusicByHeroId(heroId);
@@ -376,9 +282,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 // play queued animation
                 HeroPlayAnimation(m_HeroCike, GetAnimNameByHeroId(heroId));
                 HeroPlayAniationQueued(m_HeroCike, GetIdleAnimByHeroId(heroId));
-                // change weapon queued
-                StartCoroutine(DelayChangeWeaponPos(m_HeroCike, m_WeaponCikeLeft, m_CikeBackLeft, m_CikeChangeWeaponDelay));
-                StartCoroutine(DelayChangeWeaponPos(m_HeroCike, m_WeaponCikeRight, m_CikeBackRight, m_CikeChangeWeaponDelay));
                 // set initial rotation
                 m_HeroCike.transform.rotation = m_CikeInitRotation;
                 break;
@@ -398,8 +301,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                     ps.Play();
                 }
 
-                // change weapon queued
-                StartCoroutine(DelayChangeWeaponPos(m_HeroJianshi, m_WeaponJianshi, m_JianshiBack, m_JianshiChangeWeaponDelay));
                 // set initial rotation
                 m_HeroJianshi.transform.rotation = m_JianshiInitRotation;
                 break;
@@ -486,7 +387,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         {
             case (int)HeroIdEnum.WARRIOR:
                 m_HeroJianshi.SetActive(visible);
-                //m_HeroJianshi_r1.SetActive(false);
                 break;
             case (int)HeroIdEnum.MAGICA:
                 m_HeroCike.SetActive(visible);
@@ -514,26 +414,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             {
                 SetHeroVisibleById(heroId, true);
             }
-        }
-    }
-    private void InitWeaponMountPos(int heroId)
-    {
-        switch (heroId)
-        {
-            case (int)HeroIdEnum.MAGICA:
-                if (m_CikeHandLeft == null || m_CikeHandRight == null) return;
-                m_WeaponCikeLeft.transform.parent = m_CikeHandLeft;
-                m_WeaponCikeLeft.transform.localPosition = UnityEngine.Vector3.zero;
-                m_WeaponCikeLeft.transform.localRotation = UnityEngine.Quaternion.identity;
-                m_WeaponCikeRight.transform.parent = m_CikeHandRight;
-                m_WeaponCikeRight.transform.localPosition = UnityEngine.Vector3.zero;
-                m_WeaponCikeRight.transform.localRotation = UnityEngine.Quaternion.identity;
-                break;
-            case (int)HeroIdEnum.WARRIOR:
-                m_WeaponJianshi.transform.parent = m_JianshiHand;
-                m_WeaponJianshi.transform.localPosition = UnityEngine.Vector3.zero;
-                m_WeaponJianshi.transform.localRotation = UnityEngine.Quaternion.identity;
-                break;
         }
     }
     private string GetAnimNameByHeroId(int heroId)
@@ -570,32 +450,7 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
         }
         return result;
     }
-
-    // FixMe: another way to get active hero game object
-    public void MoveCameraToHero(int heroId)
-    {
-        return;
-        string name = GetHeroNameByHeroId(heroId);
-        UnityEngine.GameObject[] playersArr = UnityEngine.GameObject.FindGameObjectsWithTag("Player");
-        for (int i = 0; i < playersArr.Length; ++i)
-        {
-            if (playersArr[i] != null && playersArr[i].name.ToLower() == name.ToLower())
-            {
-                UnityEngine.GameObject go = UnityEngine.GameObject.Find(ArkCrossEngine.GlobalVariables.cGameRootName);
-                if (go != null)
-                {
-                    MainCamera cameraScript = go.GetComponent<MainCamera>();
-                    if (cameraScript != null)
-                    {
-                        // move camera with delta
-                        UnityEngine.GameObject play = playersArr[i];
-                        StartCoroutine(cameraScript.MoveCamera(play.transform.position, OffsetPlayer, MoveCameraDelta, CameraQuatenion));
-
-                    }
-                }
-            }
-        }
-    }
+    
     void SetSelectionSceneVisible(bool vis)
     {
         NGUITools.SetActive(UIRootGO.gameObject, vis);
@@ -695,8 +550,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
                 m_characterIndex = playerzero.HeroId;
                 // camera follow default camera
                 SetHeroVisible(m_characterIndex, true);
-                // move camera to target with coroutine
-                MoveCameraToHero(playerzero.HeroId);
                 // show default hero and play initial animation & sounds etc.
                 ShowHeroAndDoAction(playerzero.HeroId);
             }
@@ -714,7 +567,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
             SetHeroVisible(m_characterIndex, true);
             // 
             SelectHero0();
-            MoveCameraToHero(1);
         }
     }
     private void SetHeroInfo(int num, ArkCrossEngine.RoleInfo pi)
@@ -930,26 +782,6 @@ public class UIChangeHero : UnityEngine.MonoBehaviour
 
     private void ButtonCreateHeroColourScale(int newnum)
     {
-        /*
-        if (UIRootGO != null)
-        {
-            UnityEngine.Transform tf = UIRootGO.transform.Find("ButtonCreateHero/" + 0 + "/Back");
-            if (tf != null)
-            {
-                NGUITools.SetActive(tf.gameObject, false);
-            }
-            tf = UIRootGO.transform.Find("ButtonCreateHero/" + 1 + "/Back");
-            if (tf != null)
-            {
-                NGUITools.SetActive(tf.gameObject, false);
-            }
-            tf = UIRootGO.transform.Find("ButtonCreateHero/" + (newnum - 1) + "/Back");
-            if (tf != null)
-            {
-                NGUITools.SetActive(tf.gameObject, true);
-            }
-        }
-        */
         SetHeroVisible(m_characterIndex, false);
         m_characterIndex = newnum;
         ChangeHeroIntroduce(m_characterIndex);

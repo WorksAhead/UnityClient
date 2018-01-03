@@ -36,7 +36,8 @@ namespace ScriptableData
 
         public override void Destroy()
         {
-            Env_.Dispose();
+            // throw exception while shutting down unity, disable now
+            // Env_.Dispose();
         }
 
         public override void ExecuteBuffer ( string scriptData, object extra = null, string chunk = "default" )

@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using ArkCrossEngine;
-using UnityEngine;
 
 public class CharacterUtil : UnityEngine.MonoBehaviour
 {
-
     public GameObject m_MeetEnemyEffect;
     public string m_MeetEnemyEffectBone;
     public GameObject m_DeadEffect;

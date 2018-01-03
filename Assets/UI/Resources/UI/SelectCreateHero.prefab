@@ -3927,45 +3927,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dfdb4d195e8daa47b4faca1d3280f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraQuatenion: {x: 0, y: 0, z: 0, w: 0}
-  OffsetPlayer: {x: 0.9, y: -11.46, z: 10.4}
   m_AngleVelocity: 10
   MoveCameraDelta: 0.1
-  Hero_Jianshi: hero_skin_g_all
-  Hero_Cike: 2_hero_skin_g_all02
   m_AudioSource: {fileID: 8200000}
   m_WeaponAudioSource: {fileID: 8200004}
   m_CikeSelectMusic:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  m_CikeWeaponMusicDelay: 0
   m_CikeWeaponMusic:
   - {fileID: 0}
   m_JianshiSelectMusic:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  m_JianshiWeaponMusicDelay: 0
   m_JianshiWeaponMusic:
   - {fileID: 0}
   m_HeroCollider: {fileID: 100384}
   m_HeroCike: {fileID: 1359070705030250}
-  m_WeaponCikeLeft: {fileID: 0}
-  m_WeaponCikeRight: {fileID: 0}
   m_HeroJianshi: {fileID: 1286043638088922}
-  m_WeaponJianshi: {fileID: 0}
   m_Hero3: {fileID: 1743322172625940}
-  m_HeroJianshi_r1: {fileID: 1359070705030250}
-  m_HeroReplaceIndex: 0
-  m_CikeHandLeft: {fileID: 0}
-  m_CikeHandRight: {fileID: 0}
-  m_CikeBackLeft: {fileID: 0}
-  m_CikeBackRight: {fileID: 0}
-  m_JianshiHand: {fileID: 0}
-  m_JianshiBack: {fileID: 0}
-  m_CikeChangeWeaponDelay: 3.4
-  m_JianshiChangeWeaponDelay: 2.43
   m_HeroCikeAnim: hero_show_g
   m_HeroCikeIdleAnim: hero_idle_g
   m_HeroJianshiAnim: hero_show_g

@@ -276,10 +276,7 @@ public abstract class Gesture
         UnityEngine.Vector3 cur_touch_pos = new UnityEngine.Vector3(position.x, position.y, 0);
         UnityEngine.Ray ray = UnityEngine.Camera.main.ScreenPointToRay(cur_touch_pos);
         UnityEngine.RaycastHit hitInfo;
-        //int layermask = 1 << LayerMask.NameToLayer("AirWall");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObjEffect");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObj");
-        //layermask = ~layermask;
+        
         int layermask = 1 << UnityEngine.LayerMask.NameToLayer("Terrains");
         if (UnityEngine.Physics.Raycast(ray, out hitInfo, 200f, layermask))
         {
@@ -314,10 +311,7 @@ public abstract class Gesture
         UnityEngine.Vector3 cur_touch_pos = new UnityEngine.Vector3(position.x, position.y, 0);
         UnityEngine.Ray ray = UnityEngine.Camera.main.ScreenPointToRay(cur_touch_pos);
         UnityEngine.RaycastHit hitInfo;
-        //int layermask = 1 << LayerMask.NameToLayer("AirWall");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObjEffect");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObj");
-        //layermask = ~layermask;
+        
         int layermask = 1 << UnityEngine.LayerMask.NameToLayer("Terrains");
         if (UnityEngine.Physics.Raycast(ray, out hitInfo, 200f, layermask))
         {
@@ -335,12 +329,7 @@ public abstract class Gesture
         UnityEngine.Vector3 start_touch_pos = new UnityEngine.Vector3(startPosition.x, startPosition.y, 0);
         UnityEngine.Ray ray = UnityEngine.Camera.main.ScreenPointToRay(start_touch_pos);
         UnityEngine.RaycastHit hitInfo;
-        //int layermask = (1 << LayerMask.NameToLayer("AirWall"));
-        //layermask |= 1 << LayerMask.NameToLayer("Character");
-        //layermask |= 1 << LayerMask.NameToLayer("Player");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObjEffect");
-        //layermask |= 1 << LayerMask.NameToLayer("SceneObj");
-        //layermask = ~layermask;
+        
         SkillController player_skill_ctrl = null;
         if (null != player_skill_ctrl)
         {
@@ -410,7 +399,7 @@ public abstract class Gesture
                 {
                     if (WorldSystem.Instance.IsPureClientScene())
                     {
-                        SignNpcTypeInMainCity signNpcTypeScript = hitGameObj.GetComponent<SignNpcTypeInMainCity>();
+                        SignNpcType signNpcTypeScript = hitGameObj.GetComponent<SignNpcType>();
                         if (signNpcTypeScript != null)
                         {
                             LogicSystem.EventChannelForGfx.Publish("ge_npc_click", "ui", signNpcTypeScript.GetNpcType());
