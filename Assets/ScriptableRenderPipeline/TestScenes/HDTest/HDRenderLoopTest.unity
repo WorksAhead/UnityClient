@@ -64,8 +64,9 @@ LightmapSettings:
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 1
+    m_LightmapParameters: {fileID: 111300000, guid: fea87882f1cd5614195add2b1a8d0249,
+      type: 2}
+    m_LightmapsBakeMode: 0
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
@@ -7942,7 +7943,7 @@ ReflectionProbe:
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
   m_Importance: 1
-  m_CustomBakedTexture: {fileID: 8900000, guid: a6bda31e5e5c82a40b8e91ad0be087e8,
+  m_CustomBakedTexture: {fileID: 8900000, guid: 435ae4f2a5a9d48ddb2596c11d9bdbf6,
     type: 3}
 --- !u!1 &1045149339
 GameObject:
@@ -9200,7 +9201,7 @@ ReflectionProbe:
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
   m_Importance: 1
-  m_CustomBakedTexture: {fileID: 8900000, guid: a6bda31e5e5c82a40b8e91ad0be087e8,
+  m_CustomBakedTexture: {fileID: 8900000, guid: 435ae4f2a5a9d48ddb2596c11d9bdbf6,
     type: 3}
 --- !u!4 &1175446864
 Transform:
@@ -12217,7 +12218,7 @@ ReflectionProbe:
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
   m_Importance: 1
-  m_CustomBakedTexture: {fileID: 8900000, guid: a6bda31e5e5c82a40b8e91ad0be087e8,
+  m_CustomBakedTexture: {fileID: 8900000, guid: 435ae4f2a5a9d48ddb2596c11d9bdbf6,
     type: 3}
 --- !u!1001 &1610483060
 Prefab:
@@ -12900,7 +12901,7 @@ ReflectionProbe:
   m_RenderDynamicObjects: 0
   m_UseOcclusionCulling: 1
   m_Importance: 1
-  m_CustomBakedTexture: {fileID: 8900000, guid: a6bda31e5e5c82a40b8e91ad0be087e8,
+  m_CustomBakedTexture: {fileID: 8900000, guid: 435ae4f2a5a9d48ddb2596c11d9bdbf6,
     type: 3}
 --- !u!4 &1689074024 stripped
 Transform:
