@@ -72,6 +72,20 @@ half4 FragTempFilter(VaryingsDefault i) : SV_Target
     return lerp(coc0, cocHis, _TaaParams.z);
 }
 
+// sRGB / linear
+half3 SRGBToLinear(half3 c)
+{
+	half3 linearRGBLo = c / 12.92;
+	half3 linearRGBHi = pow((c + 0.055) / 1.055, half3(2.4, 2.4, 2.4));
+	half3 linearRGB = (c <= 0.04045) ? linearRGBLo : linearRGBHi;
+	return linearRGB;
+}
+
+half4 SRGBToLinear(half4 c)
+{
+	return half4(SRGBToLinear(c.rgb), c.a);
+}
+
 // Prefilter: downsampling and premultiplying
 half4 FragPrefilter(VaryingsDefault i) : SV_Target
 {
